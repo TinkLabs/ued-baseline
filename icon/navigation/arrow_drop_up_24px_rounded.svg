@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icon/navigation/arrow_drop_up_24px_rounded</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.49547132,13.0212303 L10.8238674,8.5095264 C11.4756336,7.83015787 12.5284868,7.83015787 13.180253,8.5095264 L17.5086491,13.0212303 C18.5615022,14.1186717 17.8094643,16 16.3221003,16 L7.66530811,16 C6.17794419,16 5.44261821,14.1186717 6.49547132,13.0212303 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/navigation/arrow_drop_up_24px" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use fill-opacity="0.88" fill="#000000" xlink:href="#path-1"></use>
+    </g>
+</svg>
