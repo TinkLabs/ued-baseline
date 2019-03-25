@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+	margin-bottom: 0;
+	text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: .5rem 1.75rem;
+    margin: .5rem;
+    border: 1px solid $hi-gold;
+    background: none;
+	color: white;
+    
+
+    &.btn-round {
+        border-radius: 50px;
+    }
+    &.btn-gold {
+        background-color: $hi-gold;
+    }
+}
