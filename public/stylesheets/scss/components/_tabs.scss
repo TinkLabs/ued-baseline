@@ -1,0 +1,79 @@
+@mixin tab-dark-mode {
+    color: $hi-bl-grey-light;
+    
+    &.active {
+        color: $hi-gold;
+        border-bottom: 2px solid $hi-gold;
+    }
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $hi-white;
+
+    .tab {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        line-height: 48px;
+        border: none;
+        color: $hi-bl-grey;
+        text-align: center;
+        padding: 0 16px;
+        cursor: pointer;
+
+        &.active {
+            border-bottom: 2px solid $hi-gold;
+            color: $hi-gold;
+        }
+        &.disable {
+            cursor: not-allowed;
+        }
+
+        .tab-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .icon {
+            padding-left: 8px;
+        }
+
+        &.tab-verticle {
+            flex-direction: column;
+            justify-content: center;
+
+            .tab-text {
+                line-height: 1.33;
+                font-size: 12px;
+            }
+
+            .icon {
+                padding: 0;
+            }
+        }
+    }
+
+    &.tabs-dark {
+        background-color: $hi-dark;
+
+        .tab {
+            @include tab-dark-mode;
+        }
+    }
+}
+
+.tabs.even-space {
+    .tab {
+        flex-grow: 1;
+        flex-basis: 0;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

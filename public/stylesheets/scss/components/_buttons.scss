@@ -1,0 +1,123 @@
+// variable and mixins
+$btn-gold: $hi-gold;
+$btn-gold-hover: $hi-gold-400;
+$btn-white: $hi-white;
+
+@mixin btn-gold {
+  background-color: $btn-gold;
+  border-color: $btn-gold;
+  color: $btn-white;
+}
+@mixin btn-gold-hover {
+  background-color: $btn-gold-hover;
+  border-color: $btn-gold-hover;
+}
+@mixin btn-hollow-gold {
+  background-color: transparent;
+  border-color: $btn-gold;
+  color: $btn-gold;
+}
+@mixin btn-hollow-gold-hover {
+  color: $btn-gold-hover;
+  border-color: $btn-gold-hover;
+}
+@mixin btn-disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+}
+
+// rectangular button
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @include btn-gold;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 0 24px;
+  height: 40px;
+
+  @include body2;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &.btn-large {
+    height: 52px;
+    border-radius: 8px;
+    @include subtitle1;
+  }
+
+  &.btn-hollow {
+    @include btn-hollow-gold;
+  }
+
+  &.btn-disable {
+    @include btn-disabled;
+  }
+
+  &:not(.btn-disable):not(.btn-hollow):hover {
+    @include btn-gold-hover;
+  }
+
+  &.btn-hollow:not(.btn-disable):hover {
+    @include btn-hollow-gold-hover;
+  }
+}
+
+// round button with icons
+$btn-round-icon: 20px;
+$btn-round-large-icon: 28px;
+.btn-round {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px 0 $btn-gold;
+  cursor: pointer;
+  color: $btn-white;
+  background-color: $btn-gold;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  i,
+  .icon {
+    font-size: $btn-round-icon;
+  }
+
+  &.btn-no-shadow {
+    box-shadow: none;
+  }
+
+  &.btn-large {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+
+    i,
+    .icon {
+      font-size: $btn-round-large-icon;
+    }
+  }
+
+  &.btn-large.btn-disable,
+  &.btn-disable {
+    @include btn-disabled;
+  }
+
+  &:not(.btn-disable):hover {
+    background-color: $btn-gold-hover;
+  }
+}

@@ -1,0 +1,76 @@
+// basic setup
+.demo_title {
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 80px 0;
+  color: $hi-gold-400;
+}
+.demo_body {
+  color: $hi-light-grey;
+  background-color: $hi-dark;
+  padding-bottom: 80px;
+}
+.demo_showcase {
+  width: 100%;
+  background-image: url(../images/checker_bg.png);
+  color: $hi-navy;
+  padding: 8px;
+  margin: 8px 0;
+}
+.demo_description {
+  // 
+}
+
+.demo_half_w {
+  width: 50%;
+}
+.demo_no_bg {
+  background-image: none;
+}
+
+// color palette
+.demo_color_box {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+}
+.demo_round {
+  border-radius: 50%;
+}
+.demo_label {
+  font-size: 28px;
+}
+.demo_variant {
+  width: 100px;
+  margin: 12px 2px;
+  text-align: center;
+  font-size: 16px;
+}
+
+// typography , fonts
+.demo_title_wrapper {
+  border: 1px solid $hi-gold;
+  margin-bottom: 8px;
+}
+
+.demo_title_border {
+  border: 1px dotted $hi-green;
+}
+
+.demo_typeface_wrapper {
+  width: 40%;
+  margin-right: 10%;
+  p {
+    display: block;
+    margin: 1em;
+  }
+}
+
+// buttons
+.demo_round_btn {
+  margin: 16px;
+}
