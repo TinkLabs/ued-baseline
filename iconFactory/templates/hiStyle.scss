@@ -13,9 +13,8 @@
 
 }
 
-[data-icon]:before {
+@mixin iconGeneral {
   font-family: "<%= fontName %>" !important;
-  content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -26,17 +25,32 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-icon]:before {
+  // font-family: "<%= fontName %>" !important;
+  content: attr(data-icon);
+  @include iconGeneral;
+  // font-style: normal !important;
+  // font-weight: normal !important;
+  // font-variant: normal !important;
+  // text-transform: none !important;
+  // speak: none;
+  // line-height: 1;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
 [class^="<%= className %>-"]:before,
 [class*=" <%= className %>-"]:before {
-  font-family: "<%= fontName %>" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @include iconGeneral;
+  // font-family: "<%= fontName %>" !important;
+  // font-style: normal !important;
+  // font-weight: normal !important;
+  // font-variant: normal !important;
+  // text-transform: none !important;
+  // speak: none;
+  // line-height: 1;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 <% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { 

@@ -1,0 +1,194 @@
+// text color
+$text-field-text-default: $hi-navy;
+// opacity filter
+$text-field-opcaity: 30%;
+// bg color, filtered
+// default
+$text-field-default: $hi-bl-grey;
+$text-field-default-filtered: lighten($text-field-default, $text-field-opcaity);
+// on focus
+$text-field-focus: $hi-gold;
+$text-field-focus-filtered: lighten($text-field-focus, $text-field-opcaity);
+// validated
+$text-field-valid: $hi-navy;
+$text-field-valid-filtered: lighten($text-field-valid, $text-field-opcaity);
+// on error
+$text-field-error: $hi-red;
+$text-field-error-filtered: lighten($text-field-error, $text-field-opcaity);
+// disabled
+$text-field-disabled: $hi-dark-grey;
+$text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+  min-width: 328px;
+
+  .field-label {
+    @include subtitle2;
+    color: $text-field-default;
+  }
+
+  .textbox {
+    @include body1;
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: $text-field-default-filtered;
+    border-color: $text-field-default;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: $text-field-default-filtered;
+      color: $text-field-text-default;
+    }
+  
+    .icon {
+      padding: 0 8px 0 0;
+    }
+  
+    .icon:last-child {
+      padding: 0 0 0 8px;
+      justify-self: flex-end;
+      cursor: pointer;
+    }
+  }
+
+  .helper-text {
+    @include body2;
+    padding: 0 16px;
+  }
+}
+
+/* on focus */
+.textfield:focus,
+.textfield:focus-within,
+.textfield:visited {
+  .field-label {
+    color: $text-field-focus;
+  }
+  .textbox {
+    background-color: $text-field-focus-filtered;
+    border-color: $text-field-focus-filtered;
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      background-color: $text-field-focus-filtered;
+    }
+
+    .icon {
+      color: $text-field-text-default;
+    }
+  }
+  
+  .helper-text {
+    color: $text-field-default;
+  }
+}
+
+/* on valid */
+.textfield.valid {
+  .field-label {
+    color: $text-field-valid;
+  }
+
+  .textbox {
+    .icon {
+      color: $text-field-valid;
+    }
+    .icon:last-child {
+      display: none;
+    }
+
+    &:after {
+      content: "\EBA2";
+      @include labelMark;
+      padding-right: 0;
+      color: $text-field-valid;
+    }
+  }
+  
+  .helper-text {
+    color: $text-field-valid;
+  }
+}
+
+/* on error */
+.textfield.error {
+  .field-label {
+    color: $text-field-error;
+  }
+
+  .textbox {
+    background-color: $text-field-error-filtered;
+    border-color: $text-field-error-filtered;
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      background-color: $text-field-error-filtered;
+    }
+
+    .icon {
+      color: $text-field-text-default;
+    }
+    .icon:last-child {
+      display: none;
+    }
+
+    &:after {
+      content: "\ED94";
+      @include labelMark;
+      padding-right: 0;
+      color: $text-field-error;
+    }
+  }
+  
+  .helper-text {
+    color: $text-field-error;
+  }
+}
+
+/* disabled */
+.textfield.disabled {
+  .field-label {
+    color: $text-field-disabled;
+  }
+
+  .textbox {
+    background-color: $text-field-disabled-filtered;
+    border-color: $text-field-disabled-filtered;
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      background-color: transparent;
+      cursor: not-allowed;
+    }
+
+    .icon {
+      color: $text-field-disabled;
+    }
+    .icon:last-child {
+      display: none;
+    }
+  }
+  
+  .helper-text {
+    color: $text-field-disabled;
+  }
+}
+

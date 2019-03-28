@@ -1,0 +1,71 @@
+$form-control-default: $hi-black;
+$form-control-selected: $hi-gold;
+$form-control-disabled: $hi-dark-grey;
+
+@mixin labelMark {
+  @include iconGeneral;
+  padding: 0 8px;
+}
+
+.form-group {
+  //
+}
+
+/* check box and radio button */
+input[type="checkbox"] ~ label,
+input[type="radio"] ~ label {
+  display: flex;
+  align-items: center;
+  color: $form-control-default;
+}
+input[type="checkbox"]:checked ~ label,
+input[type="radio"]:checked ~ label {
+  color: $form-control-selected;
+}
+input[type="checkbox"]:disabled ~ label,
+input[type="radio"]:disabled ~ label {
+  color: $form-control-disabled;
+}
+
+/* check box */
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+  // top: -9999px;
+  /* For mobile, it's typically better to position checkbox on top of clickable
+       area and turn opacity to 0 instead. */
+}
+input[type="checkbox"] ~ label .label-mark::before {
+  content: "\EE14";
+  @include labelMark;
+}
+input[type="checkbox"]:checked ~ label .label-mark::before {
+  content: "\EE13";
+  @include labelMark;
+}
+input[type="checkbox"]:disabled ~ label .label-mark::before {
+  content: "\EE14";
+  @include labelMark;
+}
+
+/* radio button , same as checkbox */
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+input[type="radio"] ~ label .label-mark::before {
+  content: "\EE19";
+  @include labelMark;
+}
+input[type="radio"]:checked ~ label .label-mark::before {
+  content: "\EE18";
+  @include labelMark;
+}
+input[type="radio"]:disabled ~ label .label-mark::before {
+  content: "\EE19";
+  @include labelMark;
+}
+
+label.label-large {
+  font-size: 24px;
+}

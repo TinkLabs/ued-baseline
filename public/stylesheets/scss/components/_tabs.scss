@@ -10,7 +10,7 @@
 .tabs {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     background-color: $hi-white;
@@ -18,9 +18,10 @@
     .tab {
         display: flex;
         align-items: center;
+        justify-content: center;
         height: 48px;
         line-height: 48px;
-        border: none;
+        border-bottom: 2px solid transparent;
         color: $hi-bl-grey;
         text-align: center;
         padding: 0 16px;
