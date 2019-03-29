@@ -1,23 +1,70 @@
-// text color
-$text-field-text-default: $hi-navy;
-// opacity filter
-$text-field-opcaity: 30%;
-// bg color, filtered
-// default
-$text-field-default: $hi-bl-grey;
-$text-field-default-filtered: lighten($text-field-default, $text-field-opcaity);
-// on focus
+/*
+ * 
+ * Text Color
+ *
+ */
+
+$text-field-default: rgba(0, 0, 0, 0.88);
+
+/*
+ * 
+ * Resting
+ *
+ */
+
+$text-field-resting: rgba(0, 0, 0, 0.56);
+$text-field-resting-bg: rgba(0, 0, 0, 0.08);
+
+/*
+ * 
+ * Focus / Activated
+ *
+ */
+
 $text-field-focus: $hi-gold;
-$text-field-focus-filtered: lighten($text-field-focus, $text-field-opcaity);
-// validated
-$text-field-valid: $hi-navy;
-$text-field-valid-filtered: lighten($text-field-valid, $text-field-opcaity);
-// on error
+$text-field-focus-bg: rgba($hi-gold, 0.16);
+
+/*
+ * 
+ * Enabled
+ *
+ */
+
+$text-field-enabled: rgba(0, 0, 0, 0.56);
+$text-field-enabled-bg: rgba(0, 0, 0, 0.08);
+
+/*
+ * 
+ * Error
+ *
+ */
+
 $text-field-error: $hi-red;
-$text-field-error-filtered: lighten($text-field-error, $text-field-opcaity);
-// disabled
-$text-field-disabled: $hi-dark-grey;
-$text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
+$text-field-error-bg: rgba($hi-red, 0.16);
+
+/*
+ * 
+ * Disabled
+ *
+ */
+
+$text-field-disabled: rgba($hi-black, 0.32);
+$text-field-disabled-bg: rgba($hi-black, 0.08);
+
+/*
+ * 
+ * Icons
+ *
+ */
+
+$text-field-icon-black: $text-field-default;
+$text-field-icon-red: $hi-red;
+
+/*
+ * 
+ * Styles - Default
+ *
+ */
 
 .textfield {
   display: flex;
@@ -26,88 +73,103 @@ $text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
   align-items: flex-start;
   padding: 8px;
   min-width: 328px;
+  color: $text-field-resting;
 
   .field-label {
-    @include subtitle2;
-    color: $text-field-default;
+    @include body2;
   }
 
   .textbox {
-    @include body1;
+    @include subtitle1;
     width: 100%;
     height: 50px;
     padding: 0 16px;
     border-radius: 8px;
-    background-color: $text-field-default-filtered;
-    border-color: $text-field-default;
-    
+    background-color: $text-field-resting-bg;
+    border-color: $text-field-resting-bg;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
-    input[type="text"],
-    input[type="number"],
-    input[type="email"] {
-      outline: none;
-      border: none;
+
+    input {
       width: 100%;
-      background-color: $text-field-default-filtered;
-      color: $text-field-text-default;
+      border: none;
+      background-color: transparent;
+      /* remove browser's outline when on focus */
+      outline: none;
     }
-  
+
+    /* user injected icon (front) */
     .icon {
       padding: 0 8px 0 0;
+      color: $text-field-icon-black;
     }
-  
+
+    /* user injected icon (last) */
     .icon:last-child {
       padding: 0 0 0 8px;
       justify-self: flex-end;
       cursor: pointer;
     }
+
+    /* icon enabled by class name */
+    &:before {
+      @include labelMark;
+      padding-left: 0;
+      color: $text-field-icon-black;
+    }
+    &:after {
+      @include labelMark;
+      padding-right: 0;
+      color: $text-field-icon-black;
+    }
   }
 
   .helper-text {
-    @include body2;
+    @include caption;
     padding: 0 16px;
   }
 }
 
-/* on focus */
+/*
+ * 
+ * Styles - Focus / Activated
+ *
+ */
+
 .textfield:focus,
 .textfield:focus-within,
-.textfield:visited {
-  .field-label {
-    color: $text-field-focus;
-  }
-  .textbox {
-    background-color: $text-field-focus-filtered;
-    border-color: $text-field-focus-filtered;
+.textfield:visited,
+.textfield.activated {
+  color: $text-field-focus;
 
-    input[type="text"],
-    input[type="number"],
-    input[type="email"] {
-      background-color: $text-field-focus-filtered;
-    }
+  .textbox {
+    background-color: $text-field-focus-bg;
+    border-color: $text-field-focus-bg;
 
     .icon {
-      color: $text-field-text-default;
+      color: $text-field-default;
     }
-  }
-  
-  .helper-text {
-    color: $text-field-default;
+
+    &:after {
+      content: "\EBA2";
+    }
   }
 }
 
-/* on valid */
-.textfield.valid {
-  .field-label {
-    color: $text-field-valid;
-  }
+/*
+ * 
+ * Styles - Enabled
+ *
+ */
+
+.textfield.enabled {
+  color: $text-field-enabled;
 
   .textbox {
     .icon {
-      color: $text-field-valid;
+      color: $text-field-default;
     }
     .icon:last-child {
       display: none;
@@ -115,35 +177,25 @@ $text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
 
     &:after {
       content: "\EBA2";
-      @include labelMark;
-      padding-right: 0;
-      color: $text-field-valid;
     }
-  }
-  
-  .helper-text {
-    color: $text-field-valid;
   }
 }
 
-/* on error */
+/*
+ * 
+ * Styles - Error
+ *
+ */
+
 .textfield.error {
-  .field-label {
-    color: $text-field-error;
-  }
+  color: $text-field-error;
 
   .textbox {
-    background-color: $text-field-error-filtered;
-    border-color: $text-field-error-filtered;
-
-    input[type="text"],
-    input[type="number"],
-    input[type="email"] {
-      background-color: $text-field-error-filtered;
-    }
+    background-color: $text-field-error-bg;
+    border-color: $text-field-error-bg;
 
     .icon {
-      color: $text-field-text-default;
+      color: $text-field-error;
     }
     .icon:last-child {
       display: none;
@@ -151,32 +203,34 @@ $text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
 
     &:after {
       content: "\ED94";
-      @include labelMark;
-      padding-right: 0;
       color: $text-field-error;
     }
   }
-  
+
   .helper-text {
     color: $text-field-error;
   }
 }
 
-/* disabled */
+/*
+ * 
+ * Styles - Disabled
+ *
+ */
+
 .textfield.disabled {
-  .field-label {
-    color: $text-field-disabled;
-  }
+  color: $text-field-disabled;
 
   .textbox {
-    background-color: $text-field-disabled-filtered;
-    border-color: $text-field-disabled-filtered;
+    background-color: $text-field-disabled-bg;
+    border-color: $text-field-disabled-bg;
 
-    input[type="text"],
-    input[type="number"],
-    input[type="email"] {
+    input {
       background-color: transparent;
       cursor: not-allowed;
+      &::placeholder {
+        color: $text-field-disabled;
+      }
     }
 
     .icon {
@@ -186,9 +240,67 @@ $text-field-disabled-filtered: rgba(198, 205, 206, 0.5);
       display: none;
     }
   }
-  
+
   .helper-text {
     color: $text-field-disabled;
   }
 }
 
+/* 
+ *
+ * Styles - Outlined
+ *
+ */
+.textfield.outlined {
+  /* resting */
+  color: $text-field-resting;
+
+  .textbox {
+    background-color: transparent;
+    border: 1px solid $text-field-resting;
+  }
+
+  /* focus / activated */
+  &:focus,
+  &:focus-within,
+  &:visited,
+  .activated {
+    color: $text-field-focus;
+
+    .textbox {
+      border: 1px solid $text-field-focus;
+
+      input {
+        color: $text-field-default;
+      }
+    }
+  }
+
+  /* error */
+  &.error {
+    color: $text-field-error;
+
+    .textbox {
+      border: 1px solid $text-field-error;
+
+      input {
+        color: $text-field-default;
+      }
+    }
+  }
+
+  /* disabled */
+  &.disabled {
+    color: $text-field-disabled;
+
+    .textbox {
+      border: 1px solid $text-field-disabled;
+
+      input {
+        &::placeholder {
+          color: $text-field-disabled;
+        }
+      }
+    }
+  }
+}

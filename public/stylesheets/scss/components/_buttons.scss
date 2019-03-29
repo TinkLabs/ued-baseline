@@ -26,7 +26,11 @@ $btn-white: $hi-white;
   cursor: not-allowed;
 }
 
-// rectangular button
+/*
+ *
+ * Long button
+ *
+ */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -74,7 +78,11 @@ button,
   }
 }
 
-// round button with icons
+/*
+ *
+ * Round button with icons
+ *
+ */
 $btn-round-icon: 20px;
 $btn-round-large-icon: 28px;
 .btn-round {
@@ -110,6 +118,11 @@ $btn-round-large-icon: 28px;
     .icon {
       font-size: $btn-round-large-icon;
     }
+
+    &::before,
+    &::after {
+      font-size: $btn-round-large-icon;
+    }
   }
 
   &.btn-large.btn-disable,
@@ -121,3 +134,48 @@ $btn-round-large-icon: 28px;
     background-color: $btn-gold-hover;
   }
 }
+
+/*
+ *
+ * Unbound button
+ *
+ */
+.btn-unbound {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: $hi-gold;
+  background-color: transparent;
+  padding: 0 24px;
+  height: 40px;
+
+  @include body2;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &.btn-large {
+    height: 52px;
+    border-radius: 8px;
+    @include subtitle1;
+  }
+
+  &.btn-disable {
+    @include btn-disabled;
+  }
+
+  &.btn-hollow:not(.btn-disable):hover {
+    color: $btn-gold-hover;
+  }
+
+  &:before {
+    padding-left: 0;
+  }
+  &:after {
+    padding-right: 0;
+  }
+}
+

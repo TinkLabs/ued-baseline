@@ -25,6 +25,7 @@
             </div>
         </div>
         <hr>
+        <!-- Color Palette -->
         <div class="demo_display">
             <h3 class="headline" id="Color-Palette">Color Palette</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -124,6 +125,7 @@
             </div>
         </div>
         <hr>
+        <!-- Typography -->
         <div class="demo_display">
             <h3 class="headline" id="Typography">Typography</h3>
             <div class="demo_showcase flex flex-row">
@@ -156,6 +158,7 @@
             </div>
         </div>
         <hr>
+        <!-- Montserrat -->
         <div class="demo_display">
             <h3 class="headline" id="Montserrat">Fonts : Montserrat</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -270,6 +273,7 @@
             </div>
         </div>
         <hr>
+        <!-- Merriweather -->
         <div class="demo_display">
             <h3 class="headline" id="Merriweather">Fonts : Merriweather</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -334,6 +338,7 @@
             </div>
         </div>
         <hr>
+        <!-- Buttons -->
         <div class="demo_display">
             <h3 class="headline" id="Buttons">Buttons (Large)</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -388,12 +393,8 @@
             </div>
             <h3 class="headline">Buttons (Round)</h3>
             <div class="demo_showcase flex flex-row flex-wrap align-center">
-                <a href="#" class="btn-round btn-no-shadow demo_round_btn">
-                    <i class="icon icon-content_add_24px"></i>
-                </a>
-                <a href="#" class="btn-round btn-large btn-no-shadow demo_round_btn">
-                    <i class="icon icon-content_add_24px"></i>
-                </a>
+                <a href="#" class="btn-round btn-no-shadow demo_round_btn i-add"></a>
+                <a href="#" class="btn-round btn-large btn-no-shadow demo_round_btn i-add"></a>
                 <a href="#" class="btn-round demo_round_btn">
                     <i class="icon icon-content_add_24px"></i>
                 </a>
@@ -439,8 +440,17 @@
                     <i class="icon icon-general_bookmark_24px"></i>
                 </a>
             </div>
+            <h3 class="headline">Buttons (Unbound)</h3>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a href="#" class="btn-unbound i-back">Back</a>
+                <a href="#" class="btn-unbound i-add">Default</a>
+                <a href="#" class="btn-unbound btn-disable">Disabled</a>
+                <a href="#" class="btn-unbound i-minus-right">On Right</a>
+                <a href="#" class="btn-unbound i-next">Next</a>
+            </div>
         </div>
         <hr>
+        <!-- hi fonts -->
         <div class="demo_display">
             <h3 class="headline" id="Fonts">hi fonts</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -453,6 +463,7 @@
             </div>
         </div>
         <hr>
+        <!-- Tabs -->
         <div class="demo_display">
             <h3 class="headline" id="Tabs">Tabs</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
@@ -526,39 +537,114 @@
             </div>
         </div>
         <hr>
+        <!-- Form Control -->
         <div class="demo_display">
             <h3 class="headline" id="Form-Control">Form Control</h3>
             <form action="demo">
                 <div class="demo_showcase flex flex-row flex-wrap">
-                    <div class="textfield">
-                        <p class="field-label">Field Label</p>
-                        <div class="textbox">
-                            <i class="icon icon-general_search_24px"></i>
-                            <input type="text" placeholder="custom icon on both side">
-                            <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
+                    <div class="flex flex-col">
+                        <!-- resting -->
+                        <div class="textfield">
+                            <p class="field-label">Field label</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="placeholder">
+                            </div>
+                            <p class="helper-text">Helper text</p>
                         </div>
-                        <p class="helper-text">Helper text</p>
+                        <!-- activated / focus -->
+                        <div class="textfield activated">
+                            <p class="field-label">Activated</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="placeholder" value="Activated">
+                            </div>
+                            <p class="helper-text">What's with the tick?</p>
+                        </div>
+                        <!-- enabled -->
+                        <div class="textfield enabled">
+                            <p class="field-label">Enabled</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="What's the difference from resting?">
+                            </div>
+                            <p class="helper-text">When is this used?</p>
+                        </div>
+                        <!-- error -->
+                        <div class="textfield error">
+                            <p class="field-label">Error</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="Error">
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- disabled -->
+                        <div class="textfield disabled">
+                            <p class="field-label">Field Label</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="disabled" disabled>
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- search bar -->
+                        <div class="textfield">
+                            <p class="field-label">Field Label</p>
+                            <div class="textbox">
+                                <i class="icon icon-general_search_24px"></i>
+                                <input type="text" placeholder="search bar">
+                                <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
                     </div>
-                    <div class="textfield valid">
-                        <p class="field-label">Field Label</p>
-                        <div class="textbox">
-                            <input type="text" placeholder="placeholder" value="validated">
-                        </div>
-                        <p class="helper-text">Helper text</p>
-                    </div>
-                    <div class="textfield error">
-                        <p class="field-label">Field Label</p>
-                        <div class="textbox">
-                            <input type="text" placeholder="on error">
-                        </div>
-                        <p class="helper-text">Helper text</p>
-                    </div>
-                    <div class="textfield disabled">
-                        <p class="field-label">Field Label</p>
-                        <div class="textbox">
-                            <input type="text" placeholder="disabled" disabled>
-                        </div>
-                        <p class="helper-text">Helper text</p>
+                    <div class="flex flex-col">
+                            <!-- resting -->
+                            <div class="textfield outlined">
+                                <p class="field-label">Field label</p>
+                                <div class="textbox">
+                                    <input type="text" placeholder="placeholder">
+                                </div>
+                                <p class="helper-text">Helper text</p>
+                            </div>
+                            <!-- activated / focus -->
+                            <div class="textfield outlined activated">
+                                <p class="field-label">Activated</p>
+                                <div class="textbox">
+                                    <input type="text" placeholder="placeholder" value="Activated">
+                                </div>
+                                <p class="helper-text">What's with the tick?</p>
+                            </div>
+                            <!-- enabled -->
+                            <div class="textfield outlined enabled">
+                                <p class="field-label">Enabled</p>
+                                <div class="textbox">
+                                    <input type="text" placeholder="What's the difference from resting?">
+                                </div>
+                                <p class="helper-text">When is this used?</p>
+                            </div>
+                            <!-- error -->
+                            <div class="textfield outlined error">
+                                <p class="field-label">Error</p>
+                                <div class="textbox">
+                                    <input type="text" placeholder="Error">
+                                </div>
+                                <p class="helper-text">Helper text</p>
+                            </div>
+                            <!-- disabled -->
+                            <div class="textfield outlined disabled">
+                                <p class="field-label">Field Label</p>
+                                <div class="textbox">
+                                    <input type="text" placeholder="disabled" disabled>
+                                </div>
+                                <p class="helper-text">Helper text</p>
+                            </div>
+                            <!-- search bar -->
+                            <div class="textfield outlined">
+                                <p class="field-label">Field Label</p>
+                                <div class="textbox">
+                                    <i class="icon icon-general_search_24px"></i>
+                                    <input type="text" placeholder="search bar">
+                                    <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
+                                </div>
+                                <p class="helper-text">Helper text</p>
+                            </div>
                     </div>
                 </div>
                 <div class="demo_showcase flex flex-row">
