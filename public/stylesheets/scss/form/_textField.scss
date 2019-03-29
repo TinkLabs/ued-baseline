@@ -4,7 +4,7 @@
  *
  */
 
-$text-field-default: rgba(0, 0, 0, 0.88);
+$text-field-default: $hi-black-88;
 
 /*
  * 
@@ -12,8 +12,8 @@ $text-field-default: rgba(0, 0, 0, 0.88);
  *
  */
 
-$text-field-resting: rgba(0, 0, 0, 0.56);
-$text-field-resting-bg: rgba(0, 0, 0, 0.08);
+$text-field-resting: $hi-black-56;
+$text-field-resting-bg: $hi-black-08;
 
 /*
  * 
@@ -30,8 +30,8 @@ $text-field-focus-bg: rgba($hi-gold, 0.16);
  *
  */
 
-$text-field-enabled: rgba(0, 0, 0, 0.56);
-$text-field-enabled-bg: rgba(0, 0, 0, 0.08);
+$text-field-enabled: $hi-black-56;
+$text-field-enabled-bg: $hi-black-08;
 
 /*
  * 
@@ -48,8 +48,8 @@ $text-field-error-bg: rgba($hi-red, 0.16);
  *
  */
 
-$text-field-disabled: rgba($hi-black, 0.32);
-$text-field-disabled-bg: rgba($hi-black, 0.08);
+$text-field-disabled: $hi-black-32;
+$text-field-disabled-bg: $hi-black-08;
 
 /*
  * 

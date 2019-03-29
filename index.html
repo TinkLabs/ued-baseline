@@ -13,16 +13,14 @@
         <h1 class="demo_title">Style guide</h1>
         <hr>
         <div class="demo_indexes">
-            <div class="tabs">
-                <div class="tab"><a class="tab-text" href="#Color-Palette">Color Palette</a></div>
-                <div class="tab"><a class="tab-text" href="#Typography">Typography</a></div>
-                <div class="tab"><a class="tab-text" href="#Montserrat">Montserrat</a></div>
-                <div class="tab"><a class="tab-text" href="#Merriweather">Merriweather</a></div>
-                <div class="tab"><a class="tab-text" href="#Buttons">Buttons</a></div>
-                <div class="tab"><a class="tab-text" href="#Fonts">Fonts</a></div>
-                <div class="tab"><a class="tab-text" href="#Tabs">Tabs</a></div>
-                <div class="tab"><a class="tab-text" href="#Form-Control">Form Control</a></div>
-            </div>
+            <a class="btn" href="#Color-Palette">Color Palette</a>
+            <a class="btn" href="#Typography">Typography</a>
+            <a class="btn" href="#Montserrat">Montserrat</a>
+            <a class="btn" href="#Merriweather">Merriweather</a>
+            <a class="btn" href="#Buttons">Buttons</a>
+            <a class="btn" href="#Fonts">Fonts</a>
+            <a class="btn" href="#Tabs">Tabs</a>
+            <a class="btn" href="#Form-Control">Form Control</a>
         </div>
         <hr>
         <!-- Color Palette -->
@@ -467,71 +465,88 @@
         <div class="demo_display">
             <h3 class="headline" id="Tabs">Tabs</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
+                <!-- tab default -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab active">active</div>
+                    </div>
+                </div>
+                <!-- tab gold -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab tab-gold"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-gold">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-gold active">active</div>
+                    </div>
+                </div>
+                <!-- tab navy -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab tab-navy"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-navy">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-navy active">active</div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
                 <div class="tabs">
                     <div class="tab">tabs</div>
-                    <div class="tab active">with natural</div>
-                    <div class="tab">width, no overflow,</div>
+                    <div class="tab active">with natural width</div>
+                    <div class="tab">no overflow</div>
                     <div class="tab active">no break <i class="icon icon-communication_phone_24px"></i></div>
                 </div>
             </div>
             <div class="demo_showcase flex flex-row flex-wrap">
                 <div class="tabs even-space">
                     <div class="tab">
-                        <p class="tab-text">tabs</p>
+                        <p class="tab-text">.tabs</p>
                     </div>
                     <div class="tab active">
-                        <p class="tab-text">with equal</p>
+                        <p class="tab-text">.even-space</p>
                     </div>
                     <div class="tab">
-                        <p class="tab-text">width, hidden hidden hidden</p>
+                        <p class="tab-text">with equal width</p>
                     </div>
                     <div class="tab active">
-                        <p class="tab-text">with dots</p>
+                        <p class="tab-text">trancated</p>
                         <i class="icon icon-communication_phone_24px"></i>
                     </div>
                 </div>
             </div>
             <div class="demo_showcase flex flex-row flex-wrap">
-                <div class="tabs">
+                <div class="tabs even-space">
                     <div class="tab">
-                        <p class="tab-text">light</p>
-                        <div class="icon icon-communication_phone_24px"></div>
+                        <p class="tab-text">fixed</p>
                     </div>
                     <div class="tab active">
-                        <p class="tab-text">mode</p>
-                        <i class="icon icon-communication_phone_24px"></i>
+                        <p class="tab-text">container</p>
                     </div>
-                </div>
-                <div class="tabs tabs-dark">
                     <div class="tab">
-                        <p class="tab-text">dark</p>
-                        <div class="icon icon-communication_phone_24px"></div>
-                    </div>
-                    <div class="tab active">
-                        <p class="tab-text">mode</p>
-                        <i class="icon icon-communication_phone_24px"></i>
+                        <p class="tab-text">width</p>
                     </div>
                 </div>
             </div>
             <div class="demo_showcase flex flex-row flex-wrap">
-                <div class="tabs">
-                    <div class="tab tab-verticle">
-                        <i class="icon icon-general_home_24px"></i>
-                        <p class="tab-text">dark</p>
+                <div class="tabs even-space">
+                    <div class="tab">
+                        <p class="tab-text">same</p>
                     </div>
-                    <div class="tab active tab-verticle">
-                        <i class="icon icon-communication_phone_24px"></i>
-                        <p class="tab-text">mode</p>
-                    </div>
-                </div>
-                <div class="tabs tabs-dark">
-                    <div class="tab tab-verticle tabs-dark">
-                        <i class="icon icon-general_home_24px"></i>
-                        <p class="tab-text">dark</p>
-                    </div>
-                    <div class="tab active tab-verticle">
-                        <i class="icon icon-communication_phone_24px"></i>
-                        <p class="tab-text">mode</p>
+                    <div class="tab active">
+                        <p class="tab-text">as above</p>
                     </div>
                 </div>
             </div>
@@ -585,66 +600,62 @@
                         </div>
                         <!-- search bar -->
                         <div class="textfield">
-                            <p class="field-label">Field Label</p>
                             <div class="textbox">
                                 <i class="icon icon-general_search_24px"></i>
                                 <input type="text" placeholder="search bar">
                                 <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
                             </div>
-                            <p class="helper-text">Helper text</p>
                         </div>
                     </div>
                     <div class="flex flex-col">
-                            <!-- resting -->
-                            <div class="textfield outlined">
-                                <p class="field-label">Field label</p>
-                                <div class="textbox">
-                                    <input type="text" placeholder="placeholder">
-                                </div>
-                                <p class="helper-text">Helper text</p>
+                        <!-- resting -->
+                        <div class="textfield outlined">
+                            <p class="field-label">Field label</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="placeholder">
                             </div>
-                            <!-- activated / focus -->
-                            <div class="textfield outlined activated">
-                                <p class="field-label">Activated</p>
-                                <div class="textbox">
-                                    <input type="text" placeholder="placeholder" value="Activated">
-                                </div>
-                                <p class="helper-text">What's with the tick?</p>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- activated / focus -->
+                        <div class="textfield outlined activated">
+                            <p class="field-label">Activated</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="placeholder" value="Activated">
                             </div>
-                            <!-- enabled -->
-                            <div class="textfield outlined enabled">
-                                <p class="field-label">Enabled</p>
-                                <div class="textbox">
-                                    <input type="text" placeholder="What's the difference from resting?">
-                                </div>
-                                <p class="helper-text">When is this used?</p>
+                            <p class="helper-text">What's with the tick?</p>
+                        </div>
+                        <!-- enabled -->
+                        <div class="textfield outlined enabled">
+                            <p class="field-label">Enabled</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="What's the difference from resting?">
                             </div>
-                            <!-- error -->
-                            <div class="textfield outlined error">
-                                <p class="field-label">Error</p>
-                                <div class="textbox">
-                                    <input type="text" placeholder="Error">
-                                </div>
-                                <p class="helper-text">Helper text</p>
+                            <p class="helper-text">When is this used?</p>
+                        </div>
+                        <!-- error -->
+                        <div class="textfield outlined error">
+                            <p class="field-label">Error</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="Error">
                             </div>
-                            <!-- disabled -->
-                            <div class="textfield outlined disabled">
-                                <p class="field-label">Field Label</p>
-                                <div class="textbox">
-                                    <input type="text" placeholder="disabled" disabled>
-                                </div>
-                                <p class="helper-text">Helper text</p>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- disabled -->
+                        <div class="textfield outlined disabled">
+                            <p class="field-label">Field Label</p>
+                            <div class="textbox">
+                                <input type="text" placeholder="disabled" disabled>
                             </div>
-                            <!-- search bar -->
-                            <div class="textfield outlined">
-                                <p class="field-label">Field Label</p>
-                                <div class="textbox">
-                                    <i class="icon icon-general_search_24px"></i>
-                                    <input type="text" placeholder="search bar">
-                                    <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
-                                </div>
-                                <p class="helper-text">Helper text</p>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- search bar -->
+                        <div class="textfield outlined">
+                            <div class="textbox">
+                                <i class="icon icon-general_search_24px"></i>
+                                <input type="text" placeholder="search bar">
+                                <i class="icon icon-navigation_subdirectory_arrow_right_24px"></i>
                             </div>
+                        </div>
                     </div>
                 </div>
                 <div class="demo_showcase flex flex-row">

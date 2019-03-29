@@ -167,7 +167,7 @@ $btn-round-large-icon: 28px;
     @include btn-disabled;
   }
 
-  &.btn-hollow:not(.btn-disable):hover {
+  &:not(.btn-disable):hover {
     color: $btn-gold-hover;
   }
 

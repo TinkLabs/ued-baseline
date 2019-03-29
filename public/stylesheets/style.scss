@@ -4,36 +4,47 @@
  * ref: https://github.com/JohnAlbin/normalize-scss/tree/master/sass/normalize
  *
  */
-// @import "scss/normalize";
+
+@import "scss/normalize";
 
 /*
  *
- * general settings, mostly visual
- *z
+ * general settings
+ *
  */
+
 @import "scss/variables";
 @import "scss/font";
 @import "scss/hiStyle";
 @import "scss/icons";   // handpicked icons from hiStyle
 @import "scss/typography";
 @import "scss/color";
+@import "scss/buttons";
 @import "scss/grid";
 @import "scss/flexbox";
 @import "scss/general";
 
 /*
  *
- * components import, you can skip anything you are not using
+ * form control
  *
  */
-@import "scss/components/buttons";
+
+ @import "scss/form/_formControl";
+ @import "scss/form/_textField";
+
+/*
+ *
+ * components import
+ *
+ */
+
 @import "scss/components/tabs";
-@import "scss/components/formControl";
-@import "scss/components/textField";
 
 /*
  *
  * demo scss
  *
  */
+
 @import "scss/demo";

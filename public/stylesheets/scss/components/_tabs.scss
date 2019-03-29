@@ -1,80 +1,161 @@
-@mixin tab-dark-mode {
-    color: $hi-bl-grey-light;
-    
-    &.active {
-        color: $hi-gold;
-        border-bottom: 2px solid $hi-gold;
+/*
+ *
+ * Tab Style - Default
+ *
+ */
+
+@mixin single-tab {
+  /* Typography */
+  @include subtitle2;
+  text-align: center;
+  line-height: 48px;
+  white-space: nowrap;
+  /* Sizing */
+  min-width: 120px;
+  height: 48px;
+  padding: 0 16px;
+  /* Color */
+  color: $hi-black-56;
+  background-color: $hi-white;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .tab-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.active {
+    color: $hi-gold;
+    border-bottom: 2px solid $hi-gold;
+  }
+
+  /* hover , visited , pressed */
+  &:not(.active):not(.disabled) {
+    &:hover,
+    &:visited {
+      position: relative;
+      border: none;
+      z-index: 1;
+      &::before {
+        content: "";
+        background-color: $hi-gold;
+        z-index: -1;
+        opacity: 0.32;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
+  }
+
+  &.disable {
+    cursor: not-allowed;
+  }
+
+  .icon {
+    padding-left: 8px;
+  }
 }
 
+/*
+ *
+ * Tab Style - Gold
+ *
+ */
+
+@mixin tab-gold {
+  color: $hi-white-56;
+  background-color: $hi-gold;
+
+  &.active {
+    color: $hi-white;
+    border-bottom: 2px solid $hi-white;
+  }
+
+  &:not(.active):not(.disabled) {
+    &:hover,
+    &:visited {
+      &::before {
+        background-color: $hi-white;
+      }
+    }
+  }
+}
+
+/*
+ *
+ * Tab Style - Navy
+ *
+ */
+
+@mixin tab-navy {
+  color: $hi-white-56;
+  background-color: $hi-navy;
+
+  &.active {
+    color: $hi-white;
+    border-bottom: 2px solid $hi-white;
+  }
+
+  &:not(.active):not(.disabled) {
+    &:hover,
+    &:visited {
+      &::before {
+        background-color: $hi-white;
+      }
+    }
+  }
+}
+
+/*
+ *
+ * Single tab
+ *
+ */
+
+.tab {
+  @include single-tab;
+
+  &.tab-gold {
+    @include tab-gold;
+  }
+
+  &.tab-navy {
+    @include tab-navy;
+  }
+}
+
+/*
+ *
+ * Tab Bar
+ *
+ */
+
 .tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: $hi-white;
-
-    .tab {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px;
-        line-height: 48px;
-        border-bottom: 2px solid transparent;
-        color: $hi-bl-grey;
-        text-align: center;
-        padding: 0 16px;
-        cursor: pointer;
-
-        &.active {
-            border-bottom: 2px solid $hi-gold;
-            color: $hi-gold;
-        }
-        &.disable {
-            cursor: not-allowed;
-        }
-
-        .tab-text {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .icon {
-            padding-left: 8px;
-        }
-
-        &.tab-verticle {
-            flex-direction: column;
-            justify-content: center;
-
-            .tab-text {
-                line-height: 1.33;
-                font-size: 12px;
-            }
-
-            .icon {
-                padding: 0;
-            }
-        }
-    }
-
-    &.tabs-dark {
-        background-color: $hi-dark;
-
-        .tab {
-            @include tab-dark-mode;
-        }
-    }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $hi-white;
 }
 
 .tabs.even-space {
-    .tab {
-        flex-grow: 1;
-        flex-basis: 0;
+  .tab {
+    flex-grow: 1;
+    flex-basis: 0;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
