@@ -24,9 +24,25 @@ gulp.task('scss', () => {
     .pipe(gulp.dest('./public/stylesheets'));
 });
 
-gulp.task("watch", () => {
-  gulp.watch("./public/stylesheets/**/*.scss", gulp.series("scss"));
+gulp.task('demo-scss', () => {
+  return gulp.src('./public/stylesheets/demo/demo.scss', { allowEmpty: true })
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest('./public/stylesheets'));
 });
+
+gulp.task('watch-scss', () => {
+  gulp.watch([
+    "./public/stylesheets/**/*.scss",
+    "./public/stylesheets/style.scss"
+  ], gulp.series("scss"));
+});
+
+gulp.task('watch-demo', () => {
+  gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
+});
+
+gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 
 /*
  *
@@ -46,7 +62,7 @@ var iconStream = gulp.src(['iconFactory/svg/*.svg'])
     fontHeight: 2000,
     centerHorizontally: true,
     prependUnicode: true, // recommended option
-    formats: [ 'ttf', 'eot', 'svg', 'woff', 'woff2' ],
+    formats: ['ttf', 'eot', 'svg', 'woff', 'woff2'],
   }))
   .on('error', err => {
     console.log(err)
@@ -68,8 +84,8 @@ gulp.task("handleGlyphs", done => {
       .pipe(gulp.dest('iconFactory/result'))
       .on('finish', () => {
         gulp.src(['iconFactory/result/*.scss'])
-        .pipe(gulp.dest('public/stylesheets/scss'))
-        .on('finish', done);
+          .pipe(gulp.dest('public/stylesheets/scss'))
+          .on('finish', done);
       });
   });
 });
@@ -80,8 +96,8 @@ gulp.task("handleFonts", done => {
     .pipe(gulp.dest('iconFactory/result/fonts/hiStyle'))
     .on('finish', () => {
       gulp.src(['iconFactory/result/fonts/hiStyle/*.*'])
-      .pipe(gulp.dest('public/stylesheets/fonts/hiStyle'))
-      .on('finish', done);
+        .pipe(gulp.dest('public/stylesheets/fonts/hiStyle'))
+        .on('finish', done);
     });
 });
 

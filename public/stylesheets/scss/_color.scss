@@ -204,3 +204,20 @@
 .bg-bl-grey-light {
   background-color: $hi-bl-grey-light;
 }
+
+/*
+ * Theme Color - Light
+ */
+
+$light-default: rgba(255, 255, 255, 0.88);
+$light-enabled: rgba(255, 255, 255, 0.56);
+$light-disabled: rgba(255, 255, 255, 0.32);
+
+/*
+ * Theme Color - Light
+ */
+
+$dark-default: rgba(0, 0, 0, 0.88);
+$dark-enabled: rgba(0, 0, 0, 0.56);
+$dark-disabled: rgba(0, 0, 0, 0.32);
+$dark-lightest: rgba(0, 0, 0, 0.08);

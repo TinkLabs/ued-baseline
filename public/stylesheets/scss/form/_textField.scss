@@ -4,7 +4,7 @@
  *
  */
 
-$text-field-default: $hi-black-88;
+$text-field-default: $dark-default;
 
 /*
  * 
@@ -12,8 +12,8 @@ $text-field-default: $hi-black-88;
  *
  */
 
-$text-field-resting: $hi-black-56;
-$text-field-resting-bg: $hi-black-08;
+$text-field-resting: $dark-enabled;
+$text-field-resting-bg: $dark-lightest;
 
 /*
  * 
@@ -30,8 +30,8 @@ $text-field-focus-bg: rgba($hi-gold, 0.16);
  *
  */
 
-$text-field-enabled: $hi-black-56;
-$text-field-enabled-bg: $hi-black-08;
+$text-field-enabled: $dark-enabled;
+$text-field-enabled-bg: $dark-lightest;
 
 /*
  * 
@@ -48,8 +48,8 @@ $text-field-error-bg: rgba($hi-red, 0.16);
  *
  */
 
-$text-field-disabled: $hi-black-32;
-$text-field-disabled-bg: $hi-black-08;
+$text-field-disabled: $dark-disabled;
+$text-field-disabled-bg: $dark-lightest;
 
 /*
  * 

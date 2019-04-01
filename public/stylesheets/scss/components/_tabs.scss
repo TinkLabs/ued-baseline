@@ -15,7 +15,7 @@
   height: 48px;
   padding: 0 16px;
   /* Color */
-  color: $hi-black-56;
+  color: $dark-enabled;
   background-color: $hi-white;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
@@ -73,7 +73,7 @@
  */
 
 @mixin tab-gold {
-  color: $hi-white-56;
+  color: $light-enabled;
   background-color: $hi-gold;
 
   &.active {
@@ -98,7 +98,7 @@
  */
 
 @mixin tab-navy {
-  color: $hi-white-56;
+  color: $light-enabled;
   background-color: $hi-navy;
 
   &.active {

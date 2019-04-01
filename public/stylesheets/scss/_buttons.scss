@@ -36,7 +36,7 @@ input[type="reset"],
 input[type="button"],
 button,
 .btn {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -54,6 +54,8 @@ button,
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
+  outline: none;
+
 
   &.btn-large {
     height: 52px;
