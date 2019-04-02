@@ -32,16 +32,10 @@ window.onload = e => {
     });
 
     /* Destory existing modal */
-    let modalPrimaryBtn = document.getElementById("modal-btn-primary");
-    let modalSecondaryBtn = document.getElementById("modal-btn-secondary");
-    if (modalPrimaryBtn) {
-        modalPrimaryBtn.addEventListener('click', e => {
-            console.log(e)
-        });
-    }
-    if (modalSecondaryBtn) {
-        modalSecondaryBtn.addEventListener('click', e => {
-            console.log(e)
+    let modalCloseBtn = document.getElementById("close-modal1");
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', e => {
+            document.getElementById("modal1").setAttribute("style", "display:none");
         });
     }
 

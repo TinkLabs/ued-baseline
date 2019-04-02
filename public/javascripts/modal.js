@@ -1,7 +1,7 @@
 class Modal {
     constructor(options) {
             this.id = options.id;
-            this.iconClass = options.iconClass | [];
+            this.iconClass = options.iconClass || [];
             this.title = options.title;
             this.body = options.body;
             if (typeof(options.buttonText) === "string") {
