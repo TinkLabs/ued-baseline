@@ -10,6 +10,8 @@ var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var runTimestamp = Math.round(Date.now() / 1000);
 
+const fs = require('fs');
+
 /*
  *
  *  Compile and minify css from sass for prod
@@ -53,20 +55,8 @@ gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var runTimestamp = Math.round(Date.now() / 1000);
-
-var iconStream = gulp.src(['iconFactory/svg/*.svg'])
-  .pipe(sort())
-  .pipe(iconfont({
-    fontName: 'hiStyle',
-    normalize: true,
-    fontHeight: 2000,
-    centerHorizontally: true,
-    prependUnicode: true, // recommended option
-    formats: ['ttf', 'eot', 'svg', 'woff', 'woff2'],
-  }))
-  .on('error', err => {
-    console.log(err)
-  });
+var nextUnicode = 0;
+var iconStream;
 
 // generate scss / css file
 gulp.task("handleGlyphs", done => {
@@ -101,5 +91,48 @@ gulp.task("handleFonts", done => {
     });
 });
 
-gulp.task('svg', gulp.parallel("handleGlyphs", "handleFonts"));
+// find next unicode for new svg
+gulp.task("findNextUnicode", done => {
+  let max = 0;
+  let files = fs.readdirSync("iconFactory/svg");
+  files.forEach(f => {
+    let regex = f.match(/^u([A-F]|[0-9]){4}-/);
+    if (regex) {
+      let unicode = "0x" + regex[0].slice(1, 5);
+      let intCode = parseInt(unicode);
+      if (intCode > max) {
+        max = intCode;
+      }
+    }
+  })
+  nextUnicode = (max > 0) ? max + 1 : undefined;
+  done();
+});
 
+gulp.task('createIconStreamInstance', done => {
+
+  let options = {
+    fontName: 'hiStyle',
+    normalize: true,
+    fontHeight: 2000,
+    centerHorizontally: true,
+    prependUnicode: true, // recommended option
+    startUnicode: nextUnicode, // set next unicode for adding new icon
+    formats: ['ttf', 'eot', 'svg', 'woff', 'woff2'],
+  };
+
+  iconStream = gulp.src(['iconFactory/svg/*.svg'])
+    .pipe(sort())
+    .pipe(iconfont(options))
+    .on('error', err => {
+      console.log(err)
+    });
+
+  done();
+});
+
+gulp.task('svg', gulp.series(
+  "findNextUnicode",
+  "createIconStreamInstance",
+  gulp.parallel("handleGlyphs", "handleFonts")
+));

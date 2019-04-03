@@ -1,0 +1,42 @@
+.toolbar-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 60px;
+    // height: 84px;
+    background-color: white;
+    color: $hi-gold;
+
+    cursor: pointer;
+
+    .toolbar-btn-icon-wrapper {
+        background-color: rgba($hi-gold, 0.32);
+        margin-bottom: 4px;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .toolbar-btn-icon {
+            font-size: 24px;
+        }
+    }
+
+    .toolbar-btn-text {
+        @include caption;
+        text-align: center;
+    }
+
+    &.toolbar-navy {
+        color: $hi-navy;
+
+        .toolbar-btn-icon-wrapper {
+            background-color: rgba($hi-navy, 0.08);
+        }
+    }
+}

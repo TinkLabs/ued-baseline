@@ -89,6 +89,14 @@
 
 
 // buttons
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.btn {
+  margin: 8px;
+}
+
 .demo_round_btn {
   margin: 16px;
 }
