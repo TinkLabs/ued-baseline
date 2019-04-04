@@ -1,21 +1,4 @@
 /*
- *
- *  Text Fields
- *
- *  There are 5 states of text field
- *  
- *  1. Resting : Default Resting Empty State
- *  2. Activated : Active / Focus / Visited State, or with class name "activated"
- *  3. Enabled : Resting && Not-empty State, or with class name "enabled"
- *  4. Error : Error State validated by H5, or with class name "error"
- *  5. Disabled : Disabled State, with class name "disabled"
- *
- *  Remark:
- *  You need to write your own js to toggle "Enable" state since
- *  pure CSS cannnot detect if the input field has value
- */
-
-/*
  * 
  * Text Color
  *
@@ -30,7 +13,7 @@ $text-field-default: $dark-default;
  */
 
 $text-field-resting: $dark-enabled;
-$text-field-resting-bg: blendNormal($dark-lightest, $hi-white);
+$text-field-resting-bg: $dark-lightest;
 
 /*
  * 
@@ -39,7 +22,7 @@ $text-field-resting-bg: blendNormal($dark-lightest, $hi-white);
  */
 
 $text-field-focus: $hi-gold;
-$text-field-focus-bg: blendNormal(rgba($hi-gold, 0.16), $hi-white);
+$text-field-focus-bg: rgba($hi-gold, 0.16);
 
 /*
  * 
@@ -57,7 +40,7 @@ $text-field-enabled-bg: $dark-lightest;
  */
 
 $text-field-error: $hi-red;
-$text-field-error-bg: blendNormal(rgba($hi-red, 0.16), $hi-white);
+$text-field-error-bg: rgba($hi-red, 0.16);
 
 /*
  * 
@@ -66,7 +49,7 @@ $text-field-error-bg: blendNormal(rgba($hi-red, 0.16), $hi-white);
  */
 
 $text-field-disabled: $dark-disabled;
-$text-field-disabled-bg: blendNormal($dark-lightest, $hi-white);
+$text-field-disabled-bg: $dark-lightest;
 
 /*
  * 
@@ -88,55 +71,90 @@ $text-field-icon-red: $hi-red;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
-
   padding: 8px;
   min-width: 328px;
-  border: none;
-
-  background-color: transparent;
   color: $text-field-resting;
 
   .field-label {
     @include body2;
   }
 
-  input {
+  .textbox {
     @include subtitle1;
     width: 100%;
     height: 50px;
-    padding: 0 36px 0 16px;
+    padding: 0 16px;
     border-radius: 8px;
-    outline: none;
-    border: 1px solid red;
     background-color: $text-field-resting-bg;
     border-color: $text-field-resting-bg;
-  }
 
-  /* remove all icon first */
-  .icon {
-    display: none;
-  }
-  /* trailing icon */
-  &:after {
-    @include labelMark;
-    content: "";
-    color: $text-field-icon-black;
-  }
-  /* trailing icon */
-  &:after,
-  /* user inject icon */
-  input ~ .icon {
-    display: inline;
-    position: absolute;
-    top: 45%;
-    align-self: flex-end;
-    padding-right: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      /* remove browser's outline when on focus */
+      outline: none;
+    }
+
+    /* user injected icon (front) */
+    .icon {
+      padding: 0 8px 0 0;
+      color: $text-field-icon-black;
+    }
+
+    /* user injected icon (last) */
+    .icon:last-child {
+      padding: 0 0 0 8px;
+      justify-self: flex-end;
+      cursor: pointer;
+    }
+
+    /* icon enabled by class name */
+    &:before {
+      @include labelMark;
+      padding-left: 0;
+      color: $text-field-icon-black;
+    }
+    &:after {
+      @include labelMark;
+      padding-right: 0;
+      color: $text-field-icon-black;
+    }
   }
 
   .helper-text {
     @include caption;
     padding: 0 16px;
+  }
+}
+
+/*
+ * 
+ * Styles - Focus / Activated
+ *
+ */
+
+.textfield:focus,
+.textfield:focus-within,
+.textfield:visited,
+.textfield.activated {
+  color: $text-field-focus;
+
+  .textbox {
+    background-color: $text-field-focus-bg;
+    border-color: $text-field-focus-bg;
+
+    .icon {
+      color: $text-field-default;
+    }
+
+    &:after {
+      content: "\EBA2";
+    }
   }
 }
 
@@ -149,43 +167,17 @@ $text-field-icon-red: $hi-red;
 .textfield.enabled {
   color: $text-field-enabled;
 
-  .icon {
-    display: none;
-  }
+  .textbox {
+    .icon {
+      color: $text-field-default;
+    }
+    .icon:last-child {
+      display: none;
+    }
 
-  &:after {
-    content: "\EBA2";
-  }
-}
-
-/*
- * 
- * Styles - Focus / Activated
- * 
- * This goes after "Enabled" since "Active" override "Enabled"
- *
- */
-
-.textfield:focus,
-.textfield:focus-within,
-.textfield:visited,
-.textfield.activated {
-  color: $text-field-focus;
-
-  input {
-    background-color: $text-field-focus-bg;
-    border-color: $text-field-focus-bg;
-  }
-
-  .icon {
-    display: none;
-  }
-
-  // &:before {
-  //   content: "\EC10";
-  // }
-  &:after {
-    content: "\EAA6";
+    &:after {
+      content: "\EBA2";
+    }
   }
 }
 
@@ -198,17 +190,24 @@ $text-field-icon-red: $hi-red;
 .textfield.error {
   color: $text-field-error;
 
-  input {
+  .textbox {
     background-color: $text-field-error-bg;
     border-color: $text-field-error-bg;
+
+    .icon {
+      color: $text-field-error;
+    }
+    .icon:last-child {
+      display: none;
+    }
+
+    &:after {
+      content: "\ED94";
+      color: $text-field-error;
+    }
   }
 
-  .icon {
-    display: none;
-  }
-
-  &:after {
-    content: "\ED94";
+  .helper-text {
     color: $text-field-error;
   }
 }
@@ -221,14 +220,29 @@ $text-field-icon-red: $hi-red;
 
 .textfield.disabled {
   color: $text-field-disabled;
-  
-  input {
+
+  .textbox {
     background-color: $text-field-disabled-bg;
     border-color: $text-field-disabled-bg;
-    cursor: not-allowed;
-    &::placeholder {
+
+    input {
+      background-color: transparent;
+      cursor: not-allowed;
+      &::placeholder {
+        color: $text-field-disabled;
+      }
+    }
+
+    .icon {
       color: $text-field-disabled;
     }
+    .icon:last-child {
+      display: none;
+    }
+  }
+
+  .helper-text {
+    color: $text-field-disabled;
   }
 }
 
@@ -241,22 +255,24 @@ $text-field-icon-red: $hi-red;
   /* resting */
   color: $text-field-resting;
 
-  input {
+  .textbox {
     background-color: transparent;
     border: 1px solid $text-field-resting;
   }
 
   /* focus / activated */
-  &:active,
   &:focus,
   &:focus-within,
   &:visited,
-  &.activated {
+  .activated {
     color: $text-field-focus;
 
-    input {
+    .textbox {
       border: 1px solid $text-field-focus;
-      color: $text-field-default;
+
+      input {
+        color: $text-field-default;
+      }
     }
   }
 
@@ -264,9 +280,12 @@ $text-field-icon-red: $hi-red;
   &.error {
     color: $text-field-error;
 
-    input {
+    .textbox {
       border: 1px solid $text-field-error;
-      color: $text-field-default;
+
+      input {
+        color: $text-field-default;
+      }
     }
   }
 
@@ -274,10 +293,13 @@ $text-field-icon-red: $hi-red;
   &.disabled {
     color: $text-field-disabled;
 
-    input {
+    .textbox {
       border: 1px solid $text-field-disabled;
-      &::placeholder {
-        color: $text-field-disabled;
+
+      input {
+        &::placeholder {
+          color: $text-field-disabled;
+        }
       }
     }
   }

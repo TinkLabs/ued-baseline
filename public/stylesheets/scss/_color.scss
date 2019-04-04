@@ -221,20 +221,3 @@ $dark-default: rgba(0, 0, 0, 0.88);
 $dark-enabled: rgba(0, 0, 0, 0.56);
 $dark-disabled: rgba(0, 0, 0, 0.32);
 $dark-lightest: rgba(0, 0, 0, 0.08);
-
-/*
- *
- * Color Blend Fx
- * https://github.com/heygrady/scss-blend-modes/blob/master/stylesheets/_blend-modes.scss
- *
- */
- @function blendNormal($foreground, $background) {
-  $opacity: opacity($foreground);
-  $background-opacity: opacity($background);
-
-  // calculate opacity
-  $bm-red: red($foreground) * $opacity + red($background) * $background-opacity * (1 - $opacity);
-  $bm-green: green($foreground) * $opacity + green($background) * $background-opacity * (1 - $opacity);
-  $bm-blue: blue($foreground) * $opacity + blue($background) * $background-opacity * (1 - $opacity);
-  @return rgb($bm-red, $bm-green, $bm-blue);
-}
