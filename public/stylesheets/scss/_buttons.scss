@@ -71,7 +71,7 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
   color: $btn-color-1-hover;
 }
 @mixin btn-gold-default-pressed {
-  background-color: $btn-color-1-overlay-light;
+  background-color: $color-1-overlay-white;
   border-color: transparent;
   color: $color-1-overlay-light;
 }
@@ -150,7 +150,7 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
   color: $btn-color-2-hover;
 }
 @mixin btn-navy-default-pressed {
-  background-color: $btn-color-2-overlay-light;
+  background-color: $color-2-overlay-white;
   border-color: transparent;
   color: $color-2-overlay-light;
 }
@@ -206,9 +206,10 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
  * Variables and Mixins: Round button
  *
  */
-// $btn-round-icon: 20px;
-// $btn-round-large-icon: 28px;
-// $btn-round-gold-pressed: $btn-gold-pressed;
+$btn-round-icon: 20px;
+$btn-round-large-icon: 28px;
+$text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
 
 /*
  *
@@ -248,7 +249,11 @@ button,
     border-radius: 8px;
     @include subtitle1;
   }
-  // different states
+  /*
+   *
+   * Default color Gold, different states
+   *
+   */
   &:not(.btn-disabled) {
     &:hover {
       @include btn-gold-default-hover;
@@ -299,7 +304,11 @@ button,
     }
   }
 
-  // navy
+  /*
+   *
+   * Color Navy, different states
+   *
+   */
   &.btn-navy {
     @include btn-navy-default;
     // different states
@@ -354,6 +363,67 @@ button,
     }
   }
 
+  /*
+   *
+   * Round button with icons
+   *
+   */
+  &.btn-round {
+    @include btn-gold-contained;
+    // color and shape
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    // typography
+    text-decoration: none;
+
+    i,
+    .icon {
+      font-size: $btn-round-icon;
+    }
+    &.btn-shadow {
+      box-shadow: 0 4px 16px 0 $btn-color-1-main;
+    }
+    &.btn-large {
+      width: 56px;
+      height: 56px;
+      border-radius: 28px;
+
+      i,
+      .icon {
+        font-size: $btn-round-large-icon;
+      }
+
+      &::before,
+      &::after {
+        font-size: $btn-round-large-icon;
+      }
+    }
+
+    &.btn-large.btn-disabled,
+    &.btn-disabled {
+      @include btn-gold-contained-disabled;
+    }
+    &:not(.btn-disabled) {
+      &:hover {
+        @include btn-gold-contained-hover;
+      }
+      &:focus,
+      &:focus-within,
+      &:active {
+        @include btn-gold-contained-pressed;
+
+        i,
+        .icon {
+          &::before,
+          &::after {
+            text-shadow: $text-shadow;
+          }
+        }
+      }
+    }
+  }
+
   // injected icons
   .icon {
     font-size: inherit;
@@ -364,106 +434,4 @@ button,
       padding-left: 8px;
     }
   }
-
-  /*
-   *
-   * Round button with icons
-   *
-   */
-  // &.btn-round {
-  //   // color and shape
-  //   width: 40px;
-  //   height: 40px;
-  //   border-radius: 20px;
-  //   box-shadow: 0 4px 16px 0 $btn-gold;
-  //   // typography
-  //   text-decoration: none;
-
-  //   i,
-  //   .icon {
-  //     font-size: $btn-round-icon;
-  //   }
-  //   &.btn-no-shadow {
-  //     box-shadow: none;
-  //   }
-  //   &.btn-large {
-  //     width: 56px;
-  //     height: 56px;
-  //     border-radius: 28px;
-
-  //     i,
-  //     .icon {
-  //       font-size: $btn-round-large-icon;
-  //     }
-
-  //     &::before,
-  //     &::after {
-  //       font-size: $btn-round-large-icon;
-  //     }
-  //   }
-  //   &.btn-large.btn-disabled,
-  //   &.btn-disabled {
-  //     @include btn-disabled-gold;
-  //   }
-  //   &:not(.btn-disabled) {
-  //     &:hover {
-  //       background-color: $btn-gold-hover;
-  //     }
-  //     &:focus,
-  //     &:focus-within,
-  //     &:active {
-  //       background-color: $btn-gold-pressed;
-  //       color: $btn-gold-pressed;
-
-  //       i,
-  //       .icon {
-  //         &::before,
-  //         &::after {
-  //           text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
-
-/*
- *
- * Unbound button
- *
- */
-// .btn.btn-unbound {
-
-//   color: $hi-gold;
-//   background-color: transparent;
-//   padding: 0 24px;
-//   height: 40px;
-//   transition: all 0.2s ease;
-
-//   @include body2;
-//   text-align: center;
-//   text-decoration: none;
-//   vertical-align: middle;
-//   cursor: pointer;
-
-//   &.btn-large {
-//     height: 52px;
-//     border-radius: 8px;
-//     @include subtitle1;
-//   }
-
-//   &.btn-disable {
-//     @include btn-disabled-gold;
-//   }
-
-//   &:not(.btn-disable):hover {
-//     color: $btn-gold-hover;
-//   }
-
-//   &:before {
-//     padding-left: 0;
-//   }
-//   &:after {
-//     padding-right: 0;
-//   }
-// }
