@@ -98,17 +98,15 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
     border-bottom: 2px solid $tab-gold;
   }
 
-  /* hover , visited , pressed */
+  /* pressed (active) */
   &:not(.active):not(.disabled) {
-    &:hover,
-    &:visited {
+    &:active {
       background-color: $color-1-overlay-white;
       border: none;
       color: $hi-gold;
     }
     &:focus,
-    &:focus-within,
-    &:active {
+    &:focus-within {
       background-color: $color-1-overlay-white;
       border: none;
       color: $hi-gold;
@@ -140,12 +138,6 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
   }
 
   &:not(.active):not(.disabled) {
-    // &:hover,
-    // &:visited {
-    //   &::before {
-    //     background-color: $hi-white;
-    //   }
-    // }
   }
 }
 
@@ -165,15 +157,13 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
   }
 
   &:not(.active):not(.disabled) {
-    &:hover,
-    &:visited {
+    &:active {
       background-color: $color-2-overlay-white;
       border: none;
       color: $tab-navy;
     }
     &:focus,
-    &:focus-within,
-    &:active {
+    &:focus-within {
       background-color: $color-2-overlay-white;
       border: none;
       color: $tab-navy;

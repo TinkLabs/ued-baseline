@@ -238,12 +238,11 @@ button,
    *
    */
   &:not(.btn-disabled) {
-    &:hover {
+    &:active{
       @include btn-gold-default-hover;
     }
     &:focus,
-    &:focus-within,
-    &:active {
+    &:focus-within {
       @include btn-gold-default-pressed;
     }
   }
@@ -258,12 +257,11 @@ button,
     }
 
     &:not(.btn-disabled) {
-      &:hover {
+      &:active {
         @include btn-gold-outlined-hover;
       }
       &:focus,
-      &:focus-within,
-      &:active {
+      &:focus-within {
         @include btn-gold-outlined-pressed;
       }
     }
@@ -276,12 +274,11 @@ button,
     }
 
     &:not(.btn-disabled) {
-      &:hover {
+      &:active {
         @include btn-gold-contained-hover;
       }
       &:focus,
-      &:focus-within,
-      &:active {
+      &:focus-within {
         @include btn-gold-contained-pressed;
       }
     }
@@ -296,12 +293,11 @@ button,
     @include btn-navy-default;
     // different states
     &:not(.btn-disabled) {
-      &:hover {
+      &:active {
         @include btn-navy-default-hover;
       }
       &:focus,
-      &:focus-within,
-      &:active {
+      &:focus-within {
         @include btn-navy-default-pressed;
       }
     }
@@ -316,12 +312,11 @@ button,
       }
 
       &:not(.btn-disabled) {
-        &:hover {
+        &:active {
           @include btn-navy-outlined-hover;
         }
         &:focus,
-        &:focus-within,
-        &:active {
+        &:focus-within {
           @include btn-navy-outlined-pressed;
         }
       }
@@ -334,12 +329,11 @@ button,
       }
 
       &:not(.btn-disabled) {
-        &:hover {
+        &:active {
           @include btn-navy-contained-hover;
         }
         &:focus,
-        &:focus-within,
-        &:active {
+        &:focus-within {
           @include btn-navy-contained-pressed;
         }
       }
@@ -388,12 +382,11 @@ button,
       @include btn-gold-contained-disabled;
     }
     &:not(.btn-disabled) {
-      &:hover {
+      &:active {
         @include btn-gold-contained-hover;
       }
       &:focus,
-      &:focus-within,
-      &:active {
+      &:focus-within {
         @include btn-gold-contained-pressed;
 
         i,

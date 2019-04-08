@@ -80,13 +80,12 @@ $color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
    */
   &:not(.chip-disabled) {
     &.chip-focused,
-    &:hover {
+    &:active {
       @include chip-gold-default-hover;
     }
     &.chip-pressed,
     &:focus,
-    &:focus-within,
-    &:active {
+    &:focus-within {
       @include chip-gold-default-pressed;
     }
   }

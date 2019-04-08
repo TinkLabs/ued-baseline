@@ -56,10 +56,34 @@
 }
 
 // color palette
+.demo_main_colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+  .demo_main_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}
+
 .demo_color_box {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   margin: 2px;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 .demo_round {
   border-radius: 50%;
@@ -68,10 +92,15 @@
   font-size: 28px;
 }
 .demo_variant {
-  width: 100px;
-  margin: 12px 2px;
+  width: 50px;
+  height: 50px;
+  margin: 2px 12px;
+  padding: 16px 0;
   text-align: center;
   font-size: 16px;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+  }
 }
 
 // typography , fonts
