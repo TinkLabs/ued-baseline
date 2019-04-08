@@ -1,5 +1,9 @@
 @import "../scss/variables";
 
+.demo_display {
+  display: none;
+}
+
 // basic setup
 .demo_title {
   font-size: 40px;
@@ -23,6 +27,12 @@
   padding: 8px;
   margin: 8px 0;
 }
+
+// mob screen size
+.demo_screen_mob {
+  width: calc(360px + 16px);
+}
+
 .demo_description {
   // 
 }
@@ -106,7 +116,3 @@ button,
   margin-right: 24px;
 }
 
-// top bar
-.demo_topbar {
-  width: 480px;
-}

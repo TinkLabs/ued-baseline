@@ -19,10 +19,11 @@
 @import "scss/icons";   // handpicked icons from hiStyle
 @import "scss/typography";
 @import "scss/color";
-@import "scss/buttons";
 @import "scss/grid";
 @import "scss/flexbox";
 @import "scss/general";
+@import "scss/buttons";
+@import "scss/chips";
 
 /*
  *
@@ -44,4 +45,5 @@
 @import "scss/components/modal.scss";
 @import "scss/components/toolbarButton.scss";
 @import "scss/components/topBar.scss";
+@import "scss/components/bottomNav.scss";
 

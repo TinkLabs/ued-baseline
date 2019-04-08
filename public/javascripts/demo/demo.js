@@ -1,4 +1,35 @@
 window.onload = e => {
+    /*
+     *
+     * select baseline
+     *
+     */
+    let indexes = document.getElementsByClassName("demo_indexes")[0].children;
+    for(let i = 0; i < indexes.length; i++) {
+        indexes[i].addEventListener('click', e => {
+            let target = e.currentTarget.dataset.id;
+            if (target) {
+                hideAllDemo();
+                showDemo(target);
+            }
+        });
+    }
+
+    const hideAllDemo = () => {
+        let demo = document.getElementsByClassName("demo_display");
+        for(let i = 0; i < demo.length; i++) {
+            demo[i].setAttribute("style", "display:");
+        }
+    }
+
+    const showDemo = target => {
+        let parent = document.getElementById(target).parentNode;
+        parent.setAttribute("style", "display:block");
+    }
+
+
+
+
 
     /*
      *

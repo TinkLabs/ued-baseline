@@ -14,19 +14,21 @@
         <h1 class="demo_title">Style guide</h1>
         <hr>
         <div class="demo_indexes">
-            <a class="btn btn-contained" href="#Color-Palette">Color Palette</a>
-            <a class="btn btn-contained" href="#Typography">Typography</a>
-            <a class="btn btn-contained" href="#Montserrat">Montserrat</a>
-            <a class="btn btn-contained" href="#Merriweather">Merriweather</a>
-            <a class="btn btn-contained" href="#Buttons">Buttons</a>
-            <a class="btn btn-contained" href="#Fonts">Fonts</a>
-            <a class="btn btn-contained" href="#Tabs">Tabs</a>
-            <a class="btn btn-contained" href="#Form-Control">Form Control</a>
-            <a class="btn btn-contained" href="#Search-Box">Search Box</a>
-            <a class="btn btn-contained" href="#Modal">Modal</a>
-            <a class="btn btn-contained" href="#Home-Tool-Bar">Home Tool Bar</a>
-            <a class="btn btn-contained" href="#Top-Bar">Top Bar</a>
-            <a class="btn btn-contained" href="#Top-Bar-Chat">Top-Bar-Chat</a>
+            <a class="btn btn-contained" data-id="Color-Palette">Color Palette</a>
+            <a class="btn btn-contained" data-id="Typography">Typography</a>
+            <a class="btn btn-contained" data-id="Montserrat">Montserrat</a>
+            <a class="btn btn-contained" data-id="Merriweather">Merriweather</a>
+            <a class="btn btn-contained" data-id="HIFont">hi Fonts</a>
+            <a class="btn btn-contained" data-id="Buttons">Buttons</a>
+            <a class="btn btn-contained" data-id="Chips">Chips</a>
+            <a class="btn btn-contained" data-id="Tabs">Tabs</a>
+            <a class="btn btn-contained" data-id="Form-Control">Form Control</a>
+            <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
+            <a class="btn btn-contained" data-id="Modal">Modal</a>
+            <a class="btn btn-contained" data-id="Home-Tool-Bar">Home Tool Bar</a>
+            <a class="btn btn-contained" data-id="Top-Bar">Top Bar</a>
+            <a class="btn btn-contained" data-id="Top-Bar-Chat">Top-Bar-Chat</a>
+            <a class="btn btn-contained" data-id="Bottom-Nav">Bottom Nav</a>
         </div>
         <hr>
         <!-- Color Palette -->
@@ -80,7 +82,6 @@
                 <p class="body1 gold-300">class="gold-300"</p>
             </div>
         </div>
-        <hr>
         <div class="demo_display">
             <h3 class="headline">Supporting Colors</h3>
             <div class="demo_showcase">
@@ -128,7 +129,6 @@
                 <p class="body1 purple">class="purple"</p>
             </div>
         </div>
-        <hr>
         <!-- Typography -->
         <div class="demo_display">
             <h3 class="headline" id="Typography">Typography</h3>
@@ -161,7 +161,6 @@
                 <p class="body1">class="body1"</p>
             </div>
         </div>
-        <hr>
         <!-- Montserrat -->
         <div class="demo_display">
             <h3 class="headline" id="Montserrat">Fonts : Montserrat</h3>
@@ -276,7 +275,6 @@
                 <p class="montserrat-extraBold">class="montserrat-extraBold"</p>
             </div>
         </div>
-        <hr>
         <!-- Merriweather -->
         <div class="demo_display">
             <h3 class="headline" id="Merriweather">Fonts : Merriweather</h3>
@@ -341,7 +339,6 @@
                 <p class="merriweather-black">class="merriweather-black"</p>
             </div>
         </div>
-        <hr>
         <!-- Buttons -->
         <div class="demo_display">
             <h3 class="headline" id="Buttons">Buttons</h3>
@@ -390,10 +387,9 @@
                 </a>
             </div>
         </div>
-        <hr>
         <!-- hi fonts -->
         <div class="demo_display">
-            <h3 class="headline" id="Fonts">hi fonts</h3>
+            <h3 class="headline" id="HIFont">hi fonts</h3>
             <div class="demo_showcase flex flex-row flex-wrap">
                 <div class="icon icon-alert_add_24px"></div>
                 <div class="icon icon-av_forward_5_24px"></div>
@@ -403,7 +399,6 @@
                 <div class="icon icon icon-general_bookmark_24px"></div>
             </div>
         </div>
-        <hr>
         <!-- Tabs -->
         <div class="demo_display">
             <h3 class="headline" id="Tabs">Tabs</h3>
@@ -445,35 +440,20 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase flex flex-row flex-wrap">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="tabs">
-                    <div class="tab">tabs</div>
-                    <div class="tab active">with natural width</div>
-                    <div class="tab">no overflow</div>
-                    <div class="tab active">no break <i class="icon icon-communication_phone_24px"></i></div>
-                </div>
-            </div>
-            <div class="demo_showcase flex flex-row flex-wrap">
-                <div class="tabs even-space">
                     <div class="tab">
-                        <p class="tab-text">.tabs</p>
+                        <span class="tab-text">tab</span>
                     </div>
                     <div class="tab active">
-                        <p class="tab-text">.even-space</p>
-                    </div>
-                    <div class="tab">
-                        <p class="tab-text">with equal width</p>
-                    </div>
-                    <div class="tab active">
-                        <p class="tab-text">trancated</p>
-                        <i class="icon icon-communication_phone_24px"></i>
+                        <span class="tab-text">tab</span>
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase flex flex-row flex-wrap">
-                <div class="tabs even-space">
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs">
                     <div class="tab">
-                        <p class="tab-text">fixed</p>
+                        <p class="tab-text">equal</p>
                     </div>
                     <div class="tab active">
                         <p class="tab-text">container</p>
@@ -483,19 +463,21 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase flex flex-row flex-wrap">
-                <div class="tabs even-space">
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs">
                     <div class="tab">
-                        <p class="tab-text">same</p>
+                        <span class="tab-text">tabs</span>
                     </div>
                     <div class="tab active">
-                        <p class="tab-text">as above</p>
+                        <span class="tab-text">longlong wrappedtext wrappedandhasdots</span>
+                    </div>
+                    <div class="tab">
+                        <span class="tab-text">no break</span>
                     </div>
                 </div>
             </div>
             <p class="caption">*** No scrolling yet ***</p>
         </div>
-        <hr>
         <!-- Form Control -->
         <div class="demo_display">
             <h3 class="headline" id="Form-Control">Form Control</h3>
@@ -641,11 +623,10 @@
                 </div>
             </form>
         </div>
-        <hr>
         <!-- Search Box -->
         <div class="demo_display">
             <h3 class="headline" id="Search-Box">Search Box</h3>
-            <div class="demo_showcase">
+            <div class="demo_showcase demo_screen_mob">
                 <!-- search bar -->
                 <div class="searchbox">
                     <div class="search-wrapper">
@@ -670,7 +651,6 @@
                 </div>
             </div>
         </div>
-        <hr>
         <!-- Modal -->
         <div class="demo_display">
             <h3 class="headline" id="Modal">Modal (Dialog Box)</h3>
@@ -695,12 +675,11 @@
             <div id="modal2"></div>
             <div id="modal3"></div>
         </div>
-        <hr>
         <!-- Home Tool Bar -->
         <div class="demo_display">
             <h3 class="headline" id="Home-Tool-Bar">Home Tool Bar (Button)</h3>
             <!-- Tool Bar Btn Gold -->
-            <div class="demo_showcase">
+            <div class="demo_showcase  demo_screen_mob">
                 <div class="demo_toolbar flex">
                     <div class="toolbar-btn">
                         <div class="toolbar-btn-icon-wrapper">
@@ -735,7 +714,7 @@
                 </div>
             </div>
             <!-- Tool Bar Btn Navy -->
-            <div class="demo_showcase">
+            <div class="demo_showcase  demo_screen_mob">
                 <div class="demo_toolbar flex">
                     <div class="toolbar-btn toolbar-navy">
                         <div class="toolbar-btn-icon-wrapper">
@@ -771,11 +750,10 @@
             </div>
             <p class="caption">*** No scrolling yet ***</p>
         </div>
-        <hr>
         <!-- top bar -->
         <div class="demo_display">
             <h3 class="headline" id="Top-Bar">Top Bar</h3>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar">
                     <div class="top-bar-left">
                         <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
@@ -794,7 +772,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-dark">
                     <div class="top-bar-left">
                         <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
@@ -812,7 +790,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-gold">
                     <div class="top-bar-left">
                         <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
@@ -825,7 +803,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-navy">
                     <div class="top-bar-left">
                         <div class="top-bar-icon">
@@ -838,11 +816,10 @@
                 </div>
             </div>
         </div>
-        <hr>
         <!-- chat room top bar -->
         <div class="demo_display">
             <h3 class="headline" id="Top-Bar-Chat">Top Bar (Chat)</h3>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-chat">
                     <div class="top-bar-left">
                         <div class="top-bar-icon">
@@ -865,7 +842,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-chat">
                     <div class="top-bar-left">
                         <div class="top-bar-icon">
@@ -887,7 +864,7 @@
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar top-bar-chat">
                     <div class="top-bar-left">
                         <div class="top-bar-icon">
@@ -910,11 +887,10 @@
                 </div>
             </div>
         </div>
-        <hr>
         <!-- ticketing top bar -->
-        <div class="display_demo">
+        <div class="demo_display">
             <h3 class="headline" id="Top-Bar-Ticketing">Top Bar (Ticketing)</h3>
-            <div class="display_showcase demo_topbar">
+            <div class="demo_showcase demo_screen_mob">
                 <div class="top-bar">
                     <div class="top-bar-left">
                         <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
@@ -926,10 +902,111 @@
                 </div>
             </div>
         </div>
+        <!-- bottom nav -->
+        <div class="demo_display">
+            <h3 class="headline" id="Bottom-Nav">Bottom Nav</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-dark">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-navy">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-gold">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">suuperlongvocab</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">long long long</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- chips -->
+        <div class="demo_display">
+            <h3 class="headline" id="Chips">Chips</h3>
+            <div class="demo_showcase">
+                <span class="chip">Enabled</span>
+                <span class="chip chip-focused">Focused</span>
+                <span class="chip chip-pressed">Pressed</span>
+                <span class="chip chip-disabled">Disabled</span>
+            </div>
+            <div class="demo_showcase">
+                <div class="chip">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                    <span class="chip-text">Enabled</span>
+                </div>
+                <div class="chip chip-focused">
+                    <span class="chip-text">Focused</span>
+                    <i class="icon icon-general_highlight_off_24px"></i>
+                </div>
+                <div class="chip chip-pressed">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                    <span class="chip-text">Pressed</span>
+                    <i class="icon icon-general_highlight_off_24px"></i>
+                </div>
+                <div class="chip chip-disabled">Disabled</div>
+            </div>
+        </div>
     </section>
 </body>
 <script src="./public/javascripts/modal.js"></script>
-<!-- <script src="./public/javascripts/textField.js"></script> -->
 <script src="./public/javascripts/demo/demo.js"></script>
 
 </html>
