@@ -66,8 +66,8 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
   /* Typography */
   @include subtitle2;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
   /* Sizing */
   min-width: 120px;
   height: 48px;
