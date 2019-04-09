@@ -22,7 +22,7 @@
     width: 100%;
     height: 50px;
     padding: 0 16px;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: $text-field-resting-bg;
     border-color: $text-field-resting-bg;
 
@@ -30,12 +30,25 @@
     justify-content: flex-start;
     align-items: center;
 
+    // position for search history list
+    position: relative;
+
     .search-input {
       width: 100%;
       border: none;
       background-color: transparent;
       /* remove browser's outline when on focus */
       outline: none;
+    }
+
+    .search-history {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      > * {
+        cursor: pointer;
+      }
     }
 
     /* default icon : search and clear */
