@@ -5,7 +5,7 @@ window.onload = e => {
      *
      */
     let indexes = document.getElementsByClassName("demo_indexes")[0].children;
-    for(let i = 0; i < indexes.length; i++) {
+    for (let i = 0; i < indexes.length; i++) {
         indexes[i].addEventListener('click', e => {
             let target = e.currentTarget.dataset.id;
             if (target) {
@@ -17,7 +17,7 @@ window.onload = e => {
 
     const hideAllDemo = () => {
         let demo = document.getElementsByClassName("demo_display");
-        for(let i = 0; i < demo.length; i++) {
+        for (let i = 0; i < demo.length; i++) {
             demo[i].setAttribute("style", "display:");
         }
     }
@@ -69,5 +69,42 @@ window.onload = e => {
             document.getElementById("modal1").setAttribute("style", "display:none");
         });
     }
+
+
+
+    /*
+     *
+     * Show and Hide Nav Drawer
+     * 
+     */
+
+    let navDrawerOpenBtn = document.getElementsByClassName("nav-drawer-toggle-btn");
+
+    for (let i = 0; i < navDrawerOpenBtn.length; i++) {
+        navDrawerOpenBtn[i].addEventListener('click', e => {
+            let targetId = e.target.dataset.id;
+
+            document.getElementById(targetId).classList.add("nav-drawer-show");
+
+            // nav drawer children
+            let n_d_children = document.getElementById(targetId).children;
+            
+            for (let j = 0; j < n_d_children.length; j++) {
+                let classes = n_d_children[j].classList.value.split(" ").map(e => e.trim());
+                if (classes.indexOf("nav-drawer-mainTitle") !== -1) {
+                    // nav drawer main title
+                    let n_d_main_title = n_d_children[j];
+                    let closeBtn = n_d_main_title.children[0];
+                    closeBtn.addEventListener("click", () => {
+                        document.getElementById(targetId).classList.remove("nav-drawer-show");
+                    });
+                    j = n_d_children.length;
+                }
+            }
+        });
+    }
+
+
+
 
 };

@@ -30,6 +30,7 @@
             <a class="btn btn-contained" data-id="Top-Bar">Top Bar</a>
             <a class="btn btn-contained" data-id="Top-Bar-Chat">Top-Bar-Chat</a>
             <a class="btn btn-contained" data-id="Bottom-Nav">Bottom Nav</a>
+            <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
         </div>
         <hr>
         <!-- Color Palette -->
@@ -651,10 +652,9 @@
                     <p class="search-helper">Hepler</p>
                 </div>
             </div>
-            <div class="demo_showcase demo_screen_mob">
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
                 <!-- search bar -->
                 <div class="searchbox">
-                    <p class="search-label">Label</p>
                     <div class="search-wrapper">
                         <input class="search-input" type="text" placeholder="search box plain" value="searching">
                         <!-- search history / suggestion / filtered result -->
@@ -1148,6 +1148,36 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <!-- nav drawer -->
+        <div class="demo_display">
+            <h3 class="headline" id="Navigation-Drawer">Navigation Drawer</h3>
+            <span class="btn nav-drawer-toggle-btn" data-id="side-nav-drawer">Side Menu</span>
+            <span class="btn nav-drawer-toggle-btn" data-id="bottom-nav-drawer">Open Bottom</span>
+            <div class="nav-drawer nav-drawer-side" id="side-nav-drawer">
+                <div class="nav-drawer-mainTitle"> Title <i class="icon icon-navigation_close_24px"></i>
+                </div>
+                <div class="nav-drawer-row active">
+                    <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                    <span class="nav-drawer-title">Item</span>
+                </div>
+                <div class="nav-drawer-row">
+                    <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                    <span class="nav-drawer-title">Item</span>
+                </div>
+            </div>
+            <div class="nav-drawer nav-drawer-bottom" id="bottom-nav-drawer">
+                <div class="nav-drawer-mainTitle"> Title <i class="icon icon-navigation_close_24px"></i>
+                </div>
+                <div class="nav-drawer-row">
+                    <span class="nav-drawer-title">Item</span>
+                    <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                </div>
+                <div class="nav-drawer-row">
+                    <span class="nav-drawer-title">Item</span>
+                    <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                </div>
             </div>
         </div>
     </section>

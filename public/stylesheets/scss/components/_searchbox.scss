@@ -41,10 +41,14 @@
       outline: none;
     }
 
+    // using together with List
     .search-history {
       position: absolute;
-      top: 100%;
+      top: 50%;
       left: 0;
+      padding-top: 25px;
+      background-color: #fff;
+      z-index: -10;
 
       > * {
         cursor: pointer;
@@ -70,6 +74,7 @@
   .search-helper {
     @include caption;
     padding: 0 16px;
+    z-index: -20;
   }
 
   &.disabled {
@@ -79,11 +84,11 @@
       background-color: $text-field-disabled-bg;
       border-color: $text-field-disabled-bg;
       cursor: not-allowed;
-      
+
       .search-input {
         cursor: not-allowed;
       }
-      
+
       .search-input::placeholder {
         cursor: not-allowed;
         color: $text-field-disabled;

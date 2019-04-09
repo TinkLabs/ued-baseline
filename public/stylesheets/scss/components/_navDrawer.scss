@@ -1,0 +1,129 @@
+/*
+ *
+ * Navigation Drawer
+ *
+ * "Navigation drawers provide access to destinations in your app."
+ *
+ * It can open on the side / from bottom / from top
+ *
+ * The drawer also provides a title and posibly a close(x) btn
+ * 
+ * 
+ */
+
+.nav-drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+
+  z-index: -10;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  // create overlay
+  height: 100%;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-enabled;
+    z-index: -1;
+  }
+
+  .nav-drawer-mainTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include subtitle1;
+    padding: 16px;
+    width: 100%;
+    background-color: $hi-white;
+    color: $dark-default;
+
+    .icon {
+      font-size: 20px;
+      margin-left: auto;
+      padding-right: 0;
+      cursor: pointer;
+    }
+  }
+
+  .nav-drawer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 16px;
+    width: 100%;
+    background-color: $hi-white;
+    color: $dark-enabled;
+    cursor: pointer;
+
+    &.active,
+    &:active {
+      color: $hi-gold;
+    }
+
+    .nav-drawer-title {
+      @include subtitle2;
+    }
+
+    .nav-drawer-icon-left,
+    .nav-drawer-icon-right {
+      font-size: 20px;
+    }
+    .nav-drawer-icon-left {
+      padding-right: 16px;
+    }
+    .nav-drawer-icon-right {
+      margin-left: auto;
+      padding-left: 16px;
+    }
+  }
+}
+
+.nav-drawer.nav-drawer-side {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &.nav-drawer-show {
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.nav-drawer.nav-drawer-bottom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+
+    // 2 steps animation not working
+
+  > :first-child {
+    margin-top: 100%;
+    animation: all 0.5s ease-in-out;
+    animation-delay: 5s;
+  }
+
+  &.nav-drawer-show {
+    opacity: 1;
+    z-index: 10;
+
+    > :first-child {
+        margin-top: auto;
+    }
+  }
+}
