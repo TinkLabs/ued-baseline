@@ -87,24 +87,14 @@ window.onload = e => {
             document.getElementById(targetId).classList.add("nav-drawer-show");
 
             // nav drawer children
-            let n_d_children = document.getElementById(targetId).children;
-            
-            for (let j = 0; j < n_d_children.length; j++) {
-                let classes = n_d_children[j].classList.value.split(" ").map(e => e.trim());
-                if (classes.indexOf("nav-drawer-mainTitle") !== -1) {
-                    // nav drawer main title
-                    let n_d_main_title = n_d_children[j];
-                    let closeBtn = n_d_main_title.children[0];
-                    closeBtn.addEventListener("click", () => {
-                        document.getElementById(targetId).classList.remove("nav-drawer-show");
-                    });
-                    j = n_d_children.length;
-                }
-            }
+            // -top/-left/-right/-bottom
+            let container = document.getElementById(targetId).children[0];
+            let mainTitle = container.children[0];
+            let closeBtn = mainTitle.children[0];
+            closeBtn.addEventListener("click", () => {
+                document.getElementById(targetId).classList.remove("nav-drawer-show");
+            });
+            i = navDrawerOpenBtn.length;
         });
     }
-
-
-
-
 };
