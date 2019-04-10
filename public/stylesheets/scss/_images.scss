@@ -1,6 +1,50 @@
+/*
+ *
+ * Image size specification
+ *
+ * This library will provide 4 classes according to dimensions set by BE
+ * when it corp and store images.
+ *
+ * For now these classes are only valid for mobile ver.
+ *
+ */
+
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+// 16:9
+// homepage / trending now / with padding
+.image-l {
+  width: 328px;
+  height: 187px;
+  // margin: 0 16px;
+}
+
+// 16:9
+// POI / no padding
+.image-l-fw {
+  width: 360px;
+  height: 203px;
+}
+
+// 4:3
+// card image
+.image-m {
+  width: 144px;
+  height: 108px;
+}
+
+// 1:1
+// mainly list image
+.image-s {
+  width: 68px;
+  height: 68px;
+}
+
+.image-rounded {
+  border-radius: 4px;
 }

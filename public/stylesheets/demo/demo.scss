@@ -30,7 +30,9 @@
 
 // mob screen size
 .demo_screen_mob {
-  width: calc(360px + 16px);
+  // width: calc(360px + 16px);
+  width: 360px;
+  padding: 0;
 }
 
 .demo_description {
