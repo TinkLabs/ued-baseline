@@ -3,8 +3,11 @@
  * Chips
  *
  * There are 4 states for chips: enabled, focused(hover), pressed and disabled
- * Visually similar to button
  *
+ * However there is no "hover" state for touch screen,
+ * so consider using "focus" as "active"
+ * and "pressed" as "hover" or "tapped"
+ * 
  */
 
 // base color
@@ -79,14 +82,14 @@ $color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
    *
    */
   &:not(.chip-disabled) {
-    &.chip-focused,
-    &:active {
-      @include chip-gold-default-hover;
-    }
     &.chip-pressed,
+    &:active {
+      @include chip-gold-default-pressed;
+    }
+    &.chip-focused,
     &:focus,
     &:focus-within {
-      @include chip-gold-default-pressed;
+      @include chip-gold-default-hover;
     }
   }
   &.chip-disabled {

@@ -15,6 +15,7 @@
         <hr>
         <div class="demo_indexes">
             <a class="btn btn-contained" data-id="Color-Palette">Color Palette</a>
+            <a class="btn btn-contained" data-id="Supporting-Colors">Supporting Colors</a>
             <a class="btn btn-contained" data-id="Typography">Typography</a>
             <a class="btn btn-contained" data-id="Montserrat">Montserrat</a>
             <a class="btn btn-contained" data-id="merriweather-sans">Merriweather Sans</a>
@@ -81,12 +82,14 @@
                 <p class="body1">"N" and "G" are primary color indicator</p>
                 <p class="body1">Numbers are light and dark variants</p>
                 <h3 class="subtitle1">Usage</h3>
-                <p class="body1 bg-navy-300 gold">class="bg-navy-300"</p>
-                <p class="body1 gold-300">class="gold-300"</p>
+                <div class="body1 bg-navy-200 gold-800"> ``` <br> &lt;p class="bg-navy-200 gold-800"&gt; text &lt;p&gt;
+                    <br> ``` </div>
+                <br>
+                <div class="body1 gold-300"> ``` <br> &lt;p class="gold-300"&gt; text &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <div class="demo_display">
-            <h3 class="headline">Supporting Colors</h3>
+            <h3 class="headline" id="Supporting-Colors">Supporting Colors</h3>
             <div class="demo_showcase">
                 <div class="flex flex-row flex-wrap">
                     <div class="demo_color_box bg-blue flex flex-col just-end">
@@ -128,8 +131,12 @@
             <div class="demo_description">
                 <h3 class="subtitle1">Supporting Color Palette</h3>
                 <h3 class="subtitle1">Usage</h3>
-                <p class="body1 bg-green light-grey">class="bg-green light-grey"</p>
-                <p class="body1 purple">class="purple"</p>
+                <div class="body1 bg-green light-grey"> ``` <br> &lt;p class="bg-green light-grey"&gt; text &lt;p&gt;
+                    <br> ``` </div>
+                <br>
+                <div class="body1 gold-300"> ``` <br> &lt;p class="gold-300"&gt; text &lt;p&gt; <br> ``` </div>
+                <br>
+                <div class="body1 purple"> ``` <br> &lt;p class="purple"&gt; text &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <!-- Typography -->
@@ -161,7 +168,7 @@
                 <h3 class="subtitle1">Typography for mobile content</h3>
                 <p class="body1">Select a class according to the purpose of your content</p>
                 <h3 class="subtitle1">Usage</h3>
-                <p class="body1">class="body1"</p>
+                <div class="body1"> ``` <br> &lt;p class="body1"&gt; text &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <!-- Montserrat -->
@@ -269,12 +276,14 @@
                 <h3 class="subtitle1">Main font : Montserrat</h3>
                 <p class="body1">Our primary typeface is Montserrat.</p>
                 <p class="body1">All weights and versions are available in this family.</p>
-                <p class="body1">Montserrat is perfect for a wide range of visual communications. It’s versatile for display and text.</p>
+                <p class="body1">Montserrat is perfect for a wide range of visual communications. It’s versatile for
+                    display and text.</p>
                 <p class="body1">It also reads well on mobile devices and the Web.</p>
                 <h3 class="subtitle1">Usage</h3>
-                <p class="montserrat">class="montserrat"</p>
-                <p class="montserrat-semibold-italic">class="montserrat-semibold-italic"</p>
-                <p class="montserrat-extraBold">class="montserrat-extraBold"</p>
+                <div class="body1">You don't need to use these classes since the 6 preset typography would suffice,
+                    unless there are external contents that need to be overrided</div>
+                <div class="montserrat-semibold-italic"> ``` <br> &lt;p class="montserrat-semibold-italic"&gt; text
+                    &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <!-- Merriweather Sans -->
@@ -337,8 +346,10 @@
                 <p class="body1">It should be used in conjunction with our primary typeface to add variety to our
                     designs or to break up large blocks of text.</p>
                 <h3 class="subtitle1">Usage</h3>
-                <p class="merriweather">class="merriweather-sans"</p>
-                <p class="merriweather-sans-extraBold">class="merriweather-sans-extraBold"</p>
+                <div class="body1">You don't need to use these classes since the 6 preset typography would suffice,
+                    unless there are external contents that need to be overrided</div>
+                <div class="merriweather-sans-extraBold"> ``` <br> &lt;p class="merriweather-sans-extraBold"&gt; text
+                    &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <!-- Buttons -->
@@ -352,7 +363,7 @@
                 <a class="btn btn-contained"> contained </a>
                 <a class="btn btn-contained btn-disabled"> contained.disabled </a>
             </div>
-            <div class="demo_showcase demo_no_bg flex flex-row flex-wrap">
+            <div class="demo_showcase demo_no_bg bg-white flex flex-row flex-wrap">
                 <a class="btn btn-navy"> a.btn </a>
                 <a class="btn btn-navy btn-disabled"> disabled </a>
                 <a class="btn btn-navy btn-outlined"> outlined </a>
@@ -388,10 +399,42 @@
                     <i class="icon icon-communication_forum_24px"></i>
                 </a>
             </div>
+            <div class="demo_description">
+                <h3 class="subtitle1">Buttons</h3>
+                <p class="body1">Buttons allow users to take actions, and make choices, with a single tap.</p>
+                <h3 class="subtitle1">Usage</h3>
+                <p class="body1">Plain Button</p>
+                <div class="body1"> ``` <br> &lt;a class="btn"&gt; btn text &lt;a&gt; <br> ``` </div>
+                <div class="body1"> ``` <br> &lt;a class="btn btn-navy"&gt; btn text &lt;a&gt; <br> ``` </div>
+                <br>
+                <p class="body1">Button with icon</p>
+                <div class="body1"> ``` <br>
+                    <div>&lt;a class="btn"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;i class="icon icon-content_add_24px icon-left" &gt;</div>
+                    <div>&nbsp;&nbsp; btn text</div>
+                    <div>&lt;a&gt;</div>
+                    <br> ```
+                </div>
+                <br>
+                <p class="body1">Outlined Button</p>
+                <div class="body1"> ``` <br> &lt;a class="btn btn-outlined"&gt; btn text &lt;a&gt; <br> ``` </div>
+                <br>
+                <p class="body1">Contained Button</p>
+                <div class="body1"> ``` <br> &lt;a class="btn btn-contained"&gt; btn text &lt;a&gt; <br> ``` </div>
+                <br>
+                <p class="body1">Round Button</p>
+                <div class="body1"> ``` <br>
+                    <div>&lt;a class="btn btn-round btn-shadow"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;i class="icon icon-content_add_24px icon-left" &gt;</div>
+                    <div>&lt;a&gt;</div>
+                    <br> ```
+                </div>
+            </div>
         </div>
         <!-- hi fonts -->
         <div class="demo_display">
             <h3 class="headline" id="HIFont">hi fonts</h3>
+            <a href="https://material.io/tools/icons/?style=round" class="btn btn-outlined">Check out Material Icons</a>
             <div class="demo_showcase flex flex-row flex-wrap">
                 <div class="icon icon-alert_add_24px"></div>
                 <div class="icon icon-av_forward_5_24px"></div>
@@ -479,6 +522,26 @@
                 </div>
             </div>
             <p class="caption">*** No scrolling yet ***</p>
+            <div class="demo_description">
+                <h3 class="subtitle1">Tabs</h3>
+                <div class="body1">Tabs organize content across different screens, data sets, and other interactions.
+                </div>
+                <div class="body1">Keep tab text short and simple, long text will be wrapped, then truncated.</div>
+                <div class="body1">You can have as many tabs as needed, out of screen tabs will be scrollable.</div>
+                <div class="body1">Scrolling JS not available yet.</div>
+                <h3 class="subtitle1">Usage</h3>
+                <div class="body1"> ``` <br>
+                    <div>&lt;div class="tabs"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;div class="tab active"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="tab-text"&gt; tab text &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;div class="tab"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="tab-text"&gt; tab text &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&lt;div&gt;</div>
+                    <br> ```
+                </div>
+            </div>
         </div>
         <!-- Form Control -->
         <div class="demo_display">
@@ -624,6 +687,23 @@
                     </div>
                 </div>
             </form>
+            <div class="demo_description">
+                <h3 class="subtitle1">Form Control</h3>
+                <div class="body1">For now, form control consist of Text Fields, Checkbox, and Radio Button.</div>
+                <div class="body1">For text field, 5 visual states are provided for different use-cases</div>
+                <h3 class="subtitle1">Usage</h3>
+                <div class="body1"> ``` <br>
+                    <div>&lt;div class="form-group"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;div class="textfield outlined error"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="field-label"&gt; label text &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="helper-text"&gt; helper text &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&lt;div&gt;</div>
+                    <br> ```
+                </div>
+
+            </div>
         </div>
         <!-- Search Box -->
         <div class="demo_display">
@@ -1011,8 +1091,8 @@
             <h3 class="headline" id="Chips">Chips</h3>
             <div class="demo_showcase">
                 <span class="chip">Enabled</span>
-                <span class="chip chip-focused">Focused</span>
                 <span class="chip chip-pressed">Pressed</span>
+                <span class="chip chip-focused">Focused</span>
                 <span class="chip chip-disabled">Disabled</span>
             </div>
             <div class="demo_showcase">
@@ -1020,16 +1100,28 @@
                     <i class="icon icon-general_bookmarks_24px"></i>
                     <span class="chip-text">Enabled</span>
                 </div>
-                <div class="chip chip-focused">
-                    <span class="chip-text">Focused</span>
-                    <i class="icon icon-general_highlight_off_24px"></i>
-                </div>
                 <div class="chip chip-pressed">
                     <i class="icon icon-general_bookmarks_24px"></i>
                     <span class="chip-text">Pressed</span>
                     <i class="icon icon-general_highlight_off_24px"></i>
                 </div>
+                <div class="chip chip-focused">
+                    <span class="chip-text">Focused</span>
+                    <i class="icon icon-general_highlight_off_24px"></i>
+                </div>
                 <div class="chip chip-disabled">Disabled</div>
+            </div>
+            <div class="demo_description">
+                <h3 class="subtitle1">Chip</h3>
+                <p class="body1">Chips are compact elements that represent an input, attribute, or action.</p>
+                <h3 class="subtitle1">Usage</h3>
+                <div class="body1"> ``` <br> &lt;p class="chip"&gt; chip text &lt;p&gt; <br> ``` </div>
+                <div class="body1">For a chip with icons, add: </div>
+                <div class="body1"> ``` <br> &lt;i class="icon icon-content_add_24px icon-left" &gt; <br> ``` </div>
+                <div class="body1">before or after chip text.</div>
+                <br>
+                <div class="body1">Set a chip to be active</div>
+                <div class="body1"> ``` <br> &lt;p class="chip chip-focused"&gt; chip text &lt;p&gt; <br> ``` </div>
             </div>
         </div>
         <!-- list -->
@@ -1250,18 +1342,22 @@
         <div class="demo_display">
             <h3 class="headline" id="Images">Images</h3>
             <p class="subtitle2">16:9 POI screen , no padding</p>
+            <div class="subtitle2">image-l-fw</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_l_fw.png" alt="img" class="image-l-fw">
             </div>
             <p class="subtitle2">16:9 large image / large card</p>
+            <div class="subtitle2">image-l</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_l.png" alt="img" class="image-l">
             </div>
             <p class="subtitle2">4:3 medium image / medium card</p>
+            <div class="subtitle2">image-m</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_m.png" alt="img" class="image-m">
             </div>
             <p class="subtitle2">1:1 small image / list image</p>
+            <div class="subtitle2">image-s</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_s.png" alt="img" class="image-s">
             </div>
