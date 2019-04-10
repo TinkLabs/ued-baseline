@@ -700,62 +700,113 @@
                     <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="helper-text"&gt; helper text &lt;/span&gt;</div>
                     <div>&nbsp;&nbsp; &lt;/div&gt;</div>
                     <div>&lt;div&gt;</div>
+                    <div>&lt;div class="form-group"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;input type="checkbox" id="checkbox_n"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;label class="label" for="checkbox_n"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="label-mark"&gt;&lt;/span&gt; label text</div>
+                    <div>&nbsp;&nbsp; &lt;/label&gt;</div>
+                    <div>&lt;div&gt;</div>
+                    <div>&lt;div class="form-group"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;input type="radio" id="radio_n"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;label class="label" for="radio_n"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class="label-mark"&gt;&lt;/span&gt; label text</div>
+                    <div>&nbsp;&nbsp; &lt;/label&gt;</div>
+                    <div>&lt;div&gt;</div>
                     <br> ```
                 </div>
-
             </div>
         </div>
         <!-- Search Box -->
         <div class="demo_display">
             <h3 class="headline" id="Search-Box">Search Box</h3>
-            <div class="demo_showcase demo_screen_mob">
-                <!-- search bar -->
-                <div class="searchbox">
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="search box plain">
+            <div class="demo_showcase demo_no_bg">
+                <div class="flex flex-row">
+                    <div>
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box plain">
+                            </div>
+                        </div>
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <p class="search-label">Label</p>
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box full">
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
+                        <!-- search bar -->
+                        <div class="searchbox disabled">
+                            <p class="search-label">Label</p>
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box disabled" disabled>
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
                     </div>
-                </div>
-                <!-- search bar -->
-                <div class="searchbox">
-                    <p class="search-label">Label</p>
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="search box full">
+                    <div class="">
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box plain"
+                                       value="searching">
+                                <!-- search history / suggestion / filtered result -->
+                                <ul class="search-history list">
+                                    <li class="list-row">
+                                        <div class="list-content">
+                                            <div class="list-text">
+                                                <span class="list-text-secondary"> search history </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-row">
+                                        <div class="list-content">
+                                            <div class="list-text">
+                                                <span class="list-text-secondary"> search history 2 </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
                     </div>
-                    <p class="search-helper">Hepler</p>
-                </div>
-                <!-- search bar -->
-                <div class="searchbox disabled">
-                    <p class="search-label">Label</p>
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="search box disabled" disabled>
-                    </div>
-                    <p class="search-helper">Hepler</p>
                 </div>
             </div>
-            <div class="demo_showcase demo_screen_mob demo_no_bg">
-                <!-- search bar -->
-                <div class="searchbox">
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="search box plain" value="searching">
-                        <!-- search history / suggestion / filtered result -->
-                        <ul class="search-history list">
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <div class="list-text">
-                                        <span class="list-text-secondary"> search history </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <div class="list-text">
-                                        <span class="list-text-secondary"> search history 2 </span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+            <div class="demo_description">
+                <h3 class="subtitle1">Search Box</h3>
+                <div class="body1">Place to input search /filter keywords, can be used together with list</div>
+                <h3 class="subtitle1">Usage</h3>
+                <div class="body1"> ``` <br>
+                    <div>&lt;div class="searchbox"&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;div class="search-wrapper"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;input class="search-input" type="text" placeholder="search
+                        box"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class="search-history list"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="list-row"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="list-content"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="list-text"&gt;
                     </div>
-                    <p class="search-helper">Hepler</p>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span
+                        class="list-text-secondary"&gt; search history 1 &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li class="list-row"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="list-content"&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="list-text"&gt;
+                    </div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span
+                        class="list-text-secondary"&gt; search history 2 &lt;/span&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/li&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;/div&gt;</div>
+                    <div>&nbsp;&nbsp; &lt;p class="search-helper"&gt; helper text &lt;/p&gt;</div>
+                    <div>&lt;div&gt;</div>
+                    <br> ```
                 </div>
             </div>
         </div>
