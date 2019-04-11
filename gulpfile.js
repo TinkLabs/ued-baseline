@@ -12,6 +12,30 @@ var runTimestamp = Math.round(Date.now() / 1000);
 
 const fs = require('fs');
 
+// convert md to html
+const showdown  = require('showdown');
+const showdownOptions = {
+  omitExtraWLInCodeBlocks: true,
+  noHeaderId: true,
+}
+const converter = new showdown.Converter(showdownOptions);
+
+gulp.task("md", (done) => {
+  let dir = fs.readdirSync("./readme", {withFileTypes: true});
+  dir.forEach(obj => {
+    let fileName = obj.name;
+    if (fileName.match(/.md$/)) {
+      let text = fs.readFileSync(`./readme/${obj.name}`, {encoding: "UTF-8"});
+      let html = converter.makeHtml(text);
+      let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
+      fs.writeFileSync(htmlFileName, html);
+    }
+  })
+
+  // console.log(html);
+  done();
+});
+
 /*
  *
  *  Compile and minify css from sass for prod

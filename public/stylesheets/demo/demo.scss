@@ -1,4 +1,5 @@
 @import "../scss/variables";
+@import "../scss/typography";
 
 .demo_display {
   display: none;
@@ -33,10 +34,6 @@
   // width: calc(360px + 16px);
   width: 360px;
   padding: 0;
-}
-
-.demo_description {
-  // 
 }
 
 .demo_half_w {
@@ -146,3 +143,14 @@ button,
   margin-right: 24px;
 }
 
+.demo_description {
+  h3 {
+    @include subtitle1;
+  }
+  h5 {
+    @include subtitle2;
+  }
+  p, span {
+    @include body1;
+  }
+}
