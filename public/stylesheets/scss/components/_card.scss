@@ -1,0 +1,138 @@
+/*
+ *
+ * Card
+ * 
+ * Cards contain content and actions about a single subject.
+ *
+ * a card consist of: 
+ *
+ * head ( thumbnail , header , sub-header )
+ *
+ * media ( media, overlay )
+ *
+ * body ( supporting text )
+ *
+ * actions ( action buttons and icons )
+ *
+ */
+
+.card {
+    &.card-l {
+        width: 100%;
+        max-width: 328px;
+        margin: auto;
+    }
+
+    border-radius: 4px;
+    background-color: $hi-white;
+
+    .card-container {
+        .card-head {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 16px;
+
+            .card-head-avatar {
+                margin-right: 16px;
+            }
+
+            .card-head-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                height: auto;
+
+                .card-head-title {
+                    @include subtitle1;
+                    color: $dark-default;
+                    padding-bottom: 4px;
+                }
+
+                .card-head-subtitle {
+                    @include caption;
+                    color: $dark-enabled;
+                }
+            }
+
+            .card-head-icon {
+                margin-left: auto;
+            }
+        }
+
+        .card-media-container {
+            .card-media {}
+
+            .card-media-overlay {}
+        }
+
+        .card-body {
+            padding: 16px;
+
+            >* {
+                margin-bottom: 8px;
+            }
+
+            .card-body-title {
+                @include subtitle1;
+                color: $dark-default;
+                margin-bottom: 4px;
+                display: block;
+            }
+
+            .card-body-content {
+                @include body2;
+                color: $dark-enabled;
+                display: block;
+            }
+
+            // ticketing
+            .card-body-ticketing {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .card-body-ticketing-rating {
+                    color: $hi-gold;
+                    margin-top: auto;
+                }
+
+                .card-body-ticketing-pricing {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+
+                    .card-body-ticketing-price-previous {
+                        @include caption;
+                        color: $dark-disabled;
+                        text-decoration: line-through;
+                        padding-bottom: 4px;
+                    }
+
+                    .card-body-ticketing-price {
+                        @include subtitle1;
+                        color: $hi-gold;
+                    }
+
+                }
+
+            }
+
+            .tag {
+                // margin-bottom: 4px;
+            }
+
+            // general
+            > *:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+        .card-actions {}
+    }
+}

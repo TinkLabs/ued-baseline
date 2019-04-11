@@ -23,6 +23,7 @@
             <a class="btn btn-contained" data-id="Images">Images</a>
             <a class="btn btn-contained" data-id="Buttons">Buttons</a>
             <a class="btn btn-contained" data-id="Chips">Chips</a>
+            <a class="btn btn-contained" data-id="Tag">Tag</a>
             <a class="btn btn-contained" data-id="Tabs">Tabs</a>
             <a class="btn btn-contained" data-id="Form-Control">Form Control</a>
             <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
@@ -34,6 +35,7 @@
             <a class="btn btn-contained" data-id="Top-Bar-Ticketing">Top Bar (Ticketing)</a>
             <a class="btn btn-contained" data-id="Bottom-Nav">Bottom Nav</a>
             <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
+            <a class="btn btn-contained" data-id="Card">Card</a>
         </div>
         <hr>
         <!-- Color Palette -->
@@ -1640,6 +1642,149 @@ modal.destory();</code></pre>
 <p>Images stored in BE have been cropped into different size and aspect ratio, images shall be shown in specific dimension according to it position and function.</p>
 <h3>Usage</h3>
 <pre><code class="html language-html">&lt;img class="image-l-fw" src="./img.jpg" alt="img"&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Card">Card</h3>
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
+                <div class="card card-l">
+                    <div class="card-container">
+                        <div class="card-head">
+                            <img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png">
+                            <div class="card-head-text">
+                                <span class="card-head-title">
+                                    card title
+                                </span>
+                                <span class="card-head-subtitle">
+                                    card subtitle
+                                </span>
+                            </div>
+                            <i class="card-head-icon icon icon-general_favorite_24px"></i>
+                        </div>
+
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./public/images/img_l.png">
+                            <div class="card-media-overlay">
+
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <span class="card-body-title">
+                                Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+                            </span>
+
+                            <span class="card-body-content">
+                                Enter directly with QR code
+                            </span>
+
+                            <span class="tag"> Okinawa </span>
+                            <span class="tag"> Koln </span>
+                            <span class="tag"> Hong Kong </span>
+                            <span class="tag"> Sydney </span>
+                            <span class="tag"> Moscow </span>
+                            <span class="tag"> Casablanca </span>
+
+                            <div class="card-body-ticketing">
+                                <div class="card-body-ticketing-rating">
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_border_24px"></i>
+                                </div>
+                                <div class="card-body-ticketing-pricing">
+                                    <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                                    <span class="card-body-ticketing-price"> HK$ 558 </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>Card</h3>
+<p>Cards contain content and actions about a single subject.</p>
+<p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+<h3>Usage</h3>
+<p>Main Card</p>
+<pre><code class="html language-html">&lt;div class="card card-l"&gt;
+    &lt;div class="card-container"&gt;
+        /* Card Head */
+        &lt;div class="card-head"&gt;
+            &lt;img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png"&gt;
+            &lt;div class="card-head-text"&gt;
+                &lt;span class="card-head-title"&gt; card title &lt;/span&gt;
+                &lt;span class="card-head-subtitle"&gt; card subtitle &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;i class="card-head-icon icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        /* Card Media */
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./public/images/img_l.png"&gt;
+            &lt;div class="card-media-overlay"&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        /* Card Body */
+        &lt;div class="card-body"&gt;
+            /* Body Title */
+            &lt;span class="card-body-title"&gt;
+                Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+            &lt;/span&gt;
+
+            /* Body Content */
+            &lt;span class="card-body-content"&gt;
+                Enter directly with QR code
+            &lt;/span&gt;
+
+            /* Body Tags */
+            &lt;span class="tag"&gt; Okinawa &lt;/span&gt;
+            &lt;span class="tag"&gt; Koln &lt;/span&gt;
+            &lt;span class="tag"&gt; Hong Kong &lt;/span&gt;
+            &lt;span class="tag"&gt; Sydney &lt;/span&gt;
+            &lt;span class="tag"&gt; Moscow &lt;/span&gt;
+            &lt;span class="tag"&gt; Casablanca &lt;/span&gt;
+
+            /* Body Ticketing infos */
+            &lt;div class="card-body-ticketing"&gt;
+                &lt;div class="card-body-ticketing-rating"&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_border_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-body-ticketing-pricing"&gt;
+                    &lt;span class="card-body-ticketing-price-previous"&gt; HK$ 888 &lt;/span&gt;
+                    &lt;span class="card-body-ticketing-price"&gt; HK$ 558 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Tag">Tag</h3>
+            <div class="demo_showcase">
+                <span class="tag">Tag</span>
+                <span class="tag">
+                    <i class="icon icon-toggle_star_24px"></i>
+                    Tag
+                </span>
+            </div>
+            <div class="demo_description">
+<h3>Tag</h3>
+<p>A tag provides a single piece of information of the relating object.</p>
+<h3>Usage</h3>
+<p>Plain text or icon to the left</p>
+<pre><code class="html language-html">&lt;span class="tag"&gt; tag &lt;/span&gt;
+&lt;span class="tag"&gt; &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt; tag &lt;/span&gt;</code></pre>
             </div>
         </div>
     </section>
