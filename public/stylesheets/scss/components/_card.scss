@@ -17,16 +17,20 @@
  */
 
 .card {
+    
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow:hidden;
+    background-color: $hi-white;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    
     &.card-l {
         width: 100%;
         max-width: 328px;
-        margin: auto;
     }
 
-    border-radius: 4px;
-    background-color: $hi-white;
-
     .card-container {
+
         .card-head {
             display: flex;
             flex-direction: row;
@@ -63,9 +67,55 @@
         }
 
         .card-media-container {
+            position: relative;
+
             .card-media {}
 
-            .card-media-overlay {}
+            .card-media-overlay {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                padding: 16px;
+
+                .card-media-overlay-top {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: $hi-white;
+
+                    .card-media-overlay-videoBtn {
+                        font-size: 24px;
+                        margin-left: auto;
+                        cursor: pointer;
+                    }
+                }
+
+                .card-media-overlay-bottom {
+                    margin-top: auto;
+                    color: $hi-white;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+
+                    .card-media-overlay-bottom-title {
+                        @include subtitle1;
+                    }
+
+                    .card-media-overlay-bottom-subtitle {
+                        @include body2;
+                        margin-top: 4px;
+                    }
+                }
+            }
         }
 
         .card-body {
@@ -101,6 +151,9 @@
                 }
 
                 .card-body-ticketing-pricing {
+                    // always on right
+                    margin-left: auto;
+
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
@@ -127,7 +180,7 @@
             }
 
             // general
-            > *:last-child {
+            >*:last-child {
                 margin-bottom: 0;
             }
 

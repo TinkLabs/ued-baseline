@@ -13,6 +13,6 @@ You can have as many tabs as needed, out of screen tabs will be scrollable.
     <div class="tab">
         <span class="tab-text"> tab text </span>
     </div>
-<div>
+</div>
 
 ```

@@ -189,9 +189,38 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
  * Variables and Mixins: Round button
  *
  */
+
 $btn-round-icon: 20px;
 $btn-round-large-icon: 28px;
 $text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+/*
+ *
+ * Variables and Mixins: Round button, White
+ *
+ */
+
+@mixin btn-round-white {
+  background-color: white;
+  border-color: transparent;
+  color: $btn-color-1-main;
+}
+@mixin btn-white-contained-disabled {
+  background-color: $light-disabled;
+  border-color: $light-disabled;
+  color: $dark-disabled;
+  cursor: not-allowed;
+}
+@mixin btn-white-contained-hover {
+  background-color: $color-1-overlay-white;
+  border-color: $color-1-overlay-white;
+  color: $color-1-overlay-light;
+}
+@mixin btn-white-contained-pressed {
+  background-color: $color-1-overlay-white;
+  border-color: $color-1-overlay-white;
+  color: $color-1-overlay-light;
+}
 
 
 /*
@@ -239,7 +268,7 @@ button,
    */
   &:not(.btn-disabled) {
     &:active{
-      @include btn-gold-default-hover;
+      @include btn-gold-default-pressed;
     }
     &:focus,
     &:focus-within {
@@ -294,7 +323,7 @@ button,
     // different states
     &:not(.btn-disabled) {
       &:active {
-        @include btn-navy-default-hover;
+        @include btn-navy-default-pressed;
       }
       &:focus,
       &:focus-within {
@@ -359,7 +388,7 @@ button,
       font-size: $btn-round-icon;
     }
     &.btn-shadow {
-      box-shadow: 0 4px 16px 0 $btn-color-1-main;
+      box-shadow: $box-shadow;
     }
     &.btn-large {
       width: 56px;
@@ -394,6 +423,33 @@ button,
           &::before,
           &::after {
             text-shadow: $text-shadow;
+          }
+        }
+      }
+    }
+
+    /* white version */
+    &.btn-white {
+      @include btn-round-white;
+
+      &.btn-large.btn-disabled,
+      &.btn-disabled {
+        @include btn-white-contained-disabled;
+      }
+      &:not(.btn-disabled) {
+        &:active {
+          @include btn-white-contained-hover;
+        }
+        &:focus,
+        &:focus-within {
+          @include btn-white-contained-pressed;
+  
+          i,
+          .icon {
+            &::before,
+            &::after {
+              text-shadow: $text-shadow;
+            }
           }
         }
       }

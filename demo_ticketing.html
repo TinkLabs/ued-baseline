@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Ticketing</title>
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <style>
+        section {
+            padding-bottom: 16px;
+        }
+
+        .card {
+            margin-bottom: 16px;
+        }
+        #to-top-btn {
+            position: fixed;
+            bottom: 80px;
+            right: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- page top / top bar for ticketing -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+            </div>
+            <div class="top-bar-body">
+                <h3 class="top-bar-title">Attractions</h3>
+                <i class="icon icon-navigation_expand_more_24px"></i>
+            </div>
+        </div>
+        <!-- page top / tabs -->
+        <div class="tabs">
+            <div class="tab active">
+                <span class="tab-text"> Bestseller </span>
+            </div>
+            <div class="tab">
+                <span class="tab-text"> Sights & Landmarks </span>
+            </div>
+            <div class="tab">
+                <span class="tab-text"> Water & Amusment </span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- main body / cards -->
+        <div class="card card-l">
+            <div class="card-container">
+                <div class="card-media-container">
+                    <img class="card-media" alt="card-media" src="./public/images/img_l.png">
+                    <div class="card-media-overlay">
+                        <div class="card-media-overlay-top">
+                            <span class="tag"> Bestseller </span>
+                            <i class="card-media-overlay-videoBtn
+                                    icon icon-av_play_circle_outline_24px"></i>
+                        </div>
+                        <div class="card-media-overlay-bottom">
+                            <span class="card-media-overlay-bottom-title"> Image Title </span>
+                            <span class="card-media-overlay-bottom-subtitle">Image subtitle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct) </span>
+                    <span class="card-body-content"> Enter directly with QR code </span><span class="tag"> Okinawa
+                    </span>
+                    <span class="tag"> Koln </span>
+                    <span class="tag"> Hong Kong </span>
+                    <span class="tag"> Sydney </span>
+                    <span class="tag"> Moscow </span>
+                    <span class="tag"> Casablanca </span>
+                    <div class="card-body-ticketing">
+                        <div class="card-body-ticketing-rating">
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_border_24px"></i>
+                        </div>
+                        <div class="card-body-ticketing-pricing">
+                            <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                            <span class="card-body-ticketing-price"> HK$ 558 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-l">
+            <div class="card-container">
+                <div class="card-media-container">
+                    <img class="card-media" alt="card-media" src="./public/images/img_l.png">
+                    <div class="card-media-overlay">
+                        <div class="card-media-overlay-top">
+                            <span class="tag"> Bestseller </span>
+                            <i class="card-media-overlay-videoBtn
+                                    icon icon-av_play_circle_outline_24px"></i>
+                        </div>
+                        <div class="card-media-overlay-bottom">
+                            <span class="card-media-overlay-bottom-title"> Image Title </span>
+                            <span class="card-media-overlay-bottom-subtitle">Image subtitle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct) </span>
+                    <span class="card-body-content"> Enter directly with QR code </span><span class="tag"> Okinawa
+                    </span>
+                    <span class="tag"> Koln </span>
+                    <span class="tag"> Hong Kong </span>
+                    <span class="tag"> Sydney </span>
+                    <span class="tag"> Moscow </span>
+                    <span class="tag"> Casablanca </span>
+                    <div class="card-body-ticketing">
+                        <div class="card-body-ticketing-rating">
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <i class="icon icon-toggle_star_border_24px"></i>
+                        </div>
+                        <div class="card-body-ticketing-pricing">
+                            <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                            <span class="card-body-ticketing-price"> HK$ 558 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a class="btn btn-round btn-white btn-shadow" id="to-top-btn">
+        <i class="icon icon-editor_vertical_align_top_24px"></i>
+    </a>
+    <footer>
+        <div class="bottom-nav bottom-nav-navy">
+            <a class="bottom-nav-btn bottom-nav-btn-active">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="./public/javascripts/modal.js"></script>
+
+</html>
