@@ -1,10 +1,10 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sort = require('gulp-sort');
-// const minify = require('gulp-minify');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const rename = require("gulp-rename");
 
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
@@ -12,7 +12,17 @@ var runTimestamp = Math.round(Date.now() / 1000);
 
 const fs = require('fs');
 
-// convert md to html
+/*
+ *
+ * Convert .md file to .html
+ *
+ * Use this gulp task to convert readme file of each component/element to html code,
+ * and manually (for now) update to index.html
+ * 
+ * Todo: build document web on React and automate this part / use storybook
+ *
+ */
+
 const showdown  = require('showdown');
 const showdownOptions = {
   omitExtraWLInCodeBlocks: true,
@@ -32,16 +42,16 @@ gulp.task("md", (done) => {
     }
   })
 
-  // console.log(html);
   done();
 });
 
 /*
  *
- *  Compile and minify css from sass for prod
+ *  Compile and minify css from sass
  *  autoprefixer css
  * 
  */
+
 sass.compiler = require('node-sass');
 gulp.task('scss', () => {
   return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
@@ -159,4 +169,46 @@ gulp.task('svg', gulp.series(
   "findNextUnicode",
   "createIconStreamInstance",
   gulp.parallel("handleGlyphs", "handleFonts")
+));
+
+/*
+ *
+ * Production build
+ * 
+ * Compile, combine and compress scss, css, js, svg fonts
+ * and generate a /dist folder
+ *
+ *
+ */
+
+gulp.task("prod-svg", gulp.series("svg"));
+
+gulp.task("prod-font", () => {
+  return gulp.src(["public/stylesheets/fonts/**/*"])
+    .pipe(gulp.dest("dist/stylesheets/fonts"));
+});
+
+gulp.task("prod-css", () => {
+  return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(rename("hiStyle.css"))
+    .pipe(gulp.dest('./dist/stylesheets'));
+});
+
+gulp.task("prod-js", done => {
+  done();
+})
+
+
+gulp.task("production", gulp.parallel(
+  gulp.series(
+    // compile svg font
+    "prod-svg",
+    // copy all fonts to /dist
+    "prod-font",
+    // compile min css
+    "prod-css"
+  ),
+  "prod-js",
 ));

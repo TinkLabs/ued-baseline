@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./public/stylesheets/style.css">
     <style>
         body {
-            width: 360px;
+            width: 100vw;
+            max-width: unset;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
             margin: auto;
         }
@@ -19,13 +20,15 @@
         }
 
         #fake-handy-header {
-            width: 360px;
+            width: 100vw;
+            max-width: unset;
             height: 75px;
             background-color: #000f23;
         }
 
         #fake-handy-header-thin {
-            width: 360px;
+            width: 100vw;
+            max-width: unset;
             height: 32px;
             background-color: #2b5b8c;
             margin-bottom: 24px;
@@ -49,6 +52,9 @@
             margin-bottom: 16px;
         }
     </style>
+    <script>
+        alert("Best view at 360px width");
+    </script>
 </head>
 
 <body>
@@ -179,7 +185,7 @@
             <i class="icon icon-editor_vertical_align_top_24px"></i>
         </a>
     </section>
-    <footer>
+    <footer class="full-width">
         <div class="bottom-nav bottom-nav-navy">
             <a class="bottom-nav-btn bottom-nav-btn-active">
                 <i class="bottom-nav-icon icon icon-general_home_24px"></i>

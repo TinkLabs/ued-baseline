@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./public/stylesheets/style.css">
     <style>
         body {
-            width: 360px;
+            width: 100vw;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
             margin: auto;
         }
@@ -16,22 +16,29 @@
             padding-bottom: 16px;
             position: relative;
         }
+        .top-bar {
+            position: sticky;
+            top: 0;
+        }
 
         .card {
             margin-bottom: 16px;
         }
         #to-top-btn {
-            position: absolute;
+            position: fixed;
             bottom: 80px;
             right: 16px;
         }
     </style>
+    <script>
+        alert("Best view at 360px width");
+    </script>
 </head>
 
 <body>
-    <section>
+    <section class="full-width">
         <!-- page top / top bar for ticketing -->
-        <div class="top-bar ">
+        <div class="top-bar">
             <div class="top-bar-left">
                 <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
             </div>
@@ -146,7 +153,7 @@
             <i class="icon icon-editor_vertical_align_top_24px"></i>
         </a>
     </section>
-    <footer>
+    <footer  class="full-width">
         <div class="bottom-nav bottom-nav-navy">
             <a class="bottom-nav-btn bottom-nav-btn-active">
                 <i class="bottom-nav-icon icon icon-general_home_24px"></i>
