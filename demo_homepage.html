@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Ticketing</title>
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <style>
+        body {
+            width: 360px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+            margin: auto;
+        }
+
+        section {
+            padding-bottom: 16px;
+            position: relative;
+        }
+
+        #fake-handy-header {
+            width: 360px;
+            height: 75px;
+            background-color: #000f23;
+        }
+
+        #fake-handy-header-thin {
+            width: 360px;
+            height: 32px;
+            background-color: #2b5b8c;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            margin-bottom: 16px;
+        }
+
+        #to-top-btn {
+            position: absolute;
+            bottom: 80px;
+            right: 16px;
+        }
+
+        .see-more {
+            float: right;
+        }
+
+        .poster {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="fake-handy-header" class="full-width">
+    </section>
+    <section id="fake-handy-header-thin" class="full-width">
+    </section>
+    <section>
+        <div class="toolbar">
+            <div class="toolbar-btn">
+                <div class="toolbar-btn-icon-wrapper">
+                    <i class="toolbar-btn-icon icon icon-general_account_balance_24px"></i>
+                </div>
+                <p class="toolbar-btn-text">Text</p>
+            </div>
+            <div class="toolbar-btn">
+                <div class="toolbar-btn-icon-wrapper">
+                    <i class="toolbar-btn-icon icon icon-general_map_24px"></i>
+                </div>
+                <p class="toolbar-btn-text">Maps</p>
+            </div>
+            <div class="toolbar-btn">
+                <div class="toolbar-btn-icon-wrapper">
+                    <i class="toolbar-btn-icon icon icon-international_call"></i>
+                </div>
+                <p class="toolbar-btn-text">Currency Converter</p>
+            </div>
+            <div class="toolbar-btn">
+                <div class="toolbar-btn-icon-wrapper">
+                    <i class="toolbar-btn-icon icon icon-notification_wifi_24px"></i>
+                </div>
+                <p class="toolbar-btn-text">Wi-Fi Hotspot</p>
+            </div>
+            <div class="toolbar-btn">
+                <div class="toolbar-btn-icon-wrapper">
+                    <i class="toolbar-btn-icon icon icon-vip_concierge"></i>
+                </div>
+                <p class="toolbar-btn-text">VIP Concierge</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3 class="body1">Trending Now</h3>
+        <!-- main body / cards -->
+        <div class="horizontal-scroll scroll-with-spacing poster full-width">
+            <img src="public/images/img_l.png" alt="img" class="image-l round-corner">
+            <img src="public/images/img_l.png" alt="img" class="image-l round-corner">
+            <img src="public/images/img_l.png" alt="img" class="image-l round-corner">
+        </div>
+    </section>
+    <section>
+        <h3 class="body1"> Your Neighbourhood <span class="caption gold see-more">See More</span>
+        </h3>
+        <!-- main body / cards -->
+        <img src="public/images/img_l.png" alt="img" class="image-l poster round-corner">
+        <div class="horizontal-scroll scroll-with-spacing poster full-width">
+            <div class="card card-s">
+                <div class="card-container">
+                    <div class="card-media-container">
+                        <img class="card-media" alt="card-media" src="./public/images/img_m.png">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-body-title"> Hong Kong Disneyland Admission Pass </span>
+                        <span class="card-body-content"> Attraction • 0.5 km </span>
+                        <div class="card-body-ticketing">
+                            <div class="card-body-ticketing-pricing">
+                                <span class="card-body-ticketing-price"> HK$ 600 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-s">
+                <div class="card-container">
+                    <div class="card-media-container">
+                        <img class="card-media" alt="card-media" src="./public/images/img_m.png">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-body-title"> Hong Kong Disneyland Admission Pass </span>
+                        <span class="card-body-content"> Attraction • 0.5 km </span>
+                        <div class="card-body-ticketing">
+                            <div class="card-body-ticketing-pricing">
+                                <span class="card-body-ticketing-price"> HK$ 600 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-s">
+                <div class="card-container">
+                    <div class="card-media-container">
+                        <img class="card-media" alt="card-media" src="./public/images/img_m.png">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-body-title"> Hong Kong Disneyland Admission Pass </span>
+                        <span class="card-body-content"> Attraction • 0.5 km </span>
+                        <div class="card-body-ticketing">
+                            <div class="card-body-ticketing-pricing">
+                                <span class="card-body-ticketing-price"> HK$ 600 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="card card-l">
+            <div class="card-container">
+                <div class="card-head">
+                    <img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png">
+                    <div class="card-head-text">
+                        <span class="card-head-title"> Sept.info </span>
+                        <span class="card-head-subtitle"> Sponsored </span>
+                    </div>
+                </div>
+                <div class="card-media-container">
+                    <img class="card-media" alt="card-media" src="./public/images/img_l.png">
+                </div>
+                <div class="card-body">
+                    <span class="card-body-content"> Details here , check it out </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <a class="btn btn-round btn-white btn-shadow" id="to-top-btn">
+            <i class="icon icon-editor_vertical_align_top_24px"></i>
+        </a>
+    </section>
+    <footer>
+        <div class="bottom-nav bottom-nav-navy">
+            <a class="bottom-nav-btn bottom-nav-btn-active">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+            <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                <p class="bottom-nav-text">caption</p>
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="./public/javascripts/modal.js"></script>
+
+</html>

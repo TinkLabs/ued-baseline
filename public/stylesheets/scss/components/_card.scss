@@ -16,20 +16,24 @@
  *
  */
 
+/*
+ *
+ * All cards' dimension are base on image sizes
+ *
+ *
+ *
+ */
+
 .card {
-    
+
     margin: 0 auto;
     border-radius: 4px;
-    overflow:hidden;
+    overflow: hidden;
     background-color: $hi-white;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
-    
-    &.card-l {
-        width: 100%;
-        max-width: 328px;
-    }
 
     .card-container {
+        width: 100%;
 
         .card-head {
             display: flex;
@@ -187,5 +191,40 @@
         }
 
         .card-actions {}
+    }
+
+    /*
+     *
+     * Size dependent settings
+     *
+     */
+    &.card-l {
+        width: 100%;
+        max-width: 328px;
+    }
+
+    &.card-s {
+        width: 40%;
+        min-width: 144px;
+
+        .card-container {
+            .card-body {
+                .card-body-title {
+                    @include subtitle2;
+                    @include wrapped-text-ellipsis;
+                    @include subtitle2-wrap;
+                }
+                .card-body-content {
+                    @include caption;
+                }
+                .card-body-ticketing {
+                    .card-body-ticketing-pricing {
+                        .card-body-ticketing-price {
+                            @include subtitle2;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

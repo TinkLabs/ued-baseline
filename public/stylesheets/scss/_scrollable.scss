@@ -24,4 +24,23 @@
 
 .horizontal-scroll {
     @include horizontal-scroll;
+
+    &.scroll-with-spacing {
+        > * {
+            margin-right: 8px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.full-width {
+        > *:first-child {
+            margin-left: 16px;
+        }
+        &:after {
+            content: "";
+            padding-left: 16px;
+        }
+    }
 }

@@ -83,14 +83,8 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
   transition: background-color 0.5s ease;
 
   .tab-text {
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* use this value to count block height */
-    line-height: 1.29em;
-    /* max 2 line inside a tab */
-    /* max-height = line-height * lines max number (2) */
-    max-height: 2.58em;
+    @include wrapped-text-ellipsis;
+    @include subtitle2-wrap;
   }
 
   &.active {

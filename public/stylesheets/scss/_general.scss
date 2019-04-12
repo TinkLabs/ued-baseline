@@ -15,6 +15,14 @@ html {
 body {
   font-family: "Montserrat";
   background-color: $hi-white;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.full-width {
+  margin-left: -16px;
+  margin-right: -16px;
+  width: 100vw;
 }
 
 section {
@@ -88,7 +96,7 @@ a {
 .br-1-dash-gold {
   border: 1px dashed $hi-gold;
 }
-.br-4 {
+.round-corner {
   border-radius: 4px;
 }
 
