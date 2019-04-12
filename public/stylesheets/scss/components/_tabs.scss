@@ -196,9 +196,11 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
  */
 
 .tabs {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-auto-columns: 1fr;
+  @include horizontal-scroll;
+
   background-color: $hi-white;
+
+  .tab {
+    flex: 0 1 auto;
+  }
 }

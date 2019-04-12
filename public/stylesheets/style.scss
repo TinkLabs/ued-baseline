@@ -9,20 +9,56 @@
 
 /*
  *
+ * No dependency
+ *
+ */
+
+// horizontal scrolling container
+@import "scss/scrollable";
+
+// general variables
+@import "scss/variables";
+
+// montserrat and merriweather sans
+@import "scss/font";
+
+// gulp generated svg font list
+@import "scss/hiStyle";
+
+// simple grid columns
+@import "scss/grid";
+
+// flex box class name
+@import "scss/flexbox";
+
+// fixed image sizes and ratio
+@import "scss/images";
+
+/*
+ *
  * general settings
  *
  */
 
-@import "scss/variables";
-@import "scss/font";
-@import "scss/hiStyle";
-@import "scss/icons";   // handpicked icons from hiStyle
+// shorted class name for certain hiStyle icons
+@import "scss/icons";
+
+// types of content text style
 @import "scss/typography";
+
+// color palette
 @import "scss/color";
-@import "scss/grid";
-@import "scss/flexbox";
-@import "scss/images";
+
+// uncategorized
 @import "scss/general";
+
+
+/*
+ *
+ * general elements
+ *
+ */
+
 @import "scss/buttons";
 @import "scss/chips";
 @import "scss/tag";

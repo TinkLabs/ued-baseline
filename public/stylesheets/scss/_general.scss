@@ -159,3 +159,13 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0;
 }
+
+/*
+ *
+ * Code Block
+ *
+ */
+pre {
+  width: 100%;
+  @include horizontal-scroll;
+}
