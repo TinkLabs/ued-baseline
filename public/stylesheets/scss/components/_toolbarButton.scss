@@ -5,8 +5,7 @@
     align-items: center;
 
     width: 60px;
-    // height: 84px;
-    background-color: white;
+    min-width: 72px;
     color: $hi-gold;
 
     cursor: pointer;
@@ -39,4 +38,19 @@
             background-color: rgba($hi-navy, 0.08);
         }
     }
+    &:nth-child(n+6) {
+        // max 5 per row, give margin top since 6th btn
+        margin-top: 8px;
+    }
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: white;
+    
 }
