@@ -4,6 +4,7 @@ const sort = require('gulp-sort');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const uglify = require('gulp-uglify-es').default;
 const rename = require("gulp-rename");
 
 var iconfont = require('gulp-iconfont');
@@ -192,13 +193,18 @@ gulp.task("prod-css", () => {
   return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename("hiStyle.css"))
+    .pipe(rename("handyBaseline.css"))
     .pipe(gulp.dest('./dist/stylesheets'));
 });
 
 gulp.task("prod-js", done => {
-  done();
-})
+  return gulp.src('./public/javascripts/*.js')
+    // Minify the file
+    .pipe(uglify())
+    // Output
+    .pipe(rename("handyBaseline.js"))
+    .pipe(gulp.dest('./dist/javascripts'))
+});
 
 
 gulp.task("production", gulp.parallel(
