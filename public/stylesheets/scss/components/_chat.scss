@@ -64,6 +64,7 @@
 
 @mixin audio-bg-animation {
     position: relative;
+    overflow: hidden;
 
     &::before {
         position: absolute;
@@ -263,6 +264,12 @@
 
     &.bubble-left {
         justify-content: flex-start;
+
+        .avatar {
+            margin-right: 8px;
+            width: 32px;
+            height: 32px;
+        }
 
         .msg-wrapper {
             border-top-left-radius: 4px;

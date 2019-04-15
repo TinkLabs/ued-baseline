@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Ticketing</title>
+    <!-- <link rel="stylesheet"
+          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css"> -->
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <style>
+        body {
+            width: 100vw;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+            margin: auto;
+        }
+
+        section {
+            position: relative;
+        }
+
+        .page-head {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        #chat-messages {
+            overflow: scroll;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            z-index: 10;
+            background-color: white;
+        }
+
+        .bot-choice {
+            margin-top: 12px;
+        }
+
+    </style>
+    <script>
+        alert("Best view at 360px width");
+    </script>
+</head>
+
+<body>
+    <section class="full-width page-head">
+        <!-- page top / top bar for chat room -->
+        <div class="top-bar top-bar-chat">
+            <div class="top-bar-left">
+                <div class="top-bar-icon">
+                    <i class="icon icon-hardware_keyboard_arrow_left_24px"></i>
+                </div>
+            </div>
+            <div class="top-bar-body">
+                <div class="chat-info-strip">
+                    <img class="avatar" src="./public/images/avatar.png" alt="avatar">
+                    <div class="chat-info">
+                        <p class="chat-name">Name</p>
+                        <p class="chat-number">+123 123 456 789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-actions">
+                    <i class="icon icon-maps_local_phone_24px"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="chat-messages">
+        <!-- main body / messages -->
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <span class="chat-msg"> Hi!!! </span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <span class="chat-msg"> Hello, I want to book a Michelin star restaurant for a party of 2 for tonight at
+                    7. Can you help? </span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-left">
+            <img src="./public/images/avatar.png" alt="avatar" class="avatar">
+            <div class="msg-wrapper">
+                <span class="chat-msg"> We will confirm your booking by today noon. Thank you for your kind patience.
+                </span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-left">
+            <img src="./public/images/avatar.png" alt="avatar" class="avatar">
+            <div class="msg-wrapper playing infinite-animation">
+                <i class="audio-control icon icon-av_pause_circle_filled_24px"></i>
+                <span class="audio-timer">1:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <i class="audio-control icon icon-av_play_circle_filled_24px"></i>
+                <span class="audio-timer">0:01</span>
+            </div>
+        </div>
+        <div class="chat-bubble bubble-right">
+            <div class="msg-wrapper">
+                <span class="chat-msg"> End </span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="subtitle2">How can we help you?</div>
+        <span class="subtitle2 chip bot-choice">I need help with hotel related services</span>
+        <div class="chat-input full-width">
+            <i class="chat-voice icon icon-av_mic_24px"></i>
+            <textarea class="chat-text" rows="1" placeholder="type something" onkeyup="textAreaResize(this)"></textarea>
+            <i class="chat-send icon icon-content_send_24px"></i>
+        </div>
+    </footer>
+</body>
+<!-- <script
+        src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script> -->
+<script src="./public/javascripts/handyBaseline/textarea.js"></script>
+
+</html>

@@ -17,6 +17,7 @@
         <div class="demo_indexes">
             <a class="btn btn-outlined" href="./demo_ticketing.html">Ticketing Demo</a>
             <a class="btn btn-outlined" href="./demo_homepage.html">Homepage Demo</a>
+            <a class="btn btn-outlined" href="./demo_chat.html">Concierge Demo</a>
             <a class="btn btn-contained" data-id="Color-Palette">Color Palette</a>
             <a class="btn btn-contained" data-id="Supporting-Colors">Supporting Colors</a>
             <a class="btn btn-contained" data-id="Typography">Typography</a>
@@ -1881,7 +1882,7 @@ modal.destory();</code></pre>
             <h3 class="headline" id="Chat">Chat</h3>
             <div class="demo_showcase demo_screen_mob">
                 <div class="chat-input">
-                    <i class="chat-voice icon icon icon-av_mic_24px"></i>
+                    <i class="chat-voice icon icon-av_mic_24px"></i>
                     <textarea
                         class="chat-text" rows="1" 
                         placeholder="type something"
@@ -1890,7 +1891,7 @@ modal.destory();</code></pre>
                     <i class="chat-send send-enabled icon icon-content_send_24px"></i>
                 </div>
                 <div class="chat-input">
-                    <i class="chat-voice talking icon icon icon-av_mic_24px"></i>
+                    <i class="chat-voice talking icon icon-av_mic_24px"></i>
                     <textarea class="chat-text" rows="1"
                         placeholder="type something"
                         onkeyup="textAreaResize(this)"
@@ -1900,6 +1901,7 @@ modal.destory();</code></pre>
             </div>
             <div class="demo_showcase demo_screen_mob demo_no_bg">
                 <div class="chat-bubble bubble-left">
+                    <img src="./public/images/avatar.png" alt="avatar" class="avatar">
                     <div class="msg-wrapper">
                         <span class="chat-msg"> Chat Content </span>
                     </div>
@@ -1910,6 +1912,7 @@ modal.destory();</code></pre>
                     </div>
                 </div>
                 <div class="chat-bubble bubble-left">
+                    <img src="./public/images/avatar.png" alt="avatar" class="avatar">
                     <div class="msg-wrapper">
                         <div class="msg-typing"></div>
                     </div>
@@ -1920,6 +1923,7 @@ modal.destory();</code></pre>
                     </div>
                 </div>
                 <div class="chat-bubble bubble-left">
+                    <img src="./public/images/avatar.png" alt="avatar" class="avatar">
                     <div class="msg-wrapper playing infinite-animation">
                         <i class="audio-control icon icon-av_pause_circle_filled_24px"></i>
                         <span class="audio-timer">0:01</span>
@@ -1940,7 +1944,7 @@ modal.destory();</code></pre>
                 <p>Input text field
                 Class name is for styling</p>
 <pre><code class="html language-html">&lt;div class="chat-input"&gt;
-    &lt;i class="chat-voice icon icon icon-av_mic_24px"&gt;&lt;/i&gt;
+    &lt;i class="chat-voice icon icon-av_mic_24px"&gt;&lt;/i&gt;
     &lt;textarea
         class="chat-text" rows="1" 
         placeholder="type something"
@@ -1965,9 +1969,9 @@ modal.destory();</code></pre>
         </div>
     </section>
 </body>
-<script src="./public/javascripts/modal.js"></script>
-<script src="./public/javascripts/textarea.js"></script>
-<!-- <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.js"></script> -->
+<script src="./public/javascripts/handyBaseline/modal.js"></script>
+<script src="./public/javascripts/handyBaseline/textarea.js"></script>
+<!-- <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script> -->
 <script src="./public/javascripts/demo/demo.js"></script>
 
 </html>

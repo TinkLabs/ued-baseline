@@ -1,1 +1,203 @@
-class Modal{constructor(t){this.id=t.id,this.iconClass=t.iconClass||[],this.title=t.title,this.body=t.body,this.buttonText=t.buttonText,this.stackButton=t.stackButton}init(){let t=document.getElementById(this.id),e=this.createModalBase(),d=document.createElement("div");d.classList.add("modal-wrapper");let a=this.createModalHeader();d.appendChild(a);let s=this.createModalBody();d.appendChild(s);let l=this.createModalFooter();d.appendChild(l),e.appendChild(d),t.appendChild(e)}destory(){let t=document.getElementById(this.id);for(;t.firstChild;)t.removeChild(t.firstChild)}createModalBase(){let t=document.createElement("div");return t.classList.add("modal"),t.classList.add("modal-base"),t.addEventListener("click",t=>{let e=t.target.classList,d=!1;for(let t=0;t<e.length;t++)"modal-base"===e[t]&&(t=e.length,d=!0);d&&this.destory()}),t}createModalHeader(){let t=document.createElement("div");if(t.classList.add("modal-header"),this.iconClass.length){let e=document.createElement("i");for(let t=0;t<this.iconClass.length;t++)e.classList.add(this.iconClass[t]);t.appendChild(e)}let e=document.createElement("h3");return e.classList.add("modal-title"),e.innerHTML=this.title,t.appendChild(e),t}createModalBody(){let t=document.createElement("div");t.classList.add("modal-body");let e=document.createElement("p");return e.classList.add("modal-content"),e.innerHTML=this.body,t.appendChild(e),t}createModalFooter(){let t=document.createElement("div");if(t.classList.add("modal-footer"),this.stackButton&&t.classList.add("stacked"),1===this.buttonText.length){let e=document.createElement("button");e.classList.add("btn"),e.classList.add("btn-contained"),e.id="modal-btn-primary",e.innerHTML=this.buttonText[0],e.onclick=(()=>{this.destory()}),t.appendChild(e)}else{let e=document.createElement("button");e.classList.add("btn"),e.classList.add("btn-contained"),e.id="modal-btn-secondary",e.innerHTML=this.buttonText[0],e.onclick=(()=>{this.destory()});let d=document.createElement("button");d.classList.add("btn"),d.classList.add("btn-contained"),d.id="modal-btn-primary",d.innerHTML=this.buttonText[1],d.onclick=(()=>{this.destory()}),t.appendChild(e),t.appendChild(d)}return t}}
+/*
+ *
+ * Modal
+ * 
+ * Modal can be created and styled by pure html and css.
+ * 
+ * Or use this modal class to generate, destory basic modal with
+ * built-in trigger.
+ * 
+ * To create a modal, an object of options is required:
+ * 
+ * id
+ *  string
+ *  required
+ *  the id of your modal element
+ * 
+ * iconClass
+ *  string array
+ *  optional
+ *  classnames of the icon above modal title
+ * 
+ * title
+ *  string
+ *  optional
+ *  modal title
+ * 
+ * body
+ *  string
+ *  optional
+ *  modal body text
+ * 
+ * buttonText
+ *  string array
+ *  require at least 1 entry, max 2
+ *  text for modal actions at modal footer
+ * 
+ * stackButton
+ *  boolean
+ *  optional
+ *  stacking action buttons if button text is too long
+ * 
+ */
+
+class Modal {
+    constructor(options) {
+        this.id = options.id;
+        this.iconClass = options.iconClass || [];
+        this.title = options.title;
+        this.body = options.body;
+        this.buttonText = options.buttonText;
+        this.stackButton = options.stackButton;
+    }
+
+    init() {
+        // find Target DOM location
+        let anchor = document.getElementById(this.id);
+        let modal = this.createModalBase();
+
+        // create modal wrapper
+        let modalWrapper = document.createElement("div");
+        modalWrapper.classList.add("modal-wrapper");
+
+        // create modal header
+        let modalHeader = this.createModalHeader();
+        modalWrapper.appendChild(modalHeader);
+
+        // create modal body
+        let modalBody = this.createModalBody();
+        modalWrapper.appendChild(modalBody);
+
+        // create modal footer
+        let modalFooter = this.createModalFooter();
+        modalWrapper.appendChild(modalFooter);
+
+        modal.appendChild(modalWrapper);
+        anchor.appendChild(modal);
+    }
+
+    destory() {
+        let e = document.getElementById(this.id);
+        while (e.firstChild) {
+            e.removeChild(e.firstChild);
+        }
+    }
+
+    // hide(id) {
+
+    // }
+
+    // bringForward(id) {
+
+    // }
+
+    // element creation
+    createModalBase() {
+        let modalBase = document.createElement("div");
+        modalBase.classList.add("modal");
+        modalBase.classList.add("modal-base");
+
+        modalBase.addEventListener('click', e => {
+            let classList = e.target.classList;
+            let destory = false;
+            for (let i = 0; i < classList.length; i++) {
+                if (classList[i] === "modal-base") {
+                    i = classList.length;
+                    destory = true;
+                }
+            }
+            if (destory) {
+                this.destory();
+            }
+        });
+
+
+        return modalBase;
+    }
+
+    createModalHeader() {
+        let modalHeader = document.createElement("div");
+        modalHeader.classList.add("modal-header");
+
+        if (this.iconClass.length) {
+            let iconEle = document.createElement("i");
+            for (let i = 0; i < this.iconClass.length; i++) {
+                iconEle.classList.add(this.iconClass[i])
+            }
+            modalHeader.appendChild(iconEle);
+        }
+
+        let headerTitle = document.createElement("h3");
+        headerTitle.classList.add("modal-title");
+        headerTitle.innerHTML = this.title;
+        modalHeader.appendChild(headerTitle);
+
+        return modalHeader;
+    }
+
+    createModalBody() {
+        let modalBody = document.createElement("div");
+        modalBody.classList.add("modal-body");
+
+        let bodyText = document.createElement("p");
+        bodyText.classList.add("modal-content");
+        bodyText.innerHTML = this.body;
+        modalBody.appendChild(bodyText);
+
+        return modalBody;
+    }
+
+    createModalFooter() {
+        let modalFooter = document.createElement("div");
+        modalFooter.classList.add("modal-footer");
+        if (this.stackButton) {
+            modalFooter.classList.add("stacked");
+        }
+        if (this.buttonText.length === 1) {
+            let footerText = document.createElement("button");
+            footerText.classList.add("btn");
+            footerText.classList.add("btn-contained");
+            footerText.id = "modal-btn-primary";
+            footerText.innerHTML = this.buttonText[0];
+            footerText.onclick = () => { this.destory() };
+            modalFooter.appendChild(footerText);
+        } else {
+            let footerText1 = document.createElement("button");
+            footerText1.classList.add("btn");
+            footerText1.classList.add("btn-contained");
+            footerText1.id = "modal-btn-secondary";
+            footerText1.innerHTML = this.buttonText[0];
+            footerText1.onclick = () => { this.destory() };
+            let footerText2 = document.createElement("button");
+            footerText2.classList.add("btn");
+            footerText2.classList.add("btn-contained");
+            footerText2.id = "modal-btn-primary";
+            footerText2.innerHTML = this.buttonText[1];
+            footerText2.onclick = () => { this.destory() };
+
+            modalFooter.appendChild(footerText1);
+            modalFooter.appendChild(footerText2);
+        }
+        return modalFooter;
+    }
+}
+
+textAreaResize = (field) => {
+    // Reset field height
+	field.style.height = 'inherit';
+
+	// Get the computed styles for the element
+	var computed = window.getComputedStyle(field);
+
+	// Calculate the height
+    var height = 
+        parseInt(computed.getPropertyValue('border-top-width'), 10)
+        + parseInt(computed.getPropertyValue('padding-top'), 10)
+        + field.scrollHeight
+        + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+        + parseInt(computed.getPropertyValue('border-bottom-width'), 10)
+        - 4;
+
+	field.style.height = height + 'px';
+
+}

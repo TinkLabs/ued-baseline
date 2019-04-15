@@ -1,3 +1,4 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sort = require('gulp-sort');
@@ -5,13 +6,8 @@ const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 const rename = require("gulp-rename");
-
-var iconfont = require('gulp-iconfont');
-var consolidate = require('gulp-consolidate');
-var runTimestamp = Math.round(Date.now() / 1000);
-
-const fs = require('fs');
 
 /*
  *
@@ -50,6 +46,8 @@ gulp.task("md", (done) => {
  *
  *  Compile and minify css from sass
  *  autoprefixer css
+ *  
+ *  Dev: use `gulp watch`
  * 
  */
 
@@ -87,6 +85,7 @@ gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
  *  Generate class mapping for each svg
  * 
  */
+
 var iconfont = require('gulp-iconfont');
 var consolidate = require('gulp-consolidate');
 var runTimestamp = Math.round(Date.now() / 1000);
@@ -198,12 +197,17 @@ gulp.task("prod-css", () => {
 });
 
 gulp.task("prod-js", done => {
-  return gulp.src('./public/javascripts/*.js')
+  let target = ['./public/javascripts/handyBaseline/**/*.js'];
+  let dest = './dist/javascripts';
+  return gulp.src(target)
+    // concat all js files
+    .pipe(concat("handyBaseline.js"))
+    .pipe(gulp.dest(dest))
     // Minify the file
     .pipe(uglify())
     // Output
-    .pipe(rename("handyBaseline.js"))
-    .pipe(gulp.dest('./dist/javascripts'))
+    .pipe(rename("handyBaseline.min.js"))
+    .pipe(gulp.dest(dest))
 });
 
 
@@ -216,5 +220,6 @@ gulp.task("production", gulp.parallel(
     // compile min css
     "prod-css"
   ),
+  // concat and compress js files
   "prod-js",
 ));
