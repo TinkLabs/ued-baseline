@@ -1,0 +1,28 @@
+<h3>Chat</h3>
+<p>The Chat style library provides chat bubbles for plain text, voice message, input component including text field, record audio button and send button.</p>
+<p>Include the handy js library to get auto resizing for textfield.</p>
+<h3>Usage</h3>
+<p>Input text field
+Class name is for styling</p>
+<pre><code class="html language-html">&lt;div class="chat-input"&gt;
+    &lt;i class="chat-voice icon icon icon-av_mic_24px"&gt;&lt;/i&gt;
+    &lt;textarea
+        class="chat-text" rows="1" 
+        placeholder="type something"
+        onkeyup="textAreaResize(this)"
+    &gt;&lt;/textarea&gt;
+    &lt;i class="chat-send send-enabled icon icon-content_send_24px"&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+<p>Chat Bubbles</p>
+<pre><code class="html language-html">&lt;div class="chat-bubble bubble-right"&gt; 
+    &lt;div class="msg-wrapper"&gt;
+        &lt;span class="chat-msg"&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Audio Chat Bubble</p>
+<pre><code class="html language-html">&lt;div class="chat-bubble bubble-left"&gt;
+    &lt;div class="msg-wrapper playing infinite-animation"&gt;
+        &lt;i class="audio-control icon icon-av_pause_circle_filled_24px"&gt;&lt;/i&gt;
+        &lt;span class="audio-timer"&gt;0:01&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
