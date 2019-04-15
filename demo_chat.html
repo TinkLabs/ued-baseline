@@ -66,7 +66,7 @@
             </div>
             <div class="top-bar-right">
                 <div class="top-bar-actions">
-                    <i class="icon icon-maps_local_phone_24px"></i>
+                    <span class="leave-chat">Leave Chat</span>
                 </div>
             </div>
         </div>
@@ -143,15 +143,30 @@
     <footer>
         <div class="subtitle2">How can we help you?</div>
         <span class="subtitle2 chip bot-choice">I need help with hotel related services</span>
-        <div class="chat-input full-width">
+        <div class="chat-input full-width" id="text-input">
             <i class="chat-voice icon icon-av_mic_24px"></i>
             <textarea class="chat-text" rows="1" placeholder="type something" onkeyup="textAreaResize(this)"></textarea>
             <i class="chat-send icon icon-content_send_24px"></i>
+        </div>
+        <div class="chat-input full-width" id="voice-input" style="display:none">
+            <i class="chat-to-type icon icon-hardware_keyboard_24px"></i>
+            <span class="btn btn-navy btn-contained">Hold to Talk</span>
         </div>
     </footer>
 </body>
 <!-- <script
         src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script> -->
 <script src="./public/javascripts/handyBaseline/textarea.js"></script>
+<script>
+    var audio = document.getElementsByClassName("chat-voice")[0].addEventListener("click", e => {
+        document.getElementById("text-input").setAttribute("style", "display: none");
+        document.getElementById("voice-input").setAttribute("style", "display: flex");
+
+        var keyboard = document.getElementsByClassName("chat-to-type")[0].addEventListener("click", e => {
+            document.getElementById("voice-input").setAttribute("style", "display: none");
+            document.getElementById("text-input").setAttribute("style", "display: flex");
+        });
+    });
+</script>
 
 </html>

@@ -7,7 +7,7 @@
   background-color: $hi-white;
   color: $dark-default;
 
-  padding: 8px 0;
+  padding: 8px 16px;
 
   .top-bar-left {
     display: flex;
@@ -16,7 +16,8 @@
     align-items: center;
 
     .top-bar-icon {
-      padding: 0 0 0 16px;
+      // padding: 0 0 0 16px;
+      padding: 0;
       cursor: pointer;
     }
   }
@@ -47,7 +48,7 @@
     @include subtitle2;
 
     .icon {
-      padding: 0 16px 0 0;
+      padding: 0 0 0 16px;
     }
 
     .top-bar-actions {
@@ -56,6 +57,10 @@
       align-items: center;
       * {
         cursor: pointer;
+      }
+
+      .leave-chat {
+        color: $hi-red;
       }
     }
     .top-bar-menu {
