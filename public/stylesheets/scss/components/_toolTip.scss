@@ -14,6 +14,11 @@
     cursor: help;
     position: relative;
     outline: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -26,35 +31,20 @@
     z-index: -100;
 }
 
-.tooltip:hover::before,
-.tooltip:focus::before,
-.tooltip:hover::after,
-.tooltip:focus::after {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    z-index: 100; 
-}
-
-
 /* pointer tip */
 .tooltip::before {
-    border-style: solid;
-    border-width: 16px 12px 0 12px;
-    border-color: $dark-default transparent transparent transparent;
     bottom: 100%;
     content: "";
-    margin-left: 25%;
     left: auto;
     right: auto;
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
-    transform:  scale(.6) translateY(-90%);
-} 
+    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26), opacity .65s .5s;
+    transform: scale(.6) translateY(-90%);
 
-.tooltip:hover::before,
-.tooltip:focus::before {
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, .88) 0, rgba(0, 0, 0, 0.88) 50%, transparent 0%, transparent 50%);
+    border-bottom-right-radius: 2px;
 }
-
 
 /* speech bubble */
 .tooltip::after {
@@ -64,8 +54,8 @@
     color: $hi-white;
     content: attr(data-tip);
     padding: 8px 12px;
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
-    transform:  scale(.6) translateY(50%);  
+    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
+    transform: scale(.6) translateY(50%);
     position: absolute;
     width: max-content;
     max-width: 300px;
@@ -75,18 +65,35 @@
     left: -8px;
     right: auto;
 }
+
 .tooltip.tp-center::after {
-    left: -50%;
+    left: auto;
     right: auto;
 }
+
 .tooltip.tp-right::after {
     right: -8px;
     left: auto;
 }
 
+.tooltip:hover::before,
+.tooltip:focus::before,
 .tooltip:hover::after,
-.tooltip:focus::after  {
-    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
+.tooltip:focus::after {
+    opacity: 1;
+    z-index: 100;
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before {
+    transform: scale(1) translateY(-4px) rotate(45deg);
+    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
+}
+
+.tooltip:hover::after,
+.tooltip:focus::after {
+    transform: scale(1) translateY(7px);
+    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
 }
 
 // @media (max-width: 760px) {
