@@ -194,6 +194,7 @@
         &::before {
             color: $hi-gold;
         }
+
         &:after {
             @include audio-btn-animation;
             background-color: $btn-color-1-overlay-light;
@@ -222,22 +223,44 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-end;
-}
 
-#voice-input {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    &.voice-input {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
 
-    .icon {
-        margin-right: 22px;
-        font-size: 24px;
-    }
-    .btn {
-        width: 100%;
-        height: 36px;
+        .icon {
+            margin-right: 22px;
+            font-size: 24px;
+        }
+
+        .record-btn {
+            @include subtitle2;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            width: 282px;
+            height: 36px;
+            border-radius: 4px;
+
+            background-color: $hi-navy-200;
+            border: 1px solid $hi-navy-200;
+            color: $hi-navy;
+
+            transition: background-color 0.5s ease-in-out;
+            cursor: pointer;
+
+            &.pressed,
+            &:active {
+                background-color: blendNormal(rgba($hi-navy, 0.32), $hi-white);
+            }
+        }
     }
 }
 

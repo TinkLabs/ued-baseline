@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo Ticketing</title>
-    <!-- <link rel="stylesheet"
-          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css"> -->
-    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <link rel="stylesheet"
+          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
+    <!-- <link rel="stylesheet" href="./public/stylesheets/style.css"> -->
     <style>
         body {
             width: 100vw;
@@ -148,15 +148,15 @@
             <textarea class="chat-text" rows="1" placeholder="type something" onkeyup="textAreaResize(this)"></textarea>
             <i class="chat-send icon icon-content_send_24px"></i>
         </div>
-        <div class="chat-input full-width" id="voice-input" style="display:none">
+        <div class="chat-input full-width voice-input" style="display:none">
             <i class="chat-to-type icon icon-hardware_keyboard_24px"></i>
             <span class="btn btn-navy btn-contained">Hold to Talk</span>
         </div>
     </footer>
 </body>
-<!-- <script
-        src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script> -->
-<script src="./public/javascripts/handyBaseline/textarea.js"></script>
+<script
+        src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
+<!-- <script src="./public/javascripts/handyBaseline/textarea.js"></script> -->
 <script>
     var audio = document.getElementsByClassName("chat-voice")[0].addEventListener("click", e => {
         document.getElementById("text-input").setAttribute("style", "display: none");
