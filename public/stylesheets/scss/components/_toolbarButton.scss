@@ -8,6 +8,8 @@
     color: $hi-gold;
 
     cursor: pointer;
+    // prevent text selection on long tap
+    user-select: none;
 
     .toolbar-btn-icon-wrapper {
         background-color: rgba($hi-gold, 0.32);

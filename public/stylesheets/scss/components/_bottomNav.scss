@@ -16,6 +16,9 @@
   justify-content: space-around;
   align-items: center;
 
+  // prevent text selection on long tap
+  user-select: none;
+
   .bottom-nav-btn {
     // display
     display: flex;

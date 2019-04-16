@@ -71,6 +71,8 @@ $color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
   outline: none;
   position: relative;
   transition: all 0.2s ease;
+  // prevent text selection on long tap
+  user-select: none;
 }
 
 .chip {

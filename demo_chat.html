@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo Ticketing</title>
-    <link rel="stylesheet"
-          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
+    <link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
     <!-- <link rel="stylesheet" href="./public/stylesheets/style.css"> -->
     <style>
         body {
@@ -148,9 +147,14 @@
             <textarea class="chat-text" rows="1" placeholder="type something" onkeyup="textAreaResize(this)"></textarea>
             <i class="chat-send icon icon-content_send_24px"></i>
         </div>
-        <div class="chat-input full-width voice-input" style="display:none">
+        <div class="chat-input full-width voice-input" id="voice-input" style="display:none">
             <i class="chat-to-type icon icon-hardware_keyboard_24px"></i>
-            <span class="btn btn-navy btn-contained">Hold to Talk</span>
+            <span class="record-btn" id="hold-btn">Hold to Talk</span>
+        </div>
+        <div class="tooltip tp-activity" id="recording-tooltip">
+            <i class="icon icon-av_mic_24px"></i>
+            <span class="tp-text"> 00:34 </span>
+            <span class="tp-text"> slide up to Cancel </span>
         </div>
     </footer>
 </body>
@@ -161,6 +165,17 @@
     var audio = document.getElementsByClassName("chat-voice")[0].addEventListener("click", e => {
         document.getElementById("text-input").setAttribute("style", "display: none");
         document.getElementById("voice-input").setAttribute("style", "display: flex");
+
+        var record_btn = document.getElementById("hold-btn");
+        record_btn.addEventListener("touchstart", e => {
+            e.target.innerHTML = "Release to Send";
+            document.getElementById("recording-tooltip").classList.add("tp-show");
+
+        });
+        record_btn.addEventListener("touchend", e => {
+            e.target.innerHTML = "Hold to Talk";
+            document.getElementById("recording-tooltip").classList.remove("tp-show");
+        });
 
         var keyboard = document.getElementsByClassName("chat-to-type")[0].addEventListener("click", e => {
             document.getElementById("voice-input").setAttribute("style", "display: none");

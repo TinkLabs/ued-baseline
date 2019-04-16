@@ -255,6 +255,8 @@ button,
   outline: none;
   position: relative;
   transition: all 0.2s ease;
+  // prevent text selection on long tap
+  user-select: none;
 
   &.btn-large {
     height: 52px;

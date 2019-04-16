@@ -52,6 +52,8 @@ $color-1-white-overlay: blendNormal($tag-white-overlay, $tag-color-1-main);
   cursor: none;
   outline: none;
   position: relative;
+  // prevent text selection on long tap
+  user-select: none;
 }
 
 .tag {

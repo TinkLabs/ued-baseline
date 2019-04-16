@@ -82,6 +82,9 @@ $color-2-white-overlay: blendNormal($tab-white-overlay, $tab-color-2-main);
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
 
+  // prevent text selection on long tap
+  user-select: none;
+
   .tab-text {
     @include wrapped-text-ellipsis;
     @include subtitle2-wrap;

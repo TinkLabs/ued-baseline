@@ -152,6 +152,7 @@
 
     outline: none;
     resize: none;
+
     overflow: hidden;
     background-color: $dark-lightest;
     color: $dark-default;
@@ -255,6 +256,8 @@
 
             transition: background-color 0.5s ease-in-out;
             cursor: pointer;
+            // prevent text selection on long tap
+            user-select: none;
 
             &.pressed,
             &:active {
