@@ -192,3 +192,8 @@ button,
 #show-tooltip:active ~ .tooltip.tp-activity {
     display: flex;
 }
+
+// divider
+hr.demo_divider {
+    background-color: $hi-white;
+}

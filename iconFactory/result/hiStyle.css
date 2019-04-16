@@ -43,6 +43,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-logo_concierge_agent_rounded:before { 
+	content: "\EE24" 
+}
+.icon-logo_concierge_guest_rounded:before { 
+	content: "\EE25" 
+}
+.icon-logo_hiinc_primary_negative_colour_rounded:before { 
+	content: "\EE26" 
+}
+.icon-logo_hiinc_primary_negative_mono_rounded:before { 
+	content: "\EE27" 
+}
+.icon-logo_hiinc_primary_positive_colour_rounded:before { 
+	content: "\EE28" 
+}
+.icon-logo_hiinc_primary_positive_mono_rounded:before { 
+	content: "\EE29" 
+}
+.icon-logo_hiinc_secondary_negative_colour_rounded:before { 
+	content: "\EE2A" 
+}
+.icon-logo_hiinc_secondary_negative_mono_rounded:before { 
+	content: "\EE2B" 
+}
+.icon-logo_hiinc_secondary_positive_colour_rounded:before { 
+	content: "\EE2C" 
+}
+.icon-logo_hiinc_secondary_positive_mono_rounded:before { 
+	content: "\EE2D" 
+}
 .icon-alert_add_24px:before { 
 	content: "\EA01" 
 }
