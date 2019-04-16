@@ -1,0 +1,98 @@
+/*
+ *
+ * Tooltip
+ *
+ * Provides quick explanation to user
+ *
+ * Position:
+ * Top + (Left / Center / Right)
+ *
+ */
+
+/* start of code for tooltips */
+.tooltip {
+    cursor: help;
+    position: relative;
+    outline: none;
+}
+
+
+/* common styles for both parts of tool tip */
+.tooltip::before,
+.tooltip::after {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+}
+
+.tooltip:hover::before,
+.tooltip:focus::before,
+.tooltip:hover::after,
+.tooltip:focus::after {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    z-index: 100; 
+}
+
+
+/* pointer tip */
+.tooltip::before {
+    border-style: solid;
+    border-width: 16px 12px 0 12px;
+    border-color: $dark-default transparent transparent transparent;
+    bottom: 100%;
+    content: "";
+    margin-left: 25%;
+    left: auto;
+    right: auto;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
+    transform:  scale(.6) translateY(-90%);
+} 
+
+.tooltip:hover::before,
+.tooltip:focus::before {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+}
+
+
+/* speech bubble */
+.tooltip::after {
+    background: $dark-default;
+    border-radius: 4px;
+    bottom: 180%;
+    color: $hi-white;
+    content: attr(data-tip);
+    padding: 8px 12px;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+    transform:  scale(.6) translateY(50%);  
+    position: absolute;
+    width: max-content;
+    max-width: 300px;
+}
+
+.tooltip.tp-left::after {
+    left: -8px;
+    right: auto;
+}
+.tooltip.tp-center::after {
+    left: -50%;
+    right: auto;
+}
+.tooltip.tp-right::after {
+    right: -8px;
+    left: auto;
+}
+
+.tooltip:hover::after,
+.tooltip:focus::after  {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
+}
+
+// @media (max-width: 760px) {
+//   .tooltip::after { 
+//         font-size: .75em;
+//         margin-left: -5em;
+//         width: 10em; 
+//   }
+// }
