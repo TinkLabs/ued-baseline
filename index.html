@@ -44,6 +44,7 @@
             <a class="btn btn-contained" data-id="Card-Small">Card (small)</a>
             <a class="btn btn-contained" data-id="Chat">Chat</a>
             <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
+            <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
         </div>
         <hr>
         <!-- Color Palette -->
@@ -2005,11 +2006,33 @@ modal.destory();</code></pre>
             <div class="demo_description">
 <h3>Tool Tip</h3>
 <p>A tooltip provides quick explanation on an element or a function on screen.</p>
+<p>A screen centered tooltip provides instantaneous information of current activity.</p>
 <h3>Usage</h3>
 <p>Wrap up the element that requires a tooltip.</p>
 <p>Use class name <code>tp-left</code>, <code>tp-center</code> and <code>tp-right</code> to define tool tip position.</p>
 <p>Put tool tip text in <code>data-tip</code> attribute.</p>
 <pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content &lt;/span&gt;</code></pre>
+            </div>
+        </div>
+        <!-- tool tip - center center -->
+        <div class="demo_display">
+            <h3 class="headline" id="Tool-Tip-Centered"> Tool Tip (Screen Centered) </h3>
+            <div class="demo_showcase">
+                <a class="btn btn-contained" id="show-tooltip">Hold to see tool tip</a>
+                <div class="tooltip tp-activity">
+                    <i class="icon icon-av_mic_24px"></i>
+                    <span class="tp-text"> This is the tooltip </span>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>Tool Tip (Centered)</h3>
+<p>A screen centered tooltip provides instantaneous information of current activity.</p>
+<h3>Usage</h3>
+<p>Centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.</p>
+<pre><code class="html language-html">&lt;div class="tooltip tp-activity tp-show"&gt;
+    &lt;i class="icon icon-av_mic_24px"&gt;&lt;/i&gt;
+    &lt;span class="tp-text"&gt; This is the tooltip &lt;/span&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>

@@ -1,6 +1,6 @@
 /*
  *
- * Tooltip
+ * Tooltip (normal)
  *
  * Provides quick explanation to user
  *
@@ -10,7 +10,7 @@
  */
 
 /* start of code for tooltips */
-.tooltip {
+.tooltip:not(.tp-activity) {
     cursor: help;
     position: relative;
     outline: none;
@@ -19,87 +19,125 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    /* common styles for both parts of tool tip */
+    &::before,
+    &::after {
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        z-index: -100;
+    }
+
+    /* pointer tip */
+    &::before {
+        bottom: 100%;
+        content: "";
+        left: auto;
+        right: auto;
+        transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26), opacity .65s .5s;
+        transform: scale(.6) translateY(-90%);
+    
+        width: 8px;
+        height: 8px;
+        background: linear-gradient(-45deg, rgba(0, 0, 0, .88) 0, rgba(0, 0, 0, 0.88) 50%, transparent 0%, transparent 50%);
+        border-bottom-right-radius: 2px;
+    }
+    
+    /* speech bubble */
+    &::after {
+        background: $dark-default;
+        border-radius: 4px;
+        bottom: 180%;
+        color: $hi-white;
+        content: attr(data-tip);
+        padding: 8px 12px;
+        transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
+        transform: scale(.6) translateY(50%);
+        position: absolute;
+        width: max-content;
+        max-width: 300px;
+    }
+    
+    /* pointer position */
+    &.tp-left::after {
+        left: -8px;
+        right: auto;
+    }
+    
+    &.tp-center::after {
+        left: auto;
+        right: auto;
+    }
+    
+    &.tp-right::after {
+        right: -8px;
+        left: auto;
+    }
+    
+    /* hover / focus state */
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        transform: scale(1) translateY(-4px) rotate(45deg);
+        transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
+    }
+    
+    &:hover::after,
+    &:focus::after {
+        transform: scale(1) translateY(7px);
+        transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+    }
 }
 
+/*
+ *
+ * Tooltip (Float Center)
+ *
+ * Constantly show states of current activity, eg recording
+ *
+ * Position:
+ * Screen center
+ *
+ */
 
-/* common styles for both parts of tool tip */
-.tooltip::before,
-.tooltip::after {
-    left: 50%;
-    opacity: 0;
-    position: absolute;
-    z-index: -100;
-}
-
-/* pointer tip */
-.tooltip::before {
-    bottom: 100%;
-    content: "";
-    left: auto;
-    right: auto;
-    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26), opacity .65s .5s;
-    transform: scale(.6) translateY(-90%);
-
-    width: 8px;
-    height: 8px;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, .88) 0, rgba(0, 0, 0, 0.88) 50%, transparent 0%, transparent 50%);
-    border-bottom-right-radius: 2px;
-}
-
-/* speech bubble */
-.tooltip::after {
-    background: $dark-default;
+.tooltip.tp-activity {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    padding: 16px 32px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 4px;
-    bottom: 180%;
+    
+    background-color: $dark-default;
+    border-color: transparent;
     color: $hi-white;
-    content: attr(data-tip);
-    padding: 8px 12px;
-    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
-    transform: scale(.6) translateY(50%);
-    position: absolute;
-    width: max-content;
-    max-width: 300px;
-}
 
-.tooltip.tp-left::after {
-    left: -8px;
-    right: auto;
-}
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.tooltip.tp-center::after {
-    left: auto;
-    right: auto;
-}
+    .icon {
+        font-size: 40px;
+    }
+    .tp-text {
+        @include caption;
+    }
 
-.tooltip.tp-right::after {
-    right: -8px;
-    left: auto;
+    &.tp-show {
+        display: flex;
+    }
 }
-
-.tooltip:hover::before,
-.tooltip:focus::before,
-.tooltip:hover::after,
-.tooltip:focus::after {
-    opacity: 1;
-    z-index: 100;
-}
-
-.tooltip:hover::before,
-.tooltip:focus::before {
-    transform: scale(1) translateY(-4px) rotate(45deg);
-    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
-}
-
-.tooltip:hover::after,
-.tooltip:focus::after {
-    transform: scale(1) translateY(7px);
-    transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
-}
-
-// @media (max-width: 760px) {
-//   .tooltip::after { 
-//         font-size: .75em;
-//         margin-left: -5em;
-//         width: 10em; 
-//   }
-// }
