@@ -46,6 +46,15 @@ a {
   outline: none;
   text-decoration: none;
   color: unset;
+
+  &.hyperlink {
+    text-decoration: underline;
+    color: $hi-gold;
+
+    &:active {
+      background-color: rgba($hi-gold, 0.32);
+    }
+  }
 }
 
 .center {
