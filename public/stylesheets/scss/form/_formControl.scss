@@ -64,5 +64,71 @@ label.label-large {
 }
 
 /* toggles */
+input[type="checkbox"].btn-toggle {
+  display: none;
+  
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + label {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+  }
+  
+  & + label {
+    outline: 0;
+		display: block;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+    
+    width: 38px;
+    height: 14px;
 
-/* TODO */
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+      
+      top: -5px;
+      left: 40px;
+      width: 20px;
+      height: 20px;
+		}
+    
+		&:after {
+      left: -2px;
+      box-shadow: $box-shadow;
+		}
+    
+		&:before {
+			display: none;
+    }
+  }
+  &:checked + label:after {
+		left: 50%;
+  }
+  
+  // styling
+  & + label {
+    background: #f0f0f0;
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		&:after {
+			border-radius: 50%;
+			background: #fff;
+			transition: all .2s ease;
+		}
+  }
+  &:checked + label {
+    background: $form-control-selected;
+  }
+}
