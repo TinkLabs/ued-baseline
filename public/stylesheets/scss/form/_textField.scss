@@ -101,6 +101,7 @@ $text-field-icon-red: $hi-red;
     @include body2;
   }
 
+  textarea,
   input {
     @include subtitle1;
     width: 100%;
@@ -111,6 +112,11 @@ $text-field-icon-red: $hi-red;
     border: 1px solid red;
     background-color: $text-field-resting-bg;
     border-color: $text-field-resting-bg;
+  }
+  textarea {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    resize: vertical;
   }
 
   /* remove all icon first */
@@ -126,6 +132,7 @@ $text-field-icon-red: $hi-red;
   /* trailing icon */
   &:after,
   /* user inject icon */
+  textarea ~ .icon,
   input ~ .icon {
     display: inline;
     position: absolute;
@@ -172,7 +179,7 @@ $text-field-icon-red: $hi-red;
 .textfield.activated {
   color: $text-field-focus;
 
-  input {
+  textarea, input {
     background-color: $text-field-focus-bg;
     border-color: $text-field-focus-bg;
   }
@@ -198,7 +205,7 @@ $text-field-icon-red: $hi-red;
 .textfield.error {
   color: $text-field-error;
 
-  input {
+  textarea, input {
     background-color: $text-field-error-bg;
     border-color: $text-field-error-bg;
   }
@@ -222,7 +229,7 @@ $text-field-icon-red: $hi-red;
 .textfield.disabled {
   color: $text-field-disabled;
   
-  input {
+  textarea, input {
     background-color: $text-field-disabled-bg;
     border-color: $text-field-disabled-bg;
     cursor: not-allowed;
@@ -237,11 +244,12 @@ $text-field-icon-red: $hi-red;
  * Styles - Outlined
  *
  */
+
 .textfield.outlined {
   /* resting */
   color: $text-field-resting;
 
-  input {
+  textarea, input {
     background-color: transparent;
     border: 1px solid $text-field-resting;
   }
@@ -254,7 +262,7 @@ $text-field-icon-red: $hi-red;
   &.activated {
     color: $text-field-focus;
 
-    input {
+    textarea, input {
       border: 1px solid $text-field-focus;
       color: $text-field-default;
     }
@@ -264,7 +272,7 @@ $text-field-icon-red: $hi-red;
   &.error {
     color: $text-field-error;
 
-    input {
+    textarea, input {
       border: 1px solid $text-field-error;
       color: $text-field-default;
     }
@@ -274,7 +282,7 @@ $text-field-icon-red: $hi-red;
   &.disabled {
     color: $text-field-disabled;
 
-    input {
+    textarea, input {
       border: 1px solid $text-field-disabled;
       &::placeholder {
         color: $text-field-disabled;
