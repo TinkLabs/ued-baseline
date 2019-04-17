@@ -97,4 +97,27 @@ window.onload = e => {
             i = navDrawerOpenBtn.length;
         });
     }
+
+
+
+    /*
+     *
+     * Show and Hide Menu on top bar dropdown
+     * 
+     */
+
+    let demo_tb_dd_btn = document.getElementById("top-bar-dd-btn");
+    let demo_menu_3 = document.getElementById("menu_3");
+    demo_tb_dd_btn.addEventListener('click', e => {
+        let isOpen = false;
+        for (let i = 0; i < demo_menu_3.classList.length; i++) {
+            isOpen = demo_menu_3.classList[i].match("m-show");
+        }
+        if (isOpen) {
+            demo_menu_3.classList.remove("m-show");
+        } else {
+            demo_menu_3.classList.add("m-show");
+        }
+    });
+
 };

@@ -1,0 +1,67 @@
+/*
+ *
+ * Menu
+ *
+ * "Menus display a list of choices on temporary surfaces."
+ * 
+ * Style like list item
+ * 
+ */
+
+.menu-anchor {
+    position: relative;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+
+    background-color: $hi-white;
+    color: $dark-default;
+
+    width: 173px;
+    @include subtitle2;
+
+    &.m-full {
+        @include subtitle1;
+        width: 100%;
+        top: 100%;
+    }
+
+    &.m-show {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.m-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    padding: 16px;
+    cursor: pointer;
+    // prevent text selection on long tap
+    user-select: none;
+
+    .icon {
+        margin-right: 16px;
+    }
+
+    .m-text+.icon {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .m-text {}
+
+    @include rippleEffect;
+}

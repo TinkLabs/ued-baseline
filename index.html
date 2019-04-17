@@ -34,6 +34,7 @@
             <a class="btn btn-contained" data-id="Selection-Control">Selection Control</a>
             <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
             <a class="btn btn-contained" data-id="List">List</a>
+            <a class="btn btn-contained" data-id="Menu">Menu</a>
             <a class="btn btn-contained" data-id="Modal">Modal</a>
             <a class="btn btn-contained" data-id="Dividers">Dividers</a>
             <a class="btn btn-contained" data-id="Home-Tool-Bar">Home Tool Bar</a>
@@ -2111,6 +2112,92 @@ modal.destory();</code></pre>
             <h3 class="headline" id="Dividers"> Dividers </h3>
             <div class="demo_showcase">
                 <hr>
+            </div>
+        </div>
+        <!-- menu (small) -->
+        <div class="demo_display">
+            <h3 class="headline" id="Menu"> Menu </h3>
+            <div class="demo_showcase demo_screen_mob" style="padding-bottom: 160px">
+                <div class="menu-anchor">
+                    <ul class="menu m-show" id="menu_1">
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                        </li>
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                            <i class="icon icon-navigation_chevron_right_24px"></i>
+                        </li>
+                        <li class="m-item">
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <span class="m-text">item</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo_showcase  demo_screen_mob"  style="padding-bottom: 160px">
+                <div class="menu-anchor">
+                    <ul class="menu m-full m-show" id="menu_2">
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                        </li>
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                            <i class="icon icon-navigation_chevron_right_24px"></i>
+                        </li>
+                        <li class="m-item">
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <span class="m-text">item</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h5 class="subtitle1"> Example with top bar</h5>
+            <div class="demo_showcase  demo_screen_mob" style="padding-bottom: 160px">
+                <div class="top-bar menu-anchor">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body" id="top-bar-dd-btn">
+                        <h3 class="top-bar-title">Page Title</h3>
+                        <i class="icon icon-navigation_expand_more_24px"></i>
+                    </div>
+                    <ul class="menu m-full" id="menu_3">
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                        </li>
+                        <li class="m-item">
+                            <span class="m-text">item</span>
+                            <i class="icon icon-navigation_chevron_right_24px"></i>
+                        </li>
+                        <li class="m-item">
+                            <i class="icon icon-toggle_star_24px"></i>
+                            <span class="m-text">item</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>List</h3>
+<p>"Menus display a list of choices on temporary surfaces."</p>
+<h3>Usage</h3>
+<p>Class <code>menu-anchor</code> sets reference element's position as <code>relative</code>.
+Class <code>m-full</code> sets menu to screen width.
+Class <code>m-show</code> is the class that can toggle menu visibility.</p>
+<pre><code class="html language-html">&lt;div class="menu-anchor"&gt;
+    &lt;ul class="menu m-show" id="menu_1"&gt;
+        &lt;li class="m-item"&gt;
+            &lt;span class="m-text"&gt;item&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class="m-item"&gt;
+            &lt;span class="m-text"&gt;item&lt;/span&gt;
+            &lt;i class="icon icon-navigation_chevron_right_24px"&gt;&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class="m-item"&gt;
+            &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+            &lt;span class="m-text"&gt;item&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>

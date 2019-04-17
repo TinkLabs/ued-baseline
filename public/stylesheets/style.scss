@@ -37,6 +37,9 @@
 // fixed image sizes and ratio
 @import "scss/wrappedTextEllipsis";
 
+// ripple effect animation on tap
+@import "scss/rippleEffect";
+
 /*
  *
  * general settings
@@ -83,6 +86,7 @@
 
 @import "scss/components/tabs";
 @import "scss/components/list";
+@import "scss/components/menu";
 @import "scss/components/searchbox.scss";
 @import "scss/components/card.scss";
 @import "scss/components/modal.scss";
