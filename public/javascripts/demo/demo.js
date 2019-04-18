@@ -120,4 +120,29 @@ window.onload = e => {
         }
     });
 
+
+
+    /*
+    *
+    * Create / show / hide dropdown menu
+    *
+    */
+
+    // todo: separate click event on btn , bg , and list item
+    // todo: add class for dd
+ 
+    // prepare demo data
+    let ddValue = [];
+    while (ddValue.length < 10) {
+        ddValue.push(`item ${ddValue.length + 1}`);
+    }
+
+    let dd = new dropdown({
+        id: "demo_dd",
+        allValues: ddValue,
+        defaultValue: ddValue[1]
+    });
+    dd.init();
+
+
 };

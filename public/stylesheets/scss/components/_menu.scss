@@ -8,6 +8,15 @@
  * 
  */
 
+@mixin showMenu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+    transform: translateY(0%);
+    /* this removes the transition delay so the menu will be visible while the other styles transition */
+    transition-delay: 0s, 0s, 0.5s;
+}
+
 .menu-anchor {
     position: relative;
 }
@@ -18,8 +27,8 @@
     background-color: $hi-white;
     box-shadow: $box-shadow;
     color: $dark-default;
+    width: 50%;
 
-    width: 173px;
     @include subtitle2;
 
     top: 100%;
@@ -27,14 +36,10 @@
     opacity: 0;
     transform: translateY(-2em);
     z-index: -1;
-    transition: visibility 0s linear 0s, z-index 0s linear 0.01s, all 0.5s ease-in-out 0.5s;
+    transition: visibility 0s linear 0.6s, z-index 0s linear 0.01s, all 0.5s ease-in-out 0.5s;
+    
     &.m-show {
-        visibility: visible;
-        opacity: 1;
-        z-index: 100;
-        transform: translateY(0%);
-        /* this removes the transition delay so the menu will be visible while the other styles transition */
-        transition-delay: 0s, 0s, 0.5s;
+        @include showMenu;
     }
 
     &.m-full {
@@ -45,6 +50,7 @@
     .list .list-row {
         // add effect for menu item
         @include rippleEffect;
+
         // over ride item divider
         .list-content {
             border-bottom: none;

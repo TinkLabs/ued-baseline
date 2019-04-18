@@ -1,3 +1,20 @@
+/*
+ *
+ * Selection Control
+ *
+ * Radio Button
+ *
+ * Checkbox
+ *
+ * Toggle Button
+ * 
+ * DropDown Button
+ * 
+ * 
+ */
+
+
+
 $form-control-default: $hi-black;
 $form-control-selected: $hi-gold;
 $form-control-disabled: $hi-dark-grey;
@@ -130,5 +147,48 @@ input[type="checkbox"].btn-toggle {
   }
   &:checked + label {
     background: $form-control-selected;
+  }
+}
+
+/* Dropdown */
+.dropdown.btn {
+  // force use outline version button
+  @include btn-gold-outlined;
+  // default text style
+  .dd-default {
+
+  }
+  // down arrow
+  &:after {
+    @include labelMark;
+    padding-right: 0;
+    margin-left: auto;
+    content: "\ED96";
+  }
+
+  // android style pop up menu
+  & ~ .dd-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark-enabled;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    &.dd-show {
+      display: flex;
+    }
+    
+    .list {
+      max-width: 60%;
+      max-height: 60%;
+      overflow: scroll;
+      
+      .list-row {
+        @include rippleEffect;
+      }
+    }
   }
 }
