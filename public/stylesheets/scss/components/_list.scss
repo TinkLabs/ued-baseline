@@ -106,8 +106,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
     width: 100%;
+    // prevent text selection on long tap
+    user-select: none;
 
     transition: all .5s ease-in-out;
 

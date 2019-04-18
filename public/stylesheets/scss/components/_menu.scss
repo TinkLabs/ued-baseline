@@ -4,7 +4,7 @@
  *
  * "Menus display a list of choices on temporary surfaces."
  * 
- * Style like list item
+ * Use "List" to generate menu.
  * 
  */
 
@@ -13,55 +13,41 @@
 }
 
 .menu {
-    display: none;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
     position: absolute;
-    z-index: 100;
-    opacity: 0;
 
     background-color: $hi-white;
+    box-shadow: $box-shadow;
     color: $dark-default;
 
     width: 173px;
     @include subtitle2;
 
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: visibility 0s linear 0s, z-index 0s linear 0.01s, all 0.5s ease-in-out 0.5s;
+    &.m-show {
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+        transform: translateY(0%);
+        /* this removes the transition delay so the menu will be visible while the other styles transition */
+        transition-delay: 0s, 0s, 0.5s;
+    }
+
     &.m-full {
         @include subtitle1;
         width: 100%;
-        top: 100%;
     }
 
-    &.m-show {
-        display: flex;
-        opacity: 1;
+    .list .list-row {
+        // add effect for menu item
+        @include rippleEffect;
+        // over ride item divider
+        .list-content {
+            border-bottom: none;
+        }
     }
-}
-
-.m-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-
-    width: 100%;
-    padding: 16px;
-    cursor: pointer;
-    // prevent text selection on long tap
-    user-select: none;
-
-    .icon {
-        margin-right: 16px;
-    }
-
-    .m-text+.icon {
-        margin-right: 0;
-        margin-left: auto;
-    }
-
-    .m-text {}
-
-    @include rippleEffect;
 }
