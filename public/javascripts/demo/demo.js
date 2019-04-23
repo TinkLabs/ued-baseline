@@ -130,7 +130,7 @@ window.onload = e => {
    
     // prepare demo data
     let ddValue = [];
-    while (ddValue.length < 10) {
+    while (ddValue.length < 20) {
         ddValue.push(`item ${ddValue.length + 1}`);
     }
 
