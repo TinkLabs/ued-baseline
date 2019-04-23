@@ -806,67 +806,47 @@ For text field, 5 visual states are provided for different use-cases.</p>
         <div class="demo_display">
             <h3 class="headline" id="Dropdown">Dropdown</h3>
             <div class="demo_showcase">
-                <a id="demo_dd">
-                    <!-- <span class="dd-default" data-value="default"> default </span>
-                    <div class="dd-list" id="demo_dd_list">
-                        <ul class="list">
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 1 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 2 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 3 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 4 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 5 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 6 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 7 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 8 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 9 </span>
-                                </div>
-                            </li>
-                            <li class="list-row">
-                                <div class="list-content">
-                                    <span class="list-text">item 10 </span>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div> -->
-                </a>
+                <a id="demo_dd"></a>
             </div>
             <div class="demo_description">
-
+<h3>Drop Down Button</h3>
+<p>Drop Down Button provides user with a list of options</p>
+<h3>Usage</h3>
+<h5>plain HTML</h5>
+<pre><code class="html language-html">&lt;a id="dd_1"&gt;
+    &lt;span class="dd-default" data-value="default"&gt; default &lt;/span&gt;
+    &lt;div class="dd-list" id="demo_dd_list"&gt;
+        &lt;ul class="list"&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 1 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 2 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 3 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+<h5>generate with JS</h5>
+<pre><code class="html language-html">&lt;a id="demo_dd"&gt;&lt;/a&gt;</code></pre>
+<pre><code class="js language-js">// settings and inputs
+let dd = new dropdown({
+    id: "demo_dd",
+    allValues: ["a", "b", "c"],
+    defaultValue: "a"
+});
+// create button
+dd.init();
+// get current value
+dd.currentValue;</code></pre>
             </div>
         </div>
         <!-- Search Box -->

@@ -6,6 +6,7 @@ class dropdown {
         this.listId = options.id + "_list";
         this.allValues = options.allValues || [];
         this.defaultValue = options.defaultValue || "---";
+        this.currentValue = options.defaultValue || "";
     }
 
     init() {
@@ -17,6 +18,7 @@ class dropdown {
         // set display value
         let display = document.createElement("span");
         display.classList.add("dd-default");
+        display.id = `dd-${this.id}-current`;
         display.setAttribute("data-value", this.defaultValue);
         display.innerHTML = this.defaultValue;
         // append and set
@@ -39,28 +41,32 @@ class dropdown {
         listBase.id = this.listId;
         listBase.addEventListener('click', e => {
             if (this.hasClass(e.target.classList, "dd-show")) {
-                // not click on item
+                // clicked on background
                 this.close();
-            } else {
-                // process click on item
             }
         });
+
         // create list 
         let list = document.createElement("ul");
         list.classList.add("list");
         // create rows
-        this.allValues.forEach(value => {
+        this.allValues.forEach((value, index) => {
+            // create row wrapper
             let listRow = document.createElement("li");
             listRow.classList.add("list-row");
-
+            listRow.id = `dd-${this.id}-item-${index}`;
+            listRow.setAttribute("data-value", value);
+            listRow.addEventListener('click', e => {
+                this.updateCurrentValue(e.currentTarget);
+            });
+            // content wrapper
             let content = document.createElement("div");
             content.classList.add("list-content");
-
+            // list content
             let text = document.createElement("span");
             text.classList.add("list-text");
             text.innerHTML = value;
-            text.setAttribute("data-value", value);
-
+            // appending elements
             content.appendChild(text);
             listRow.appendChild(content);
             list.appendChild(listRow);
@@ -93,5 +99,13 @@ class dropdown {
             }
         }
         return result;
+    }
+
+    updateCurrentValue(target) {
+        let v = target.getAttribute("data-value");
+        let display = document.getElementById(`dd-${this.id}-current`);
+        display.innerHTML = v;
+        display.setAttribute("data-value", v);
+        this.close();
     }
 }
