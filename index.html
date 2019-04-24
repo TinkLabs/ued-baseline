@@ -173,6 +173,9 @@
                     <div class="demo_title_wrapper">
                         <p class="caption demo_title_border">Caption : Merriweather Sans Regular 12px Line:16</p>
                     </div>
+                    <div class="demo_title_wrapper">
+                        <p class="toolbar demo_title_border">Toolbar : Merriweather Sans Regular 10px Line:13</p>
+                    </div>
                 </div>
             </div>
             <div class="demo_description">
@@ -2189,12 +2192,12 @@ modal.destory();</code></pre>
             <div class="demo_description">
 <h3>Tool Tip</h3>
 <p>A tooltip provides quick explanation on an element or a function on screen.</p>
-<p>A screen centered tooltip provides instantaneous information of current activity.</p>
 <h3>Usage</h3>
 <p>Wrap up the element that requires a tooltip.</p>
 <p>Use class name <code>tp-left</code>, <code>tp-center</code> and <code>tp-right</code> to define tool tip position.</p>
+<p>Use class name <code>tp-bottom</code> to place tooltip at the bottom if necessary.</p>
 <p>Put tool tip text in <code>data-tip</code> attribute.</p>
-<pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content &lt;/span&gt;</code></pre>
+<pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content that needs tooltip &lt;/span&gt;</code></pre>
             </div>
         </div>
         <!-- tool tip - center center -->
@@ -2208,10 +2211,10 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Tool Tip (Centered)</h3>
+<h3>Tool Tip</h3>
 <p>A screen centered tooltip provides instantaneous information of current activity.</p>
 <h3>Usage</h3>
-<p>Centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.</p>
+<p>Screen centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.</p>
 <pre><code class="html language-html">&lt;div class="tooltip tp-activity tp-show"&gt;
     &lt;i class="icon icon-av_mic_24px"&gt;&lt;/i&gt;
     &lt;span class="tp-text"&gt; This is the tooltip &lt;/span&gt;
@@ -2312,7 +2315,7 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>List</h3>
+<h3>Menu</h3>
 <p>"Menus display a list of choices on temporary surfaces."</p>
 <h3>Usage</h3>
 <p>Class <code>menu-anchor</code> sets reference element's position as <code>relative</code>.

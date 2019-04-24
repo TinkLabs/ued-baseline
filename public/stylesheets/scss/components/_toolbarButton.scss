@@ -28,7 +28,7 @@
     }
 
     .toolbar-btn-text {
-        @include caption;
+        @include toolbar;
         text-align: center;
     }
 
