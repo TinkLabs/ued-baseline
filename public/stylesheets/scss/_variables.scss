@@ -58,3 +58,35 @@ $hi-bl-grey-light: #ebebeb;
  * Box shadow
  */
 $box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+/*
+ * Theme Color - Light
+ */
+$light-default: rgba(255, 255, 255, 0.88);
+$light-enabled: rgba(255, 255, 255, 0.56);
+$light-disabled: rgba(255, 255, 255, 0.32);
+
+/*
+ * Theme Color - Light
+ */
+$dark-default: rgba(0, 0, 0, 0.88);
+$dark-enabled: rgba(0, 0, 0, 0.56);
+$dark-disabled: rgba(0, 0, 0, 0.32);
+$dark-lightest: rgba(0, 0, 0, 0.08);
+
+/*
+  *
+  * Color Blend Fx
+  * https://github.com/heygrady/scss-blend-modes/blob/master/stylesheets/_blend-modes.scss
+  *
+  */
+@function blendNormal($foreground, $background) {
+    $opacity: opacity($foreground);
+    $background-opacity: opacity($background);
+
+    // calculate opacity
+    $bm-red: red($foreground) * $opacity + red($background) * $background-opacity * (1 - $opacity);
+    $bm-green: green($foreground) * $opacity + green($background) * $background-opacity * (1 - $opacity);
+    $bm-blue: blue($foreground) * $opacity + blue($background) * $background-opacity * (1 - $opacity);
+    @return rgb($bm-red, $bm-green, $bm-blue);
+}

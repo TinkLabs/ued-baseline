@@ -13,17 +13,17 @@
  */
 
 $btn-white: $hi-white;
-$btn-white-overlay: rgba(255, 255, 255, 0.56);
+$btn-white-overlay: $light-enabled;
 
 $btn-color-1-main: $hi-gold;
 $btn-color-1-hover: $hi-gold-300;
-$btn-color-1-overlay-light: rgba(#8a5300, 0.32);
-$btn-color-1-overlay-strong: rgba(#8a5300, 0.56);
+$btn-color-1-overlay-light: rgba($hi-gold-900, 0.32);
+$btn-color-1-overlay-strong: rgba($hi-gold-900, 0.56);
 
 $btn-color-2-main: $hi-navy;
 $btn-color-2-hover: $hi-navy-600;
-$btn-color-2-overlay-light: rgba(#000a33, 0.32);
-$btn-color-2-overlay-strong: rgba(#000a33, 0.56);
+$btn-color-2-overlay-light: rgba($hi-navy-900, 0.32);
+$btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
 
 /*
  *
@@ -32,10 +32,10 @@ $btn-color-2-overlay-strong: rgba(#000a33, 0.56);
  */
 
 // blended color
-$color-1-overlay-white: blendNormal($btn-color-1-overlay-light, $btn-white);
-$color-1-overlay-light: blendNormal($btn-color-1-overlay-light, $btn-color-1-main);
-$color-1-overlay-strong: blendNormal($btn-color-1-overlay-strong, $btn-color-1-main);
-$color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
+$btn-blend-color-1-overlay-white: blendNormal($btn-color-1-overlay-light, $btn-white);
+$btn-blend-color-1-overlay-light: blendNormal($btn-color-1-overlay-light, $btn-color-1-main);
+$btn-blend-color-1-overlay-strong: blendNormal($btn-color-1-overlay-strong, $btn-color-1-main);
+$btn-blend-color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
 
 // default
 @mixin btn-gold-default {
@@ -46,16 +46,16 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
 @mixin btn-gold-default-disabled {
   background-color: transparent;
   border-color: transparent;
-  color: $color-1-white-overlay;
+  color: $btn-blend-color-1-white-overlay;
   cursor: not-allowed;
 }
 @mixin btn-gold-default-hover {
   color: $btn-color-1-hover;
 }
 @mixin btn-gold-default-pressed {
-  background-color: $color-1-overlay-white;
+  background-color: $btn-blend-color-1-overlay-white;
   border-color: transparent;
-  color: $color-1-overlay-light;
+  color: $btn-blend-color-1-overlay-light;
 }
 
 // outlined
@@ -67,7 +67,7 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
 @mixin btn-gold-outlined-disabled {
   background-color: transparent;
   border-color: $btn-color-1-overlay-light;
-  color: $color-1-white-overlay;
+  color: $btn-blend-color-1-white-overlay;
   cursor: not-allowed;
 }
 @mixin btn-gold-outlined-hover {
@@ -76,9 +76,9 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
   border-color: $btn-color-1-hover;
 }
 @mixin btn-gold-outlined-pressed {
-  background-color: $color-1-overlay-white;
-  border-color: $color-1-overlay-light;
-  color: $color-1-overlay-light;
+  background-color: $btn-blend-color-1-overlay-white;
+  border-color: $btn-blend-color-1-overlay-light;
+  color: $btn-blend-color-1-overlay-light;
 }
 
 // contained
@@ -88,8 +88,8 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
   color: $btn-white;
 }
 @mixin btn-gold-contained-disabled {
-  background-color: $color-1-white-overlay;
-  border-color: $color-1-white-overlay;
+  background-color: $btn-blend-color-1-white-overlay;
+  border-color: $btn-blend-color-1-white-overlay;
   color: $btn-white;
   cursor: not-allowed;
 }
@@ -99,9 +99,9 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
   color: $btn-white;
 }
 @mixin btn-gold-contained-pressed {
-  background-color: $color-1-overlay-strong;
+  background-color: $btn-blend-color-1-overlay-strong;
   border-color: transparent;
-  color: $color-1-white-overlay;
+  color: $btn-blend-color-1-white-overlay;
 }
 
 /*
@@ -111,10 +111,10 @@ $color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
  */
 
 // blended color
-$color-2-overlay-white: blendNormal($btn-color-2-overlay-light, $btn-white);
-$color-2-overlay-light: blendNormal($btn-color-2-overlay-light, $btn-color-2-main);
-$color-2-overlay-strong: blendNormal($btn-color-2-overlay-strong, $btn-color-2-main);
-$color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
+$btn-blend-color-2-overlay-white: blendNormal($btn-color-2-overlay-light, $btn-white);
+$btn-blend-color-2-overlay-light: blendNormal($btn-color-2-overlay-light, $btn-color-2-main);
+$btn-blend-color-2-overlay-strong: blendNormal($btn-color-2-overlay-strong, $btn-color-2-main);
+$btn-blend-color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
 
 // default
 @mixin btn-navy-default {
@@ -125,16 +125,16 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
 @mixin btn-navy-default-disabled {
   background-color: transparent;
   border-color: transparent;
-  color: $color-2-white-overlay;
+  color: $btn-blend-color-2-white-overlay;
   cursor: not-allowed;
 }
 @mixin btn-navy-default-hover {
   color: $btn-color-2-hover;
 }
 @mixin btn-navy-default-pressed {
-  background-color: $color-2-overlay-white;
+  background-color: $btn-blend-color-2-overlay-white;
   border-color: transparent;
-  color: $color-2-overlay-light;
+  color: $btn-blend-color-2-overlay-light;
 }
 
 // outlined
@@ -146,7 +146,7 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
 @mixin btn-navy-outlined-disabled {
   background-color: transparent;
   border-color: $btn-color-2-overlay-light;
-  color: $color-2-white-overlay;
+  color: $btn-blend-color-2-white-overlay;
   cursor: not-allowed;
 }
 @mixin btn-navy-outlined-hover {
@@ -155,9 +155,9 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
   border-color: $btn-color-2-hover;
 }
 @mixin btn-navy-outlined-pressed {
-  background-color: $color-2-overlay-white;
-  border-color: $color-2-overlay-light;
-  color: $color-2-overlay-light;
+  background-color: $btn-blend-color-2-overlay-white;
+  border-color: $btn-blend-color-2-overlay-light;
+  color: $btn-blend-color-2-overlay-light;
 }
 
 // contained
@@ -167,8 +167,8 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
   color: $btn-white;
 }
 @mixin btn-navy-contained-disabled {
-  background-color: $color-2-white-overlay;
-  border-color: $color-2-white-overlay;
+  background-color: $btn-blend-color-2-white-overlay;
+  border-color: $btn-blend-color-2-white-overlay;
   color: $btn-white;
   cursor: not-allowed;
 }
@@ -178,9 +178,9 @@ $color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
   color: $btn-white;
 }
 @mixin btn-navy-contained-pressed {
-  background-color: $color-2-overlay-strong;
+  background-color: $btn-blend-color-2-overlay-strong;
   border-color: transparent;
-  color: $color-2-white-overlay;
+  color: $btn-blend-color-2-white-overlay;
 }
 
 /*
@@ -200,7 +200,7 @@ $text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
  */
 
 @mixin btn-round-white {
-  background-color: white;
+  background-color: $btn-white;
   border-color: transparent;
   color: $btn-color-1-main;
 }
@@ -211,14 +211,44 @@ $text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   cursor: not-allowed;
 }
 @mixin btn-white-contained-hover {
-  background-color: $color-1-overlay-white;
-  border-color: $color-1-overlay-white;
-  color: $color-1-overlay-light;
+  background-color: $btn-blend-color-1-overlay-white;
+  border-color: $btn-blend-color-1-overlay-white;
+  color: $btn-blend-color-1-overlay-light;
 }
 @mixin btn-white-contained-pressed {
-  background-color: $color-1-overlay-white;
-  border-color: $color-1-overlay-white;
-  color: $color-1-overlay-light;
+  background-color: $btn-blend-color-1-overlay-white;
+  border-color: $btn-blend-color-1-overlay-white;
+  color: $btn-blend-color-1-overlay-light;
+}
+
+/*
+ *
+ * Variables and Mixins: Square button
+ *
+ */
+
+$btn-square-icon: 16px;
+
+@mixin btn-square-white {
+  background-color: $btn-white;
+  border-color: $btn-color-1-main;
+  color: $btn-color-1-main;
+}
+@mixin btn-square-contained-disabled {
+  background-color: $btn-white;
+  border-color: $btn-color-1-overlay-light;
+  color: $btn-blend-color-1-white-overlay;
+  cursor: not-allowed;
+}
+@mixin btn-square-contained-hover {
+  background-color: $btn-blend-color-1-overlay-white;
+  border-color: $btn-blend-color-1-overlay-strong;
+  color: $btn-blend-color-1-overlay-strong;
+}
+@mixin btn-square-contained-pressed {
+  background-color: $btn-blend-color-1-overlay-white;
+  border-color: $btn-blend-color-1-overlay-strong;
+  color: $btn-blend-color-1-overlay-strong;
 }
 
 
@@ -290,7 +320,7 @@ button,
 
     &:not(.btn-disabled) {
       &:active {
-        @include btn-gold-outlined-hover;
+        @include btn-gold-outlined-pressed;
       }
       &:focus,
       &:focus-within {
@@ -307,7 +337,7 @@ button,
 
     &:not(.btn-disabled) {
       &:active {
-        @include btn-gold-contained-hover;
+        @include btn-gold-contained-pressed;
       }
       &:focus,
       &:focus-within {
@@ -345,7 +375,7 @@ button,
 
       &:not(.btn-disabled) {
         &:active {
-          @include btn-navy-outlined-hover;
+          @include btn-navy-outlined-pressed;
         }
         &:focus,
         &:focus-within {
@@ -362,7 +392,7 @@ button,
 
       &:not(.btn-disabled) {
         &:active {
-          @include btn-navy-contained-hover;
+          @include btn-navy-contained-pressed;
         }
         &:focus,
         &:focus-within {
@@ -415,7 +445,7 @@ button,
     }
     &:not(.btn-disabled) {
       &:active {
-        @include btn-gold-contained-hover;
+        @include btn-gold-contained-pressed;
       }
       &:focus,
       &:focus-within {
@@ -441,7 +471,7 @@ button,
       }
       &:not(.btn-disabled) {
         &:active {
-          @include btn-white-contained-hover;
+          @include btn-white-contained-pressed;
         }
         &:focus,
         &:focus-within {
@@ -459,6 +489,48 @@ button,
     }
   }
 
+  /*
+   *
+   * Square button with icons
+   *
+   */
+   &.btn-square {
+    @include btn-square-white;
+    // color and shape
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    // typography
+    text-decoration: none;
+
+    i,
+    .icon {
+      font-size: $btn-square-icon;
+    }
+
+    &.btn-large.btn-disabled,
+    &.btn-disabled {
+      @include btn-square-contained-disabled;
+    }
+    &:not(.btn-disabled) {
+      &:active {
+        @include btn-square-contained-pressed;
+      }
+      &:focus,
+      &:focus-within {
+        @include btn-square-contained-pressed;
+
+        i,
+        .icon {
+          &::before,
+          &::after {
+            text-shadow: $text-shadow;
+          }
+        }
+      }
+    }
+  }
+
   // injected icons
   .icon {
     font-size: inherit;
@@ -467,6 +539,32 @@ button,
     }
     &.icon-right {
       padding-left: 8px;
+    }
+  }
+
+  // built in icon for button
+  &.btn-plus {
+    &::before {
+      @include labelMark;
+      content: "\EA9B";
+    }
+  }
+  &.btn-minus {
+    &::before {
+      @include labelMark;
+      content: "\EABD";
+    }
+  }
+  &.btn-forth {
+    &::before {
+      @include labelMark;
+      content: "\ED93";
+    }
+  }
+  &.btn-back {
+    &::before {
+      @include labelMark;
+      content: "\ED92";
     }
   }
 }

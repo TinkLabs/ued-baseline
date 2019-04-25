@@ -2,18 +2,35 @@
 <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
 <h3>Usage</h3>
 <h5>Plain Button</h5>
-<pre><code>&lt;a class="btn"&gt; btn text &lt;a&gt; </code></pre>
-<pre><code>&lt;a class="btn btn-navy"&gt; btn text &lt;a&gt; </code></pre>
-<h5>Button with icon</h5>
+<pre><code>&lt;a class="btn"&gt; btn text &lt;/a&gt; </code></pre>
+<h5>Button with custom icon</h5>
 <pre><code>&lt;a class="btn"&gt;
-   &lt;i class="icon icon-content_add_24px icon-left" &gt;
+   &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
    btn text
-&lt;a&gt;</code></pre>
+&lt;/a&gt;</code></pre>
 <h5>Outlined Button</h5>
-<pre><code>&lt;a class="btn btn-outlined"&gt; btn text &lt;a&gt; </code></pre>
+<pre><code>&lt;a class="btn btn-outlined"&gt; btn text &lt;/a&gt; </code></pre>
 <h5>Contained Button</h5>
-<pre><code>&lt;a class="btn btn-contained"&gt; btn text &lt;a&gt; </code></pre>
+<pre><code>&lt;a class="btn btn-contained"&gt; btn text &lt;/a&gt; </code></pre>
 <h5>Round Button</h5>
 <pre><code>&lt;a class="btn btn-round btn-shadow"&gt;
-   &lt;i class="icon icon-content_add_24px icon-left" &gt;
-&lt;a&gt;</code></pre>
+   &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+<h5>Square Button</h5>
+<pre><code>&lt;a class="btn btn-square btn-shadow"&gt;
+   &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+<h5>Button Color</h5>
+<p>Default color for button is gold. Use <code>btn-navy</code> to change color to navy.</p>
+<h5>Button Size</h5>
+<p>Use <code>btn-m</code> to get a button with medium size and font size, except square button.</p>
+<h5>Built in icon for button</h5>
+<p>Using below class names on <code>btn</code> will give the button a pre-defined icon</p>
+<pre><code class="html language-html">// " + " icon
+&lt;a class="btn btn-plus"&gt;&lt;/a&gt;
+// " - " minus
+&lt;a class="btn btn-minus"&gt;&lt;/a&gt;
+// " &lt; " icon
+&lt;a class="btn btn-back"&gt;&lt;/a&gt;
+// " &gt; " icon
+&lt;a class="btn btn-forth"&gt;&lt;/a&gt;</code></pre>

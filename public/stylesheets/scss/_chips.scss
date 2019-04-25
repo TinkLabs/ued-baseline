@@ -13,18 +13,18 @@
 // base color
 
 $chip-white: $hi-white;
-$chip-white-overlay: rgba(255, 255, 255, 0.56);
+$chip-white-overlay: $light-enabled;
 
 $chip-color-1-main: $hi-gold;
 $chip-color-1-hover: $hi-gold-300;
-$chip-color-1-overlay-light: rgba(#8a5300, 0.32);
-$chip-color-1-overlay-strong: rgba(#8a5300, 0.56);
+$chip-color-1-overlay-light: rgba($hi-gold-900, 0.32);
+$chip-color-1-overlay-strong: rgba($hi-gold-900, 0.56);
 
 // blended color
-$color-1-overlay-white: blendNormal($chip-color-1-overlay-light, $chip-white);
-$color-1-overlay-light: blendNormal($chip-color-1-overlay-light, $chip-color-1-main);
-$color-1-overlay-strong: blendNormal($chip-color-1-overlay-strong, $chip-color-1-main);
-$color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
+$chip-blend-color-1-overlay-white: blendNormal($chip-color-1-overlay-light, $chip-white);
+$chip-blend-color-1-overlay-light: blendNormal($chip-color-1-overlay-light, $chip-color-1-main);
+$chip-blend-color-1-overlay-strong: blendNormal($chip-color-1-overlay-strong, $chip-color-1-main);
+$chip-blend-color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
 
 // default
 @mixin chip-gold-default {
@@ -38,14 +38,14 @@ $color-1-white-overlay: blendNormal($chip-white-overlay, $chip-color-1-main);
   color: $chip-white;
 }
 @mixin chip-gold-default-pressed {
-  background-color: $color-1-overlay-white;
+  background-color: $chip-blend-color-1-overlay-white;
   border-color: $chip-color-1-main;
   color: $chip-color-1-main;
 }
 @mixin chip-gold-default-disabled {
   background-color: transparent;
-  border-color: $color-1-white-overlay;
-  color: $color-1-white-overlay;
+  border-color: $chip-blend-color-1-white-overlay;
+  color: $chip-blend-color-1-white-overlay;
   cursor: not-allowed;
 }
 @mixin chip-base {
