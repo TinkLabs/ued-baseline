@@ -40,9 +40,6 @@
 // ripple effect animation on tap
 @import "scss/rippleEffect";
 
-// backdrop basic styling
-@import "scss/backdrop";
-
 /*
  *
  * general settings
@@ -72,6 +69,7 @@
 @import "scss/chips";
 @import "scss/tag";
 @import "scss/breadcrumb";
+@import "scss/backdrop";
 
 /*
  *
@@ -100,4 +98,5 @@
 @import "scss/components/bottomNav.scss";
 @import "scss/components/chat";
 @import "scss/components/toolTip";
-@import "scss/components/pagination"
+@import "scss/components/pagination";
+@import "scss/components/progressBar";

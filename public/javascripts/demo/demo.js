@@ -123,11 +123,11 @@ window.onload = e => {
 
 
     /*
-    *
-    * Create / show / hide dropdown menu
-    *
-    */
-   
+     *
+     * Create / show / hide dropdown menu
+     *
+     */
+
     // prepare demo data
     let ddValue = [];
     while (ddValue.length < 20) {
@@ -140,5 +140,21 @@ window.onload = e => {
         defaultValue: ddValue[1]
     });
     dd.init();
+
+
+
+
+    /*
+     *
+     * Adjust progress bar's width
+     *
+     */
+    let pbControlBtn = document.getElementsByClassName("demo_pb_control");
+    for (let i = 0; i < pbControlBtn.length; i++) {
+        pbControlBtn[i].addEventListener('click', e => {
+            let percentage = e.currentTarget.dataset.percent;
+            document.getElementById("demo-pb-bar-1").setAttribute("style", `width: ${percentage}%`);
+        })
+    }
 
 };

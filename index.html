@@ -31,6 +31,7 @@
             <a class="btn btn-contained" data-id="Dividers">Dividers</a>
             <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
             <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
+            <a class="btn btn-contained" data-id="Progress-Bar">Progress Bar</a>
             <hr />
             <!-- single click component -->
             <a class="btn btn-contained" data-id="Hyperlink">Hyperlink</a>
@@ -2486,6 +2487,50 @@ Use <code>active</code> to highlight current page.</p>
         &lt;a class="pg-btn"&gt; 200 &lt;/a&gt;
     &lt;/div&gt;
     &lt;a class="pg-forth"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Progress-Bar">Progress Bar</h3>
+            <div class="demo_showcase">
+                <div class="progress-bar">
+                    <div class="pb-container">
+                        <div class="pb-bar pb-infinite"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="demo_showcase">
+                <div class="progress-bar">
+                    <div class="pb-container">
+                        <div id="demo-pb-bar-1" class="pb-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_progress_bar_control">
+                <p class="subtitle2">Click to see progress bar transition</p>
+                <button class="demo_pb_control" data-percent="25"> 25% </button>
+                <button class="demo_pb_control" data-percent="50"> 50% </button>
+                <button class="demo_pb_control" data-percent="75"> 75% </button>
+            </div>
+            <div class="demo_description">
+<h3>Progress Bar Linear</h3>
+<p>Progress bar shows user the progress of a loading process.
+Infinite rolling is used when progress percentage is not important to user.</p>
+<h3>Usage</h3>
+<h5>Infinite</h5>
+<p>Use <code>pb-infinite</code> together with <code>pb-bar</code> to get infinite loading animation</p>
+<pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+    &lt;div class="pb-container"&gt;
+        &lt;div class="pb-bar pb-infinite"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h5>Live Progress</h5>
+<p>Alter inline CSS width to control length of progress bar by your JS.</p>
+<pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+    &lt;div class="pb-container"&gt;
+        &lt;div class="pb-bar" style="width: 75%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
