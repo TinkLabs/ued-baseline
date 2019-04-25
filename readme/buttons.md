@@ -2,12 +2,12 @@
 Buttons allow users to take actions, and make choices, with a single tap.
 ### Usage
 ##### Plain Button
-``` 
+```html
 <a class="btn"> btn text </a> 
 ```
 
 ##### Button with custom icon
-``` 
+```html
 <a class="btn">
    <i class="icon icon-content_add_24px icon-left" ></i>
    btn text
@@ -15,25 +15,26 @@ Buttons allow users to take actions, and make choices, with a single tap.
 ```
 
 ##### Outlined Button
-``` 
+```html
 <a class="btn btn-outlined"> btn text </a> 
 ```
 
 ##### Contained Button
-``` 
+```html
 <a class="btn btn-contained"> btn text </a> 
 ```
 
 ##### Round Button
-``` 
-<a class="btn btn-round btn-shadow">
+Use with `btn-float` to get a visual elevation.
+```html
+<a class="btn btn-round btn-float">
    <i class="icon icon-content_add_24px icon-left" ></i>
 </a>
 ```
 
 ##### Square Button
-``` 
-<a class="btn btn-square btn-shadow">
+```html
+<a class="btn btn-square">
    <i class="icon icon-content_add_24px icon-left" ></i>
 </a>
 ```

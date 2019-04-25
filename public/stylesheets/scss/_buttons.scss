@@ -14,6 +14,7 @@
 
 $btn-white: $hi-white;
 $btn-white-overlay: $light-enabled;
+$btn-box-shadow: 0 4px 16px 0 $hi-gold;
 
 $btn-color-1-main: $hi-gold;
 $btn-color-1-hover: $hi-gold-300;
@@ -421,6 +422,9 @@ button,
       font-size: $btn-round-icon;
     }
     &.btn-shadow {
+      box-shadow: $btn-box-shadow;
+    }
+    &.btn-float {
       box-shadow: $box-shadow;
     }
     &.btn-large {
