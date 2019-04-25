@@ -1,0 +1,68 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $hi-white;
+    width: fit-content;
+
+    .pg-back,
+    .pg-forth,
+    .pg-btn-wrapper .pg-btn {
+        @include btn-basic;
+        @include btn-square-mixin;
+        margin: 0;
+
+        &.pg-disabled {
+            border-color: $dark-disabled;
+            color: $dark-disabled;
+        }
+    }
+
+    .pg-back {
+        margin-right: 16px;
+
+        &:before {
+            @include labelMark;
+            content: "\ED92";
+        }
+    }
+
+    .pg-forth {
+        margin-left: 16px;
+
+        &:before {
+            @include labelMark;
+            content: "\ED93";
+        }
+    }
+
+    .pg-btn-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .pg-btn {
+            margin-right: 8px;
+            border-color: transparent;
+
+            &.active {
+                background-color: $hi-gold;
+                border-color: $hi-gold;
+                color: $hi-white;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:nth-child(n + 8) {
+                display: none
+            }
+        }
+    }
+}

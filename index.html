@@ -15,9 +15,12 @@
         <h1 class="demo_title">handy baseline</h1>
         <hr class="demo_divider">
         <div class="demo_indexes">
+            <!-- demo pages -->
             <a class="btn btn-outlined" href="./demo_ticketing.html">Ticketing Demo</a>
             <a class="btn btn-outlined" href="./demo_homepage.html">Homepage Demo</a>
             <a class="btn btn-outlined" href="./demo_chat.html">Concierge Demo</a>
+            <hr />
+            <!-- basic -->
             <a class="btn btn-contained" data-id="Color-Palette">Color Palette</a>
             <a class="btn btn-contained" data-id="Supporting-Colors">Supporting Colors</a>
             <a class="btn btn-contained" data-id="Typography">Typography</a>
@@ -25,32 +28,49 @@
             <a class="btn btn-contained" data-id="merriweather-sans">Merriweather Sans</a>
             <a class="btn btn-contained" data-id="HIFont">hi Fonts</a>
             <a class="btn btn-contained" data-id="Images">Images</a>
+            <a class="btn btn-contained" data-id="Dividers">Dividers</a>
+            <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
+            <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
+            <hr />
+            <!-- single click component -->
             <a class="btn btn-contained" data-id="Hyperlink">Hyperlink</a>
             <a class="btn btn-contained" data-id="Buttons">Buttons</a>
             <a class="btn btn-contained" data-id="Chips">Chips</a>
             <a class="btn btn-contained" data-id="Tag">Tag</a>
             <a class="btn btn-contained" data-id="Breadcrumb">Breadcrumb</a>
             <a class="btn btn-contained" data-id="Tabs">Tabs</a>
+            <hr />
+            <!-- forms and input and control -->
             <a class="btn btn-contained" data-id="Form-Control">Form Control</a>
             <a class="btn btn-contained" data-id="Selection-Control">Selection Control</a>
             <a class="btn btn-contained" data-id="Dropdown">Dropdown</a>
             <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
+            <hr />
+            <!-- list and menu -->
             <a class="btn btn-contained" data-id="List">List</a>
             <a class="btn btn-contained" data-id="Menu">Menu</a>
-            <a class="btn btn-contained" data-id="Modal">Modal</a>
-            <a class="btn btn-contained" data-id="Dividers">Dividers</a>
-            <a class="btn btn-contained" data-id="Home-Tool-Bar">Home Tool Bar</a>
+            <hr />
+            <!-- structural component -->
+            <!-- top -->
             <a class="btn btn-contained" data-id="Top-Bar">Top Bar</a>
             <a class="btn btn-contained" data-id="Top-Bar-Chat">Top Bar (Chat)</a>
             <a class="btn btn-contained" data-id="Top-Bar-Ticketing">Top Bar (Ticketing)</a>
+            <a class="btn btn-contained" data-id="Home-Tool-Bar">Home Tool Bar</a>
+            <!-- bottom -->
             <a class="btn btn-contained" data-id="Bottom-Nav">Bottom Nav</a>
+            <!-- page control -->
+            <a class="btn btn-contained" data-id="Pagination">Pagination</a>
+            <hr />
+            <!-- full page -->
+            <a class="btn btn-contained" data-id="Modal">Modal</a>
             <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
+            <!-- large components -->
             <a class="btn btn-contained" data-id="Card-Large">Card (large)</a>
             <a class="btn btn-contained" data-id="card-medium">Card (medium)</a>
             <a class="btn btn-contained" data-id="card-small">Card (small)</a>
+            <hr />
+            <!-- chat room -->
             <a class="btn btn-contained" data-id="Chat">Chat</a>
-            <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
-            <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
         </div>
         <hr class="demo_divider">
         <!-- Color Palette -->
@@ -2404,11 +2424,73 @@ Content of a menu is structured by the <code>List</code> component</p>
 &lt;a href="#" class="breadcrumb"&gt; breadcrumb &lt;/a&gt;</code></pre>
             </div>
         </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Pagination">Pagination</h3>
+            <div class="demo_showcase">
+                <div class="pagination">
+                    <a class="pg-back pg-disabled"></a>
+                    <div class="pg-btn-wrapper">
+                        <a class="pg-btn active"> 1 </a>
+                        <a class="pg-btn"> 2 </a>
+                        <a class="pg-btn"> 3 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 100 </a>
+                    </div>
+                    <a class="pg-forth"></a>
+                </div>
+            </div>
+            <div class="demo_showcase">
+                <div class="pagination">
+                    <a class="pg-back pg-disabled"></a>
+                    <div class="pg-btn-wrapper">
+                        <a class="pg-btn"> 1 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 101 </a>
+                        <a class="pg-btn active"> 102 </a>
+                        <a class="pg-btn"> 103 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 200 </a>
+                    </div>
+                    <a class="pg-forth"></a>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>Pagination</h3>
+<p>Pagination component provides user a quick way to reach different page or section within the page content.</p>
+<h3>Usage</h3>
+<p>Use <code>pg-disabled</code> to disable back and forth button.
+Use <code>active</code> to highlight current page.</p>
+<h5>Normal / Default Situation</h5>
+<pre><code class="html language-html">&lt;div class="pagination"&gt;
+    &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
+    &lt;div class="pg-btn-wrapper"&gt;
+        &lt;a class="pg-btn active"&gt; 1 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 2 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 3 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 100 &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a class="pg-forth"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<h5>In the Middle</h5>
+<p>The maximun number of page button can be displayed is 7.</p>
+<pre><code class="html language-html">&lt;div class="pagination"&gt;
+    &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
+    &lt;div class="pg-btn-wrapper"&gt;
+        &lt;a class="pg-btn"&gt; 1 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 101 &lt;/a&gt;
+        &lt;a class="pg-btn active"&gt; 102 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 103 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 200 &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a class="pg-forth"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
     </section>
 </body>
-<!-- <script src="./public/javascripts/handyBaseline/modal.js"></script> -->
-<!-- <script src="./public/javascripts/handyBaseline/textarea.js"></script> -->
-<!-- <script src="./public/javascripts/handyBaseline/dropdown.js"></script> -->
 <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
 <script src="./public/javascripts/demo/demo.js"></script>
 
