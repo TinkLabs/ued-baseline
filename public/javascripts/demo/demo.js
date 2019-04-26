@@ -157,4 +157,44 @@ window.onload = e => {
         })
     }
 
+
+
+    /*
+     *
+     * Toggle accordions
+     *
+     */
+    // let accordions = document.getElementsByClassName("accordion");
+    // for (let i = 0; i < accordions.length; i++) {
+    //     // todo move listener to title
+    //     accordions[i].addEventListener('click', e => {
+    //         let clicked = e.currentTarget.children;
+    //         for (let j = 0; j < clicked.length; j++) {
+    //             clicked[j].classList.forEach(c => {
+    //                 if (c.match("ac-body")) {
+    //                     // toggle
+    //                     // check open state
+    //                     let isOpen;
+    //                     e.currentTarget.classList.forEach(e => {
+    //                         isOpen = e.match("ac-open") ? false : true;
+    //                     });
+    //                     openAccordion(isOpen, e.currentTarget);
+    //                     // end loop
+    //                     j = clicked.length;
+    //                 }
+    //             });
+    //         }
+    //     });
+    // }
+
+    // function openAccordion(toOpen, dom) {
+    //     if (toOpen) {
+    //         // open
+    //         dom.classList.add("ac-open");
+    //     } else {
+    //         // close
+    //         dom.classList.remove("ac-open");
+    //     }
+    // }
+
 };

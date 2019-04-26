@@ -1,0 +1,104 @@
+/*
+ *
+ * Accordion
+ *
+ * An expandable list that shows user details about the list title.
+ *
+ *  use `ac-open` to keep accordion open
+ *
+ *  pure css slide transition is not the best.
+ *
+ */
+
+.accordion {
+    // basic settings
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: $hi-white;
+
+    /*
+     * Resting
+     */
+
+    // hidden checkbox / radio btn
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    // accordion title, click to toggle (label)
+    .ac-title {
+        // base from list item
+        @include list-row;
+        position: relative;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            right: 16px;
+            // border-bottom when closed
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            // prevent border appearing before accordion is closed
+            transition: border 0s linear 0.5s;
+        }
+
+        // toggle arrow, default downward
+        &:after {
+            @include labelMark;
+            // downward arrow
+            content: "\EC73";
+            // rotation transition
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    // accordion body, slide transition
+    .ac-body {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out;
+        padding: 0 16px;
+
+        // actual content holder
+        .ac-content {
+            @include caption;
+            display: block;
+            color: $dark-enabled;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding-bottom: 25px;
+        }
+    }
+
+    &:last-child {
+        .ac-body {
+            .ac-content {
+                border-bottom: none;
+            }
+        }
+    }
+
+    /*
+     * Open
+     */
+    input[type="radio"]:checked,
+    input[type="checkbox"]:checked {
+        & ~ .ac-title {
+            &:before {
+                border-bottom: none;
+            }
+            &:after {
+                transform: rotateX(180deg);
+            }
+        }
+        & ~ .ac-body {
+            max-height: 100vh;
+        }
+    }
+}

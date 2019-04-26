@@ -1,0 +1,55 @@
+<h3>Accordion</h3>
+<p>An expandable list that shows user details about the list title.</p>
+<h3>Usage</h3>
+<p>There are two types of behavior on opening accordion.</p>
+<h5>Opening Multiple Accordions</h5>
+<pre><code class="html language-html">&lt;div class="accordion"&gt;
+    // hidden checkbox button that control accordion state
+    &lt;input id="demo_accordion_1" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_1" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="accordion"&gt;
+    &lt;input id="demo_accordion_2" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_2" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="accordion"&gt;
+    &lt;input id="demo_accordion_3" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_3" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h5>Opening Single Accordion</h5>
+<pre><code class="html language-html">&lt;form&gt;
+    // wrap the set of accordion in a form so that you can have multiple accordion sets that open single accordion
+    &lt;div class="accordion"&gt;
+        // hidden radio input that control accordion state
+        &lt;input id="demo_accordion_4" type="radio" name="demo_accordion_set_2" /&gt;
+        // label for button which serve as title of the accordion
+        &lt;label for="demo_accordion_4" class="ac-title"&gt;Label&lt;/label&gt;
+        // the actual body of the accordion, which is hidden by default
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion"&gt;
+        &lt;input id="demo_accordion_5" type="radio" name="demo_accordion_set_2" /&gt;
+        &lt;label for="demo_accordion_5" class="ac-title"&gt;Label&lt;/label&gt;
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion"&gt;
+        &lt;input id="demo_accordion_6" type="radio" name="demo_accordion_set_2" /&gt;
+        &lt;label for="demo_accordion_6" class="ac-title"&gt;Label&lt;/label&gt;
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
