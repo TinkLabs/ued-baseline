@@ -3,6 +3,9 @@ An expandable list that shows user details about the list title.
 
 ### Usage
 There are two types of behavior on opening accordion.
+Use radio button if you want the accordion set to open one tab only.
+Use checkbox button if you want the accordion set to open multiple tabs.
+Use class name `ac-m` together with `accordion` if you want bigger font size.
 
 ##### Opening Multiple Accordions
 ```html

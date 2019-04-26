@@ -11,6 +11,7 @@
  */
 
 .accordion {
+    // default size : S
     // basic settings
     position: relative;
     width: 100%;
@@ -99,6 +100,18 @@
         }
         & ~ .ac-body {
             max-height: 100vh;
+        }
+    }
+
+    // M size
+    &.ac-m {
+        .ac-title {
+            @include subtitle1;
+        }
+        .ac-body {
+            .ac-content {
+                @include body2;
+            }
         }
     }
 }

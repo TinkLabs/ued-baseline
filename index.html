@@ -2564,21 +2564,14 @@ Infinite rolling is used when progress percentage is not important to user.</p>
             <div class="demo_showcase demo_screen_mob">
                 <div class="accordion">
                     <input id="demo_accordion_2" type="checkbox" name="demo_accordion_set_1" />
-                    <label for="demo_accordion_2" class="ac-title">Label</label>
+                    <label for="demo_accordion_2" class="ac-title">default size</label>
                     <div class="ac-body">
                         <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
                     </div>
                 </div>
-                <div class="accordion">
+                <div class="accordion ac-m">
                     <input id="demo_accordion_3" type="checkbox" name="demo_accordion_set_1" />
-                    <label for="demo_accordion_3" class="ac-title">Label</label>
-                    <div class="ac-body">
-                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <input id="demo_accordion_4" type="checkbox" name="demo_accordion_set_1" />
-                    <label for="demo_accordion_4" class="ac-title">Label</label>
+                    <label for="demo_accordion_3" class="ac-title">meduim size</label>
                     <div class="ac-body">
                         <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
                     </div>
@@ -2615,7 +2608,10 @@ Infinite rolling is used when progress percentage is not important to user.</p>
 <h3>Accordion</h3>
 <p>An expandable list that shows user details about the list title.</p>
 <h3>Usage</h3>
-<p>There are two types of behavior on opening accordion.</p>
+<p>There are two types of behavior on opening accordion.
+Use radio button if you want the accordion set to open one tab only.
+Use checkbox button if you want the accordion set to open multiple tabs.
+Use class name <code>ac-m</code> together with <code>accordion</code> if you want bigger font size.</p>
 <h5>Opening Multiple Accordions</h5>
 <pre><code class="html language-html">&lt;div class="accordion"&gt;
     // hidden checkbox button that control accordion state
