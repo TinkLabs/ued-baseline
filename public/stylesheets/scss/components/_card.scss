@@ -203,20 +203,67 @@
      *
      * Size dependent settings
      *
+     * Large Card: all 16:9
+     *
+     * Full Bleed Image (no padding) | 16:9 | L | 360 x 203 | card-fw
+     * Homepage Card (std padding)   | 16:9 | L | 328 x 187 | card-l
+     *
+     * Medium Card: 16:9 HD and 4:3
+     *
+     * Ticketing Homepage Card       | 16:9 | M | 160 x 90  | card-m-wide
+     * General Card with Image       |  4:3 | M | 144 x 108 | card-m
+     *
+     * Small Card 1:1
+     *
+     * List with Image               |  1:1 | S |  68 x 68  | card-xs
+     *
      */
+
+    &.card-fw {
+        width: 360px;
+
+        .card-container {
+            .card-media-container {
+                .card-media {
+                    @include image-fw;
+                }
+            }
+        }
+    }
+
     &.card-l {
-        width: 100%;
-        max-width: 328px;
+        width: 328px;
+
+        .card-container {
+            .card-media-container {
+                .card-media {
+                    @include image-l;
+                }
+            }
+        }
+    }
+
+    &.card-m-wide {
+        width: 160px;
+
+        .card-container {
+            .card-media-container {
+                .card-media {
+                    @include image-m-wide;
+                }
+            }
+        }
     }
 
     &.card-m {
-        width: 240px;
-    }
-
-    &.card-s {
         width: 144px;
 
         .card-container {
+            .card-media-container {
+                .card-media {
+                    @include image-m;
+                }
+            }
             .card-body {
                 .card-body-title {
                     @include subtitle2;

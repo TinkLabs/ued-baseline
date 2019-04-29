@@ -25,32 +25,53 @@
 }
 
 // 16:9
-// homepage / trending now / with padding
-.image-l {
-  width: 328px;
-  height: 187px;
-  // margin: 0 16px;
+// POI / no padding
+@mixin image-fw {
+  width: 360px;
+  height: 203px;
+}
+.image-l-fw {
+  @include image-fw;
 }
 
 // 16:9
-// POI / no padding
-.image-l-fw {
-  width: 360px;
-  height: 203px;
+// homepage / trending now / with padding
+@mixin image-l {
+  width: 328px;
+  height: 187px;
+}
+.image-l {
+  @include image-l;
+}
+
+// 16:9
+// ticketing card image
+@mixin image-m-wide {
+  width: 160px;
+  height: 90px;
+}
+.image-s {
+  @include image-m-wide;
 }
 
 // 4:3
 // card image
-.image-m {
+@mixin image-m {
   width: 144px;
   height: 108px;
+}
+.image-s {
+  @include image-m;
 }
 
 // 1:1
 // mainly list image
-.image-s {
+@mixin image-s {
   width: 68px;
   height: 68px;
+}
+.image-s {
+  @include image-s;
 }
 
 .image-rounded {

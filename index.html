@@ -68,8 +68,7 @@
             <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
             <!-- large components -->
             <a class="btn btn-contained" data-id="Card-Large">Card (large)</a>
-            <a class="btn btn-contained" data-id="card-medium">Card (medium)</a>
-            <a class="btn btn-contained" data-id="card-small">Card (small)</a>
+            <a class="btn btn-contained" data-id="Card-Medium">Card (medium)</a>
             <a class="btn btn-contained" data-id="Accordion">Accordion</a>
             <hr />
             <!-- chat room -->
@@ -1878,26 +1877,26 @@ modal.destory();</code></pre>
         <div class="demo_display">
             <h3 class="headline" id="Images">Images</h3>
             <p class="subtitle2">16:9 POI screen , no padding</p>
-            <div class="subtitle2">image-l-fw</div>
+            <div class="subtitle2">image-fw</div>
             <div class="demo_showcase demo_screen_mob">
-                <img src="public/images/img_l_fw.png" alt="img" class="image-l-fw">
+                <img src="public/images/img_fw.png" alt="img" class="image-fw">
             </div>
             <p class="subtitle2">16:9 large image / large card</p>
             <div class="subtitle2">image-l</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_l.png" alt="img" class="image-l">
             </div>
-            <p class="subtitle2">16:9  medium / medium card</p>
-            <div class="subtitle2">image-m</div>
+            <p class="subtitle2">16:9  medium-wide image / medium-wide card</p>
+            <div class="subtitle2">image-m-wide</div>
             <div class="demo_showcase demo_screen_mob">
-                <img src="public/images/img_l.png" alt="img" class="image-l">
+                <img src="public/images/img_m_wide.png" alt="img" class="image-m-wide">
             </div>
-            <p class="subtitle2">4:3 small image / small card</p>
+            <p class="subtitle2">4:3 medium image / medium card</p>
             <div class="subtitle2">image-m</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_m.png" alt="img" class="image-m">
             </div>
-            <p class="subtitle2">1:1 xs image / list image</p>
+            <p class="subtitle2">1:1 s image / list image</p>
             <div class="subtitle2">image-s</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/img_s.png" alt="img" class="image-s">
@@ -1907,19 +1906,67 @@ modal.destory();</code></pre>
                 <p>Images stored in BE have been cropped into different size and aspect ratio, images shall be shown in
                     specific dimension according to it position and function.</p>
                 <h3>Usage</h3>
-                <pre><code class="html language-html">&lt;img class="image-l-fw" src="./img.jpg" alt="img"&gt;</code></pre>
+                <pre><code class="html language-html">&lt;img class="image-fw" src="./img.jpg" alt="img"&gt;</code></pre>
             </div>
         </div>
+        <!-- card -->
         <div class="demo_display">
             <h3 class="headline" id="Card-Large">Card (Large)</h3>
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
+                <div class="card card-fw">
+                    <div class="card-container">
+                        <div class="card-head">
+                            <img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png">
+                            <div class="card-head-text">
+                                <span class="card-head-title"> Full Width Card </span>
+                                <span class="card-head-subtitle"> card-fw </span>
+                            </div>
+                            <i class="card-head-icon icon icon-general_favorite_24px"></i>
+                        </div>
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./public/images/img_fw.png">
+                            <div class="card-media-overlay">
+                                <div class="card-media-overlay-top">
+                                    <span class="tag"> Bestseller </span>
+                                    <i class="card-media-overlay-videoBtn
+                                    icon icon-av_play_circle_outline_24px"></i>
+                                </div>
+                                <div class="card-media-overlay-bottom">
+                                    <span class="card-media-overlay-bottom-title"> Image Title </span>
+                                    <span class="card-media-overlay-bottom-subtitle">Image subtitle</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+                            </span>
+                            <span class="card-body-content"> Enter directly with QR code </span>
+                            <span class="tag"> Hong Kong </span>
+                            <div class="card-body-ticketing">
+                                <div class="card-body-ticketing-rating">
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_border_24px"></i>
+                                </div>
+                                <div class="card-body-ticketing-pricing">
+                                    <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                                    <span class="card-body-ticketing-price"> HK$ 558 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="demo_showcase demo_screen_mob demo_no_bg">
                 <div class="card card-l">
                     <div class="card-container">
                         <div class="card-head">
                             <img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png">
                             <div class="card-head-text">
-                                <span class="card-head-title"> card title </span>
-                                <span class="card-head-subtitle"> card subtitle </span>
+                                <span class="card-head-title"> Large Card </span>
+                                <span class="card-head-subtitle"> card-l </span>
                             </div>
                             <i class="card-head-icon icon icon-general_favorite_24px"></i>
                         </div>
@@ -1941,12 +1988,7 @@ modal.destory();</code></pre>
                             <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct)
                             </span>
                             <span class="card-body-content"> Enter directly with QR code </span>
-                            <span class="tag"> Okinawa </span>
-                            <span class="tag"> Koln </span>
                             <span class="tag"> Hong Kong </span>
-                            <span class="tag"> Sydney </span>
-                            <span class="tag"> Moscow </span>
-                            <span class="tag"> Casablanca </span>
                             <div class="card-body-ticketing">
                                 <div class="card-body-ticketing-rating">
                                     <i class="icon icon-toggle_star_24px"></i>
@@ -1965,50 +2007,46 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-                <h3>Card</h3>
-                <p>Cards contain content and actions about a single subject.</p>
-                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
-                <h3>Usage</h3>
-                <p>Main Card</p>
-                <pre><code class="html language-html">&lt;div class="card card-l"&gt;
+<h3>Card</h3>
+<p>Cards contain content and actions about a single subject.</p>
+<p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+<h3>Usage</h3>
+<h5>Full Width Card, 16:9, no padding</h5>
+<pre><code class="html language-html">&lt;div class="card card-fw"&gt;
     &lt;div class="card-container"&gt;
         /* Card Head */
         &lt;div class="card-head"&gt;
             &lt;img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png"&gt;
             &lt;div class="card-head-text"&gt;
-                &lt;span class="card-head-title"&gt; card title &lt;/span&gt;
-                &lt;span class="card-head-subtitle"&gt; card subtitle &lt;/span&gt;
+                &lt;span class="card-head-title"&gt; Full Width Card &lt;/span&gt;
+                &lt;span class="card-head-subtitle"&gt; card-fw &lt;/span&gt;
             &lt;/div&gt;
             &lt;i class="card-head-icon icon icon-general_favorite_24px"&gt;&lt;/i&gt;
         &lt;/div&gt;
-
         /* Card Media */
         &lt;div class="card-media-container"&gt;
-            &lt;img class="card-media" alt="card-media" src="./public/images/img_l.png"&gt;
+            &lt;img class="card-media" alt="card-media" src="./public/images/img_fw.png"&gt;
             &lt;div class="card-media-overlay"&gt;
-
+                &lt;div class="card-media-overlay-top"&gt;
+                    &lt;span class="tag"&gt; Bestseller &lt;/span&gt;
+                    &lt;i class="card-media-overlay-videoBtn
+                    icon icon-av_play_circle_outline_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-media-overlay-bottom"&gt;
+                    &lt;span class="card-media-overlay-bottom-title"&gt; Image Title &lt;/span&gt;
+                    &lt;span class="card-media-overlay-bottom-subtitle"&gt;Image subtitle&lt;/span&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-
         /* Card Body */
         &lt;div class="card-body"&gt;
             /* Body Title */
-            &lt;span class="card-body-title"&gt;
-                Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admisison Ticket (QR Code Direct)
             &lt;/span&gt;
-
             /* Body Content */
-            &lt;span class="card-body-content"&gt;
-                Enter directly with QR code
-            &lt;/span&gt;
-
+            &lt;span class="card-body-content"&gt; Enter directly with QR code &lt;/span&gt;
             /* Body Tags */
-            &lt;span class="tag"&gt; Okinawa &lt;/span&gt;
-            &lt;span class="tag"&gt; Koln &lt;/span&gt;
             &lt;span class="tag"&gt; Hong Kong &lt;/span&gt;
-            &lt;span class="tag"&gt; Sydney &lt;/span&gt;
-            &lt;span class="tag"&gt; Moscow &lt;/span&gt;
-            &lt;span class="tag"&gt; Casablanca &lt;/span&gt;
 
             /* Body Ticketing infos */
             &lt;div class="card-body-ticketing"&gt;
@@ -2024,14 +2062,72 @@ modal.destory();</code></pre>
                     &lt;span class="card-body-ticketing-price"&gt; HK$ 558 &lt;/span&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h5>Large Card 16:9</h5>
+<pre><code class="html language-html">&lt;div class="card card-l"&gt;
+    &lt;div class="card-container"&gt;
+        &lt;div class="card-head"&gt;
+            &lt;img class="card-head-avatar avatar" alt="avatar" src="./public/images/checker_bg.png"&gt;
+            &lt;div class="card-head-text"&gt;
+                &lt;span class="card-head-title"&gt; Large Card &lt;/span&gt;
+                &lt;span class="card-head-subtitle"&gt; card-l &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;i class="card-head-icon icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./public/images/img_l.png"&gt;
+            &lt;div class="card-media-overlay"&gt;
+                &lt;div class="card-media-overlay-top"&gt;
+                    &lt;span class="tag"&gt; Bestseller &lt;/span&gt;
+                    &lt;i class="card-media-overlay-videoBtn
+                    icon icon-av_play_circle_outline_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-media-overlay-bottom"&gt;
+                    &lt;span class="card-media-overlay-bottom-title"&gt; Image Title &lt;/span&gt;
+                    &lt;span class="card-media-overlay-bottom-subtitle"&gt;Image subtitle&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+            &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; Enter directly with QR code &lt;/span&gt;
+            &lt;span class="tag"&gt; Hong Kong &lt;/span&gt;
+            &lt;div class="card-body-ticketing"&gt;
+                &lt;div class="card-body-ticketing-rating"&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_border_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-body-ticketing-pricing"&gt;
+                    &lt;span class="card-body-ticketing-price-previous"&gt; HK$ 888 &lt;/span&gt;
+                    &lt;span class="card-body-ticketing-price"&gt; HK$ 558 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
         <div class="demo_display">
-            <h3 class="headline" id="card-medium">Card (medium)</h3>
+            <h3 class="headline" id="Card-Medium">Card (medium)</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="card card-m-wide">
+                    <div class="card-container">
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./public/images/img_m_wide.png">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Medium Card 16:9 image </span>
+                            <span class="card-body-content"> card-m-wide </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="demo_showcase demo_screen_mob">
                 <div class="card card-m">
                     <div class="card-container">
@@ -2039,8 +2135,8 @@ modal.destory();</code></pre>
                             <img class="card-media" alt="card-media" src="./public/images/img_m.png">
                         </div>
                         <div class="card-body">
-                            <span class="card-body-title"> Hong Kong Disneyland Admission Pass </span>
-                            <span class="card-body-content"> Attraction • 0.5 km </span>
+                            <span class="card-body-title"> Medium Card 4:3 image </span>
+                            <span class="card-body-content"> card-m </span>
                         </div>
                     </div>
                 </div>
@@ -2050,65 +2146,33 @@ modal.destory();</code></pre>
 <p>Cards contain content and actions about a single subject.</p>
 <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
 <h3>Usage</h3>
-<p>Main Card</p>
+<h5>Medium Size Card, 16:9</h5>
+<pre><code class="html language-html">&lt;div class="card card-m-wide"&gt;
+    &lt;div class="card-container"&gt;
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./public/images/img_m_wide.png"&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;span class="card-body-title"&gt; Medium Card 16:9 image &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; card-m-wide &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h5>Medium Size Card, 4:3</h5>
 <pre><code class="html language-html">&lt;div class="card card-m"&gt;
     &lt;div class="card-container"&gt;
         &lt;div class="card-media-container"&gt;
             &lt;img class="card-media" alt="card-media" src="./public/images/img_m.png"&gt;
         &lt;/div&gt;
         &lt;div class="card-body"&gt;
-            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admission Pass &lt;/span&gt;
-            &lt;span class="card-body-content"&gt; Attraction • 0.5 km &lt;/span&gt;
+            &lt;span class="card-body-title"&gt; Medium Card 4:3 image &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; card-m &lt;/span&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
-        <div class="demo_display">
-            <h3 class="headline" id="card-small">Card (small)</h3>
-            <div class="demo_showcase demo_screen_mob">
-                <div class="card card-s">
-                    <div class="card-container">
-                        <div class="card-media-container">
-                            <img class="card-media" alt="card-media" src="./public/images/img_m.png">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-body-title"> Hong Kong Disneyland Admission Pass </span>
-                            <span class="card-body-content"> Attraction • 0.5 km </span>
-                            <div class="card-body-ticketing">
-                                <div class="card-body-ticketing-pricing">
-                                    <span class="card-body-ticketing-price"> HK$ 600 </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="demo_description">
-                <h3>Card</h3>
-                <p>Cards contain content and actions about a single subject.</p>
-                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
-                <h3>Usage</h3>
-                <p>Small Card</p>
-                <pre><code class="html language-html">&lt;div class="card card-s"&gt;
-    &lt;div class="card-container"&gt;
-        &lt;div class="card-media-container"&gt;
-            &lt;img class="card-media" alt="card-media" src="./public/images/img_m.png"&gt;
-        &lt;/div&gt;
-        &lt;div class="card-body"&gt;
-            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admission Pass &lt;/span&gt;
-            &lt;span class="card-body-content"&gt; Attraction • 0.5 km &lt;/span&gt;
-
-            &lt;div class="card-body-ticketing"&gt;
-                &lt;div class="card-body-ticketing-pricing"&gt;
-                    &lt;span class="card-body-ticketing-price"&gt; HK$ 600 &lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-        </div>
+        <!-- tag -->
         <div class="demo_display">
             <h3 class="headline" id="Tag">Tag</h3>
             <div class="demo_showcase">

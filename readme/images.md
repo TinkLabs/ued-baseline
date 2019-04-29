@@ -3,5 +3,5 @@ Images stored in BE have been cropped into different size and aspect ratio, imag
 
 ### Usage
 ```html
-<img class="image-l-fw" src="./img.jpg" alt="img">
+<img class="image-fw" src="./img.jpg" alt="img">
 ```
