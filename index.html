@@ -65,6 +65,7 @@
             <hr />
             <!-- full page -->
             <a class="btn btn-contained" data-id="Modal">Modal</a>
+            <a class="btn btn-contained" data-id="Backdrop">Backdrop</a>
             <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
             <!-- large components -->
             <a class="btn btn-contained" data-id="Card-Large">Card (large)</a>
@@ -2762,6 +2763,36 @@ Use class name <code>ac-m</code> together with <code>accordion</code> if you wan
     &lt;a class="indicator"&gt;&lt;/a&gt;
     &lt;a class="indicator"&gt;&lt;/a&gt;
     &lt;a class="indicator"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Backdrop -->
+        <div class="demo_display">
+            <h3 class="headline" id="Backdrop"> Backdrop </h3>
+            <div class="demo_showcase demo_screen_mob demo_no_bg full-width">
+                <div class="backdrop">
+                    <div class="bd-back bg-white">
+                        Back
+                        <button id="demo_toggle_backdrop_1" data-target="demo_backdrop_1"> Demo Toggle </button>
+                    </div>
+                    <div class="bd-front bg-navy-200" id="demo_backdrop_1">
+                        Front
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>Backdrop</h3>
+<p>A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content.</p>
+<h3>Usage</h3>
+<p>Style both layer so user can distinguish them.
+Use <code>collapse</code> on <code>bd-front</code> to toggle front layer position.</p>
+<pre><code class="html language-html">&lt;div class="backdrop"&gt;
+    &lt;div class="bd-back bg-white"&gt;
+        Back
+    &lt;/div&gt;
+    &lt;div class="bd-front bg-navy-200"&gt;
+        Front
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
