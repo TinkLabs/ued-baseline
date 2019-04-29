@@ -93,6 +93,7 @@
         position: relative;
         font-size: 0;
         margin: 0 4px 0 0;
+        transition: width 0.2s ease-in-out;
         &:last-child {
             margin-right: 0;
         }
@@ -112,9 +113,16 @@
 }
 
 @mixin carousel-indicator-dark {
+    &:active {
+        // reset color on click
+        .indicator.active:not(:active) {
+            background: $dark-lightest;
+        }
+    }
     .indicator {
+        // default color
         background: $dark-lightest;
-
+        
         &.active,
         &:active {
             background: $dark-default;
