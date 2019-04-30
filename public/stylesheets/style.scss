@@ -77,8 +77,8 @@
  *
  */
 
- @import "scss/form/_formControl";
- @import "scss/form/_textField";
+ @import "scss/form/formControl";
+ @import "scss/form/textField";
 
 /*
  *
@@ -89,13 +89,13 @@
 @import "scss/components/tabs";
 @import "scss/components/list";
 @import "scss/components/menu";
-@import "scss/components/searchbox.scss";
-@import "scss/components/card.scss";
-@import "scss/components/modal.scss";
-@import "scss/components/navDrawer.scss";
-@import "scss/components/toolbarButton.scss";
-@import "scss/components/topBar.scss";
-@import "scss/components/bottomNav.scss";
+@import "scss/components/searchbox";
+@import "scss/components/card";
+@import "scss/components/modal";
+@import "scss/components/navDrawer";
+@import "scss/components/toolbarButton";
+@import "scss/components/topBar";
+@import "scss/components/bottomNav";
 @import "scss/components/chat";
 @import "scss/components/toolTip";
 @import "scss/components/pagination";
@@ -103,3 +103,11 @@
 @import "scss/components/progressBarCircular";
 @import "scss/components/accordion";
 @import "scss/components/carousel";
+
+/*
+ *
+ * modified plugin import
+ *
+ */
+ 
+@import "scss/rangeSlider/rangeSlider";

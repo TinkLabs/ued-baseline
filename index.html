@@ -32,7 +32,7 @@
             <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
             <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
             <a class="btn btn-contained" data-id="Progress-Bar">Progress Bar</a>
-            <!-- <a class="btn btn-contained" data-id="Progress-Bar-Circular">Progress Bar (Circular)</a> -->
+            <a class="btn btn-contained" data-id="Progress-Bar-Circular">Progress Bar (Circular)</a>
             <hr />
             <!-- single click component -->
             <a class="btn btn-contained" data-id="Hyperlink">Hyperlink</a>
@@ -47,6 +47,7 @@
             <a class="btn btn-contained" data-id="Selection-Control">Selection Control</a>
             <a class="btn btn-contained" data-id="Dropdown">Dropdown</a>
             <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
+            <a class="btn btn-contained" data-id="Slider">Slider</a>
             <hr />
             <!-- list and menu -->
             <a class="btn btn-contained" data-id="List">List</a>
@@ -2796,9 +2797,61 @@ Use <code>collapse</code> on <code>bd-front</code> to toggle front layer positio
 &lt;/div&gt;</code></pre>
             </div>
         </div>
+        <!-- Slider -->
+        <div class="demo_display">
+            <h3 class="headline" id="Slider"> Slider </h3>
+            <div class="demo_showcase">
+                <div id="demo_rangeSlider"></div>
+            </div>
+            <div class="demo_description">
+<h3>Range Slider</h3>
+<p>An input component that allows user set value within a preset range by draging the button on the track.</p>
+<h3>Usage</h3>
+<p>Since support on styling <code>input[type=range]</code> with pure CSS is low, an external library is induced to provides both styling and functional support.</p>
+<p>See <a href="https://github.com/harrisonchan9/noUiSlider">noUiSlider</a> for full documentations.</p>
+<pre><code class="html language-html">// label the slider with an id
+&lt;div id="demo_rangeSlider"&gt;&lt;/div&gt;
+
+// also include the js library
+&lt;script src="&lt;CDN domain&gt;/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
+<pre><code class="js language-js">var slider = document.getElementById('demo_rangeSlider');
+
+noUiSlider.create(slider, {
+    // starting position of knob
+    start: [50],
+    // Display colored bars between handles
+    connect: [true, false],
+    // min max of value on the bar
+    range: {
+        'min': 0,
+        'max': 100
+    },
+});
+
+// When the slider value changes ...
+slider.noUiSlider.on('update', function (values, handle) {
+    // `values` is the value of current state, in case of multiple knobs, `values` is an array
+    // `handle` is the index of the knob that triggered the action
+    // your code here
+});</code></pre>
+<p>There are some other options such as:</p>
+<pre><code class="js language-js">// tooltip
+tooltip: true,
+// show scale
+pips: {
+    mode: 'steps',
+    stepped: true,
+    density: 10
+},
+// step difference
+step: 10,</code></pre>
+<p>See library <a href="https://refreshless.com/nouislider/">documentation</a> for more information.</p>
+            </div>
+        </div>
     </section>
 </body>
 <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
 <script src="./public/javascripts/demo/demo.js"></script>
+<!-- <script src="./public/javascripts/plugin/nouislider.min.js"></script> -->
 
 </html>

@@ -164,9 +164,9 @@ window.onload = e => {
      * Toggle backdrop
      *
      */
-    
-     let backdropToggle = document.getElementById("demo_toggle_backdrop_1");
-     backdropToggle.addEventListener('click', e => {
+
+    let backdropToggle = document.getElementById("demo_toggle_backdrop_1");
+    backdropToggle.addEventListener('click', e => {
         let id = e.currentTarget.dataset.target;
         let bd_class = document.getElementById(id).classList;
         // find `.collapse`
@@ -181,6 +181,28 @@ window.onload = e => {
         } else {
             bd_class.add("collapse");
         }
-     });
+    });
 
+
+    /*
+     *
+     * Slider
+     *
+     */
+
+    var slider = document.getElementById('demo_rangeSlider');
+
+    noUiSlider.create(slider, {
+        start: [50],
+        connect: [true, false],
+        range: {
+            'min': 0,
+            'max': 100
+        },
+    });
+
+    // When the slider value changes
+    slider.noUiSlider.on('update', function (values, handle) {
+        console.log(values, handle);
+    });
 };

@@ -8,6 +8,7 @@ const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const rename = require("gulp-rename");
+const browserSync = require('browser-sync').create();
 
 /*
  *
@@ -20,7 +21,7 @@ const rename = require("gulp-rename");
  *
  */
 
-const showdown  = require('showdown');
+const showdown = require('showdown');
 const showdownOptions = {
   omitExtraWLInCodeBlocks: true,
   noHeaderId: true,
@@ -28,11 +29,11 @@ const showdownOptions = {
 const converter = new showdown.Converter(showdownOptions);
 
 gulp.task("md", (done) => {
-  let dir = fs.readdirSync("./readme", {withFileTypes: true});
+  let dir = fs.readdirSync("./readme", { withFileTypes: true });
   dir.forEach(obj => {
     let fileName = obj.name;
     if (fileName.match(/.md$/)) {
-      let text = fs.readFileSync(`./readme/${obj.name}`, {encoding: "UTF-8"});
+      let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
       let html = converter.makeHtml(text);
       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
       fs.writeFileSync(htmlFileName, html);
@@ -56,14 +57,16 @@ gulp.task('scss', () => {
   return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'));
+    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('demo-scss', () => {
   return gulp.src('./public/stylesheets/demo/demo.scss', { allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'));
+    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch-scss', () => {
@@ -173,6 +176,33 @@ gulp.task('svg', gulp.series(
 
 /*
  *
+ *
+ * Browser-Sync
+ *
+ *
+ */
+
+//  watch html
+gulp.task('watch-html', () => {
+  gulp.watch("./index.html").on('change', browserSync.reload);
+})
+
+
+// Static server
+gulp.task('hotreload', gulp.parallel(
+  'watch',
+  () => {
+    browserSync.init({
+      server: {
+        baseDir: "./"
+      }
+    });
+  },
+  'watch-html'
+));
+
+/*
+ *
  * Production build
  * 
  * Compile, combine and compress scss, css, js, svg fonts
@@ -197,7 +227,7 @@ gulp.task("prod-css", () => {
 });
 
 gulp.task("prod-js", done => {
-  let target = ['./public/javascripts/handyBaseline/**/*.js'];
+  let target = ['./public/javascripts/handyBaseline/**/*.js', './public/javascripts/plugin/**/*.js'];
   let dest = './dist/javascripts';
   return gulp.src(target)
     // concat all js files
