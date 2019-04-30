@@ -49,6 +49,7 @@ a {
 
     &.hyperlink {
         text-decoration: underline;
+        cursor: pointer;
         color: $hi-gold;
 
         &:active {
@@ -210,4 +211,14 @@ ul {
 pre {
     width: 100%;
     @include horizontal-scroll;
+}
+
+/*
+ *
+ * behavior
+ *
+ */
+
+.no-scroll {
+    overflow: hidden;
 }

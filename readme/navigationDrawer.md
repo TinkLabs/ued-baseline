@@ -1,7 +1,9 @@
 ### Navigation Drawer
 Navigation drawers provide access to destinations in your app.
 
-Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show"
+Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show".
+
+To stop the content under the Navigation Drawer from scrolling, add class `no-scroll` to body when the drawer is open.
 
 ### Usage
 ```html

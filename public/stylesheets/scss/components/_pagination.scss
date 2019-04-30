@@ -19,6 +19,16 @@
             border-color: $dark-disabled;
             color: $dark-disabled;
         }
+        &:not(.pg-disabled) {
+            &:active {
+                @include btn-gold-default-pressed;
+            }
+    
+            &:focus,
+            &:focus-within {
+                @include btn-gold-default-pressed;
+            }
+        }
     }
 
     .pg-back {
