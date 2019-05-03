@@ -32,7 +32,7 @@
     }
 
     .pg-back {
-        margin-right: 16px;
+        margin-right: 8px;
 
         &:before {
             @include labelMark;
@@ -41,7 +41,7 @@
     }
 
     .pg-forth {
-        margin-left: 16px;
+        margin-left: 8px;
 
         &:before {
             @include labelMark;
@@ -57,7 +57,7 @@
         align-items: center;
 
         .pg-btn {
-            margin-right: 8px;
+            margin-right: 4px;
             border-color: transparent;
 
             &.active {
