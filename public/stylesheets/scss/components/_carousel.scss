@@ -80,6 +80,8 @@
     justify-content: center;
     z-index: 100;
     background: transparent;
+    width: fit-content;
+    margin: auto;
 
     .indicator {
         width: 8px;

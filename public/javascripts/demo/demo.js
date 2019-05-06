@@ -240,4 +240,54 @@ window.onload = e => {
     .addEventListener('click', e => {
         cpb.reset();
     });
+
+
+
+
+    /*
+     *
+     * Search Input History
+     *
+     */
+
+    let dsih = document.getElementById("demo-search-input-history");
+    let history = ["search history", "search history 2", "search history 3"];
+    dsih.addEventListener('click', e => {
+        if (!dsih.children.length) {
+            // create list
+            let ul = document.createElement("ul");
+            ul.classList.add("search-history");
+            ul.classList.add("list");
+
+            let items = history.map(h => (appendHistoryList(h)));
+            items.forEach(i => {
+                i.addEventListener('click', c => removeHistoryList());
+                ul.appendChild(i);
+            });
+            dsih.parentNode.appendChild(ul);
+        }
+    });
+
+    const appendHistoryList = (h) => {
+        let li = document.createElement("li");
+        li.classList.add("list-row");
+        let content = document.createElement("div");
+        content.classList.add("list-content");
+        let text = document.createElement("div");
+        text.classList.add("list-text");
+        let span = document.createElement("span");
+        span.classList.add("list-text-secondary");
+        span.innerHTML = h;
+
+        text.appendChild(span);
+        content.appendChild(text);
+        li.appendChild(content);
+        return li;
+    };
+
+    const removeHistoryList = () => {
+        dsih.parentElement.querySelector(".search-history").remove();
+    }
+
+
 };
