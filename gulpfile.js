@@ -12,6 +12,12 @@ const browserSync = require('browser-sync').create();
 
 /*
  *
+ * TLDR for dev : use `gulp hotreload` 
+ * 
+ */
+
+/*
+ *
  * Convert .md file to .html
  *
  * Use this gulp task to convert readme file of each component/element to html code,
@@ -48,8 +54,6 @@ gulp.task("md", (done) => {
  *  Compile and minify css from sass
  *  autoprefixer css
  *  
- *  Dev: use `gulp watch`
- * 
  */
 
 sass.compiler = require('node-sass');
@@ -79,8 +83,6 @@ gulp.task('watch-scss', () => {
 gulp.task('watch-demo', () => {
   gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
 });
-
-gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 
 /*
  *
@@ -185,8 +187,10 @@ gulp.task('svg', gulp.series(
 //  watch html
 gulp.task('watch-html', () => {
   gulp.watch("./index.html").on('change', browserSync.reload);
-})
+});
 
+// watch all scss
+gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 
 // Static server
 gulp.task('hotreload', gulp.parallel(

@@ -1,0 +1,22 @@
+<h3>Progress Bar Circular</h3>
+<p>Progress bar shows user the progress of a loading process.
+Infinite rolling is used when progress percentage is not important to user.
+Javascript library is required for this component to work.</p>
+<h3>Usage</h3>
+<h5>Basic</h5>
+<p>Add the following element to your code.</p>
+<pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
+<p>Create a new progress bar, use the id of the element created above.</p>
+<pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
+<h5>Update Progress</h5>
+<p>Use the <code>update(percent)</code> function to update progress, where <code>0 &lt;= percent &lt;= 1</code></p>
+<pre><code class="js language-js">cpb.update(0.2);</code></pre>
+<h5>Infinite Rotation</h5>
+<p>Use the <code>infinite()</code> function to start rotation animation.</p>
+<pre><code class="js language-js">cpb.infinite();</code></pre>
+<h5>Toggle Rotation</h5>
+<p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using <code>infinite()</code> function.</p>
+<pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
+<h5>Reset Rotation</h5>
+<p>Use the <code>reset()</code> function to reset bar position.</p>
+<pre><code class="js language-js">cpb.reset();</code></pre>

@@ -2605,15 +2605,40 @@ Infinite rolling is used when progress percentage is not important to user.</p>
             </div>
         </div>
         <!-- Circular Progress Bar -->
-        <!-- TODO -->
         <!-- require JS -->
         <div class="demo_display">
             <h3 class="headline" id="Progress-Bar-Circular">Progress Bar (Circular)</h3>
             <div class="demo_showcase">
-                
+                <div id="circular-progress-1"></div>
             </div>
+            <button id="set-progress-bar-1">0.3</button>
+            <button id="set-progress-bar-2">0.7</button>
+            <button id="set-progress-bar-infinite">loop</button>
+            <button id="set-progress-bar-toggle">toggle</button>
+            <button id="set-progress-bar-reset">reset</button>
             <div class="demo_description">
-
+<h3>Progress Bar Circular</h3>
+<p>Progress bar shows user the progress of a loading process.
+Infinite rolling is used when progress percentage is not important to user.
+Javascript library is required for this component to work.</p>
+<h3>Usage</h3>
+<h5>Basic</h5>
+<p>Add the following element to your code.</p>
+<pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
+<p>Create a new progress bar, use the id of the element created above.</p>
+<pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
+<h5>Update Progress</h5>
+<p>Use the <code>update(percent)</code> function to update progress, where <code>0 &lt;= percent &lt;= 1</code></p>
+<pre><code class="js language-js">cpb.update(0.2);</code></pre>
+<h5>Infinite Rotation</h5>
+<p>Use the <code>infinite()</code> function to start rotation animation.</p>
+<pre><code class="js language-js">cpb.infinite();</code></pre>
+<h5>Toggle Rotation</h5>
+<p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using <code>infinite()</code> function.</p>
+<pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
+<h5>Reset Rotation</h5>
+<p>Use the <code>reset()</code> function to reset bar position.</p>
+<pre><code class="js language-js">cpb.reset();</code></pre>
             </div>
         </div>
         <!-- Accordion -->
@@ -2849,10 +2874,12 @@ step: 10,</code></pre>
 <p>See library <a href="https://refreshless.com/nouislider/">documentation</a> for more information.</p>
             </div>
         </div>
+        <div class="demo_display">
+            <h3 class="headline"></h3>
+        </div>
     </section>
 </body>
 <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
 <script src="./public/javascripts/demo/demo.js"></script>
-<!-- <script src="./public/javascripts/plugin/nouislider.min.js"></script> -->
 
 </html>

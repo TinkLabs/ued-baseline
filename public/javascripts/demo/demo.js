@@ -205,4 +205,39 @@ window.onload = e => {
     slider.noUiSlider.on('update', function (values, handle) {
         console.log(values, handle);
     });
+
+    /*
+     *
+     * Circular progress bar
+     *
+     */
+    let cpb = new circularProgressBar({id: "circular-progress-1"});
+
+    cpb.init();
+
+    document
+    .getElementById("set-progress-bar-1")
+    .addEventListener('click', e => {
+        cpb.update(0.2);
+    });
+    document
+    .getElementById("set-progress-bar-2")
+    .addEventListener('click', e => {
+        cpb.update(0.7);
+    });
+    document
+    .getElementById("set-progress-bar-infinite")
+    .addEventListener('click', e => {
+        cpb.infinite();
+    });
+    document
+    .getElementById("set-progress-bar-toggle")
+    .addEventListener('click', e => {
+        cpb.toggleInfinite();
+    });
+    document
+    .getElementById("set-progress-bar-reset")
+    .addEventListener('click', e => {
+        cpb.reset();
+    });
 };
