@@ -1,0 +1,33 @@
+<h3>File Uploader</h3>
+<p>This is a pure CSS component, JS / React component is not on schedule. Pull Request is very welcomed.</p>
+<h3>Usage</h3>
+<h5>Default State</h5>
+<pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+    &lt;div class="up-control"&gt;
+        &lt;label for="file-uploader-1" class="up-label"&gt;
+            Drag and drop files here or
+            &lt;a class="btn"&gt;Browse files&lt;/a&gt;
+        &lt;/label&gt;
+        &lt;input id="file-uploader-1" class="up-input"
+            type="file" name="files[]"
+            data-multiple-caption="{count} files selected" multiple /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h5>File Chosen</h5>
+<ol>
+<li>update the label text yourself</li>
+<li>toggle class <code>hide</code> on submit button</li>
+</ol>
+<pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+    &lt;div class="up-control"&gt;
+        &lt;label for="file-uploader-2" class="up-label"&gt;
+            N files have been selected
+        &lt;/label&gt;
+        &lt;input id="file-uploader-2" class="up-input"
+            type="file" name="files[]"
+            data-multiple-caption="{count} files selected" multiple /&gt;
+        &lt;button type="submit"&gt;Upload&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h3>Remark</h3>
+<p>Chrome on T2 works fine, but Webview on T2 is not working. Consult android team.</p>

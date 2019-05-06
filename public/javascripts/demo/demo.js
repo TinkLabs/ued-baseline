@@ -289,5 +289,18 @@ window.onload = e => {
         dsih.parentElement.querySelector(".search-history").remove();
     }
 
+    /*
+     *
+     * Prevent Submit
+     *
+     */
+
+    let submitBtns = document.querySelectorAll("button[type=submit]");
+    submitBtns.forEach(b => {
+        b.addEventListener('click', e => {
+            e.preventDefault();
+        })
+    });
+
 
 };
