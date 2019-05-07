@@ -36,8 +36,8 @@ If you are using React, only add the css to your `index.html`, you will need to 
 4. Make Pull Request for your changes
 
 ##### Styles and Components
-`gulp watch`
-This will compile `style.scss` to `style.css` live
+`gulp hotreload`
+This will compile `style.scss` to `style.css` live, start a hotreload server watching css and html changes.
 
 ##### Adding Custom Fonts
 We are converting svg icons into font
@@ -49,6 +49,14 @@ We are converting svg icons into font
 Demo page: `./index.html`
 
 svg icon reference page: `./iconFactory/result/icon-reference.html`
+
+##### Writing Descriptions for components
+1. Goto `./readme` folder
+2. Find / Create the markdown file for the component
+3. Edit content
+4. Run `gulp md` and a html file with the same name as markdown file is generated
+5. Copy content in the html file
+6. Paste it in `index.html` within `demo_description` div
 
 
 ### Demo Link
@@ -68,3 +76,4 @@ This will compile all file and copy necessary assets to `/dist` folder
 1. Run `gulp production` to get latest compiled files inside `/dist`.
 2. Go to s3 bucket `/handy-staging-test` > `/design_baseline_demo`.
 3. Copy the whole `/dist` folder into s3 bucket.
+4. Also copy `index.html` or `/public` folder if you made changes in them.
