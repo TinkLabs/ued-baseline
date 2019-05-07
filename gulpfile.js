@@ -176,6 +176,21 @@ gulp.task('svg', gulp.series(
   gulp.parallel("handleGlyphs", "handleFonts")
 ));
 
+
+/*
+ *
+ * copy color svg icon to dist
+ * 
+ */
+
+gulp.task('cp-color-icon', done => {
+  gulp.src("public/images/colorIcons/*.svg")
+  .pipe(gulp.dest("dist/images/colorIcons"))
+  .on('finish', done);
+});
+
+
+
 /*
  *
  *
@@ -247,6 +262,8 @@ gulp.task("prod-js", done => {
 
 gulp.task("production", gulp.parallel(
   gulp.series(
+    // copy color icon to /dist
+    "cp-color-icon",
     // compile svg font
     "prod-svg",
     // copy all fonts to /dist
