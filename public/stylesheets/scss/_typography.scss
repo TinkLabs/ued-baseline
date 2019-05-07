@@ -59,7 +59,7 @@
   letter-spacing: normal;
 }
 
-@mixin toolbar {
+@mixin toolbarText {
   font-size: 10px;
   font-weight: 400;
   font-style: normal;
@@ -122,8 +122,8 @@ h6 {
   @include caption;
 }
 
-.toolbar {
-  @include toolbar;
+.toolbarText {
+  @include toolbarText;
 }
 
 /*
