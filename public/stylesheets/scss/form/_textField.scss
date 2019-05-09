@@ -90,7 +90,7 @@ $text-field-icon-red: $hi-red;
   align-items: flex-start;
   position: relative;
 
-  padding: 8px;
+  // padding: 8px;
   min-width: 328px;
   border: none;
 
@@ -114,7 +114,7 @@ $text-field-icon-red: $hi-red;
     border-color: $text-field-resting-bg;
   }
   textarea {
-    padding-top: 8px;
+    padding-top: 15px;
     padding-bottom: 8px;
     resize: vertical;
   }

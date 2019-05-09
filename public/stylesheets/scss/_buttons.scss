@@ -338,7 +338,7 @@ button,
     @include btn-basic;
 
     &.btn-m {
-        @include headline;
+        @include subtitle2;
         height: 48px;
 
         .icon {
@@ -346,7 +346,7 @@ button,
         }
     }
 
-    /*
+  /*
    *
    * Default color Gold, different states
    *
