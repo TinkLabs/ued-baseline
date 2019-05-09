@@ -44,7 +44,7 @@ $btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
     border-style: solid;
     border-radius: 4px;
     padding: 0 16px;
-    height: 40px;
+    height: 38px;
     // typography
     @include body2;
     text-align: center;
@@ -339,7 +339,7 @@ button,
 
     &.btn-m {
         @include headline;
-        padding: 12px 16px;
+        height: 48px;
 
         .icon {
             font-size: 24px;
