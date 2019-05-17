@@ -11,7 +11,8 @@
   width: 100vw;
   height: 100vh;
 
-  background-color: rgba($hi-bl-grey-light, 0.5);
+  // background-color: rgba($hi-bl-grey-light, 0.5);
+  background-color: $dark-disabled;
 
   .modal-wrapper {
     display: flex;

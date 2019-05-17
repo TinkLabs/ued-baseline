@@ -41,8 +41,9 @@ $color-1-white-overlay: blendNormal($tag-white-overlay, $tag-color-1-main);
   @include tag-gold-default;
   border-width: 1px;
   border-style: solid;
-  border-radius: 12px;
-  padding: 4px 8px;
+  border-radius: $border-radius;
+  height: 26px;
+  padding: 0 8px;
   // typography
   @include caption;
   text-align: center;

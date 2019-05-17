@@ -154,6 +154,9 @@ $text-field-icon-red: $hi-red;
   .helper-text {
     @include caption;
     padding: 0 16px;
+
+    grid-row-start: helper-start;
+    grid-row-end: end;
   }
 }
 

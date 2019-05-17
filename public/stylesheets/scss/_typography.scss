@@ -2,60 +2,60 @@
 @mixin headline {
   font-family: Montserrat;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: $semiBold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.2;
+  line-height: 30px;
   letter-spacing: normal;
 }
 
 @mixin subtitle1 {
   font-family: Montserrat;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: $semiBold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.25;
+  line-height: 24px;
   letter-spacing: normal;
 }
 
 @mixin subtitle2 {
   font-family: Montserrat;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: $semiBold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.29;
+  line-height: 24px;
   letter-spacing: normal;
 }
 
 @mixin body1 {
   font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: $medium;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.5;
+  line-height: 24px;
   letter-spacing: normal;
 }
 
 @mixin body2 {
-  font-family: 'Merriweather Sans';
-  font-size: 14px;
-  font-weight: normal;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: $medium;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.43;
+  line-height: 20px;
   letter-spacing: normal;
 }
 
 @mixin caption {
-  font-family: 'Merriweather Sans';
-  font-size: 12px;
-  font-weight: 400;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: $medium;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.33;
+  line-height: 20px;
   letter-spacing: normal;
 }
 
