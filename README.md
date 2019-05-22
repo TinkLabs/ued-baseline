@@ -83,3 +83,9 @@ This will compile all file and copy necessary assets to `/dist` folder
 
 ##### Production
 1. PR and merge to master
+
+
+### TODO
+- Add intro section to explain how to use, what is included etc
+- automate description update
+- Safari touch effect all no show

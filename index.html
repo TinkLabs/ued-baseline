@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>handy baseline</title>
-    
     <!-- local , hot reload -->
     <!-- <link rel="stylesheet" href="./public/stylesheets/style.css"> -->
     <!-- staging -->
-    <link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
+    <link rel="stylesheet"
+          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
     <!-- production -->
     <!-- <link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css"> -->
-
     <link rel="stylesheet" href="./public/stylesheets/demo.css">
 </head>
 
@@ -20,11 +19,34 @@
     <section>
         <h1 class="demo_title">handy baseline</h1>
         <hr class="demo_divider">
+        <div class="demo_intro">
+            <h3 class="headline">About</h3>
+            <p class="body1">Handy baseline is a library created to help developers quickly build web app with stlyed
+                components.</p>
+            <h3 class="subtitle1">CSS</h3>
+            <p class="body1">The CSS file contains styling for all components, created accoring to design baseline.</p>
+            <pre><code>&lt;link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css" /&gt;</code></pre>
+            <div></div>
+            <h3 class="subtitle1">JS</h3>
+            <p class="body1">The JS file contains class method to manipulate a few of more complex components,
+                including:</p>
+            <hr/>
+                <p class="tag">Dropdown</p>
+                <p class="tag">Modal</p>
+                <p class="tag">Textarea resizing</p>
+                <p class="tag">Progress bar</p>
+            <hr/>
+            <p class="body1">The JS is built with pure Javascript and needs no external library, you can omit it if you
+                want to write your own triggers. You HAVE to write your own trigger if you are working on SPA like React.</p>
+            <pre><code>&lt;script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
+
+        </div>
+        <hr class="demo_divider">
         <div class="change_log">
             <h3 class="headline">Important News</h3>
             <div class="subtitle1">9 May, 2019</div>
-            <p class="body1">Code structure of Form Control (text field) has been updated to include use-cases with no label or helper text.</p>
-
+            <p class="body1">Code structure of Form Control (text field) has been updated to include use-cases with no
+                label or helper text.</p>
         </div>
         <hr class="demo_divider">
         <div class="demo_indexes">
@@ -214,7 +236,8 @@
                         <p class="caption demo_title_border">Caption : Montserat Medium 10px Line:14</p>
                     </div>
                     <div class="demo_title_wrapper">
-                        <p class="toolbarText demo_title_border">toolbarText : Merriweather Sans Regular 10px Line:13</p>
+                        <p class="toolbarText demo_title_border">toolbarText : Merriweather Sans Regular 10px Line:13
+                        </p>
                     </div>
                 </div>
             </div>
@@ -452,12 +475,8 @@
                 <a class="btn btn-square">
                     <i class="icon icon-content_add_24px"></i>
                 </a>
-                <a class="btn btn-square">
-                    1
-                </a>
-                <a class="btn btn-square btn-disabled">
-                    2
-                </a>
+                <a class="btn btn-square"> 1 </a>
+                <a class="btn btn-square btn-disabled"> 2 </a>
                 <a class="btn btn-square btn-disabled">
                     <i class="icon icon-content_remove_24px"></i>
                 </a>
@@ -485,36 +504,36 @@
                     <i class="icon icon-content_add_24px icon-left"></i> contained </a>
             </div>
             <div class="demo_description">
-<h3>Buttons</h3>
-<p>Buttons allow users to take actions, and make choices, with a single tap.</p>
-<h3>Usage</h3>
-<h5>Plain Button</h5>
-<pre><code class="html language-html">&lt;a class="btn"&gt; btn text &lt;/a&gt; </code></pre>
-<h5>Button with custom icon</h5>
-<pre><code class="html language-html">&lt;a class="btn"&gt;
+                <h3>Buttons</h3>
+                <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
+                <h3>Usage</h3>
+                <h5>Plain Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Button with custom icon</h5>
+                <pre><code class="html language-html">&lt;a class="btn"&gt;
     &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
     btn text
 &lt;/a&gt;</code></pre>
-<h5>Outlined Button</h5>
-<pre><code class="html language-html">&lt;a class="btn btn-outlined"&gt; btn text &lt;/a&gt; </code></pre>
-<h5>Contained Button</h5>
-<pre><code class="html language-html">&lt;a class="btn btn-contained"&gt; btn text &lt;/a&gt; </code></pre>
-<h5>Round Button</h5>
-<p>Use with <code>btn-float</code> to get a visual elevation.</p>
-<pre><code class="html language-html">&lt;a class="btn btn-round btn-float"&gt;
+                <h5>Outlined Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-outlined"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Contained Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-contained"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Round Button</h5>
+                <p>Use with <code>btn-float</code> to get a visual elevation.</p>
+                <pre><code class="html language-html">&lt;a class="btn btn-round btn-float"&gt;
     &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
 &lt;/a&gt;</code></pre>
-<h5>Square Button</h5>
-<pre><code class="html language-html">&lt;a class="btn btn-square"&gt;
+                <h5>Square Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-square"&gt;
     &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
 &lt;/a&gt;</code></pre>
-<h5>Button Color</h5>
-<p>Default color for button is gold. Use <code>btn-navy</code> to change color to navy.</p>
-<h5>Button Size</h5>
-<p>Use <code>btn-m</code> to get a button with medium size and font size, except square button.</p>
-<h5>Built in icon for button</h5>
-<p>Using below class names on <code>btn</code> will give the button a pre-defined icon</p>
-<pre><code class="html language-html">// " + " icon
+                <h5>Button Color</h5>
+                <p>Default color for button is gold. Use <code>btn-navy</code> to change color to navy.</p>
+                <h5>Button Size</h5>
+                <p>Use <code>btn-m</code> to get a button with medium size and font size, except square button.</p>
+                <h5>Built in icon for button</h5>
+                <p>Using below class names on <code>btn</code> will give the button a pre-defined icon</p>
+                <pre><code class="html language-html">// " + " icon
 &lt;a class="btn btn-plus"&gt;&lt;/a&gt;
 // " - " minus
 &lt;a class="btn btn-minus"&gt;&lt;/a&gt;
@@ -531,10 +550,11 @@
                 <a class="hyperlink body2"> Hyperlink, not just a tag </a>
             </div>
             <div class="demo_description">
-<h3>Hyperlink</h3>
-<p>All default styling are removed for styling other components, so use the class name <code>hyperlink</code> if you need the most basic link behavior.</p>
-<h3>Usage</h3>
-<pre><code>&lt;a href="/" class="hyperlink body2"&gt; link text &lt;p&gt; </code></pre>
+                <h3>Hyperlink</h3>
+                <p>All default styling are removed for styling other components, so use the class name
+                    <code>hyperlink</code> if you need the most basic link behavior.</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;a href="/" class="hyperlink body2"&gt; link text &lt;p&gt; </code></pre>
             </div>
         </div>
         <!-- hi fonts -->
@@ -550,19 +570,20 @@
                 <div class="icon icon icon-general_bookmark_24px"></div>
             </div>
             <div class="demo_description">
-<h3>hi Fonts</h3>
-<h5>Material Icons</h5>
-<p>All icons from Material Icons and made into svg fonts.</p>
-<h5>Color Icons</h5>
-<p>Colored icons are mostly brand logos, eg hiinc, ali pay, wechat pay etc.
-You can find them in <code>/public/images/colorIcons</code> or <code>/dist/images/colorIcons</code></p>
-<h5>Documentation</h5>
-<p>Look up <code>className</code> and <code>content</code> in <code>/iconFactory/result/icons-reference.html</code></p>
-<h3>Usage</h3>
-<p>In HTML5</p>
-<pre><code>&lt;i class="icon icon-content_add_24px icon-right"&gt;&lt;/i&gt;</code></pre>
-<p>Or in SCSS</p>
-<pre><code class="scss language-scss">.element:before {
+                <h3>hi Fonts</h3>
+                <h5>Material Icons</h5>
+                <p>All icons from Material Icons and made into svg fonts.</p>
+                <h5>Color Icons</h5>
+                <p>Colored icons are mostly brand logos, eg hiinc, ali pay, wechat pay etc. You can find them in
+                    <code>/public/images/colorIcons</code> or <code>/dist/images/colorIcons</code></p>
+                <h5>Documentation</h5>
+                <p>Look up <code>className</code> and <code>content</code> in
+                    <code>/iconFactory/result/icons-reference.html</code></p>
+                <h3>Usage</h3>
+                <p>In HTML5</p>
+                <pre><code>&lt;i class="icon icon-content_add_24px icon-right"&gt;&lt;/i&gt;</code></pre>
+                <p>Or in SCSS</p>
+                <pre><code class="scss language-scss">.element:before {
     @include labelMark;
     content: "\EC10";
 }</code></pre>
@@ -790,11 +811,11 @@ You can find them in <code>/public/images/colorIcons</code> or <code>/dist/image
                 </div>
             </form>
             <div class="demo_description">
-<h3>Form Control</h3>
-<p>For now, form control consist of Text Fields, Checkbox, and Radio Button.
-For text field, 5 visual states are provided for different use-cases.</p>
-<h3>Usage</h3>
-<pre><code class="html language-html">&lt;div class="form-group"&gt;
+                <h3>Form Control</h3>
+                <p>For now, form control consist of Text Fields, Checkbox, and Radio Button. For text field, 5 visual
+                    states are provided for different use-cases.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="form-group"&gt;
     &lt;div class="textfield outlined error"&gt;
         &lt;span class="field-label"&gt; label text &lt;/span&gt;
         &lt;div class="input-wrapper"&gt;
@@ -803,12 +824,13 @@ For text field, 5 visual states are provided for different use-cases.</p>
         &lt;span class="helper-text"&gt; helper text &lt;/span&gt;
     &lt;/div&gt;
 &lt;div&gt;</code></pre>
-<h3>Remark</h3>
-<h5>Change Log</h5>
-<ul>
-<li>9 May, 2019</li>
-<li>To fix bug when <code>field-label</code> or <code>helper-text</code> is not present, an <code>input-wrapper</code> is added to keep icon in place.</li>
-</ul>
+                <h3>Remark</h3>
+                <h5>Change Log</h5>
+                <ul>
+                    <li>9 May, 2019</li>
+                    <li>To fix bug when <code>field-label</code> or <code>helper-text</code> is not present, an
+                        <code>input-wrapper</code> is added to keep icon in place.</li>
+                </ul>
             </div>
         </div>
         <!-- Selection Control -->
@@ -895,10 +917,10 @@ For text field, 5 visual states are provided for different use-cases.</p>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Selection Control</h3>
-<p>Selection control consist of Checkbox, Radio Button, and Toggle Button.</p>
-<h3>Usage</h3>
-<pre><code class="html language-html">&lt;div class="form-group"&gt;
+                <h3>Selection Control</h3>
+                <p>Selection control consist of Checkbox, Radio Button, and Toggle Button.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="form-group"&gt;
     &lt;input type="checkbox" id="checkbox_n"&gt;
     &lt;label class="label" for="checkbox_n"&gt;
         &lt;span class="label-mark"&gt;&lt;/span&gt; label text
@@ -925,11 +947,11 @@ For text field, 5 visual states are provided for different use-cases.</p>
                 <a id="demo_dd"></a>
             </div>
             <div class="demo_description">
-<h3>Drop Down Button</h3>
-<p>Drop Down Button provides user with a list of options</p>
-<h3>Usage</h3>
-<h5>plain HTML</h5>
-<pre><code class="html language-html">&lt;a id="dd_1"&gt;
+                <h3>Drop Down Button</h3>
+                <p>Drop Down Button provides user with a list of options</p>
+                <h3>Usage</h3>
+                <h5>plain HTML</h5>
+                <pre><code class="html language-html">&lt;a id="dd_1"&gt;
     &lt;span class="dd-default" data-value="default"&gt; default &lt;/span&gt;
     &lt;div class="dd-list" id="demo_dd_list"&gt;
         &lt;ul class="list"&gt;
@@ -951,9 +973,9 @@ For text field, 5 visual states are provided for different use-cases.</p>
         &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/a&gt;</code></pre>
-<h5>generate with JS</h5>
-<pre><code class="html language-html">&lt;a id="demo_dd"&gt;&lt;/a&gt;</code></pre>
-<pre><code class="js language-js">// settings and inputs
+                <h5>generate with JS</h5>
+                <pre><code class="html language-html">&lt;a id="demo_dd"&gt;&lt;/a&gt;</code></pre>
+                <pre><code class="js language-js">// settings and inputs
 let dd = new dropdown({
     id: "demo_dd",
     allValues: ["a", "b", "c"],
@@ -1871,12 +1893,13 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Navigation Drawer</h3>
-<p>Navigation drawers provide access to destinations in your app.</p>
-<p>Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show".</p>
-<p>To stop the content under the Navigation Drawer from scrolling, add class <code>no-scroll</code> to body when the drawer is open.</p>
-<h3>Usage</h3>
-<pre><code class="html language-html">&lt;div class="nav-drawer" id="bottom-nav-drawer"&gt;
+                <h3>Navigation Drawer</h3>
+                <p>Navigation drawers provide access to destinations in your app.</p>
+                <p>Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show".</p>
+                <p>To stop the content under the Navigation Drawer from scrolling, add class <code>no-scroll</code> to
+                    body when the drawer is open.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="nav-drawer" id="bottom-nav-drawer"&gt;
     &lt;div class="nav-drawer-bottom"&gt;
         &lt;div class="nav-drawer-mainTitle"&gt; Title &lt;i
                 class="nav-drawer-close icon icon-navigation_close_24px"&gt;&lt;/i&gt;
@@ -1911,9 +1934,9 @@ modal.destory();</code></pre>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<pre><code class="js language-js">document.getElementById("bottom-nav-drawer").classList.add("nav-drawer-show");</code></pre>
-<p>or</p>
-<pre><code class="js language-js">document.getElementById("side-nav-drawer").classList.add("nav-drawer-show");</code></pre>
+                <pre><code class="js language-js">document.getElementById("bottom-nav-drawer").classList.add("nav-drawer-show");</code></pre>
+                <p>or</p>
+                <pre><code class="js language-js">document.getElementById("side-nav-drawer").classList.add("nav-drawer-show");</code></pre>
             </div>
         </div>
         <!-- images -->
@@ -1929,7 +1952,7 @@ modal.destory();</code></pre>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/demo/img_l.png" alt="img" class="image-l">
             </div>
-            <p class="subtitle2">16:9  medium-wide image / medium-wide card</p>
+            <p class="subtitle2">16:9 medium-wide image / medium-wide card</p>
             <div class="subtitle2">image-m-wide</div>
             <div class="demo_showcase demo_screen_mob">
                 <img src="public/images/demo/img_m_wide.png" alt="img" class="image-m-wide">
@@ -2050,12 +2073,12 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Card</h3>
-<p>Cards contain content and actions about a single subject.</p>
-<p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
-<h3>Usage</h3>
-<h5>Full Width Card, 16:9, no padding</h5>
-<pre><code class="html language-html">&lt;div class="card card-fw"&gt;
+                <h3>Card</h3>
+                <p>Cards contain content and actions about a single subject.</p>
+                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+                <h3>Usage</h3>
+                <h5>Full Width Card, 16:9, no padding</h5>
+                <pre><code class="html language-html">&lt;div class="card card-fw"&gt;
     &lt;div class="card-container"&gt;
         /* Card Head */
         &lt;div class="card-head"&gt;
@@ -2108,8 +2131,8 @@ modal.destory();</code></pre>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h5>Large Card 16:9</h5>
-<pre><code class="html language-html">&lt;div class="card card-l"&gt;
+                <h5>Large Card 16:9</h5>
+                <pre><code class="html language-html">&lt;div class="card card-l"&gt;
     &lt;div class="card-container"&gt;
         &lt;div class="card-head"&gt;
             &lt;img class="card-head-avatar avatar" alt="avatar" src="./public/images/demo/checker_bg.png"&gt;
@@ -2185,12 +2208,12 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Card</h3>
-<p>Cards contain content and actions about a single subject.</p>
-<p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
-<h3>Usage</h3>
-<h5>Medium Size Card, 16:9</h5>
-<pre><code class="html language-html">&lt;div class="card card-m-wide"&gt;
+                <h3>Card</h3>
+                <p>Cards contain content and actions about a single subject.</p>
+                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+                <h3>Usage</h3>
+                <h5>Medium Size Card, 16:9</h5>
+                <pre><code class="html language-html">&lt;div class="card card-m-wide"&gt;
     &lt;div class="card-container"&gt;
         &lt;div class="card-media-container"&gt;
             &lt;img class="card-media" alt="card-media" src="./public/images/demo/img_m_wide.png"&gt;
@@ -2201,8 +2224,8 @@ modal.destory();</code></pre>
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h5>Medium Size Card, 4:3</h5>
-<pre><code class="html language-html">&lt;div class="card card-m"&gt;
+                <h5>Medium Size Card, 4:3</h5>
+                <pre><code class="html language-html">&lt;div class="card card-m"&gt;
     &lt;div class="card-container"&gt;
         &lt;div class="card-media-container"&gt;
             &lt;img class="card-media" alt="card-media" src="./public/images/demo/img_m.png"&gt;
@@ -2238,19 +2261,14 @@ modal.destory();</code></pre>
             <div class="demo_showcase demo_screen_mob">
                 <div class="chat-input">
                     <i class="chat-voice icon icon-av_mic_24px"></i>
-                    <textarea
-                        class="chat-text" rows="1" 
-                        placeholder="type something"
-                        onkeyup="textAreaResize(this)"
-                    ></textarea>
+                    <textarea class="chat-text" rows="1" placeholder="type something"
+                              onkeyup="textAreaResize(this)"></textarea>
                     <i class="chat-send send-enabled icon icon-content_send_24px"></i>
                 </div>
                 <div class="chat-input">
                     <i class="chat-voice talking icon icon-av_mic_24px"></i>
-                    <textarea class="chat-text" rows="1"
-                        placeholder="type something"
-                        onkeyup="textAreaResize(this)"
-                    ></textarea>
+                    <textarea class="chat-text" rows="1" placeholder="type something"
+                              onkeyup="textAreaResize(this)"></textarea>
                     <i class="chat-send icon icon-content_send_24px"></i>
                 </div>
                 <div class="chat-input voice-input">
@@ -2266,9 +2284,10 @@ modal.destory();</code></pre>
                         <span class="chat-msg"> Chat Content </span>
                     </div>
                 </div>
-                <div class="chat-bubble bubble-right"> 
+                <div class="chat-bubble bubble-right">
                     <div class="msg-wrapper">
-                        <span class="chat-msg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. </span>
+                        <span class="chat-msg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna
+                            malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. </span>
                     </div>
                 </div>
                 <div class="chat-bubble bubble-left">
@@ -2298,12 +2317,12 @@ modal.destory();</code></pre>
             </div>
             <div class="demo_description">
                 <h3>Chat</h3>
-                <p>The Chat style library provides chat bubbles for plain text, voice message, input component including text field, record audio button and send button.</p>
+                <p>The Chat style library provides chat bubbles for plain text, voice message, input component including
+                    text field, record audio button and send button.</p>
                 <p>Include the handy js library to get auto resizing for textfield.</p>
                 <h3>Usage</h3>
-                <p>Input text field
-                Class name is for styling</p>
-<pre><code class="html language-html">&lt;div class="chat-input"&gt;
+                <p>Input text field Class name is for styling</p>
+                <pre><code class="html language-html">&lt;div class="chat-input"&gt;
     &lt;i class="chat-voice icon icon-av_mic_24px"&gt;&lt;/i&gt;
     &lt;textarea
         class="chat-text" rows="1" 
@@ -2313,13 +2332,13 @@ modal.destory();</code></pre>
     &lt;i class="chat-send send-enabled icon icon-content_send_24px"&gt;&lt;/i&gt;
 &lt;/div&gt;</code></pre>
                 <p>Chat Bubbles</p>
-<pre><code class="html language-html">&lt;div class="chat-bubble bubble-right"&gt; 
+                <pre><code class="html language-html">&lt;div class="chat-bubble bubble-right"&gt; 
     &lt;div class="msg-wrapper"&gt;
         &lt;span class="chat-msg"&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. &lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <p>Audio Chat Bubble</p>
-<pre><code class="html language-html">&lt;div class="chat-bubble bubble-left"&gt;
+                <pre><code class="html language-html">&lt;div class="chat-bubble bubble-left"&gt;
     &lt;div class="msg-wrapper playing infinite-animation"&gt;
         &lt;i class="audio-control icon icon-av_pause_circle_filled_24px"&gt;&lt;/i&gt;
         &lt;span class="audio-timer"&gt;0:01&lt;/span&gt;
@@ -2331,36 +2350,29 @@ modal.destory();</code></pre>
         <div class="demo_display">
             <h3 class="headline" id="Tool-Tip"> Tool Tip </h3>
             <div class="demo_showcase demo_screen_mob demo_tooltip_wrapper">
-                <span class="tooltip tp-left" data-tip="Tips" tabindex="1">
-                    left
-                </span>
-                <span class="tooltip tp-center" data-tip="Long Long Long Long Long Long Long Long Long tips" tabindex="2">
-                    center
-                </span>
-                <span class="tooltip tp-right" data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tabindex="3">
-                    right
-                </span>
+                <span class="tooltip tp-left" data-tip="Tips" tabindex="1"> left </span>
+                <span class="tooltip tp-center" data-tip="Long Long Long Long Long Long Long Long Long tips"
+                      tabindex="2"> center </span>
+                <span class="tooltip tp-right" data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                      tabindex="3"> right </span>
             </div>
             <div class="demo_showcase demo_screen_mob demo_tooltip_wrapper">
-                <span class="tooltip tp-left tp-bottom" data-tip="Tips" tabindex="1">
-                    left
-                </span>
-                <span class="tooltip tp-center tp-bottom" data-tip="Long Long Long Long Long Long Long Long Long tips" tabindex="2">
-                    center
-                </span>
-                <span class="tooltip tp-right tp-bottom" data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tabindex="3">
-                    right
-                </span>
+                <span class="tooltip tp-left tp-bottom" data-tip="Tips" tabindex="1"> left </span>
+                <span class="tooltip tp-center tp-bottom" data-tip="Long Long Long Long Long Long Long Long Long tips"
+                      tabindex="2"> center </span>
+                <span class="tooltip tp-right tp-bottom"
+                      data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tabindex="3"> right </span>
             </div>
             <div class="demo_description">
-<h3>Tool Tip</h3>
-<p>A tooltip provides quick explanation on an element or a function on screen.</p>
-<h3>Usage</h3>
-<p>Wrap up the element that requires a tooltip.</p>
-<p>Use class name <code>tp-left</code>, <code>tp-center</code> and <code>tp-right</code> to define tool tip position.</p>
-<p>Use class name <code>tp-bottom</code> to place tooltip at the bottom if necessary.</p>
-<p>Put tool tip text in <code>data-tip</code> attribute.</p>
-<pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content that needs tooltip &lt;/span&gt;</code></pre>
+                <h3>Tool Tip</h3>
+                <p>A tooltip provides quick explanation on an element or a function on screen.</p>
+                <h3>Usage</h3>
+                <p>Wrap up the element that requires a tooltip.</p>
+                <p>Use class name <code>tp-left</code>, <code>tp-center</code> and <code>tp-right</code> to define tool
+                    tip position.</p>
+                <p>Use class name <code>tp-bottom</code> to place tooltip at the bottom if necessary.</p>
+                <p>Put tool tip text in <code>data-tip</code> attribute.</p>
+                <pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content that needs tooltip &lt;/span&gt;</code></pre>
             </div>
         </div>
         <!-- tool tip - center center -->
@@ -2374,11 +2386,12 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Tool Tip</h3>
-<p>A screen centered tooltip provides instantaneous information of current activity.</p>
-<h3>Usage</h3>
-<p>Screen centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.</p>
-<pre><code class="html language-html">&lt;div class="tooltip tp-activity tp-show"&gt;
+                <h3>Tool Tip</h3>
+                <p>A screen centered tooltip provides instantaneous information of current activity.</p>
+                <h3>Usage</h3>
+                <p>Screen centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.
+                </p>
+                <pre><code class="html language-html">&lt;div class="tooltip tp-activity tp-show"&gt;
     &lt;i class="icon icon-av_mic_24px"&gt;&lt;/i&gt;
     &lt;span class="tp-text"&gt; This is the tooltip &lt;/span&gt;
 &lt;/div&gt;</code></pre>
@@ -2391,13 +2404,14 @@ modal.destory();</code></pre>
                 <hr>
             </div>
             <div class="demo_description">
-<h3>Divider</h3>
-<p>A divider a used to visually separate two vertically neighbouring sections of content.</p>
-<h3>Usage</h3>
-<pre><code class="html language-html">&lt;hr&gt;</code></pre>
-<p>Also add spacing as specified in design.</p>
-<h3>Remark</h3>
-<p>Do not use divider on components like list, menu, or accordion. They have their own "divider" integrated already.</p>
+                <h3>Divider</h3>
+                <p>A divider a used to visually separate two vertically neighbouring sections of content.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;hr&gt;</code></pre>
+                <p>Also add spacing as specified in design.</p>
+                <h3>Remark</h3>
+                <p>Do not use divider on components like list, menu, or accordion. They have their own "divider"
+                    integrated already.</p>
             </div>
         </div>
         <!-- menu (small) -->
@@ -2428,7 +2442,7 @@ modal.destory();</code></pre>
                     </div>
                 </div>
             </div>
-            <div class="demo_showcase  demo_screen_mob"  style="padding-bottom: 160px">
+            <div class="demo_showcase  demo_screen_mob" style="padding-bottom: 160px">
                 <div class="menu-anchor">
                     <div class="menu m-full m-show" id="menu_2">
                         <ul class="list">
@@ -2487,14 +2501,13 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Menu</h3>
-<p>"Menus display a list of choices on temporary surfaces."</p>
-<h3>Usage</h3>
-<p>Class <code>menu-anchor</code> sets reference element's position as <code>relative</code>.
-Class <code>m-full</code> sets menu to screen width.
-Class <code>m-show</code> is the class that can toggle menu visibility.</p>
-Content of a menu is structured by the <code>List</code> component</p>
-<pre><code class="html language-html">&lt;div class="top-bar menu-anchor"&gt;
+                <h3>Menu</h3>
+                <p>"Menus display a list of choices on temporary surfaces."</p>
+                <h3>Usage</h3>
+                <p>Class <code>menu-anchor</code> sets reference element's position as <code>relative</code>. Class
+                    <code>m-full</code> sets menu to screen width. Class <code>m-show</code> is the class that can
+                    toggle menu visibility.</p> Content of a menu is structured by the <code>List</code> component</p>
+                <pre><code class="html language-html">&lt;div class="top-bar menu-anchor"&gt;
     &lt;div class="top-bar-left"&gt;
         &lt;i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"&gt;&lt;/i&gt;
     &lt;/div&gt;
@@ -2534,11 +2547,12 @@ Content of a menu is structured by the <code>List</code> component</p>
                 <a href="#" class="breadcrumb"> breadcrumb </a>
             </div>
             <div class="demo_description">
-<h3>Breadcrumb</h3>
-<p>Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.</p>
-<p>Use class name <code>active</code> to specify current page / step.</p>
-<h3>Usage</h3>
-<pre><code class="html language-html">&lt;a href="#" class="breadcrumb active"&gt; breadcrumb &lt;/a&gt;
+                <h3>Breadcrumb</h3>
+                <p>Indicate the current page's location within a navigational hierarchy that automatically adds
+                    separators via CSS.</p>
+                <p>Use class name <code>active</code> to specify current page / step.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;a href="#" class="breadcrumb active"&gt; breadcrumb &lt;/a&gt;
 &lt;a href="#" class="breadcrumb"&gt; breadcrumb &lt;/a&gt;
 &lt;a href="#" class="breadcrumb"&gt; breadcrumb &lt;/a&gt;</code></pre>
             </div>
@@ -2574,13 +2588,14 @@ Content of a menu is structured by the <code>List</code> component</p>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Pagination</h3>
-<p>Pagination component provides user a quick way to reach different page or section within the page content.</p>
-<h3>Usage</h3>
-<p>Use <code>pg-disabled</code> to disable back and forth button.
-Use <code>active</code> to highlight current page.</p>
-<h5>Normal / Default Situation</h5>
-<pre><code class="html language-html">&lt;div class="pagination"&gt;
+                <h3>Pagination</h3>
+                <p>Pagination component provides user a quick way to reach different page or section within the page
+                    content.</p>
+                <h3>Usage</h3>
+                <p>Use <code>pg-disabled</code> to disable back and forth button. Use <code>active</code> to highlight
+                    current page.</p>
+                <h5>Normal / Default Situation</h5>
+                <pre><code class="html language-html">&lt;div class="pagination"&gt;
     &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
     &lt;div class="pg-btn-wrapper"&gt;
         &lt;a class="pg-btn active"&gt; 1 &lt;/a&gt;
@@ -2591,9 +2606,9 @@ Use <code>active</code> to highlight current page.</p>
     &lt;/div&gt;
     &lt;a class="pg-forth"&gt;&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-<h5>In the Middle</h5>
-<p>The maximun number of page button can be displayed is 7.</p>
-<pre><code class="html language-html">&lt;div class="pagination"&gt;
+                <h5>In the Middle</h5>
+                <p>The maximun number of page button can be displayed is 7.</p>
+                <pre><code class="html language-html">&lt;div class="pagination"&gt;
     &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
     &lt;div class="pg-btn-wrapper"&gt;
         &lt;a class="pg-btn"&gt; 1 &lt;/a&gt;
@@ -2632,20 +2647,20 @@ Use <code>active</code> to highlight current page.</p>
                 <button class="demo_pb_control" data-percent="75"> 75% </button>
             </div>
             <div class="demo_description">
-<h3>Progress Bar Linear</h3>
-<p>Progress bar shows user the progress of a loading process.
-Infinite rolling is used when progress percentage is not important to user.</p>
-<h3>Usage</h3>
-<h5>Infinite</h5>
-<p>Use <code>pb-infinite</code> together with <code>pb-bar</code> to get infinite loading animation</p>
-<pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+                <h3>Progress Bar Linear</h3>
+                <p>Progress bar shows user the progress of a loading process. Infinite rolling is used when progress
+                    percentage is not important to user.</p>
+                <h3>Usage</h3>
+                <h5>Infinite</h5>
+                <p>Use <code>pb-infinite</code> together with <code>pb-bar</code> to get infinite loading animation</p>
+                <pre><code class="html language-html">&lt;div class="progress-bar"&gt;
     &lt;div class="pb-container"&gt;
         &lt;div class="pb-bar pb-infinite"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h5>Live Progress</h5>
-<p>Alter inline CSS width to control length of progress bar by your JS.</p>
-<pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+                <h5>Live Progress</h5>
+                <p>Alter inline CSS width to control length of progress bar by your JS.</p>
+                <pre><code class="html language-html">&lt;div class="progress-bar"&gt;
     &lt;div class="pb-container"&gt;
         &lt;div class="pb-bar" style="width: 75%"&gt;&lt;/div&gt;
     &lt;/div&gt;
@@ -2665,28 +2680,29 @@ Infinite rolling is used when progress percentage is not important to user.</p>
             <button id="set-progress-bar-toggle">toggle</button>
             <button id="set-progress-bar-reset">reset</button>
             <div class="demo_description">
-<h3>Progress Bar Circular</h3>
-<p>Progress bar shows user the progress of a loading process.
-Infinite rolling is used when progress percentage is not important to user.
-Javascript library is required for this component to work.</p>
-<h3>Usage</h3>
-<h5>Basic</h5>
-<p>Add the following element to your code.</p>
-<pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
-<p>Create a new progress bar, use the id of the element created above.</p>
-<pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
-<h5>Update Progress</h5>
-<p>Use the <code>update(percent)</code> function to update progress, where <code>0 &lt;= percent &lt;= 1</code></p>
-<pre><code class="js language-js">cpb.update(0.2);</code></pre>
-<h5>Infinite Rotation</h5>
-<p>Use the <code>infinite()</code> function to start rotation animation.</p>
-<pre><code class="js language-js">cpb.infinite();</code></pre>
-<h5>Toggle Rotation</h5>
-<p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using <code>infinite()</code> function.</p>
-<pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
-<h5>Reset Rotation</h5>
-<p>Use the <code>reset()</code> function to reset bar position.</p>
-<pre><code class="js language-js">cpb.reset();</code></pre>
+                <h3>Progress Bar Circular</h3>
+                <p>Progress bar shows user the progress of a loading process. Infinite rolling is used when progress
+                    percentage is not important to user. Javascript library is required for this component to work.</p>
+                <h3>Usage</h3>
+                <h5>Basic</h5>
+                <p>Add the following element to your code.</p>
+                <pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
+                <p>Create a new progress bar, use the id of the element created above.</p>
+                <pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
+                <h5>Update Progress</h5>
+                <p>Use the <code>update(percent)</code> function to update progress, where
+                    <code>0 &lt;= percent &lt;= 1</code></p>
+                <pre><code class="js language-js">cpb.update(0.2);</code></pre>
+                <h5>Infinite Rotation</h5>
+                <p>Use the <code>infinite()</code> function to start rotation animation.</p>
+                <pre><code class="js language-js">cpb.infinite();</code></pre>
+                <h5>Toggle Rotation</h5>
+                <p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using
+                    <code>infinite()</code> function.</p>
+                <pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
+                <h5>Reset Rotation</h5>
+                <p>Use the <code>reset()</code> function to reset bar position.</p>
+                <pre><code class="js language-js">cpb.reset();</code></pre>
             </div>
         </div>
         <!-- Accordion -->
@@ -2697,64 +2713,66 @@ Javascript library is required for this component to work.</p>
                     <input id="demo_accordion_1" type="checkbox" name="demo_accordion_1" />
                     <label for="demo_accordion_1" class="ac-title">Label</label>
                     <div class="ac-body">
-                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
                     </div>
                 </div>
             </div>
-
             <div class="demo_showcase demo_screen_mob">
                 <div class="accordion">
                     <input id="demo_accordion_2" type="checkbox" name="demo_accordion_set_1" />
                     <label for="demo_accordion_2" class="ac-title">default size</label>
                     <div class="ac-body">
-                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
                     </div>
                 </div>
                 <div class="accordion ac-m">
                     <input id="demo_accordion_3" type="checkbox" name="demo_accordion_set_1" />
                     <label for="demo_accordion_3" class="ac-title">meduim size</label>
                     <div class="ac-body">
-                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
                     </div>
                 </div>
             </div>
-
             <div class="demo_showcase demo_screen_mob">
                 <form>
                     <div class="accordion">
                         <input id="demo_accordion_5" type="radio" name="demo_accordion_set_2" />
                         <label for="demo_accordion_5" class="ac-title">Label</label>
                         <div class="ac-body">
-                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
                         </div>
                     </div>
                     <div class="accordion">
                         <input id="demo_accordion_6" type="radio" name="demo_accordion_set_2" />
                         <label for="demo_accordion_6" class="ac-title">Label</label>
                         <div class="ac-body">
-                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
                         </div>
                     </div>
                     <div class="accordion">
                         <input id="demo_accordion_7" type="radio" name="demo_accordion_set_2" />
                         <label for="demo_accordion_7" class="ac-title">Label</label>
                         <div class="ac-body">
-                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto</p>
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
                         </div>
                     </div>
                 </form>
             </div>
-
             <div class="demo_description">
-<h3>Accordion</h3>
-<p>An expandable list that shows user details about the list title.</p>
-<h3>Usage</h3>
-<p>There are two types of behavior on opening accordion.
-Use radio button if you want the accordion set to open one tab only.
-Use checkbox button if you want the accordion set to open multiple tabs.
-Use class name <code>ac-m</code> together with <code>accordion</code> if you want bigger font size.</p>
-<h5>Opening Multiple Accordions</h5>
-<pre><code class="html language-html">&lt;div class="accordion"&gt;
+                <h3>Accordion</h3>
+                <p>An expandable list that shows user details about the list title.</p>
+                <h3>Usage</h3>
+                <p>There are two types of behavior on opening accordion. Use radio button if you want the accordion set
+                    to open one tab only. Use checkbox button if you want the accordion set to open multiple tabs. Use
+                    class name <code>ac-m</code> together with <code>accordion</code> if you want bigger font size.</p>
+                <h5>Opening Multiple Accordions</h5>
+                <pre><code class="html language-html">&lt;div class="accordion"&gt;
     // hidden checkbox button that control accordion state
     &lt;input id="demo_accordion_1" type="checkbox" name="demo_accordion_set_1" /&gt;
     &lt;label for="demo_accordion_1" class="ac-title"&gt;Label&lt;/label&gt;
@@ -2776,8 +2794,8 @@ Use class name <code>ac-m</code> together with <code>accordion</code> if you wan
         &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h5>Opening Single Accordion</h5>
-<pre><code class="html language-html">&lt;form&gt;
+                <h5>Opening Single Accordion</h5>
+                <pre><code class="html language-html">&lt;form&gt;
     // wrap the set of accordion in a form so that you can have multiple accordion sets that open single accordion
     &lt;div class="accordion"&gt;
         // hidden radio input that control accordion state
@@ -2828,11 +2846,11 @@ Use class name <code>ac-m</code> together with <code>accordion</code> if you wan
                 </div>
             </div>
             <div class="demo_description">
-<h3>Carousel Indicator</h3>
-<p>Shows user current state of a carousel and provides control on carousel.</p>
-<h3>Usage</h3>
-<p>Use <code>indicator-dark</code> to change color to suit your slides if needed.</p>
-<pre><code class="html language-html">&lt;div class="carousel-indicator indicator-dark"&gt;
+                <h3>Carousel Indicator</h3>
+                <p>Shows user current state of a carousel and provides control on carousel.</p>
+                <h3>Usage</h3>
+                <p>Use <code>indicator-dark</code> to change color to suit your slides if needed.</p>
+                <pre><code class="html language-html">&lt;div class="carousel-indicator indicator-dark"&gt;
     &lt;a class="indicator active"&gt;&lt;/a&gt;
     &lt;a class="indicator"&gt;&lt;/a&gt;
     &lt;a class="indicator"&gt;&lt;/a&gt;
@@ -2846,22 +2864,20 @@ Use class name <code>ac-m</code> together with <code>accordion</code> if you wan
             <h3 class="headline" id="Backdrop"> Backdrop </h3>
             <div class="demo_showcase demo_screen_mob demo_no_bg full-width">
                 <div class="backdrop">
-                    <div class="bd-back bg-white">
-                        Back
-                        <button id="demo_toggle_backdrop_1" data-target="demo_backdrop_1"> Demo Toggle </button>
+                    <div class="bd-back bg-white"> Back <button id="demo_toggle_backdrop_1"
+                                data-target="demo_backdrop_1"> Demo Toggle </button>
                     </div>
-                    <div class="bd-front bg-navy-200" id="demo_backdrop_1">
-                        Front
-                    </div>
+                    <div class="bd-front bg-navy-200" id="demo_backdrop_1"> Front </div>
                 </div>
             </div>
             <div class="demo_description">
-<h3>Backdrop</h3>
-<p>A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content.</p>
-<h3>Usage</h3>
-<p>Style both layer so user can distinguish them.
-Use <code>collapse</code> on <code>bd-front</code> to toggle front layer position.</p>
-<pre><code class="html language-html">&lt;div class="backdrop"&gt;
+                <h3>Backdrop</h3>
+                <p>A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content.
+                </p>
+                <h3>Usage</h3>
+                <p>Style both layer so user can distinguish them. Use <code>collapse</code> on <code>bd-front</code> to
+                    toggle front layer position.</p>
+                <pre><code class="html language-html">&lt;div class="backdrop"&gt;
     &lt;div class="bd-back bg-white"&gt;
         Back
     &lt;/div&gt;
@@ -2878,17 +2894,19 @@ Use <code>collapse</code> on <code>bd-front</code> to toggle front layer positio
                 <div id="demo_rangeSlider"></div>
             </div>
             <div class="demo_description">
-<h3>Range Slider</h3>
-<p>An input component that allows user set value within a preset range by draging the button on the track.</p>
-<h3>Usage</h3>
-<p>Since support on styling <code>input[type=range]</code> with pure CSS is low, an external library is induced to provides both styling and functional support.</p>
-<p>See <a href="https://github.com/harrisonchan9/noUiSlider">noUiSlider</a> for full documentations.</p>
-<pre><code class="html language-html">// label the slider with an id
+                <h3>Range Slider</h3>
+                <p>An input component that allows user set value within a preset range by draging the button on the
+                    track.</p>
+                <h3>Usage</h3>
+                <p>Since support on styling <code>input[type=range]</code> with pure CSS is low, an external library is
+                    induced to provides both styling and functional support.</p>
+                <p>See <a href="https://github.com/harrisonchan9/noUiSlider">noUiSlider</a> for full documentations.</p>
+                <pre><code class="html language-html">// label the slider with an id
 &lt;div id="demo_rangeSlider"&gt;&lt;/div&gt;
 
 // also include the js library
 &lt;script src="&lt;CDN domain&gt;/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
-<pre><code class="js language-js">var slider = document.getElementById('demo_rangeSlider');
+                <pre><code class="js language-js">var slider = document.getElementById('demo_rangeSlider');
 
 noUiSlider.create(slider, {
     // starting position of knob
@@ -2908,8 +2926,8 @@ slider.noUiSlider.on('update', function (values, handle) {
     // `handle` is the index of the knob that triggered the action
     // your code here
 });</code></pre>
-<p>There are some other options such as:</p>
-<pre><code class="js language-js">// tooltip
+                <p>There are some other options such as:</p>
+                <pre><code class="js language-js">// tooltip
 tooltip: true,
 // show scale
 pips: {
@@ -2919,7 +2937,7 @@ pips: {
 },
 // step difference
 step: 10,</code></pre>
-<p>See library <a href="https://refreshless.com/nouislider/">documentation</a> for more information.</p>
+                <p>See library <a href="https://refreshless.com/nouislider/">documentation</a> for more information.</p>
             </div>
         </div>
         <div class="demo_display">
@@ -2927,13 +2945,11 @@ step: 10,</code></pre>
             <div class="demo_showcase">
                 <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
                     <div class="up-control">
-                        <label for="file-uploader-1" class="up-label">
-                            Drag and drop files here or
-                            <a class="btn">Browse files</a>
+                        <label for="file-uploader-1" class="up-label"> Drag and drop files here or <a class="btn">Browse
+                                files</a>
                         </label>
-                        <input id="file-uploader-1" class="up-input"
-                            type="file" name="files[]"
-                            data-multiple-caption="{count} files selected" multiple />
+                        <input id="file-uploader-1" class="up-input" type="file" name="files[]"
+                               data-multiple-caption="{count} files selected" multiple />
                         <button class="hide" type="submit">Upload</button>
                     </div>
                 </form>
@@ -2941,22 +2957,20 @@ step: 10,</code></pre>
             <div class="demo_showcase">
                 <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
                     <div class="up-control">
-                        <label for="file-uploader-2" class="up-label">
-                            N files have been selected
-                        </label>
-                        <input id="file-uploader-2" class="up-input"
-                            type="file" name="files[]"
-                            data-multiple-caption="{count} files selected" multiple />
+                        <label for="file-uploader-2" class="up-label"> N files have been selected </label>
+                        <input id="file-uploader-2" class="up-input" type="file" name="files[]"
+                               data-multiple-caption="{count} files selected" multiple />
                         <button type="submit">Upload</button>
                     </div>
                 </form>
             </div>
             <div class="demo_description">
-<h3>File Uploader</h3>
-<p>This is a pure CSS component, JS / React component is not on schedule. Pull Request is very welcomed.</p>
-<h3>Usage</h3>
-<h5>Default State</h5>
-<pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+                <h3>File Uploader</h3>
+                <p>This is a pure CSS component, JS / React component is not on schedule. Pull Request is very welcomed.
+                </p>
+                <h3>Usage</h3>
+                <h5>Default State</h5>
+                <pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
     &lt;div class="up-control"&gt;
         &lt;label for="file-uploader-1" class="up-label"&gt;
             Drag and drop files here or
@@ -2967,12 +2981,12 @@ step: 10,</code></pre>
             data-multiple-caption="{count} files selected" multiple /&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-<h5>File Chosen</h5>
-<ol>
-<li>update the label text yourself</li>
-<li>toggle class <code>hide</code> on submit button</li>
-</ol>
-<pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+                <h5>File Chosen</h5>
+                <ol>
+                    <li>update the label text yourself</li>
+                    <li>toggle class <code>hide</code> on submit button</li>
+                </ol>
+                <pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
     &lt;div class="up-control"&gt;
         &lt;label for="file-uploader-2" class="up-label"&gt;
             N files have been selected
@@ -2983,19 +2997,17 @@ step: 10,</code></pre>
         &lt;button type="submit"&gt;Upload&lt;/button&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-<h3>Remark</h3>
-<p>Chrome on T2 works fine, but Webview on T2 is not working. Consult android team.</p>
+                <h3>Remark</h3>
+                <p>Chrome on T2 works fine, but Webview on T2 is not working. Consult android team.</p>
             </div>
         </div>
-
     </section>
 </body>
-
 <!-- staging -->
-<!-- <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script> -->
+<script
+        src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
 <!-- production -->
 <!-- <script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"></script> -->
-
 <script src="./public/javascripts/demo/demo.js"></script>
 
 </html>
