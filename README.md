@@ -21,9 +21,16 @@ Add the following lines of code to your `html` file.
 
 If you are using React, only add the css to your `index.html`, you will need to write your own JS,
 
+Staging
 ```html
 <link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
 <script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
+```
+
+Production
+```html
+<link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css">
+<script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"></script>
 ```
 
 ---
@@ -60,11 +67,7 @@ svg icon reference page: `./iconFactory/result/icon-reference.html`
 
 
 ### Demo Link
-##### Staging
 https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/index.html
-
-
-
 
 
 ### Production Build
@@ -77,3 +80,6 @@ This will compile all file and copy necessary assets to `/dist` folder
 2. Go to s3 bucket `/handy-staging-test` > `/design_baseline_demo`.
 3. Copy the whole `/dist` folder into s3 bucket.
 4. Also copy `index.html` or `/public` folder if you made changes in them.
+
+##### Production
+1. PR and merge to master
