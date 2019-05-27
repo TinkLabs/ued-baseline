@@ -30,7 +30,7 @@
     }
 
     .toolbar-btn-text {
-        @include toolbarText;
+        @include caption;
         text-align: center;
     }
 

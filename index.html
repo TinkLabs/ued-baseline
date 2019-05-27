@@ -6,12 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>handy baseline</title>
     <!-- local , hot reload -->
-    <!-- <link rel="stylesheet" href="./public/stylesheets/style.css"> -->
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <!-- dev -->
+    <!-- <link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css"> -->
     <!-- staging -->
-    <link rel="stylesheet"
-          href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
-    <!-- production -->
-    <!-- <link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css"> -->
+    <!-- <link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css"> -->
     <link rel="stylesheet" href="./public/stylesheets/demo.css">
 </head>
 
@@ -25,21 +24,21 @@
                 components.</p>
             <h3 class="subtitle1">CSS</h3>
             <p class="body1">The CSS file contains styling for all components, created accoring to design baseline.</p>
-            <pre><code>&lt;link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css" /&gt;</code></pre>
+            <pre><code>&lt;link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css" /&gt;</code></pre>
             <div></div>
             <h3 class="subtitle1">JS</h3>
             <p class="body1">The JS file contains class method to manipulate a few of more complex components,
                 including:</p>
-            <hr/>
-                <p class="tag">Dropdown</p>
-                <p class="tag">Modal</p>
-                <p class="tag">Textarea resizing</p>
-                <p class="tag">Progress bar</p>
-            <hr/>
+            <hr />
+            <p class="tag">Dropdown</p>
+            <p class="tag">Modal</p>
+            <p class="tag">Textarea resizing</p>
+            <p class="tag">Progress bar</p>
+            <hr />
             <p class="body1">The JS is built with pure Javascript and needs no external library, you can omit it if you
-                want to write your own triggers. You HAVE to write your own trigger if you are working on SPA like React.</p>
-            <pre><code>&lt;script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
-
+                want to write your own triggers. You HAVE to write your own trigger if you are working on SPA like
+                React.</p>
+            <pre><code>&lt;script src="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/javascripts/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
         </div>
         <hr class="demo_divider">
         <div class="change_log">
@@ -68,6 +67,7 @@
             <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
             <a class="btn btn-contained" data-id="Progress-Bar">Progress Bar</a>
             <a class="btn btn-contained" data-id="Progress-Bar-Circular">Progress Bar (Circular)</a>
+            <a class="btn btn-contained" data-id="Alert-Chip">Alert Chip</a>
             <hr />
             <!-- single click component -->
             <a class="btn btn-contained" data-id="Hyperlink">Hyperlink</a>
@@ -234,10 +234,6 @@
                     </div>
                     <div class="demo_title_wrapper">
                         <p class="caption demo_title_border">Caption : Montserat Medium 10px Line:14</p>
-                    </div>
-                    <div class="demo_title_wrapper">
-                        <p class="toolbarText demo_title_border">toolbarText : Merriweather Sans Regular 10px Line:13
-                        </p>
                     </div>
                 </div>
             </div>
@@ -975,7 +971,8 @@
 &lt;/a&gt;</code></pre>
                 <h5>generate with JS</h5>
                 <pre><code class="html language-html">&lt;a id="demo_dd"&gt;&lt;/a&gt;</code></pre>
-                <pre><code class="js language-js">// settings and inputs
+                <pre><code class="js language-js">
+// settings and inputs
 let dd = new dropdown({
     id: "demo_dd",
     allValues: ["a", "b", "c"],
@@ -2999,6 +2996,23 @@ step: 10,</code></pre>
 &lt;/form&gt;</code></pre>
                 <h3>Remark</h3>
                 <p>Chrome on T2 works fine, but Webview on T2 is not working. Consult android team.</p>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Alert-Chip">Alert Chip</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="alert-chip"> This is the Normal Alert </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="alert-chip error"> This is the Error Alert </div>
+            </div>
+            <div class="demo_description">
+<h3>Alert</h3>
+<p>A simple pop up containing simple message.</p>
+<h3>Usage</h3>
+<p>There are normal and error versions avaliable. 
+Use class name <code>error</code> for error version.</p>
+<pre><code class="html language-html">&lt;div class="alert-chip error"&gt; Your Message &lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>

@@ -44,9 +44,9 @@ $btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
     border-style: solid;
     border-radius: 4px;
     padding: 0 16px;
-    height: 38px;
+    height: 40px;
     // typography
-    @include body2;
+    @include subtitle2;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -57,6 +57,14 @@ $btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
     transition: all 0.2s ease;
     // prevent text selection on long tap
     user-select: none;
+
+    .icon {
+
+        &:before,
+        &:after {
+            font-size: 18px;
+        }
+    }
 }
 
 /*
@@ -66,7 +74,7 @@ $btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
  */
 
 // blended color
-$btn-blend-color-1-overlay-white: blendNormal($btn-color-1-overlay-light, $btn-white);
+$btn-blend-color-1-overlay-white: blendNormal($btn-color-1-overlay-strong, $btn-white);
 $btn-blend-color-1-overlay-light: blendNormal($btn-color-1-overlay-light, $btn-color-1-main);
 $btn-blend-color-1-overlay-strong: blendNormal($btn-color-1-overlay-strong, $btn-color-1-main);
 $btn-blend-color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-main);
@@ -154,7 +162,7 @@ $btn-blend-color-1-white-overlay: blendNormal($btn-white-overlay, $btn-color-1-m
  */
 
 // blended color
-$btn-blend-color-2-overlay-white: blendNormal($btn-color-2-overlay-light, $btn-white);
+$btn-blend-color-2-overlay-white: blendNormal($btn-color-2-overlay-strong, $btn-white);
 $btn-blend-color-2-overlay-light: blendNormal($btn-color-2-overlay-light, $btn-color-2-main);
 $btn-blend-color-2-overlay-strong: blendNormal($btn-color-2-overlay-strong, $btn-color-2-main);
 $btn-blend-color-2-white-overlay: blendNormal($btn-white-overlay, $btn-color-2-main);
@@ -338,15 +346,10 @@ button,
     @include btn-basic;
 
     &.btn-m {
-        @include subtitle2;
         height: 48px;
-
-        .icon {
-            font-size: 24px;
-        }
     }
 
-  /*
+    /*
    *
    * Default color Gold, different states
    *
@@ -642,3 +645,24 @@ button,
         }
     }
 }
+
+/*
+ *
+ * A pair of buttons
+ *
+ */
+// .btn-pair {
+//     display: grid;
+//     grid-template-rows: 100%;
+//     grid-template-columns: 1fr 1fr;
+
+//     max-width: 228px;
+//     min-height: 38px;
+
+//     .btn-l,
+//     .btn-r {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }

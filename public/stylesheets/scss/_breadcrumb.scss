@@ -6,12 +6,12 @@
         color: $hi-gold;
     }
 
-    &:after {
+    &:before {
         content: "/";
         padding: 0 8px;
     }
-    &:last-child {
-        &::after {
+    &:first-child {
+        &::before {
             content: "";
         }
     }
