@@ -1,0 +1,45 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+
+jobs:
+  build-deploy:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:11-stretch
+    steps:
+      - run:
+          name: install aws dependency
+          command: |
+            sudo apt update
+            sudo apt install libpython-dev
+      - aws-cli/install
+      - aws-cli/configure
+      - checkout
+      - run:
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm
+          command: |
+            npm install
+            npm install --only=dev
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Package result
+          command: npx gulp production
+      - run:
+          name: Deploy
+          command: |
+            aws s3 cp ./dist s3://handy-cdn-staging/baseline/dist --recursive --acl public-read
+workflows:
+  version: 2
+  deploy-prod:
+    jobs:
+      - build-deploy
