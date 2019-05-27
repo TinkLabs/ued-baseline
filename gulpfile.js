@@ -86,6 +86,48 @@ gulp.task('watch-demo', () => {
 
 /*
  *
+ * Convert ttf to other type
+ * 
+ */
+
+const ttf2woff = require('gulp-ttf2woff');
+gulp.task('ttf2woff-montserrat', done => {
+  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .on('finish', done)
+});
+gulp.task('ttf2woff-merriweather-sans', done => {
+  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+    .pipe(ttf2woff())
+    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .on('finish', done)
+});
+
+const ttf2woff2 = require('gulp-ttf2woff2');
+gulp.task('ttf2woff2-montserrat', done => {
+  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .on('finish', done)
+});
+gulp.task('ttf2woff2-merriweather-sans', done => {
+  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+    .pipe(ttf2woff2())
+    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .on('finish', done)
+});
+
+gulp.task('ttf2all', gulp.parallel([
+  'ttf2woff-montserrat',
+  'ttf2woff-merriweather-sans',
+  'ttf2woff2-montserrat',
+  'ttf2woff2-merriweather-sans',
+]))
+
+
+/*
+ *
  *  Convert svg files into font file
  *  Generate class mapping for each svg
  * 
