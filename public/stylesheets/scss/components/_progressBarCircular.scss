@@ -2,7 +2,7 @@
  *
  * Circular Progress Bar
  *
- * TODO: circular prrogress bar require js
+ * equire js
  *
  */
 
@@ -25,7 +25,7 @@ circle {
 }
 
 .circular-progress-background {
-    stroke:$hi-gold;
+    stroke: $hi-gold;
 }
 
 .circular-progress-cover {
@@ -37,6 +37,7 @@ circle {
         transition: none;
         transform-origin: center;
         animation: rotateProgress 2s infinite linear;
+
         &.paused {
             animation-play-state: paused;
         }
@@ -56,9 +57,91 @@ circle {
 
 @keyframes rotateProgress {
     from {
-      transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform:rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
+
+/*
+ * Fixed arc loader
+ */
+
+.indicator {
+    height: 14px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.indicator.fixed-arc:before,
+.indicator.fixed-arc:after {
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    right: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    border: 1px solid transparent;
+}
+
+.indicator.fixed-arc:before {
+    z-index: 100;
+    border-color: $hi-gold;
+    border-left-color: transparent;
+    animation: spin 1s linear 0s infinite;
+}
+.indicator.fixed-arc.navy:before {
+    border-color: $hi-navy;
+    border-left-color: transparent;
+}
+
+.indicator.fixed-arc:after {
+    border: 1px solid transparent;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.process-indicator {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @include body2;
+    // left padding includes indicator with and spacing
+    padding: 12px 24px 12px 46px;
+    background-color: $hi-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: fit-content;
+
+    .label {
+        color: $hi-gold;
+    }
+
+    &.navy {
+
+        .indicator,
+        .label {
+            color: $hi-navy;
+        }
+
+        .fixed-arc:before {
+            border-color: $hi-navy;
+            border-left-color: transparent;
+        }
+    }
+}

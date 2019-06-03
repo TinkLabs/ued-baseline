@@ -1,9 +1,9 @@
 ### Progress Bar Circular
 Progress bar shows user the progress of a loading process.
-Infinite rolling is used when progress percentage is not important to user.
-Javascript library is required for this component to work.
+Javascript library is required if you want to have control on the component.
+Otherwise you can use `fixed-arc indicator` to place an infinite rotation indicator.
 
-### Usage
+### Usage (Controlable)
 ##### Basic
 Add the following element to your code.
 ```html
@@ -37,4 +37,13 @@ cpb.toggleInfinite();
 Use the `reset()` function to reset bar position.
 ```js
 cpb.reset();
+```
+
+### Usage (No control)
+##### Basic
+```html
+<div class="process-indicator navy">
+    <div class="indicator fixed-arc"></div>
+    <p class="label">Loading ...</p>
+</div>
 ```

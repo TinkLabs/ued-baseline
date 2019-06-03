@@ -229,3 +229,13 @@ hr.demo_divider {
         padding: 8px;
     }
 }
+
+
+// demo full width
+.demo_full_width {
+    width: 425px;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+    }
+}

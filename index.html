@@ -2465,7 +2465,7 @@ modal.destory();</code></pre>
                 </div>
             </div>
             <h5 class="subtitle1"> Example with top bar</h5>
-            <div class="demo_showcase  demo_screen_mob" style="padding-bottom: 160px">
+            <div class="demo_showcase  demo_screen_mob demo_full_width">
                 <div class="top-bar menu-anchor">
                     <div class="top-bar-left">
                         <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
@@ -2665,9 +2665,9 @@ modal.destory();</code></pre>
             </div>
         </div>
         <!-- Circular Progress Bar -->
-        <!-- require JS -->
         <div class="demo_display">
             <h3 class="headline" id="Progress-Bar-Circular">Progress Bar (Circular)</h3>
+            <!-- require JS -->
             <div class="demo_showcase">
                 <div id="circular-progress-1"></div>
             </div>
@@ -2676,30 +2676,46 @@ modal.destory();</code></pre>
             <button id="set-progress-bar-infinite">loop</button>
             <button id="set-progress-bar-toggle">toggle</button>
             <button id="set-progress-bar-reset">reset</button>
+            <!-- fixed arc no JS needed -->
+            <div class="demo_showcase">
+                <div class="process-indicator">
+                    <div class="indicator fixed-arc"></div>
+                    <p class="label">Loading ...</p>
+                </div>
+                <div class="process-indicator navy">
+                    <div class="indicator fixed-arc"></div>
+                    <p class="label">Loading ...</p>
+                </div>
+            </div>
             <div class="demo_description">
-                <h3>Progress Bar Circular</h3>
-                <p>Progress bar shows user the progress of a loading process. Infinite rolling is used when progress
-                    percentage is not important to user. Javascript library is required for this component to work.</p>
-                <h3>Usage</h3>
-                <h5>Basic</h5>
-                <p>Add the following element to your code.</p>
-                <pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
-                <p>Create a new progress bar, use the id of the element created above.</p>
-                <pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
-                <h5>Update Progress</h5>
-                <p>Use the <code>update(percent)</code> function to update progress, where
-                    <code>0 &lt;= percent &lt;= 1</code></p>
-                <pre><code class="js language-js">cpb.update(0.2);</code></pre>
-                <h5>Infinite Rotation</h5>
-                <p>Use the <code>infinite()</code> function to start rotation animation.</p>
-                <pre><code class="js language-js">cpb.infinite();</code></pre>
-                <h5>Toggle Rotation</h5>
-                <p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using
-                    <code>infinite()</code> function.</p>
-                <pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
-                <h5>Reset Rotation</h5>
-                <p>Use the <code>reset()</code> function to reset bar position.</p>
-                <pre><code class="js language-js">cpb.reset();</code></pre>
+<h3>Progress Bar Circular</h3>
+<p>Progress bar shows user the progress of a loading process.
+Javascript library is required if you want to have control on the component.
+Otherwise you can use <code>fixed-arc indicator</code> to place an infinite rotation indicator.</p>
+<h3>Usage (Controlable)</h3>
+<h5>Basic</h5>
+<p>Add the following element to your code.</p>
+<pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
+<p>Create a new progress bar, use the id of the element created above.</p>
+<pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
+<h5>Update Progress</h5>
+<p>Use the <code>update(percent)</code> function to update progress, where <code>0 &lt;= percent &lt;= 1</code></p>
+<pre><code class="js language-js">cpb.update(0.2);</code></pre>
+<h5>Infinite Rotation</h5>
+<p>Use the <code>infinite()</code> function to start rotation animation.</p>
+<pre><code class="js language-js">cpb.infinite();</code></pre>
+<h5>Toggle Rotation</h5>
+<p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using <code>infinite()</code> function.</p>
+<pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
+<h5>Reset Rotation</h5>
+<p>Use the <code>reset()</code> function to reset bar position.</p>
+<pre><code class="js language-js">cpb.reset();</code></pre>
+<h3>Usage (No control)</h3>
+<h5>Basic</h5>
+<pre><code class="html language-html">&lt;div class="process-indicator navy"&gt;
+    &lt;div class="indicator fixed-arc"&gt;&lt;/div&gt;
+    &lt;p class="label"&gt;Loading ...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
         <!-- Accordion -->
