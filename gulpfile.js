@@ -227,8 +227,8 @@ gulp.task('svg', gulp.series(
 
 gulp.task('cp-color-icon', done => {
   gulp.src("public/images/colorIcons/*.svg")
-  .pipe(gulp.dest("dist/images/colorIcons"))
-  .on('finish', done);
+    .pipe(gulp.dest("dist/images/colorIcons"))
+    .on('finish', done);
 });
 
 
