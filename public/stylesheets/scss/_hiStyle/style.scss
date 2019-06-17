@@ -1,0 +1,55 @@
+/*
+ *
+ * Icons
+ *
+ * 1. add to class name and you will get the icon on the left of your element
+ * 2. append `-right` to the class name and the icon will appear on the right
+ * 3. a few icons have opposite behavior for context reason (eg: back)
+ * 
+ */
+
+@mixin labelMark {
+  @include iconGeneral;
+  padding: 0 8px;
+}
+
+// icons
+$plus: "\EA9B";
+$minus: "\EBE5";
+$next: "\ED08";
+$back: "\ED07";
+[class^="i-"],
+[class*=" i-"] {
+  // set icons
+  &:before {
+    @include labelMark;
+  }
+  &:after {
+    @include labelMark;
+  }
+}
+
+.i-add::before {
+  content: $plus;
+}
+.i-add-right::after {
+  content: $plus;
+}
+.i-minus::before {
+  content: $minus;
+}
+.i-minus-right::after {
+  content: $minus;
+}
+.i-next::after {
+  content: $next;
+}
+.i-next-right::before {
+  content: $next;
+}
+.i-back::before {
+  content: $back;
+}
+.i-back-right::after {
+  content: $back;
+}

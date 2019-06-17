@@ -1,0 +1,223 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    /* "Supported by WebKit/Safari, Blink/Chrome, and some versions of Internet Explorer and Microsoft Edge." */
+    /* mainly for mobile */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: $hi-white;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.full-width {
+    margin-left: -16px;
+    margin-right: -16px;
+    width: 100vw;
+    max-width: unset;
+}
+
+section {
+    width: 100%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span {
+    display: inline;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: unset;
+
+    &.hyperlink {
+        text-decoration: underline;
+        cursor: pointer;
+        color: $hi-gold;
+
+        &:active {
+            background-color: rgba($hi-gold, 0.32);
+        }
+    }
+}
+
+hr {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    width: 100%;
+    height: 1px;
+    border-width: 0;
+    background-color: $dark-disabled;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.center {
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*
+ *
+ * display
+ *
+ */
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+/*
+ *
+ * common class
+ *
+ */
+
+/*
+ *
+ * border
+ *
+ */
+.br-1-dot-white {
+    border: 1px dotted $hi-white;
+}
+
+.br-1-dot-green {
+    border: 1px dotted $hi-green;
+}
+
+.br-1-dash-white {
+    border: 1px dashed $hi-white;
+}
+
+.br-1-dash-gold {
+    border: 1px dashed $hi-gold;
+}
+
+.round-corner {
+    border-radius: 4px;
+}
+
+/*
+ *
+ * background colours
+ *
+ */
+.bg-navy {
+    background-color: $hi-navy;
+}
+
+.bg-gold {
+    background-color: $hi-gold;
+}
+
+.bg-red {
+    background-color: $hi-red;
+}
+
+.bg-green {
+    background-color: $hi-green;
+}
+
+.bg-black {
+    background-color: $hi-black;
+}
+
+// .bg-grey {
+//   background-color: $hi-grey;
+// }
+// .bg-grey-light {
+//   background-color: $hi-grey-light;
+// }
+.bg-white {
+    background-color: $hi-white;
+}
+
+/*
+ *
+ * padding and margin
+ *
+ */
+.mr0 {
+    margin: 0;
+}
+
+.mr-b-1 {
+    margin-bottom: 1rem;
+}
+
+/*
+ *
+ * hiStyle Fonts
+ *
+ * general setting refers to hiStyle.scss
+ *
+ */
+.icon {
+    display: inline;
+    ;
+}
+
+
+/*
+ *
+ * list
+ *
+ */
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+
+/*
+ *
+ * Code Block
+ *
+ */
+pre {
+    width: 100%;
+    @include horizontal-scroll;
+}
+
+/*
+ *
+ * behavior
+ *
+ */
+
+.no-scroll {
+    overflow: hidden;
+}

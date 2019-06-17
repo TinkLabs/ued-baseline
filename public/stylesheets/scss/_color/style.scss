@@ -1,0 +1,208 @@
+/*
+ *
+ * colors and background colors
+ *
+ * if you want to set variables for color, go to variables.scss
+ *
+ */
+
+/*
+ * Primary Navy
+ */
+.navy {
+  color: $hi-navy;
+}
+.navy-900 {
+  color: $hi-navy-900;
+}
+.navy-800 {
+  color: $hi-navy-800;
+}
+.navy-700 {
+  color: $hi-navy-700;
+}
+.navy-600 {
+  color: $hi-navy-600;
+}
+.navy-500 {
+  color: $hi-navy-500;
+}
+.navy-400 {
+  color: $hi-navy-400;
+}
+.navy-300 {
+  color: $hi-navy-300;
+}
+.navy-200 {
+  color: $hi-navy-200;
+}
+.bg-navy {
+  background-color: $hi-navy;
+}
+.bg-navy-900 {
+  background-color: $hi-navy-900;
+}
+.bg-navy-800 {
+  background-color: $hi-navy-800;
+}
+.bg-navy-700 {
+  background-color: $hi-navy-700;
+}
+.bg-navy-600 {
+  background-color: $hi-navy-600;
+}
+.bg-navy-500 {
+  background-color: $hi-navy-500;
+}
+.bg-navy-400 {
+  background-color: $hi-navy-400;
+}
+.bg-navy-300 {
+  background-color: $hi-navy-300;
+}
+.bg-navy-200 {
+  background-color: $hi-navy-200;
+}
+
+/*
+ * Primary Gold
+ */
+.gold {
+  color: $hi-gold;
+}
+.gold-900 {
+  color: $hi-gold-900;
+}
+.gold-800 {
+  color: $hi-gold-800;
+}
+.gold-700 {
+  color: $hi-gold-700;
+}
+.gold-600 {
+  color: $hi-gold-600;
+}
+.gold-500 {
+  color: $hi-gold-500;
+}
+.gold-400 {
+  color: $hi-gold-400;
+}
+.gold-300 {
+  color: $hi-gold-300;
+}
+.gold-200 {
+  color: $hi-gold-200;
+}
+.bg-gold {
+  background-color: $hi-gold;
+}
+.bg-gold-900 {
+  background-color: $hi-gold-900;
+}
+.bg-gold-800 {
+  background-color: $hi-gold-800;
+}
+.bg-gold-700 {
+  background-color: $hi-gold-700;
+}
+.bg-gold-600 {
+  background-color: $hi-gold-600;
+}
+.bg-gold-500 {
+  background-color: $hi-gold-500;
+}
+.bg-gold-400 {
+  background-color: $hi-gold-400;
+}
+.bg-gold-300 {
+  background-color: $hi-gold-300;
+}
+.bg-gold-200 {
+  background-color: $hi-gold-200;
+}
+
+/*
+ * Secondary Color : Supporting Colors
+ */
+.red {
+  color: $hi-red;
+}
+.green {
+  color: $hi-green;
+}
+.blue {
+  color: $hi-blue;
+}
+.purple {
+  color: $hi-purple;
+}
+.bg-red {
+  background-color: $hi-red;
+}
+.bg-green {
+  background-color: $hi-green;
+}
+.bg-blue {
+  background-color: $hi-blue;
+}
+.bg-purple {
+  background-color: $hi-purple;
+}
+
+/*
+ * Secondary Color : Surface Colors
+ */
+.dark {
+  color: $hi-dark;
+}
+.dark-grey {
+  color: $hi-dark-grey;
+}
+.light-grey {
+  color: $hi-light-grey;
+}
+.light {
+  color: $hi-light;
+}
+.bg-dark {
+  background-color: $hi-dark;
+}
+.bg-dark-grey {
+  background-color: $hi-dark-grey;
+}
+.bg-light-grey {
+  background-color: $hi-light-grey;
+}
+.bg-light {
+  background-color: $hi-light;
+}
+
+/*
+ * Other basline Color
+ */
+
+.black {
+  color: $hi-black;
+}
+.white {
+  color: $hi-white;
+}
+.bl-grey {
+  color: $hi-bl-grey;
+}
+.bl-grey-light {
+  background-color: $hi-bl-grey-light;
+}
+.bg-black {
+  background-color: $hi-black;
+}
+.bg-white {
+  background-color: $hi-white;
+}
+.bg-bl-grey {
+  background-color: $hi-bl-grey;
+}
+.bg-bl-grey-light {
+  background-color: $hi-bl-grey-light;
+}

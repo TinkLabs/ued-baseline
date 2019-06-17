@@ -1,0 +1,18 @@
+.breadcrumb {
+    @include caption;
+    color: $dark-enabled;
+
+    &.active {
+        color: $hi-gold;
+    }
+
+    &:before {
+        content: "/";
+        padding: 0 8px;
+    }
+    &:first-child {
+        &::before {
+            content: "";
+        }
+    }
+}

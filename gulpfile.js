@@ -7,7 +7,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
-const rename = require("gulp-rename");
+const gulp_rename = require("gulp-rename");
 const browserSync = require('browser-sync').create();
 
 /*
@@ -283,7 +283,7 @@ gulp.task("prod-css", () => {
   return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename("handyBaseline.css"))
+    .pipe(gulp_rename("handyBaseline.css"))
     .pipe(gulp.dest('./dist/stylesheets'));
 });
 
@@ -297,7 +297,7 @@ gulp.task("prod-js", done => {
     // Minify the file
     .pipe(uglify())
     // Output
-    .pipe(rename("handyBaseline.min.js"))
+    .pipe(gulp_rename("handyBaseline.min.js"))
     .pipe(gulp.dest(dest))
 });
 
@@ -316,3 +316,58 @@ gulp.task("production", gulp.parallel(
   // concat and compress js files
   "prod-js",
 ));
+
+
+
+
+const {
+  readdir,
+  mkdir,
+  rename,
+} = fs.promises;
+
+// check files ready
+gulp.task('compare', async done => {
+  try {
+    let dir = await readdir('public/stylesheets/scss/components', { encoding: 'utf8' });
+    let scss = dir.filter(fileName => fileName.match('.scss'))
+    let md = dir.filter(fileName => fileName.match('.md'))
+    console.log("scss: ", scss.length, " md: ", md.length)
+  } catch (err) {
+    console.error(err);
+  }
+  done();
+});
+
+// mv and rename
+gulp.task('mv', async done => {
+  try {
+    // read dir
+    let dir = await readdir('public/stylesheets/scss/form', { encoding: 'utf8' });
+    let fileName = dir.filter(fileName => fileName.match('.md')).map(fileName => fileName.replace(".md", ""));
+    fileName.forEach(async name => {
+      // create folder for each scss
+      await mkdir(`public/stylesheets/scss/form/_${name}`, { recursive: true });
+      
+      // mv scss and md into new folder and re-name to stlye.scss and readme.md
+      await rename(`public/stylesheets/scss/form/_${name}.scss`, `public/stylesheets/scss/form/_${name}/style.scss`);
+      await rename(`public/stylesheets/scss/form/${name}.md`, `public/stylesheets/scss/form/_${name}/readme.md`);
+    });
+
+
+  } catch (err) {
+    console.error(err);
+  }
+  done();
+});
+
+gulp.task('story', async done => {
+  try {
+    let dir = await readdir('public/stylesheets/scss', { encoding: 'utf8' });
+    let comp = dir.filter(name => name.match("_"));
+    console.log(comp);
+  } catch (err) {
+    console.error(err);
+  }
+  done();
+});

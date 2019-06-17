@@ -1,0 +1,71 @@
+/*
+ *
+ * Tag
+ *
+ * A label that provdies a single piece of info each.
+ *
+ * Looks like chips but in clickable
+ * 
+ */
+
+// base color
+
+$tag-white: $hi-white;
+$tag-white-overlay: rgba(255, 255, 255, 0.56);
+
+$tag-color-1-main: $hi-gold;
+$tag-color-1-hover: $hi-gold-300;
+$tag-color-1-overlay-light: rgba(#8a5300, 0.32);
+$tag-color-1-overlay-strong: rgba(#8a5300, 0.56);
+
+// blended color
+$color-1-overlay-white: blendNormal($tag-color-1-overlay-light, $tag-white);
+$color-1-overlay-light: blendNormal($tag-color-1-overlay-light, $tag-color-1-main);
+$color-1-overlay-strong: blendNormal($tag-color-1-overlay-strong, $tag-color-1-main);
+$color-1-white-overlay: blendNormal($tag-white-overlay, $tag-color-1-main);
+
+// default
+@mixin tag-gold-default {
+  background-color: $tag-color-1-main;
+  border-color: transparent;
+  color: $tag-white;
+}
+
+@mixin tag-base {
+  // display
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // color and shape
+  @include tag-gold-default;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $border-radius;
+  height: 26px;
+  padding: 0 8px;
+  // typography
+  @include caption;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  // other styling
+  cursor: none;
+  outline: none;
+  position: relative;
+  // prevent text selection on long tap
+  user-select: none;
+}
+
+.tag {
+  @include tag-base;
+
+  /*
+   *
+   * Icons, left icon only
+   *
+   */
+  .icon {
+    padding: 0 4px 0 0;
+  }
+}

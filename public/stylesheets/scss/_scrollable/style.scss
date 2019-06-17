@@ -1,0 +1,46 @@
+/*
+ *
+ * This provides a simple scrollable container using only CSS,
+ * used by components like tab bar.
+ * 
+ * Flex box is used to keep children div in single row and/or equal size
+ * 
+ * If you need fancy function or effect you will need 3rd party carousel plugin.
+ *
+ */
+
+@mixin horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.horizontal-scroll {
+    @include horizontal-scroll;
+
+    &.scroll-with-spacing {
+        > * {
+            margin-right: 8px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.full-width {
+        > *:first-child {
+            margin-left: 16px;
+        }
+        &:after {
+            content: "";
+            padding-left: 16px;
+        }
+    }
+}

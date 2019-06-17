@@ -1,0 +1,120 @@
+/*
+ *
+ * Bottom Nav of (web)app
+ *
+ * Max 5 buttons
+ * Careful of text wrapping
+ *
+ */
+
+.bottom-nav {
+  width: 100%;
+  background-color: $hi-white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  // prevent text selection on long tap
+  user-select: none;
+
+  .bottom-nav-btn {
+    // display
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // sizing
+    min-width: 20%;
+    padding: 4px;
+    // typography
+    word-break: break-word;
+    hyphens: auto;
+    text-align: center;
+    // other style
+    cursor: pointer;
+
+    color: $dark-enabled;
+    &.bottom-nav-btn-active {
+      color: $dark-default;
+    }
+    &.bottom-nav-btn-disabled {
+      color: $dark-disabled;
+    }
+
+    .bottom-nav-icon {
+      font-size: 32px;
+    }
+
+    .bottom-nav-text {
+      @include caption;
+      // typography
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+    }
+
+    /* hide any btn after the 5th */
+    &:nth-child(n + 6) {
+      display: none;
+    }
+  }
+}
+
+/*
+ *
+ * Different Color Mode - Dark
+ *
+ */
+.bottom-nav.bottom-nav-dark {
+  background-color: $dark-default;
+  .bottom-nav-btn {
+    color: $light-enabled;
+    &.bottom-nav-btn-active {
+      color: $light-default;
+    }
+    &.bottom-nav-btn-disabled {
+      color: $light-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/*
+ *
+ * Different Color Mode - Navy
+ *
+ */
+.bottom-nav.bottom-nav-navy {
+  background-color: $hi-navy;
+  .bottom-nav-btn {
+    color: $light-enabled;
+    &.bottom-nav-btn-active {
+      color: $light-default;
+    }
+    &.bottom-nav-btn-disabled {
+      color: $light-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/*
+ *
+ * Different Color Mode - Gold
+ *
+ */
+.bottom-nav.bottom-nav-gold {
+  background-color: $hi-gold;
+  .bottom-nav-btn {
+    color: $light-enabled;
+    &.bottom-nav-btn-active {
+      color: $light-default;
+    }
+    &.bottom-nav-btn-disabled {
+      color: $light-disabled;
+      cursor: not-allowed;
+    }
+  }
+}

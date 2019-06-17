@@ -1,0 +1,24 @@
+/*
+ *
+ * Range Slider
+ *
+ * Avoid using pure css on input[type=range] because
+ *   1. psudo-element not widely/formally supported
+ *
+ *   2. hard to drag on handy
+ *
+ */
+
+$range_slider_width: 100%;
+$range_slider_max_width: 328px;
+$range_slider_height: 4px;
+$range_slider_color: rgba($hi-gold, 0.32);
+$range_slider_color_filled: $hi-gold;
+$range_slider_knob_size: 18px;
+$range_slider_knob_border_radius: 50%;
+$range_slider_filled_border: 2px;
+$range_slider_shadow_size: -8px;
+$range_slider_margin_top: -7px;
+
+$noUi-css-prefix: noUi;
+@import "nouislider.base.scss";

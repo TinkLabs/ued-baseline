@@ -1,0 +1,165 @@
+// mixins
+@mixin headline {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: $semiBold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+@mixin subtitle1 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: $semiBold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+
+@mixin subtitle2 {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: $semiBold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+@mixin body1 {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: $normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+@mixin body2 {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: $medium;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+@mixin caption {
+  font-family: Montserrat;
+  font-size: 10px;
+  font-weight: $medium;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 12px;
+  letter-spacing: 0.2;
+}
+
+/*
+ *
+ * headers
+ *
+ */
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2.5rem;
+}
+h5 {
+  font-size: 2rem;
+}
+h6 {
+  font-size: 1.5rem;
+}
+
+/*
+ *
+ * headlines, titles, bodies
+ *
+ */
+
+.headline {
+  @include headline;
+}
+
+.subtitle1 {
+  @include subtitle1;
+}
+
+.subtitle2 {
+  @include subtitle2;
+}
+
+.body1 {
+  @include body1;
+}
+
+.body2 {
+  @include body2;
+}
+
+.caption {
+  @include caption;
+}
+
+/*
+ *
+ * Multi line with ellipsis
+ *
+ * Pure Css way is not very flexible / not wide support by browser
+ *
+ * Todo : use js to truncate text
+ *
+ */
+/* styles for '...' */
+// @mixin multilineEllipsis($line-height, $num-of-line, $font-size) {
+//   /* hide text if it more than N lines  */
+//   overflow: hidden;
+//   /* for set '...' in absolute position */
+//   position: relative;
+//   /* use this value to count block height */
+//   line-height: $line-height;
+//   /* max-height = line-height (1.2) * lines max number (3) */
+//   max-height: $font-size * $line-height * $num-of-line;
+//   /* fix problem when last visible word doesn't adjoin right side  */
+//   text-align: justify;
+//   /* place for '...' */
+//   margin-right: -1em;
+//   padding-right: 1em;
+//   /* create the ... */
+//   &:before {
+//     /* points in the end */
+//     content: "...";
+//     /* absolute position */
+//     position: absolute;
+//     /* set position to right bottom corner of block */
+//     right: 0;
+//     bottom: 0;
+//   }
+//   /* hide ... if we have text, which is less than or equal to max lines */
+//   &:after {
+//     /* points in the end */
+//     content: "";
+//     /* absolute position */
+//     position: absolute;
+//     /* set position to right bottom corner of text */
+//     right: 0;
+//     /* set width and height */
+//     width: 1em;
+//     height: 1em;
+//     margin-top: 0.2em;
+//     /* bg color = bg color under block */
+//     background: white;
+//   }
+// }

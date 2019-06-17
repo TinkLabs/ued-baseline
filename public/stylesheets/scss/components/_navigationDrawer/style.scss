@@ -1,0 +1,128 @@
+/*
+ *
+ * Navigation Drawer
+ *
+ * "Navigation drawers provide access to destinations in your app."
+ *
+ * It can open on the side / from bottom / from top
+ *
+ * The drawer also provides a title and posibly a close(x) btn
+ * 
+ * 
+ */
+
+.nav-drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+
+  opacity: 0;
+  z-index: -10;
+  transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+  &.nav-drawer-show {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  // create overlay
+  &::before {
+    // base
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-enabled;
+  }
+
+  .nav-drawer-mainTitle,
+  .nav-drawer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+  }
+
+
+  .nav-drawer-mainTitle {
+    @include subtitle1;
+    color: $dark-default;
+
+    .nav-drawer-close {
+      font-size: 20px;
+      margin-left: auto;
+      padding-right: 0;
+      cursor: pointer;
+    }
+  }
+
+  .nav-drawer-row {
+    color: $dark-enabled;
+    cursor: pointer;
+
+    &.active,
+    &:active {
+      color: $hi-gold;
+    }
+
+    .nav-drawer-title {
+      @include subtitle2;
+    }
+
+    .nav-drawer-icon-left,
+    .nav-drawer-icon-right {
+      font-size: 20px;
+    }
+    .nav-drawer-icon-left {
+      padding-right: 16px;
+    }
+    .nav-drawer-icon-right {
+      margin-left: auto;
+      padding-left: 16px;
+    }
+  }
+
+  // drawer container & animation
+  .nav-drawer-left,
+  .nav-drawer-right,
+  .nav-drawer-top,
+  .nav-drawer-bottom {
+    z-index: 10;
+    position: absolute;
+    transition: top 0.5s ease-in-out, bottom 0.5s ease-in-out, left 0.5s ease-in-out, right 0.5s ease-in-out;
+    background-color: $hi-white;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  // bottom drawer
+  .nav-drawer-bottom {
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+  }
+  &.nav-drawer-show .nav-drawer-bottom {
+    bottom: 0;
+  }
+
+  // left drawer
+  .nav-drawer-left {
+    width: 80%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+  }
+  &.nav-drawer-show .nav-drawer-left {
+    left: 0;
+  }
+}
+
