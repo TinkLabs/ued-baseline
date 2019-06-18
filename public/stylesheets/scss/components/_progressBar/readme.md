@@ -3,7 +3,7 @@ Progress bar shows user the progress of a loading process.
 Infinite rolling is used when progress percentage is not important to user.
 
 ### Usage
-##### Infinite
+#### Infinite
 Use `pb-infinite` together with `pb-bar` to get infinite loading animation
 ```html
 <div class="progress-bar">
@@ -13,7 +13,7 @@ Use `pb-infinite` together with `pb-bar` to get infinite loading animation
 </div>
 ```
 
-##### Live Progress
+#### Live Progress
 Alter inline CSS width to control length of progress bar by your JS.
 ```html
 <div class="progress-bar">

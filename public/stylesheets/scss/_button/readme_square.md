@@ -1,7 +1,7 @@
 ### Buttons
 
-##### Square Button
-**Large** size availabel.
+#### Square Button
+`Large` size availabel.
 Only gold is available.
 Can be disabled.
 

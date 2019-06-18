@@ -4,7 +4,7 @@ Pagination component provides user a quick way to reach different page or sectio
 ### Usage
 Use `pg-disabled` to disable back and forth button.
 Use `active` to highlight current page.
-##### Normal / Default Situation
+#### Normal / Default Situation
 ```html
 <div class="pagination">
     <a class="pg-back pg-disabled"></a>
@@ -19,7 +19,7 @@ Use `active` to highlight current page.
 </div>
 ```
 
-##### In the Middle
+#### In the Middle
 The maximun number of page button can be displayed is 7.
 ```html
 <div class="pagination">

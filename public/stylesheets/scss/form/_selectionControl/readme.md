@@ -29,7 +29,7 @@ Selection control consist of Checkbox, Radio Button, and Toggle Button.
 Drop Down Button provides user with a list of options
 
 ### Usage
-##### plain HTML
+#### plain HTML
 ```html
 <a id="dd_1">
     <span class="dd-default" data-value="default"> default </span>
@@ -55,7 +55,7 @@ Drop Down Button provides user with a list of options
 </a>
 ```
 
-##### generate with JS
+#### generate with JS
 ```html
 <a id="demo_dd"></a>
 ```

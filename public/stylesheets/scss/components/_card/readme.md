@@ -4,7 +4,7 @@ Cards contain content and actions about a single subject.
 Cards also come in various size and layout accoring to position on screen and functionality.
 
 ### Usage
-##### Full Width Card, 16:9, no padding
+#### Full Width Card, 16:9, no padding
 ```html
 <div class="card card-fw">
     <div class="card-container">
@@ -61,7 +61,7 @@ Cards also come in various size and layout accoring to position on screen and fu
 </div>
 ```
 
-##### Large Card 16:9
+#### Large Card 16:9
 ```html
 <div class="card card-l">
     <div class="card-container">
@@ -116,7 +116,7 @@ Cards contain content and actions about a single subject.
 Cards also come in various size and layout accoring to position on screen and functionality.
 
 ### Usage
-##### Medium Size Card, 16:9
+#### Medium Size Card, 16:9
 ```html
 <div class="card card-m-wide">
     <div class="card-container">
@@ -130,7 +130,7 @@ Cards also come in various size and layout accoring to position on screen and fu
     </div>
 </div>
 ```
-##### Medium Size Card, 4:3
+#### Medium Size Card, 4:3
 ```html
 <div class="card card-m">
     <div class="card-container">

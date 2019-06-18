@@ -6,7 +6,7 @@ Chips are compact elements that represent an input, attribute, or action.
 <p class="chip"> chip text </p> 
 ```
 
-##### For a chip with icons:
+#### For a chip with icons:
 
 ```html
 <p class="chip">
@@ -15,7 +15,7 @@ Chips are compact elements that represent an input, attribute, or action.
 </p>
 ```
 
-##### Set a chip to be active
+#### Set a chip to be active
 
 ```html
 <p class="chip chip-focused"> chip text </p> 

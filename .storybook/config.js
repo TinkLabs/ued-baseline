@@ -41,7 +41,21 @@ import { themes } from '@storybook/theming';
 addParameters({
   options: {
     // https://storybook.js.org/docs/configurations/theming/
-    theme: themes.dark,
+    theme: {
+      ...themes.dark,
+      base: 'dark',
+      addonNotesTheme: {
+        code: {
+          color: 'rebeccapurple',
+        },
+        "table tr": {
+          "background-color": 'transparent !important',
+        },
+        "table tr:nth-of-type(2n)": {
+          "background-color": 'rgba(0,0,0,0.1) !important',
+        },
+      }
+    },
   },
 });
 

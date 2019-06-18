@@ -15,6 +15,6 @@ For text field, 5 visual states are provided for different use-cases.
 ```
 
 ### Remark
-##### Change Log
+#### Change Log
 - 9 May, 2019
 - To fix bug when `field-label` or `helper-text` is not present, an `input-wrapper` is added to keep icon in place.

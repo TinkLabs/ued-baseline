@@ -1,8 +1,8 @@
 ### Buttons
 
-##### Round Button
-Use with **btn-float** to get a visual elevation.
-**Large** size availabel.
+#### Round Button
+Use with `btn-float` to get a visual elevation.
+`Large` size availabel.
 Only gold is available.
 Can be disabled.
 

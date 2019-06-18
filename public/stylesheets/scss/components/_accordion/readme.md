@@ -7,7 +7,7 @@ Use radio button if you want the accordion set to open one tab only.
 Use checkbox button if you want the accordion set to open multiple tabs.
 Use class name `ac-m` together with `accordion` if you want bigger font size.
 
-##### Opening Multiple Accordions
+#### Opening Multiple Accordions
 ```html
 <div class="accordion">
     // hidden checkbox button that control accordion state
@@ -33,7 +33,7 @@ Use class name `ac-m` together with `accordion` if you want bigger font size.
 </div>
 ```
 
-##### Opening Single Accordion
+#### Opening Single Accordion
 ```html
 <form>
     // wrap the set of accordion in a form so that you can have multiple accordion sets that open single accordion
