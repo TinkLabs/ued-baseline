@@ -3,7 +3,8 @@ A backdrop appears behind all other surfaces in an app, displaying contextual an
 
 ### Usage
 Style both layer so user can distinguish them.
-Use `collapse` on `bd-front` to toggle front layer position.
+Use class **collapse** on **bd-front** to toggle front layer position.
+
 ```html
 <div class="backdrop">
     <div class="bd-back bg-white">

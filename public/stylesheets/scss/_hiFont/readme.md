@@ -1,4 +1,8 @@
 ### hi Fonts
+
+contains a few shortened icons' class names
+contains mixin `labelMark` for icon to be used anywhere
+
 ##### Material Icons
 All icons from Material Icons and made into svg fonts.
 

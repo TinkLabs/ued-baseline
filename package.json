@@ -16,11 +16,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-knobs": "^5.1.8",
+    "@storybook/addon-notes": "^5.1.8",
     "@storybook/addon-storysource": "^5.1.8",
-    "@storybook/html": "^5.1.8",
+    "@storybook/react": "^5.1.8",
     "autoprefixer": "^9.4.7",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.5",
+    "classnames": "^2.2.6",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -37,6 +42,7 @@
     "gulp-uglify-es": "^1.0.4",
     "gulp-watch": "^5.0.1",
     "node-sass": "^4.12.0",
+    "recursive-readdir": "^2.2.2",
     "sass-loader": "^7.1.0"
   }
 }

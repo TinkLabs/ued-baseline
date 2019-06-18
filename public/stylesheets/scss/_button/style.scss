@@ -59,6 +59,8 @@ $btn-color-2-overlay-strong: rgba($hi-navy-900, 0.56);
     user-select: none;
 
     .icon {
+        font-size: 18px;
+        height: 18px;
 
         &:before,
         &:after {
@@ -329,6 +331,12 @@ $btn-square-icon: 16px;
     i,
     .icon {
         font-size: $btn-square-icon;
+        height: $btn-square-icon;
+
+        &:before,
+        &:after {
+            font-size: $btn-square-icon;
+        }
     }
 }
 
@@ -487,6 +495,12 @@ button,
         i,
         .icon {
             font-size: $btn-round-icon;
+            height: $btn-round-icon;
+
+            &::before,
+            &::after {
+                font-size: $btn-round-icon;
+            }
         }
 
         &.btn-shadow {
@@ -505,6 +519,7 @@ button,
             i,
             .icon {
                 font-size: $btn-round-large-icon;
+                height: $btn-round-large-icon;
             }
 
             &::before,

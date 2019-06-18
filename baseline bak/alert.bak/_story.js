@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/html';
+import { storiesOf } from '@storybook/react';
 
 import markdownNotes from './readme.md';
 

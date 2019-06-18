@@ -23,7 +23,7 @@
 @import "scss/_fontStyle/style";
 
 // gulp generated svg font list
-@import "scss/_hiStyle/style";
+@import "scss/_hiFontBasic/style";
 
 // simple grid columns
 @import "scss/_grid/style";
@@ -47,7 +47,7 @@
  */
 
 // shorted class name for certain hiStyle icons
-@import "scss/_icons/style";
+@import "scss/_hiFont/style";
 
 // types of content text style
 @import "scss/_typography/style";
@@ -65,8 +65,8 @@
  *
  */
 
-@import "scss/_buttons/style";
-@import "scss/_chips/style";
+@import "scss/_button/style";
+@import "scss/_chip/style";
 @import "scss/_tag/style";
 @import "scss/_breadcrumb/style";
 @import "scss/_backdrop/style";
