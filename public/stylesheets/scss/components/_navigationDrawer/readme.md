@@ -3,7 +3,7 @@ Navigation drawers provide access to destinations in your app.
 
 Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show".
 
-To stop the content under the Navigation Drawer from scrolling, add class `no-scroll` to body when the drawer is open.
+To stop the content under the Navigation Drawer from scrolling, add class `no-scroll` to `body` when the drawer is open.
 
 ### Usage
 ```html
@@ -43,10 +43,13 @@ To stop the content under the Navigation Drawer from scrolling, add class `no-sc
     </div>
 </div>
 ```
+
 ```js
 document.getElementById("bottom-nav-drawer").classList.add("nav-drawer-show");
 ```
+
 or
+
 ```js
 document.getElementById("side-nav-drawer").classList.add("nav-drawer-show");
 ```

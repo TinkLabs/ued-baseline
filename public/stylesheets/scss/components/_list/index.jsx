@@ -9,7 +9,11 @@ export default function List(props) {
                         <div className="list-content multiline">
 
                             {/* thumbnail */}
-                            <i className="list-thumbnail icon icon-toggle_star_24px"></i>
+                            {
+                                curr.avatar
+                                ? <img class="list-thumbnail avatar" alt="avatar" src={curr.avatar} />
+                                : <i className="list-thumbnail icon icon-toggle_star_24px"></i>
+                            }
 
                             {/* body */}
                             <div className="list-text">

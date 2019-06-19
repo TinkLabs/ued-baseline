@@ -7,6 +7,7 @@ import markdownNotes from './readme.md';
 import List from "./index.jsx";
 // controls
 import {
+  boolean,
   number,
   radios,
   text,
@@ -39,6 +40,7 @@ storiesOf('List', module)
       for (let i = 0; i < length; i++) {
         let groupId = `List_${i + 1}`;
         let dataPkg = {
+          avatar: (boolean(`Avatar ${i+1}`, false, groupId) && avatar),
           overline: text(`Overline ${i+1}`, "overline", groupId),
           primary: text(`Primary Text ${i+1}`, "primary", groupId),
           secondary: text(`Secondary Text ${i+1}`, "secondary", groupId),

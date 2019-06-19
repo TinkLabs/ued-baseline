@@ -3,9 +3,13 @@
 
 ### Usage
 Class `menu-anchor` sets reference element's position as `relative`.
-Class `m-full` sets menu to screen width.
+
+Class `m-full` sets menu to 100% parent width, default is 50%.
+
 Class `m-show` is the class that can toggle menu visibility.
+
 Content of a menu is structured by the `List` component
+
 ```html
 <div class="top-bar menu-anchor">
     <div class="top-bar-left">

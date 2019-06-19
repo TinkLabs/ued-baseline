@@ -1,14 +1,22 @@
 ### Dialog / Modal
 Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
-Dialog can be created in 2 ways, either by plain HTLM, with custom JS.
-Or by builtin Modal Class functions.
+
+Dialog can be created in 2 ways, either by builtin Modal Class functions.
+
+Or build your own component in SPA like React.
+
+If button text are too long, use `stackButton` option or `stack` class with `modal-footer` to provide more spacing to long button.
+
 ### Usage
 Case 1: Using Class Function, in HTML file add a reference element with a modal ID:
+
 ```html
 <button class="btn" data-modalid="1">Build By Code</button>
-<div id="modal_1></div>
+<div id="modal_1"></div>
 ```
+
 and in javascript:
+
 ```js
 let modalSettings = {
     // modal id : string
@@ -32,6 +40,7 @@ modal.destory();
 ```
 
 Case 2: Create a dailog with plain HTML:
+
 ```html
 <div class="modal" id="modal1">
     <div class="modal-wrapper">
