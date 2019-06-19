@@ -2,6 +2,7 @@
 Lists are continuous, vertical indexes of text or images.
 
 ### Usage
+
 ```html
 <ul class="list">
     <li class="list-row">
@@ -17,27 +18,27 @@ Lists are continuous, vertical indexes of text or images.
     </li>
     <li class="list-row">
         <div class="list-content multiline">
-            <img class="list-thumbnail avatar" alt="avatar" src="public/images/checker_bg.png"></i>
+            <img class="list-thumbnail avatar" alt="avatar" src="public/images/checker_bg.png" />
             <div class="list-text">
                 <span class="list-text-overline">Overline</span>
                 <span class="list-text-primary">Primary Text</span>
                 <span class="list-text-secondary">Secondary Text</span>
             </div>
-            <span class="list-meta">Caption</i>
+            <span class="list-meta">Caption</span>
         </div>
     </li>
     <li class="list-row">
         <div class="list-content multiline">
-            <img class="list-thumbnail avatar" alt="avatar" src="public/images/checker_bg.png"></i>
+            <img class="list-thumbnail avatar" alt="avatar" src="public/images/checker_bg.png" />
             <div class="list-text">
                 <span class="list-text-primary">Primary Text</span>
-                <span class="list-text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Sed ultrices nisi aliquam imperdiet vehicula.</span>
+                <span class="list-text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices nisi aliquam imperdiet vehicula.</span>
             </div>
             <div class="list-meta form-group">
-                <input type="checkbox" id="checkbox_list_2">
+                <input type="checkbox" id="checkbox_list_2" />
                 <label for="checkbox_list_2">
-                    <span class="label-mark"></span></label>
+                    <span class="label-mark"></span>
+                </label>
             </div>
         </div>
     </li>

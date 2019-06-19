@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Typography(props) {
     return (
-        <div class="demo_showcase flex flex-row">
+        <div className="demo_showcase flex flex-row">
             <div className="demo_half_w">
                 <div className="demo_title_wrapper">
                     <p className="headline demo_title_border">Headline : Montserrat SemiBold 20px Line:30</p>

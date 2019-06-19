@@ -1,25 +1,34 @@
 ### Chat
 The Chat style library provides chat bubbles for plain text, voice message, input component including text field, record audio button and send button.
 
-Include the handy js library to get auto resizing for textfield.
+For ordinary HTML, include the handy js library to get auto resizing for textfield.
 
-### Usage
+You need to write your own trigger if you are using SPA like React.
+
+#### Usage
 Input text field
-Class name is for styling
 
 ```html
+<!-- chat input container -->
 <div class="chat-input">
-    <i class="chat-voice icon icon icon-av_mic_24px"></i>
-    <textarea
-        class="chat-text" rows="1" 
-        placeholder="type something"
-        onkeyup="textAreaResize(this)"
-    ></textarea>
-    <i class="chat-send send-enabled icon icon-content_send_24px"></i>
+    <!-- `chat-voice` is the button for actions like voice recording -->
+        <i class="chat-voice icon icon icon-av_mic_24px"></i>
+    
+    <!-- user text input area, you may need your own js to control its size -->
+        <textarea
+            class="chat-text" rows="1" 
+            placeholder="type something"
+            onkeyup="textAreaResize(this)"
+        ></textarea>
+    
+    <!-- `chat-send` is the send button -->
+    <!-- `send-enabled` is used to toggle the disable state -->
+        <i class="chat-send send-enabled icon icon-content_send_24px"></i>
 </div>
 ```
 
 Chat Bubbles
+
 ```html
 <div class="chat-bubble bubble-right"> 
     <div class="msg-wrapper">
@@ -29,6 +38,7 @@ Chat Bubbles
 ```
 
 Audio Chat Bubble
+
 ```html
 <div class="chat-bubble bubble-left">
     <div class="msg-wrapper playing infinite-animation">

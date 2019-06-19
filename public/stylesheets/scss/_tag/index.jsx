@@ -1,13 +1,13 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export default function Tag(props) {
-    let chipClass = classnames({
+    let chipClass = classNames({
         'tag': true,
     });
 
     return (
-        <p class={chipClass}>
+        <p className={chipClass}>
             {props.children}
         </p>
     )

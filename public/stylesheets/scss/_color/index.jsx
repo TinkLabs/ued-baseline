@@ -3,41 +3,41 @@ import React from 'react';
 export default function Color(props) {
     if (props.palette === "supporting") {
         return (
-            <div class="demo_showcase">
-                <div class="flex flex-row flex-wrap">
-                    <div class="demo_color_box bg-blue flex flex-col just-end">
-                        <p class="color white">Blue</p>
-                        <p class="hex white">#8DC8E8</p>
+            <div className="demo_showcase">
+                <div className="flex flex-row flex-wrap">
+                    <div className="demo_color_box bg-blue flex flex-col just-end">
+                        <p className="color white">Blue</p>
+                        <p className="hex white">#8DC8E8</p>
                     </div>
-                    <div class="demo_color_box bg-purple flex flex-col just-end">
-                        <p class="color white">Purple</p>
-                        <p class="hex white">#B06C95</p>
+                    <div className="demo_color_box bg-purple flex flex-col just-end">
+                        <p className="color white">Purple</p>
+                        <p className="hex white">#B06C95</p>
                     </div>
-                    <div class="demo_color_box bg-red flex flex-col just-end">
-                        <p class="color white">Red</p>
-                        <p class="hex white">#DA291C</p>
+                    <div className="demo_color_box bg-red flex flex-col just-end">
+                        <p className="color white">Red</p>
+                        <p className="hex white">#DA291C</p>
                     </div>
-                    <div class="demo_color_box bg-green flex flex-col just-end">
-                        <p class="color white">Green</p>
-                        <p class="hex white">#4A783C</p>
+                    <div className="demo_color_box bg-green flex flex-col just-end">
+                        <p className="color white">Green</p>
+                        <p className="hex white">#4A783C</p>
                     </div>
                 </div>
-                <div class=" flex flex-row flex-wrap">
-                    <div class="demo_color_box bg-dark flex flex-col just-end">
-                        <p class="color white">Dark</p>
-                        <p class="hex white">#0F0F0F</p>
+                <div className=" flex flex-row flex-wrap">
+                    <div className="demo_color_box bg-dark flex flex-col just-end">
+                        <p className="color white">Dark</p>
+                        <p className="hex white">#0F0F0F</p>
                     </div>
-                    <div class="demo_color_box bg-dark-grey flex flex-col just-end">
-                        <p class="color white">Dark Grey</p>
-                        <p class="hex white">#C6CDCE</p>
+                    <div className="demo_color_box bg-dark-grey flex flex-col just-end">
+                        <p className="color white">Dark Grey</p>
+                        <p className="hex white">#C6CDCE</p>
                     </div>
-                    <div class="demo_color_box bg-light-grey flex flex-col just-end">
-                        <p class="color dark">Light Grey</p>
-                        <p class="hex dark">#F0F5F8</p>
+                    <div className="demo_color_box bg-light-grey flex flex-col just-end">
+                        <p className="color dark">Light Grey</p>
+                        <p className="hex dark">#F0F5F8</p>
                     </div>
-                    <div class="demo_color_box bg-light flex flex-col just-end">
-                        <p class="color dark">Light</p>
-                        <p class="hex dark">#F7FCFF</p>
+                    <div className="demo_color_box bg-light flex flex-col just-end">
+                        <p className="color dark">Light</p>
+                        <p className="hex dark">#F7FCFF</p>
                     </div>
                 </div>
             </div>

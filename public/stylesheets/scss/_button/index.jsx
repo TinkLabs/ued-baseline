@@ -1,8 +1,8 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export default function Button(props) {
-    let compClass = classnames(processBtnClass(props));
+    let compClass = classNames(processBtnClass(props));
 
     return (
         <a className={compClass}>

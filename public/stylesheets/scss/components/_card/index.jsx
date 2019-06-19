@@ -1,8 +1,8 @@
 import React from 'react';
-import classname from 'classnames';
+import classNames from 'classnames';
 
 export default function Card(props) {
-    const cardClass = classname({
+    const cardClass = classNames({
         'card': true,
         'card-fw': props.size === "card-fw",
         'card-l': props.size === "card-l",
