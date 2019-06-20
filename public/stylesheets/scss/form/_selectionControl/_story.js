@@ -12,7 +12,6 @@ import {
   radios,
   text,
 } from '@storybook/addon-knobs';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 
 storiesOf('Selection Controls', module)
   .add('radio',
