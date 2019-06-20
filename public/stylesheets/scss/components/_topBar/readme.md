@@ -2,6 +2,7 @@
 A bar on top of the screen that provides user with controls and info of the page.
 
 ### Usage
+
 ```html
 <div class="top-bar">
     <div class="top-bar-left">

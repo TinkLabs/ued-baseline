@@ -3,6 +3,7 @@ This is a pure CSS component, JS / React component is not on schedule. Pull Requ
 
 ### Usage
 #### Default State
+
 ```html
 <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
     <div class="up-control">
@@ -20,6 +21,7 @@ This is a pure CSS component, JS / React component is not on schedule. Pull Requ
 #### File Chosen
 1. update the label text yourself
 2. toggle class `hide` on submit button
+
 ```html
 <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
     <div class="up-control">
