@@ -1,8 +1,9 @@
 ### Search Box
-Place to input search or filter keywords, can be used together with list
+Place to input search or filter keywords, can be used together with list for search history or suggestion.
 
 ### Usage
-``` 
+
+```html
 <div class="searchbox">
     <div class="search-wrapper">
         <input class="search-input" type="text" placeholder="search box">
@@ -25,5 +26,4 @@ Place to input search or filter keywords, can be used together with list
     </div>
     <p class="search-helper"> helper text </p>
 <div>
-
 ```

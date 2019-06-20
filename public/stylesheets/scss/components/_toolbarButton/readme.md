@@ -4,6 +4,7 @@ A Series of buttons to open most used apps on handy, located at the top of handy
 ### Scrolling JS not ready yet
 
 ### Usage
+
 ```html
 <div class="flex">
     <div class="toolbar-btn">
@@ -37,5 +38,4 @@ A Series of buttons to open most used apps on handy, located at the top of handy
         <p class="toolbar-btn-text">VIP Concierge</p>
     </div>
 </div>
-
 ```

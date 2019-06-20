@@ -4,7 +4,7 @@ A tooltip provides quick explanation on an element or a function on screen.
 ### Usage
 Wrap up the element that requires a tooltip.
 
-Use class name `tp-left`, `tp-center` and `tp-right` to define tool tip position.
+Use class name `tp-left`, `tp-center` and `tp-right` according to position of wrapped element to define tool tip position relative to the screen.
 
 Use class name `tp-bottom` to place tooltip at the bottom if necessary.
 

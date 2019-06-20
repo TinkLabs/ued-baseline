@@ -7,10 +7,10 @@ Since support on styling `input[type=range]` with pure CSS is low, an external l
 See [noUiSlider](https://github.com/harrisonchan9/noUiSlider) for full documentations.
 
 ```html
-// label the slider with an id
+<!-- label the slider with an id -->
 <div id="demo_rangeSlider"></div>
 
-// also include the js library
+<!-- also include the js library -->
 <script src="<CDN domain>/handyBaseline.min.js"></script>
 ```
 
@@ -38,6 +38,7 @@ slider.noUiSlider.on('update', function (values, handle) {
 ```
 
 There are some other options such as:
+
 ```js
 // tooltip
 tooltip: true,
@@ -50,4 +51,5 @@ pips: {
 // step difference
 step: 10,
 ```
+
 See library [documentation](https://refreshless.com/nouislider/) for more information.

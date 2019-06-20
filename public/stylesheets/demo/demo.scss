@@ -204,15 +204,15 @@ button,
 .tooltip:not(.tp-activity) {
     margin-top: 60px;
 
-    &:first-child {
-        margin-left: 0;
-        margin-right: auto;
-    }
+    // &:first-child {
+    //     margin-left: 0;
+    //     margin-right: auto;
+    // }
 
-    &:last-child {
-        margin-left: auto;
-        margin-right: 0;
-    }
+    // &:last-child {
+    //     margin-left: auto;
+    //     margin-right: 0;
+    // }
 }
 
 #show-tooltip:active~.tooltip.tp-activity {
