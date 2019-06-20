@@ -28,7 +28,7 @@ let stateOptions = {
 }
 let stateDefaultValue = "None";
 
-storiesOf('Tag', module)
+storiesOf('Component|Tag', module)
   .add('general',
     () => {
       const disable = boolean("Disable", false);

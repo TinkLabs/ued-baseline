@@ -19,7 +19,7 @@ const options = {
 };
 const defaultValue = '1';
 
-storiesOf('Breadcrumb', module)
+storiesOf('Component|Breadcrumb', module)
   .add('general',
     () => {
       // init everytime display is rendered

@@ -20,7 +20,7 @@ const actionBtnOptions = {
 };
 const actionBtnDefaultValue = "more";
 
-storiesOf('Top Bar', module)
+storiesOf('Component|Top Bar', module)
   .add('normal',
     () => {
       const backBtn = boolean("Back button", true);

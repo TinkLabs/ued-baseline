@@ -23,7 +23,7 @@ const stateOptions = {
 };
 const stateDefaultValue = "resting";
 
-storiesOf('Text Field', module)
+storiesOf('Form | Text Field', module)
   .add('general',
     () => {
       const state = radios(stateLabel, stateOptions, stateDefaultValue);

@@ -11,7 +11,7 @@ import {
   text,
 } from '@storybook/addon-knobs';
 
-storiesOf('Search Box', module)
+storiesOf('Component|Search Box', module)
   .add('normal',
     () => {
       const label = text("Label", "label");

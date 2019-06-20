@@ -19,7 +19,7 @@ const lengthOption = {
 };
 const lengthDefaultValue = "10";
 
-storiesOf('Pagination', module)
+storiesOf('Component|Pagination', module)
   .add('normal',
     () => {
       const pageCount = radios(lengthLabel, lengthOption, lengthDefaultValue);

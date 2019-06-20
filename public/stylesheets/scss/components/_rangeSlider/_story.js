@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 // doc
 import markdownNotes from './readme.md';
 
-storiesOf('Range Slider', module)
+storiesOf('Component|Range Slider', module)
   .add('normal',
     () => (
       <a className="hyper"> This component supported by noUiSlider </a>

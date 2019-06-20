@@ -13,7 +13,7 @@ import {
   text,
 } from '@storybook/addon-knobs';
 
-storiesOf('Selection Controls', module)
+storiesOf('Form | Selection Controls', module)
   .add('radio',
     () => {
       let count = number("Button count", 1, { steps: 1 });

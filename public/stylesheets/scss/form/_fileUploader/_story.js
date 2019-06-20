@@ -18,7 +18,7 @@ const stateOptions = {
 };
 const stateDefaultValue = "none";
 
-storiesOf('File Uploader', module)
+storiesOf('Form | File Uploader', module)
   .add('normal',
     () => {
       const state = radios(stateLabel, stateOptions, stateDefaultValue);

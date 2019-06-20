@@ -35,7 +35,7 @@ const sizeOptions = {
 }
 const sizeDefaultValue = "card-fw";
 
-storiesOf('Card', module)
+storiesOf('Component|Card', module)
   .add('normal',
     () => {
       const size = radios(sizeLabel, sizeOptions, sizeDefaultValue);

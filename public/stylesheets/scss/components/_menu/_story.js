@@ -10,7 +10,7 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 
-storiesOf('Menu', module)
+storiesOf('Component|Menu', module)
   .add('normal',
     () => {
       const showMenu = boolean('Show menu', false);

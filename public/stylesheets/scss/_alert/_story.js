@@ -11,7 +11,7 @@ import {
   text,
 } from '@storybook/addon-knobs';
 
-storiesOf('Alert', module)
+storiesOf('Component|Alert', module)
   .add('general',
     () => {
       const error = boolean("Error", false)

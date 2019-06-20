@@ -6,7 +6,7 @@ import markdownNotes from './readme.md';
 // component
 import BottomNavigation from "./index.jsx";
 
-storiesOf('Bottom Navigation', module)
+storiesOf('Component|Bottom Navigation', module)
   .add('normal',
     () => {
       return (<BottomNavigation />)

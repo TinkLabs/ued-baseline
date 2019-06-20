@@ -18,7 +18,7 @@ const btnCountOptions = {
 };
 const btnCountDefaultValue = "1";
 
-storiesOf('Modal', module)
+storiesOf('Component|Modal', module)
   .add('normal',
     () => {
       const btnCount = radios(btnCountLabel, btnCountOptions, btnCountDefaultValue)

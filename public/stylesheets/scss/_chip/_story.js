@@ -28,7 +28,7 @@ let stateOptions = {
 }
 let stateDefaultValue = "None";
 
-storiesOf('Chip', module)
+storiesOf('Component|Chip', module)
   .add('general',
     () => {
       const disable = boolean("Disable", false);

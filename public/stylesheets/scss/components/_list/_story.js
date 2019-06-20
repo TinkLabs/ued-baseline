@@ -22,7 +22,7 @@ const metaOptions = {
 };
 const metaDefaultValue = "icon";
 
-storiesOf('List', module)
+storiesOf('Component|List', module)
   .add('normal',
     () => {
       let data = new Array;

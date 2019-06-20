@@ -13,7 +13,7 @@ import {
 const label = "Fill the bar, max 5";
 const defaultValue = false;
 
-storiesOf('Toolbar Button', module)
+storiesOf('Component|Toolbar Button', module)
   .add('normal',
     () => {
       const multiple = boolean(label, defaultValue);

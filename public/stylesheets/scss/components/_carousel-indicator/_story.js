@@ -10,7 +10,7 @@ import {
   boolean,
 } from '@storybook/addon-knobs';
 
-storiesOf('Carousel Indicator', module)
+storiesOf('Component|Carousel Indicator', module)
   .add('normal',
     () => {
       const darkMode = boolean("Dark Mode", false);

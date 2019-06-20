@@ -13,7 +13,7 @@ import {
 const label = 'Tab Text';
 const defaultValue = ['Tab1', 'Tab2', 'Tab3'];
 
-storiesOf('Tab', module)
+storiesOf('Component|Tab', module)
   .add('normal',
     () => {
       const tabTexts = array(label, defaultValue);

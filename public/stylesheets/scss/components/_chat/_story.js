@@ -25,7 +25,7 @@ const sideOptions = {
 };
 const sideDefaultValue = "left";
 
-storiesOf('Chat', module)
+storiesOf('Component|Chat', module)
   .add('normal',
     () => {
       const type = radios(typeLabel, typeOptions, typeDefaultValue);

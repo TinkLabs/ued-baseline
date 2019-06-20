@@ -18,7 +18,7 @@ const behavoirOptions = {
 }
 const behavoirDefaultValue = "single";
 
-storiesOf('Accordion', module)
+storiesOf('Component|Accordion', module)
   .add('normal',
     () => {
       const behavoir = radios(behavoirLabel, behavoirOptions, behavoirDefaultValue);

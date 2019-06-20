@@ -34,7 +34,7 @@ const verticalOptions = {
 };
 const verticalDefaultValue = "top";
 
-storiesOf('Tooltip', module)
+storiesOf('Component|Tooltip', module)
   .add('normal',
     () => {
       const type = radios(typeLabel, typeOptions, typeDefaultValue);

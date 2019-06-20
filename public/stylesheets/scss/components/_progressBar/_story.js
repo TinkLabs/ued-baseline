@@ -20,7 +20,7 @@ const progressOption = {
 };
 const progressDefaultValue = 10;
 
-storiesOf('Progress Bar', module)
+storiesOf('Component|Progress Bar', module)
   .add('normal',
     () => {
       const infinite = boolean("Infinite loop", true);

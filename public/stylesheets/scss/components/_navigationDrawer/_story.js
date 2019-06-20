@@ -18,7 +18,7 @@ const positionOptions = {
 };
 const positionDefaultValue = "left";
 
-storiesOf('Navigation Drawer', module)
+storiesOf('Component|Navigation Drawer', module)
   .add('normal',
     () => {
       const position = radios(positionLabel, positionOptions, positionDefaultValue);

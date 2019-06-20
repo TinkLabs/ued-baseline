@@ -7,7 +7,7 @@ import markdownNotes_controlled from './readme_controlled.md';
 // component
 import ProgressBarCircular from "./index.jsx";
 
-storiesOf('Circular Progress Bar', module)
+storiesOf('Component|Circular Progress Bar', module)
   .add('no control',
     () => (
       <ProgressBarCircular />

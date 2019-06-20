@@ -43,7 +43,7 @@ const elevationLabel = "Elevation";
 const elevationDefault = false;
 
 
-storiesOf('Button', module)
+storiesOf('Component|Button', module)
   .add('general',
     () => {
       // init everytime display is rendered
