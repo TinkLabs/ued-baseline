@@ -12,3 +12,9 @@ Copy and Paste the class name of icon you needed with class `icon`
 ```html
 <i class="icon icon-alert_add_24px" />
 ```
+
+#### Where to find
+
+1. local : `./icons-reference.html`
+
+2. online : https://handy-staging-test.s3.amazonaws.com/design_baseline_storybook/icons-reference.html

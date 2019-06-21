@@ -157,7 +157,11 @@ gulp.task("handleGlyphs", done => {
         gulp.src(['iconFactory/result/hiStyle.scss'])
           .pipe(gulp_rename("style.scss"))
           .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic'))
-          .on('finish', done);
+          .on('finish', () => {
+            gulp.src(['iconFactory/result/icons-reference.html'])
+              .pipe(gulp.dest("./"))
+              .on('finish', done);
+          });
       });
   });
 });
