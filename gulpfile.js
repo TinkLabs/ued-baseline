@@ -12,7 +12,7 @@ const browserSync = require('browser-sync').create();
 
 /*
  *
- * TLDR for dev : use `gulp hotreload` 
+ * TLDR for dev : use `yarn storybook` 
  * 
  */
 
@@ -27,27 +27,27 @@ const browserSync = require('browser-sync').create();
  *
  */
 
-const showdown = require('showdown');
-const showdownOptions = {
-  omitExtraWLInCodeBlocks: true,
-  noHeaderId: true,
-}
-const converter = new showdown.Converter(showdownOptions);
+// const showdown = require('showdown');
+// const showdownOptions = {
+//   omitExtraWLInCodeBlocks: true,
+//   noHeaderId: true,
+// }
+// const converter = new showdown.Converter(showdownOptions);
 
-gulp.task("md", (done) => {
-  let dir = fs.readdirSync("./readme", { withFileTypes: true });
-  dir.forEach(obj => {
-    let fileName = obj.name;
-    if (fileName.match(/.md$/)) {
-      let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
-      let html = converter.makeHtml(text);
-      let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
-      fs.writeFileSync(htmlFileName, html);
-    }
-  })
+// gulp.task("md", (done) => {
+//   let dir = fs.readdirSync("./readme", { withFileTypes: true });
+//   dir.forEach(obj => {
+//     let fileName = obj.name;
+//     if (fileName.match(/.md$/)) {
+//       let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
+//       let html = converter.makeHtml(text);
+//       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
+//       fs.writeFileSync(htmlFileName, html);
+//     }
+//   })
 
-  done();
-});
+//   done();
+// });
 
 /*
  *
@@ -73,16 +73,16 @@ gulp.task('demo-scss', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('watch-scss', () => {
-  gulp.watch([
-    "./public/stylesheets/**/*.scss",
-    "./public/stylesheets/style.scss"
-  ], gulp.series("scss"));
-});
+// gulp.task('watch-scss', () => {
+//   gulp.watch([
+//     "./public/stylesheets/**/*.scss",
+//     "./public/stylesheets/style.scss"
+//   ], gulp.series("scss"));
+// });
 
-gulp.task('watch-demo', () => {
-  gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
-});
+// gulp.task('watch-demo', () => {
+//   gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
+// });
 
 /*
  *
@@ -154,8 +154,8 @@ gulp.task("handleGlyphs", done => {
       }))
       .pipe(gulp.dest('iconFactory/result'))
       .on('finish', () => {
-        gulp.src(['iconFactory/result/*.scss'])
-          .pipe(gulp.dest('public/stylesheets/scss'))
+        gulp.src(['iconFactory/result/hiStyle.scss'])
+          .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic/style.scss'))
           .on('finish', done);
       });
   });
@@ -241,26 +241,26 @@ gulp.task('cp-color-icon', done => {
  *
  */
 
-//  watch html
-gulp.task('watch-html', () => {
-  gulp.watch("./index.html").on('change', browserSync.reload);
-});
+// //  watch html
+// gulp.task('watch-html', () => {
+//   gulp.watch("./index.html").on('change', browserSync.reload);
+// });
 
-// watch all scss
-gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
+// // watch all scss
+// gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 
-// Static server
-gulp.task('hotreload', gulp.parallel(
-  'watch',
-  () => {
-    browserSync.init({
-      server: {
-        baseDir: "./"
-      }
-    });
-  },
-  'watch-html'
-));
+// // Static server
+// gulp.task('hotreload', gulp.parallel(
+//   'watch',
+//   () => {
+//     browserSync.init({
+//       server: {
+//         baseDir: "./"
+//       }
+//     });
+//   },
+//   'watch-html'
+// ));
 
 /*
  *

@@ -66,6 +66,7 @@ addParameters({
  */
 
 function loadStories() {
+  require("./landing");
   // You can require as many stories as you need.
   require('../stories/index.js');
 }
