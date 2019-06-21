@@ -45,5 +45,5 @@
     "recursive-readdir": "^2.2.2",
     "sass-loader": "^7.1.0"
   },
-  "homepage": "https://handy-staging-test.s3.amazonaws.com/design_baseline_demo"
+  "homepage": "https://handy-staging-test.s3.amazonaws.com/design_baseline_storybook"
 }

@@ -155,7 +155,8 @@ gulp.task("handleGlyphs", done => {
       .pipe(gulp.dest('iconFactory/result'))
       .on('finish', () => {
         gulp.src(['iconFactory/result/hiStyle.scss'])
-          .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic/style.scss'))
+          .pipe(gulp_rename("style.scss"))
+          .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic'))
           .on('finish', done);
       });
   });

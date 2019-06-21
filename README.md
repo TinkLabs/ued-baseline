@@ -3,7 +3,7 @@
 ---
 ## Documentation
 
-[online doc](https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/index.html)
+[online doc](https://handy-staging-test.s3.amazonaws.com/design_baseline_storybook/index.html)
 
 ## Index
 [1. Introduction](.storybook/_landing.md)

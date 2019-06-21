@@ -32,6 +32,6 @@ storiesOf('Welcome | Welcome', module)
             <div className="headline navy"> Details </div>
         ),
         {
-            notes: { markdown: contributeNotes }
+            notes: { markdown: detailsNotes }
         }
     )
