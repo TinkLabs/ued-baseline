@@ -1,0 +1,57 @@
+/*
+ *
+ * Wrapping text into max 2 lines,
+ * truncate remaining overflown text
+ *
+ */
+
+@mixin wrapped-text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* use this value to count block height */
+/* max 2 line inside a tab */
+/* max-height = line-height * lines max number (2) */
+
+@mixin subtitle1-wrap {
+    line-height: $line-height-subtitle1;
+    max-height: $line-height-subtitle1 * 2;
+}
+@mixin subtitle2-wrap {
+    line-height: $line-height-subtitle2;
+    max-height: $line-height-subtitle2 * 2;
+}
+@mixin body1-wrap {
+    line-height: $line-height-body1;
+    max-height: $line-height-body1 * 2;
+}
+@mixin body2-wrap {
+    line-height: $line-height-body2;
+    max-height: $line-height-body2 * 2;
+}
+@mixin caption-wrap {
+    line-height: $line-height-caption;
+    max-height: $line-height-caption * 2;
+}
+
+.subtitle1.wrap-ellipsis {
+    @include wrapped-text-ellipsis;
+    @include subtitle1-wrap;
+}
+.subtitle2.wrap-ellipsis {
+    @include wrapped-text-ellipsis;
+    @include subtitle2-wrap;
+}
+.body1.wrap-ellipsis {
+    @include wrapped-text-ellipsis;
+    @include body1-wrap;
+}
+.body2.wrap-ellipsis {
+    @include wrapped-text-ellipsis;
+    @include body2-wrap;
+}
+.caption.wrap-ellipsis {
+    @include wrapped-text-ellipsis;
+    @include caption-wrap;
+}

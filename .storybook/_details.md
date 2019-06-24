@@ -27,7 +27,7 @@ Storybook [addons](https://storybook.js.org/addons/) enable advanced functionali
 
 We are converting svg icons into font
 
-1. Place / Add your svg icons in `/public/images/svg`
+1. Place / Add your svg icons in `/src/images/svg`
 2. Run `gulp svg`
 
 

@@ -58,30 +58,30 @@ const browserSync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
 gulp.task('scss', () => {
-  return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
+  return gulp.src('./src/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(gulp.dest('./src/stylesheets'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('demo-scss', () => {
-  return gulp.src('./public/stylesheets/demo/demo.scss', { allowEmpty: true })
+  return gulp.src('./src/stylesheets/demo/demo.scss', { allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(gulp.dest('./src/stylesheets'))
     .pipe(browserSync.stream());
 });
 
 // gulp.task('watch-scss', () => {
 //   gulp.watch([
-//     "./public/stylesheets/**/*.scss",
-//     "./public/stylesheets/style.scss"
+//     "./src/stylesheets/**/*.scss",
+//     "./src/stylesheets/style.scss"
 //   ], gulp.series("scss"));
 // });
 
 // gulp.task('watch-demo', () => {
-//   gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
+//   gulp.watch("./src/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
 // });
 
 /*
@@ -92,29 +92,29 @@ gulp.task('demo-scss', () => {
 
 const ttf2woff = require('gulp-ttf2woff');
 gulp.task('ttf2woff-montserrat', done => {
-  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Montserrat/*.ttf'])
     .pipe(ttf2woff())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Montserrat/'))
     .on('finish', done)
 });
 gulp.task('ttf2woff-merriweather-sans', done => {
-  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Merriweather_Sans/*.ttf'])
     .pipe(ttf2woff())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Merriweather_Sans/'))
     .on('finish', done)
 });
 
 const ttf2woff2 = require('gulp-ttf2woff2');
 gulp.task('ttf2woff2-montserrat', done => {
-  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Montserrat/*.ttf'])
     .pipe(ttf2woff2())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Montserrat/'))
     .on('finish', done)
 });
 gulp.task('ttf2woff2-merriweather-sans', done => {
-  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Merriweather_Sans/*.ttf'])
     .pipe(ttf2woff2())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Merriweather_Sans/'))
     .on('finish', done)
 });
 
@@ -285,7 +285,7 @@ gulp.task("prod-font", () => {
 });
 
 gulp.task("prod-css", () => {
-  return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
+  return gulp.src('./src/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp_rename("handyBaseline.css"))
@@ -293,7 +293,7 @@ gulp.task("prod-css", () => {
 });
 
 gulp.task("prod-js", done => {
-  let target = ['./public/javascripts/handyBaseline/**/*.js', './public/javascripts/plugin/**/*.js'];
+  let target = ['./src/javascripts/handyBaseline/**/*.js', './src/javascripts/plugin/**/*.js'];
   let dest = './dist/javascripts';
   return gulp.src(target)
     // concat all js files

@@ -1,14 +1,14 @@
 import { configure } from '@storybook/react';
 
 // local
-// import '../public/stylesheets/style.scss';
-// import '../public/stylesheets/demo.css';
+import '../src/stylesheets/style.scss';
+import '../src/stylesheets/demo.css';
 
 // staging / prod doc
-import '../dist/stylesheets/handyBaseline.css';
-import '../public/stylesheets/demo.css';
+// import '../dist/stylesheets/handyBaseline.css';
+// import '../src/stylesheets/demo.css';
 
-const req = require.context('../public/stylesheets/scss', true, /_story\.js$/);
+const req = require.context('../src/stylesheets/scss', true, /_story\.js$/);
 
 function loadStories() {
 	req.keys().forEach(req);

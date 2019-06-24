@@ -1,6 +1,8 @@
 // basic
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { linkTo } from '@storybook/addon-links'
+
 // doc
 import landingNotes from './_landing.md';
 import logNotes from './_log.md';
@@ -10,9 +12,19 @@ storiesOf('Welcome | Welcome', module)
     .add('readme',
         () => (
             <div>
-                <span className="headline navy"> Welcome, please read the notes below before you start. </span>
-                <span className="subtitle2 navy"> See "change log" for latest updates. </span>
-                <span className="subtitle2 navy"> See "details" for more details about this repo. </span>
+                <div className="headline navy"> Welcome, please read the notes below before you start. </div>
+                <br/>
+                <div className="subtitle2 navy"> 
+                    See
+                    <a className="hyperlink" onClick={linkTo('Welcome | Welcome', 'change log')}> change log </a>
+                    for latest updates.
+                </div>
+                <br/>
+                <div className="subtitle2 navy">
+                    See
+                    <a className="hyperlink" onClick={linkTo('Welcome | Welcome', 'details')}> details </a>
+                    for more details about this repo.
+                </div>
             </div>
         ),
         {
