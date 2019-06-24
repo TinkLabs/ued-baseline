@@ -1,6 +1,6 @@
 # Change Log
 
-**21 June, 2019**
+**24 June, 2019**
 
 - Switch documentation page to `Storybook`, with major folder structure change
 

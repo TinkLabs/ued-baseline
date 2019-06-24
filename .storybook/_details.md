@@ -15,7 +15,7 @@ Storybook [addons](https://storybook.js.org/addons/) enable advanced functionali
 
 #### How to edit
 
-1. Go to `public/stylesheets/scss`, find the targeted component / style folder
+1. Go to `src/stylesheets/scss`, find the targeted component / style folder
 2. Change file content accordingly
     - `_story.js` contains logic on how storybook display demo code and documents
     - `index.jsx` contains react code for demo component / styling
@@ -43,6 +43,8 @@ gulp production
 
 Commit and push and merge into master branch.
 
+CDN is hooked with repo and will auto deploy CSS and JS.
+
 #### Build and serve documents
 
 Compile storybook by:
@@ -50,8 +52,7 @@ Compile storybook by:
 ```bash
 gulp production
 
-yarn build-storybook
+npm run build-storybook
 ```
 
-Copy content of `/build` folder into s3 bucket `handy-staging-test/design_baseline_demo/`
-
+Copy content of `/storybook-static` folder and `icons-reference.html` into s3 bucket `handy-staging-test/design_baseline_storybook/`
