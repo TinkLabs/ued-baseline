@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import markdownNotes from './readme.md';
 // component
 import Topbar from "./index.jsx";
+import TopbarDemo from "./demo.jsx";
 // controls
 import {
   boolean,
@@ -35,6 +36,12 @@ storiesOf('Component|Top Bar', module)
         />
       )
     },
+    {
+      notes: { markdown: markdownNotes }
+    }
+  )
+  .add('demo:chat',
+    () => (<TopbarDemo demo="chat" />),
     {
       notes: { markdown: markdownNotes }
     }

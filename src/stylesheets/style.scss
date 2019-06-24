@@ -65,12 +65,15 @@
  *
  */
 
-@import "scss/_button/style";
-@import "scss/_chip/style";
-@import "scss/_tag/style";
-@import "scss/_breadcrumb/style";
 @import "scss/_backdrop/style";
-@import "scss/_alert/style";
+
+@import "scss/components/_button/style";
+@import "scss/components/_chip/style";
+@import "scss/components/_tag/style";
+@import "scss/components/_breadcrumb/style";
+@import "scss/components/_alert/style";
+@import "scss/components/_divider/style";
+@import "scss/components/_hyperlink/style";
 
 /*
  *
@@ -78,9 +81,9 @@
  *
  */
 
- @import "scss/form/_selectionControl/style";
- @import "scss/form/_textField/style";
- @import "scss/form/_fileUploader/style";
+@import "scss/form/_selectionControl/style";
+@import "scss/form/_textField/style";
+@import "scss/form/_fileUploader/style";
 
 /*
  *
@@ -111,5 +114,5 @@
  * modified plugin import
  *
  */
- 
+
 @import "scss/components/_rangeSlider/style";

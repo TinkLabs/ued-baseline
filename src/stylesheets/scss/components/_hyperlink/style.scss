@@ -1,0 +1,15 @@
+/*
+ *
+ *  General settings for a tag is in general.scss
+ *
+ */
+
+a.hyperlink {
+    text-decoration: underline;
+    cursor: pointer;
+    color: $hi-gold;
+
+    &:active {
+        background-color: rgba($hi-gold, 0.32);
+    }
+}

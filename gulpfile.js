@@ -12,42 +12,9 @@ const browserSync = require('browser-sync').create();
 
 /*
  *
- * TLDR for dev : use `yarn storybook` 
+ * TLDR for dev : use `npm run storybook`
  * 
  */
-
-/*
- *
- * Convert .md file to .html
- *
- * Use this gulp task to convert readme file of each component/element to html code,
- * and manually (for now) update to index.html
- * 
- * Todo: build document web on React and automate this part / use storybook
- *
- */
-
-// const showdown = require('showdown');
-// const showdownOptions = {
-//   omitExtraWLInCodeBlocks: true,
-//   noHeaderId: true,
-// }
-// const converter = new showdown.Converter(showdownOptions);
-
-// gulp.task("md", (done) => {
-//   let dir = fs.readdirSync("./readme", { withFileTypes: true });
-//   dir.forEach(obj => {
-//     let fileName = obj.name;
-//     if (fileName.match(/.md$/)) {
-//       let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
-//       let html = converter.makeHtml(text);
-//       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
-//       fs.writeFileSync(htmlFileName, html);
-//     }
-//   })
-
-//   done();
-// });
 
 /*
  *
@@ -156,7 +123,7 @@ gulp.task("handleGlyphs", done => {
       .on('finish', () => {
         gulp.src(['iconFactory/result/hiStyle.scss'])
           .pipe(gulp_rename("style.scss"))
-          .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic'))
+          .pipe(gulp.dest('src/stylesheets/scss/_hiFontBasic'))
           .on('finish', () => {
             gulp.src(['iconFactory/result/icons-reference.html'])
               .pipe(gulp.dest("./"))
@@ -172,7 +139,7 @@ gulp.task("handleFonts", done => {
     .pipe(gulp.dest('iconFactory/result/fonts/hiStyle'))
     .on('finish', () => {
       gulp.src(['iconFactory/result/fonts/hiStyle/*.*'])
-        .pipe(gulp.dest('public/stylesheets/fonts/hiStyle'))
+        .pipe(gulp.dest('src/stylesheets/fonts/hiStyle'))
         .on('finish', done);
     });
 });
@@ -231,41 +198,10 @@ gulp.task('svg', gulp.series(
  */
 
 gulp.task('cp-color-icon', done => {
-  gulp.src("public/images/colorIcons/*.svg")
+  gulp.src("src/images/colorIcons/*.svg")
     .pipe(gulp.dest("dist/images/colorIcons"))
     .on('finish', done);
 });
-
-
-
-/*
- *
- *
- * Browser-Sync
- *
- *
- */
-
-// //  watch html
-// gulp.task('watch-html', () => {
-//   gulp.watch("./index.html").on('change', browserSync.reload);
-// });
-
-// // watch all scss
-// gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
-
-// // Static server
-// gulp.task('hotreload', gulp.parallel(
-//   'watch',
-//   () => {
-//     browserSync.init({
-//       server: {
-//         baseDir: "./"
-//       }
-//     });
-//   },
-//   'watch-html'
-// ));
 
 /*
  *
@@ -280,7 +216,7 @@ gulp.task('cp-color-icon', done => {
 gulp.task("prod-svg", gulp.series("svg"));
 
 gulp.task("prod-font", () => {
-  return gulp.src(["public/stylesheets/fonts/**/*"])
+  return gulp.src(["src/stylesheets/fonts/**/*"])
     .pipe(gulp.dest("dist/stylesheets/fonts"));
 });
 
@@ -321,3 +257,78 @@ gulp.task("production", gulp.parallel(
   // concat and compress js files
   "prod-js",
 ));
+
+
+
+
+
+
+
+/*
+ *
+ * Deprecated
+ *
+ */
+
+
+/*
+ *
+ * Convert .md file to .html
+ *
+ * Use this gulp task to convert readme file of each component/element to html code,
+ * and manually (for now) update to index.html
+ *
+ * Todo: build document web on React and automate this part / use storybook
+ *
+ */
+
+// const showdown = require('showdown');
+// const showdownOptions = {
+//   omitExtraWLInCodeBlocks: true,
+//   noHeaderId: true,
+// }
+// const converter = new showdown.Converter(showdownOptions);
+
+// gulp.task("md", (done) => {
+//   let dir = fs.readdirSync("./readme", { withFileTypes: true });
+//   dir.forEach(obj => {
+//     let fileName = obj.name;
+//     if (fileName.match(/.md$/)) {
+//       let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
+//       let html = converter.makeHtml(text);
+//       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
+//       fs.writeFileSync(htmlFileName, html);
+//     }
+//   })
+
+//   done();
+// });
+
+/*
+ *
+ *
+ * Browser-Sync
+ *
+ *
+ */
+
+// //  watch html
+// gulp.task('watch-html', () => {
+//   gulp.watch("./index.html").on('change', browserSync.reload);
+// });
+
+// // watch all scss
+// gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
+
+// // Static server
+// gulp.task('hotreload', gulp.parallel(
+//   'watch',
+//   () => {
+//     browserSync.init({
+//       server: {
+//         baseDir: "./"
+//       }
+//     });
+//   },
+//   'watch-html'
+// ));
