@@ -7,12 +7,12 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
-const rename = require("gulp-rename");
+const gulp_rename = require("gulp-rename");
 const browserSync = require('browser-sync').create();
 
 /*
  *
- * TLDR for dev : use `gulp hotreload` 
+ * TLDR for dev : use `yarn storybook` 
  * 
  */
 
@@ -27,27 +27,27 @@ const browserSync = require('browser-sync').create();
  *
  */
 
-const showdown = require('showdown');
-const showdownOptions = {
-  omitExtraWLInCodeBlocks: true,
-  noHeaderId: true,
-}
-const converter = new showdown.Converter(showdownOptions);
+// const showdown = require('showdown');
+// const showdownOptions = {
+//   omitExtraWLInCodeBlocks: true,
+//   noHeaderId: true,
+// }
+// const converter = new showdown.Converter(showdownOptions);
 
-gulp.task("md", (done) => {
-  let dir = fs.readdirSync("./readme", { withFileTypes: true });
-  dir.forEach(obj => {
-    let fileName = obj.name;
-    if (fileName.match(/.md$/)) {
-      let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
-      let html = converter.makeHtml(text);
-      let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
-      fs.writeFileSync(htmlFileName, html);
-    }
-  })
+// gulp.task("md", (done) => {
+//   let dir = fs.readdirSync("./readme", { withFileTypes: true });
+//   dir.forEach(obj => {
+//     let fileName = obj.name;
+//     if (fileName.match(/.md$/)) {
+//       let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
+//       let html = converter.makeHtml(text);
+//       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
+//       fs.writeFileSync(htmlFileName, html);
+//     }
+//   })
 
-  done();
-});
+//   done();
+// });
 
 /*
  *
@@ -73,16 +73,16 @@ gulp.task('demo-scss', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('watch-scss', () => {
-  gulp.watch([
-    "./public/stylesheets/**/*.scss",
-    "./public/stylesheets/style.scss"
-  ], gulp.series("scss"));
-});
+// gulp.task('watch-scss', () => {
+//   gulp.watch([
+//     "./public/stylesheets/**/*.scss",
+//     "./public/stylesheets/style.scss"
+//   ], gulp.series("scss"));
+// });
 
-gulp.task('watch-demo', () => {
-  gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
-});
+// gulp.task('watch-demo', () => {
+//   gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
+// });
 
 /*
  *
@@ -154,9 +154,14 @@ gulp.task("handleGlyphs", done => {
       }))
       .pipe(gulp.dest('iconFactory/result'))
       .on('finish', () => {
-        gulp.src(['iconFactory/result/*.scss'])
-          .pipe(gulp.dest('public/stylesheets/scss'))
-          .on('finish', done);
+        gulp.src(['iconFactory/result/hiStyle.scss'])
+          .pipe(gulp_rename("style.scss"))
+          .pipe(gulp.dest('public/stylesheets/scss/_hiFontBasic'))
+          .on('finish', () => {
+            gulp.src(['iconFactory/result/icons-reference.html'])
+              .pipe(gulp.dest("./"))
+              .on('finish', done);
+          });
       });
   });
 });
@@ -241,26 +246,26 @@ gulp.task('cp-color-icon', done => {
  *
  */
 
-//  watch html
-gulp.task('watch-html', () => {
-  gulp.watch("./index.html").on('change', browserSync.reload);
-});
+// //  watch html
+// gulp.task('watch-html', () => {
+//   gulp.watch("./index.html").on('change', browserSync.reload);
+// });
 
-// watch all scss
-gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
+// // watch all scss
+// gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
 
-// Static server
-gulp.task('hotreload', gulp.parallel(
-  'watch',
-  () => {
-    browserSync.init({
-      server: {
-        baseDir: "./"
-      }
-    });
-  },
-  'watch-html'
-));
+// // Static server
+// gulp.task('hotreload', gulp.parallel(
+//   'watch',
+//   () => {
+//     browserSync.init({
+//       server: {
+//         baseDir: "./"
+//       }
+//     });
+//   },
+//   'watch-html'
+// ));
 
 /*
  *
@@ -283,7 +288,7 @@ gulp.task("prod-css", () => {
   return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename("handyBaseline.css"))
+    .pipe(gulp_rename("handyBaseline.css"))
     .pipe(gulp.dest('./dist/stylesheets'));
 });
 
@@ -297,7 +302,7 @@ gulp.task("prod-js", done => {
     // Minify the file
     .pipe(uglify())
     // Output
-    .pipe(rename("handyBaseline.min.js"))
+    .pipe(gulp_rename("handyBaseline.min.js"))
     .pipe(gulp.dest(dest))
 });
 
