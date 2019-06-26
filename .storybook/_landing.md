@@ -11,6 +11,9 @@ Handy baseline is a library created to help developers quickly build web app wit
 Copy and paste the following into your html file.
 
 ```html
+<!-- production -->
+<link rel="stylesheet" href="https://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css" />
+<!-- staging -->
 <link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css" />
 ```
 
@@ -25,5 +28,8 @@ The JS is built with pure Javascript and needs no external library, you can omit
 You HAVE to write your own trigger if you are working on SPA like React.
 
 ```html
+<!-- production -->
+<script src="https://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"></script>
+<!-- staging -->
 <script src="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/javascripts/handyBaseline.min.js"></script>
 ```
