@@ -22,14 +22,8 @@ If you are using React, only add the css to your `index.html`, you will need to 
 
 Staging
 ```html
-<link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css">
-<script src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
-```
-
-Production
-```html
-<link rel="stylesheet" href="http://cdn.handy.travel/baseline/dist/stylesheets/handyBaseline.css">
-<script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"></script>
+<link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css">
+<script src="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/javascripts/handyBaseline.min.js"></script>
 ```
 
 ---
