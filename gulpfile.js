@@ -7,47 +7,14 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
-const rename = require("gulp-rename");
+const gulp_rename = require("gulp-rename");
 const browserSync = require('browser-sync').create();
 
 /*
  *
- * TLDR for dev : use `gulp hotreload` 
+ * TLDR for dev : use `npm run storybook`
  * 
  */
-
-/*
- *
- * Convert .md file to .html
- *
- * Use this gulp task to convert readme file of each component/element to html code,
- * and manually (for now) update to index.html
- * 
- * Todo: build document web on React and automate this part / use storybook
- *
- */
-
-const showdown = require('showdown');
-const showdownOptions = {
-  omitExtraWLInCodeBlocks: true,
-  noHeaderId: true,
-}
-const converter = new showdown.Converter(showdownOptions);
-
-gulp.task("md", (done) => {
-  let dir = fs.readdirSync("./readme", { withFileTypes: true });
-  dir.forEach(obj => {
-    let fileName = obj.name;
-    if (fileName.match(/.md$/)) {
-      let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
-      let html = converter.makeHtml(text);
-      let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
-      fs.writeFileSync(htmlFileName, html);
-    }
-  })
-
-  done();
-});
 
 /*
  *
@@ -58,31 +25,31 @@ gulp.task("md", (done) => {
 
 sass.compiler = require('node-sass');
 gulp.task('scss', () => {
-  return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
+  return gulp.src('./src/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(gulp.dest('./src/stylesheets'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('demo-scss', () => {
-  return gulp.src('./public/stylesheets/demo/demo.scss', { allowEmpty: true })
+  return gulp.src('./src/stylesheets/demo/demo.scss', { allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest('./public/stylesheets'))
+    .pipe(gulp.dest('./src/stylesheets'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('watch-scss', () => {
-  gulp.watch([
-    "./public/stylesheets/**/*.scss",
-    "./public/stylesheets/style.scss"
-  ], gulp.series("scss"));
-});
+// gulp.task('watch-scss', () => {
+//   gulp.watch([
+//     "./src/stylesheets/**/*.scss",
+//     "./src/stylesheets/style.scss"
+//   ], gulp.series("scss"));
+// });
 
-gulp.task('watch-demo', () => {
-  gulp.watch("./public/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
-});
+// gulp.task('watch-demo', () => {
+//   gulp.watch("./src/stylesheets/demo/demo.scss", gulp.series("demo-scss"));
+// });
 
 /*
  *
@@ -92,29 +59,29 @@ gulp.task('watch-demo', () => {
 
 const ttf2woff = require('gulp-ttf2woff');
 gulp.task('ttf2woff-montserrat', done => {
-  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Montserrat/*.ttf'])
     .pipe(ttf2woff())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Montserrat/'))
     .on('finish', done)
 });
 gulp.task('ttf2woff-merriweather-sans', done => {
-  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Merriweather_Sans/*.ttf'])
     .pipe(ttf2woff())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Merriweather_Sans/'))
     .on('finish', done)
 });
 
 const ttf2woff2 = require('gulp-ttf2woff2');
 gulp.task('ttf2woff2-montserrat', done => {
-  gulp.src(['./public/stylesheets/fonts/Montserrat/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Montserrat/*.ttf'])
     .pipe(ttf2woff2())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Montserrat/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Montserrat/'))
     .on('finish', done)
 });
 gulp.task('ttf2woff2-merriweather-sans', done => {
-  gulp.src(['./public/stylesheets/fonts/Merriweather_Sans/*.ttf'])
+  gulp.src(['./src/stylesheets/fonts/Merriweather_Sans/*.ttf'])
     .pipe(ttf2woff2())
-    .pipe(gulp.dest('./public/stylesheets/fonts/Merriweather_Sans/'))
+    .pipe(gulp.dest('./src/stylesheets/fonts/Merriweather_Sans/'))
     .on('finish', done)
 });
 
@@ -154,9 +121,14 @@ gulp.task("handleGlyphs", done => {
       }))
       .pipe(gulp.dest('iconFactory/result'))
       .on('finish', () => {
-        gulp.src(['iconFactory/result/*.scss'])
-          .pipe(gulp.dest('public/stylesheets/scss'))
-          .on('finish', done);
+        gulp.src(['iconFactory/result/hiStyle.scss'])
+          .pipe(gulp_rename("style.scss"))
+          .pipe(gulp.dest('src/stylesheets/scss/_hiFontBasic'))
+          .on('finish', () => {
+            gulp.src(['iconFactory/result/icons-reference.html'])
+              .pipe(gulp.dest("./"))
+              .on('finish', done);
+          });
       });
   });
 });
@@ -167,7 +139,7 @@ gulp.task("handleFonts", done => {
     .pipe(gulp.dest('iconFactory/result/fonts/hiStyle'))
     .on('finish', () => {
       gulp.src(['iconFactory/result/fonts/hiStyle/*.*'])
-        .pipe(gulp.dest('public/stylesheets/fonts/hiStyle'))
+        .pipe(gulp.dest('src/stylesheets/fonts/hiStyle'))
         .on('finish', done);
     });
 });
@@ -226,41 +198,10 @@ gulp.task('svg', gulp.series(
  */
 
 gulp.task('cp-color-icon', done => {
-  gulp.src("public/images/colorIcons/*.svg")
-  .pipe(gulp.dest("dist/images/colorIcons"))
-  .on('finish', done);
+  gulp.src("src/images/colorIcons/*.svg")
+    .pipe(gulp.dest("dist/images/colorIcons"))
+    .on('finish', done);
 });
-
-
-
-/*
- *
- *
- * Browser-Sync
- *
- *
- */
-
-//  watch html
-gulp.task('watch-html', () => {
-  gulp.watch("./index.html").on('change', browserSync.reload);
-});
-
-// watch all scss
-gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
-
-// Static server
-gulp.task('hotreload', gulp.parallel(
-  'watch',
-  () => {
-    browserSync.init({
-      server: {
-        baseDir: "./"
-      }
-    });
-  },
-  'watch-html'
-));
 
 /*
  *
@@ -275,20 +216,20 @@ gulp.task('hotreload', gulp.parallel(
 gulp.task("prod-svg", gulp.series("svg"));
 
 gulp.task("prod-font", () => {
-  return gulp.src(["public/stylesheets/fonts/**/*"])
+  return gulp.src(["src/stylesheets/fonts/**/*"])
     .pipe(gulp.dest("dist/stylesheets/fonts"));
 });
 
 gulp.task("prod-css", () => {
-  return gulp.src('./public/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
+  return gulp.src('./src/stylesheets/style.scss', { sourcemaps: true, allowEmpty: true })
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename("handyBaseline.css"))
+    .pipe(gulp_rename("handyBaseline.css"))
     .pipe(gulp.dest('./dist/stylesheets'));
 });
 
 gulp.task("prod-js", done => {
-  let target = ['./public/javascripts/handyBaseline/**/*.js', './public/javascripts/plugin/**/*.js'];
+  let target = ['./src/javascripts/handyBaseline/**/*.js', './src/javascripts/plugin/**/*.js'];
   let dest = './dist/javascripts';
   return gulp.src(target)
     // concat all js files
@@ -297,7 +238,7 @@ gulp.task("prod-js", done => {
     // Minify the file
     .pipe(uglify())
     // Output
-    .pipe(rename("handyBaseline.min.js"))
+    .pipe(gulp_rename("handyBaseline.min.js"))
     .pipe(gulp.dest(dest))
 });
 
@@ -316,3 +257,78 @@ gulp.task("production", gulp.parallel(
   // concat and compress js files
   "prod-js",
 ));
+
+
+
+
+
+
+
+/*
+ *
+ * Deprecated
+ *
+ */
+
+
+/*
+ *
+ * Convert .md file to .html
+ *
+ * Use this gulp task to convert readme file of each component/element to html code,
+ * and manually (for now) update to index.html
+ *
+ * Todo: build document web on React and automate this part / use storybook
+ *
+ */
+
+// const showdown = require('showdown');
+// const showdownOptions = {
+//   omitExtraWLInCodeBlocks: true,
+//   noHeaderId: true,
+// }
+// const converter = new showdown.Converter(showdownOptions);
+
+// gulp.task("md", (done) => {
+//   let dir = fs.readdirSync("./readme", { withFileTypes: true });
+//   dir.forEach(obj => {
+//     let fileName = obj.name;
+//     if (fileName.match(/.md$/)) {
+//       let text = fs.readFileSync(`./readme/${obj.name}`, { encoding: "UTF-8" });
+//       let html = converter.makeHtml(text);
+//       let htmlFileName = `./readme/${obj.name.replace(".md", "")}.html`
+//       fs.writeFileSync(htmlFileName, html);
+//     }
+//   })
+
+//   done();
+// });
+
+/*
+ *
+ *
+ * Browser-Sync
+ *
+ *
+ */
+
+// //  watch html
+// gulp.task('watch-html', () => {
+//   gulp.watch("./index.html").on('change', browserSync.reload);
+// });
+
+// // watch all scss
+// gulp.task("watch", gulp.parallel(['watch-demo', 'watch-scss']));
+
+// // Static server
+// gulp.task('hotreload', gulp.parallel(
+//   'watch',
+//   () => {
+//     browserSync.init({
+//       server: {
+//         baseDir: "./"
+//       }
+//     });
+//   },
+//   'watch-html'
+// ));

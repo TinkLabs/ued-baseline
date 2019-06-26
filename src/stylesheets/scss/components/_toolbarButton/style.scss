@@ -1,0 +1,60 @@
+.toolbar-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    width: 20%;
+    // add tiny spacing between btn text
+    padding: 0 2px;
+    color: $hi-gold;
+
+    cursor: pointer;
+    // prevent text selection on long tap
+    user-select: none;
+
+    .toolbar-btn-icon-wrapper {
+        background-color: rgba($hi-gold, 0.32);
+        margin-bottom: 4px;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .toolbar-btn-icon {
+            font-size: 24px;
+            height: 24px;
+        }
+    }
+
+    .toolbar-btn-text {
+        @include caption;
+        text-align: center;
+    }
+
+    &.toolbar-navy {
+        color: $hi-navy;
+
+        .toolbar-btn-icon-wrapper {
+            background-color: rgba($hi-navy, 0.08);
+        }
+    }
+    &:nth-child(n+6) {
+        // max 5 per row, give margin top since 6th btn
+        margin-top: 8px;
+    }
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background-color: white;
+    
+}

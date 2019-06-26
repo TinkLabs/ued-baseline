@@ -1,0 +1,3041 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>handy baseline</title>
+    <!-- local , hot reload -->
+    <!-- <link rel="stylesheet" href="./src/stylesheets/style.css"> -->
+    <!-- dev -->
+    <!-- <link rel="stylesheet" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/stylesheets/handyBaseline.css"> -->
+    <!-- staging -->
+    <link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css">
+    <link rel="stylesheet" href="./src/stylesheets/demo.css">
+</head>
+
+<body class="demo_body">
+    <section>
+        <h1 class="demo_title">handy baseline</h1>
+        <hr class="demo_divider">
+        <div class="demo_intro">
+            <h3 class="headline">About</h3>
+            <p class="body1">Handy baseline is a library created to help developers quickly build web app with stlyed
+                components.</p>
+            <h3 class="subtitle1">CSS</h3>
+            <p class="body1">The CSS file contains styling for all components, created accoring to design baseline.</p>
+            <pre><code>&lt;link rel="stylesheet" href="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/stylesheets/handyBaseline.css" /&gt;</code></pre>
+            <div></div>
+            <h3 class="subtitle1">JS</h3>
+            <p class="body1">The JS file contains class method to manipulate a few of more complex components,
+                including:</p>
+            <hr />
+            <p class="tag">Dropdown</p>
+            <p class="tag">Modal</p>
+            <p class="tag">Textarea resizing</p>
+            <p class="tag">Progress bar</p>
+            <hr />
+            <p class="body1">The JS is built with pure Javascript and needs no external library, you can omit it if you
+                want to write your own triggers. You HAVE to write your own trigger if you are working on SPA like
+                React.</p>
+            <pre><code>&lt;script src="https://handy-cdn-staging.s3.amazonaws.com/baseline/dist/javascripts/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <hr class="demo_divider">
+        <div class="change_log">
+            <h3 class="headline">Important News</h3>
+            <div class="subtitle1">11 June, 2019</div>
+            <p class="body1">Add link to page displaying icon fonts, remove rotation of svg in global scope, other minor improvements</p>
+            <div class="subtitle1">9 May, 2019</div>
+            <p class="body1">Code structure of Form Control (text field) has been updated to include use-cases with no
+                label or helper text.</p>
+        </div>
+        <hr class="demo_divider">
+        <div class="demo_indexes">
+            <!-- demo pages -->
+            <a class="btn btn-outlined" href="./demo_ticketing.html">Ticketing Demo</a>
+            <a class="btn btn-outlined" href="./demo_homepage.html">Homepage Demo</a>
+            <a class="btn btn-outlined" href="./demo_chat.html">Concierge Demo</a>
+            <hr />
+            <!-- basic -->
+            <a class="btn btn-contained" data-id="Color-Palette">Color Palette</a>
+            <a class="btn btn-contained" data-id="Supporting-Colors">Supporting Colors</a>
+            <a class="btn btn-contained" data-id="Typography">Typography</a>
+            <a class="btn btn-contained" data-id="Montserrat">Montserrat</a>
+            <a class="btn btn-contained" data-id="merriweather-sans">Merriweather Sans</a>
+            <a class="btn btn-contained" data-id="HIFont">hi Fonts</a>
+            <a class="btn btn-contained" data-id="Images">Images</a>
+            <a class="btn btn-contained" data-id="Dividers">Dividers</a>
+            <a class="btn btn-contained" data-id="Tool-Tip">Tool Tip</a>
+            <a class="btn btn-contained" data-id="Tool-Tip-Centered">Tool Tip (Screen Centered)</a>
+            <a class="btn btn-contained" data-id="Progress-Bar">Progress Bar</a>
+            <a class="btn btn-contained" data-id="Progress-Bar-Circular">Progress Bar (Circular)</a>
+            <a class="btn btn-contained" data-id="Alert-Chip">Alert Chip</a>
+            <hr />
+            <!-- single click component -->
+            <a class="btn btn-contained" data-id="Hyperlink">Hyperlink</a>
+            <a class="btn btn-contained" data-id="Buttons">Buttons</a>
+            <a class="btn btn-contained" data-id="Chips">Chips</a>
+            <a class="btn btn-contained" data-id="Tag">Tag</a>
+            <a class="btn btn-contained" data-id="Breadcrumb">Breadcrumb</a>
+            <a class="btn btn-contained" data-id="Tabs">Tabs</a>
+            <hr />
+            <!-- forms and input and control -->
+            <a class="btn btn-contained" data-id="Form-Control">Form Control</a>
+            <a class="btn btn-contained" data-id="File-Upload">File Upload</a>
+            <a class="btn btn-contained" data-id="Selection-Control">Selection Control</a>
+            <a class="btn btn-contained" data-id="Dropdown">Dropdown</a>
+            <a class="btn btn-contained" data-id="Search-Box">Search Box</a>
+            <a class="btn btn-contained" data-id="Slider">Slider</a>
+            <hr />
+            <!-- list and menu -->
+            <a class="btn btn-contained" data-id="List">List</a>
+            <a class="btn btn-contained" data-id="Menu">Menu</a>
+            <hr />
+            <!-- structural component -->
+            <!-- top -->
+            <a class="btn btn-contained" data-id="Top-Bar">Top Bar</a>
+            <a class="btn btn-contained" data-id="Top-Bar-Chat">Top Bar (Chat)</a>
+            <a class="btn btn-contained" data-id="Top-Bar-Ticketing">Top Bar (Ticketing)</a>
+            <a class="btn btn-contained" data-id="Home-Tool-Bar">Home Tool Bar</a>
+            <!-- bottom -->
+            <a class="btn btn-contained" data-id="Bottom-Nav">Bottom Nav</a>
+            <!-- page control -->
+            <a class="btn btn-contained" data-id="Pagination">Pagination</a>
+            <hr />
+            <!-- full page -->
+            <a class="btn btn-contained" data-id="Modal">Modal</a>
+            <a class="btn btn-contained" data-id="Backdrop">Backdrop</a>
+            <a class="btn btn-contained" data-id="Navigation-Drawer">Navigation Drawer</a>
+            <!-- large components -->
+            <a class="btn btn-contained" data-id="Card-Large">Card (large)</a>
+            <a class="btn btn-contained" data-id="Card-Medium">Card (medium)</a>
+            <a class="btn btn-contained" data-id="Accordion">Accordion</a>
+            <a class="btn btn-contained" data-id="Carousel-Indicator">Carousel Indicator</a>
+            <hr />
+            <!-- chat room -->
+            <a class="btn btn-contained" data-id="Chat">Chat</a>
+        </div>
+        <hr class="demo_divider">
+        <!-- Color Palette -->
+        <div class="demo_display">
+            <h3 class="headline" id="Color-Palette">Color Palette</h3>
+            <div class="demo_showcase demo_main_colors">
+                <div class="demo_main_col">
+                    <div class="demo_color_box bg-navy-900"></div>
+                    <div class="demo_color_box bg-navy-800 demo_round flex just-center align-center">
+                        <p class="demo_label white">N</p>
+                    </div>
+                    <div class="demo_color_box bg-navy-700"></div>
+                    <div class="demo_color_box bg-navy-600"></div>
+                    <div class="demo_color_box bg-navy-500"></div>
+                    <div class="demo_color_box bg-navy-400"></div>
+                    <div class="demo_color_box bg-navy-300"></div>
+                    <div class="demo_color_box bg-navy-200"></div>
+                    <div class="demo_color_box flex just-center align-center">Navy</div>
+                </div>
+                <div class="demo_main_col">
+                    <div class="demo_variant">900</div>
+                    <div class="demo_variant">800</div>
+                    <div class="demo_variant">700</div>
+                    <div class="demo_variant">600</div>
+                    <div class="demo_variant">500</div>
+                    <div class="demo_variant">400</div>
+                    <div class="demo_variant">300</div>
+                    <div class="demo_variant">200</div>
+                    <div class="demo_variant">Variant</div>
+                </div>
+                <div class="demo_main_col">
+                    <div class="demo_color_box bg-gold-900"></div>
+                    <div class="demo_color_box bg-gold-800"></div>
+                    <div class="demo_color_box bg-gold-700"></div>
+                    <div class="demo_color_box bg-gold-600"></div>
+                    <div class="demo_color_box bg-gold-500 demo_round flex just-center align-center">
+                        <p class="demo_label dark">G</p>
+                    </div>
+                    <div class="demo_color_box bg-gold-400"></div>
+                    <div class="demo_color_box bg-gold-300"></div>
+                    <div class="demo_color_box bg-gold-200"></div>
+                    <div class="demo_color_box flex just-center align-center">Gold</div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Primary Color Palette</h3>
+                <p>"N" and "G" are primary color indicator Numbers are light and dark variants</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;p class="bg-navy-200 gold-800"&gt; text &lt;p&gt; </code></pre>
+                <pre><code>&lt;p class="gold-300"&gt; text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Supporting-Colors">Supporting Colors</h3>
+            <div class="demo_showcase">
+                <div class="flex flex-row flex-wrap">
+                    <div class="demo_color_box bg-blue flex flex-col just-end">
+                        <p class="color white">Blue</p>
+                        <p class="hex white">#8DC8E8</p>
+                    </div>
+                    <div class="demo_color_box bg-purple flex flex-col just-end">
+                        <p class="color white">Purple</p>
+                        <p class="hex white">#B06C95</p>
+                    </div>
+                    <div class="demo_color_box bg-red flex flex-col just-end">
+                        <p class="color white">Red</p>
+                        <p class="hex white">#DA291C</p>
+                    </div>
+                    <div class="demo_color_box bg-green flex flex-col just-end">
+                        <p class="color white">Green</p>
+                        <p class="hex white">#4A783C</p>
+                    </div>
+                </div>
+                <div class=" flex flex-row flex-wrap">
+                    <div class="demo_color_box bg-dark flex flex-col just-end">
+                        <p class="color white">Dark</p>
+                        <p class="hex white">#0F0F0F</p>
+                    </div>
+                    <div class="demo_color_box bg-dark-grey flex flex-col just-end">
+                        <p class="color white">Dark Grey</p>
+                        <p class="hex white">#C6CDCE</p>
+                    </div>
+                    <div class="demo_color_box bg-light-grey flex flex-col just-end">
+                        <p class="color dark">Light Grey</p>
+                        <p class="hex dark">#F0F5F8</p>
+                    </div>
+                    <div class="demo_color_box bg-light flex flex-col just-end">
+                        <p class="color dark">Light</p>
+                        <p class="hex dark">#F7FCFF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Supporting Color Palette</h3>
+                <h3>Usage</h3>
+                <pre><code>&lt;p class="bg-green light-grey"&gt; text &lt;p&gt; </code></pre>
+                <pre><code>&lt;p class="gold-300"&gt; text &lt;p&gt; </code></pre>
+                <pre><code>&lt;p class="purple"&gt; text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- Typography -->
+        <div class="demo_display">
+            <h3 class="headline" id="Typography">Typography</h3>
+            <div class="demo_showcase flex flex-row">
+                <div class="demo_half_w">
+                    <div class="demo_title_wrapper">
+                        <p class="headline demo_title_border">Headline : Montserrat SemiBold 20px Line:30</p>
+                    </div>
+                    <div class="demo_title_wrapper">
+                        <p class="subtitle1 demo_title_border">Subtitle1 : Montserrat SemiBold 16px Line:24</p>
+                    </div>
+                    <div class="demo_title_wrapper">
+                        <p class="subtitle2 demo_title_border">Subtitle2 : Montserrat SemiBold 14px Line:24</p>
+                    </div>
+                    <div class="demo_title_wrapper">
+                        <p class="body1 demo_title_border">Body1 : Montserat Medium 14px Line24</p>
+                    </div>
+                    <div class="demo_title_wrapper">
+                        <p class="body2 demo_title_border">Body2 : Montserat Medium 12px Line:20</p>
+                    </div>
+                    <div class="demo_title_wrapper">
+                        <p class="caption demo_title_border">Caption : Montserat Medium 10px Line:14</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Typography for mobile content</h3>
+                <p>Select a class according to the purpose of your content</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;p class="body1"&gt; text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- Montserrat -->
+        <div class="demo_display">
+            <h3 class="headline" id="Montserrat">Fonts : Montserrat</h3>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <div class="demo_typeface_wrapper montserrat-extraLight">
+                    <p class="demo_font_family">Montserrat ExtraLight</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-extraLight-italic">
+                    <p class="demo_font_family">Montserrat ExtraLight Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-light">
+                    <p class="demo_font_family">Montserrat Light</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-light-italic">
+                    <p class="demo_font_family">Montserrat Light Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat">
+                    <p class="demo_font_family">Montserrat</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-italic">
+                    <p class="demo_font_family">Montserrat Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-medium">
+                    <p class="demo_font_family">Montserrat Medium</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-medium-italic">
+                    <p class="demo_font_family">Montserrat Medium Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-semibold">
+                    <p class="demo_font_family">Montserrat SemiBold</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-semibold-italic">
+                    <p class="demo_font_family">Montserrat SemiBold Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-bold">
+                    <p class="demo_font_family">Montserrat Bold</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-bold-italic">
+                    <p class="demo_font_family">Montserrat Bold Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-extraBold">
+                    <p class="demo_font_family">Montserrat ExtraBold</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-extraBold-italic">
+                    <p class="demo_font_family">Montserrat ExtraBold Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-black">
+                    <p class="demo_font_family">Montserrat Black</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper montserrat-black-italic">
+                    <p class="demo_font_family">Montserrat Black Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Main font : Montserrat</h3>
+                <p>Our primary typeface is Montserrat. All weights and versions are available in this family. Montserrat
+                    is perfect for a wide range of visual communications. It’s versatile for display and text. It also
+                    reads well on mobile devices and the Web.</p>
+                <h3>Usage</h3>
+                <p>You don't need to use these classes since the 6 preset typography would suffice, unless there are
+                    external contents that need to be overrided</p>
+                <pre><code>&lt;p class="montserrat-semibold-italic"&gt; text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- Merriweather Sans -->
+        <div class="demo_display">
+            <h3 class="headline" id="merriweather-sans">Fonts : Merriweather Sans</h3>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <div class="demo_typeface_wrapper merriweather-sans-light">
+                    <p class="demo_font_family">Merriweather Sans Light</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-light-italic">
+                    <p class="demo_font_family">Merriweather Sans Light Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans">
+                    <p class="demo_font_family">Merriweather Sans</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-italic">
+                    <p class="demo_font_family">Merriweather Sans Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-bold">
+                    <p class="demo_font_family">Merriweather Sans Bold</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-bold-italic">
+                    <p class="demo_font_family">Merriweather Sans Bold Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-extraBold">
+                    <p class="demo_font_family">Merriweather Sans ExtraBold</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+                <div class="demo_typeface_wrapper merriweather-sans-extraBold-italic">
+                    <p class="demo_font_family">Merriweather Sans ExtraBold Italic</p>
+                    <p class="demo_uppercase">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p class="demo_lowercase">abcdefghijklmnopqrstuvwxyz</p>
+                    <p class="demo_number">0123456789</p>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Main font : Merriweather Sans</h3>
+                <p>Our secondary typeface is Merriweather Sans. It can be used in more formal communications. It should
+                    be used in conjunction with our primary typeface to add variety to our designs or to break up large
+                    blocks of text.</p>
+                <h3>Usage</h3>
+                <p>You don't need to use these classes since the 6 preset typography would suffice, unless there are
+                    external contents that need to be overrided</p>
+                <pre><code>&lt;p class="merriweather-sans-extraBold"&gt; text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="demo_display">
+            <h3 class="headline" id="Buttons">Buttons</h3>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn"> a.btn </a>
+                <a class="btn btn-disabled"> disabled </a>
+                <a class="btn btn-outlined"> outlined </a>
+                <a class="btn btn-outlined btn-disabled"> outlined.disabled </a>
+                <a class="btn btn-contained"> contained </a>
+                <a class="btn btn-contained btn-disabled"> contained.disabled </a>
+            </div>
+            <div class="demo_showcase demo_no_bg bg-white flex flex-row flex-wrap">
+                <a class="btn btn-navy"> a.btn </a>
+                <a class="btn btn-navy btn-disabled"> disabled </a>
+                <a class="btn btn-navy btn-outlined"> outlined </a>
+                <a class="btn btn-navy btn-outlined btn-disabled"> outlined.disabled </a>
+                <a class="btn btn-navy btn-contained"> contained </a>
+                <a class="btn btn-navy btn-contained btn-disabled"> contained.disabled </a>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn"> a.btn <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn">
+                    <i class="icon icon-content_add_24px icon-left"></i> a.btn </a>
+                <a class="btn btn-outlined"> outlined <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn btn-outlined">
+                    <i class="icon icon-content_add_24px icon-left"></i> outlined </a>
+                <a class="btn btn-contained"> contained <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn btn-contained">
+                    <i class="icon icon-content_add_24px icon-left"></i> contained </a>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn btn-round">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                </a>
+                <a class="btn btn-round btn-disabled">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                </a>
+                <a class="btn btn-round btn-shadow">
+                    <i class="icon icon-communication_forum_24px"></i>
+                </a>
+                <a class="btn btn-round btn-shadow btn-disabled">
+                    <i class="icon icon-communication_forum_24px"></i>
+                </a>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn btn-square">
+                    <i class="icon icon-content_add_24px"></i>
+                </a>
+                <a class="btn btn-square"> 1 </a>
+                <a class="btn btn-square btn-disabled"> 2 </a>
+                <a class="btn btn-square btn-disabled">
+                    <i class="icon icon-content_remove_24px"></i>
+                </a>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn btn-m"> a.btn </a>
+                <a class="btn btn-m btn-disabled"> disabled </a>
+                <a class="btn btn-m btn-outlined"> outlined </a>
+                <a class="btn btn-m btn-outlined btn-disabled"> outlined.disabled </a>
+                <a class="btn btn-m btn-contained"> contained </a>
+                <a class="btn btn-m btn-contained btn-disabled"> contained.disabled </a>
+            </div>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <a class="btn btn-m"> a.btn <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn btn-m">
+                    <i class="icon icon-content_add_24px icon-left"></i> a.btn </a>
+                <a class="btn btn-m btn-outlined"> outlined <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn btn-m btn-outlined">
+                    <i class="icon icon-content_add_24px icon-left"></i> outlined </a>
+                <a class="btn btn-m btn-contained"> contained <i class="icon icon-content_add_24px icon-right"></i>
+                </a>
+                <a class="btn btn-m btn-contained">
+                    <i class="icon icon-content_add_24px icon-left"></i> contained </a>
+            </div>
+            <div class="demo_description">
+                <h3>Buttons</h3>
+                <p>Buttons allow users to take actions, and make choices, with a single tap.</p>
+                <h3>Usage</h3>
+                <h5>Plain Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Button with custom icon</h5>
+                <pre><code class="html language-html">&lt;a class="btn"&gt;
+    &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
+    btn text
+&lt;/a&gt;</code></pre>
+                <h5>Outlined Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-outlined"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Contained Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-contained"&gt; btn text &lt;/a&gt; </code></pre>
+                <h5>Round Button</h5>
+                <p>Use with <code>btn-float</code> to get a visual elevation.</p>
+                <pre><code class="html language-html">&lt;a class="btn btn-round btn-float"&gt;
+    &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+                <h5>Square Button</h5>
+                <pre><code class="html language-html">&lt;a class="btn btn-square"&gt;
+    &lt;i class="icon icon-content_add_24px icon-left" &gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+                <h5>Button Color</h5>
+                <p>Default color for button is gold. Use <code>btn-navy</code> to change color to navy.</p>
+                <h5>Button Size</h5>
+                <p>Use <code>btn-m</code> to get a button with medium size and font size, except square button.</p>
+                <h5>Built in icon for button</h5>
+                <p>Using below class names on <code>btn</code> will give the button a pre-defined icon</p>
+                <pre><code class="html language-html">// " + " icon
+&lt;a class="btn btn-plus"&gt;&lt;/a&gt;
+// " - " minus
+&lt;a class="btn btn-minus"&gt;&lt;/a&gt;
+// " &lt; " icon
+&lt;a class="btn btn-back"&gt;&lt;/a&gt;
+// " &gt; " icon
+&lt;a class="btn btn-forth"&gt;&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Hyperlink -->
+        <div class="demo_display">
+            <h3 class="headline" id="Hyperlink">Hyperlink</h3>
+            <div class="demo_showcase">
+                <a class="hyperlink body2"> Hyperlink, not just a tag </a>
+            </div>
+            <div class="demo_description">
+                <h3>Hyperlink</h3>
+                <p>All default styling are removed for styling other components, so use the class name
+                    <code>hyperlink</code> if you need the most basic link behavior.</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;a href="/" class="hyperlink body2"&gt; link text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- hi fonts -->
+        <div class="demo_display">
+            <h3 class="headline" id="HIFont">hi fonts</h3>
+            <a href="https://material.io/tools/icons/?style=round" class="btn btn-outlined">Check out Material Icons</a>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <div class="icon icon-alert_add_24px"></div>
+                <div class="icon icon-av_forward_5_24px"></div>
+                <div class="icon icon-communication_phone_24px"></div>
+                <div class="icon icon-communication_voicemail_24px"></div>
+                <div class="icon icon-device_signal_wifi_statusbar_connected_no_internet_26x24px"></div>
+                <div class="icon icon icon-general_bookmark_24px"></div>
+            </div>
+            <div class="demo_description">
+                <h3>hi Fonts</h3>
+                <h5>Material Icons</h5>
+                <p>All icons from Material Icons and made into svg fonts.</p>
+                <h5>Documentation</h5>
+                <p>Look up <code>className</code> and <code>content</code> <a class="hyperlink" href="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/icons-reference.html">here</a></p>
+                <h3>Usage</h3>
+                <p>In HTML5</p>
+                <pre><code>&lt;i class="icon icon-content_add_24px icon-right"&gt;&lt;/i&gt;</code></pre>
+                <p>Or in SCSS</p>
+                <pre><code class="scss language-scss">.element:before {
+    @include labelMark;
+    content: "\EC10";
+}</code></pre>
+            </div>
+        </div>
+        <!-- Tabs -->
+        <div class="demo_display">
+            <h3 class="headline" id="Tabs">Tabs</h3>
+            <div class="demo_showcase flex flex-row flex-wrap">
+                <!-- tab default -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab active">active</div>
+                    </div>
+                </div>
+                <!-- tab gold -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab tab-gold"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-gold">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-gold active">active</div>
+                    </div>
+                </div>
+                <!-- tab navy -->
+                <div class="flex flex-col">
+                    <div class="demo_ele">
+                        <div class="tab tab-navy"></div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-navy">subtitle2</div>
+                    </div>
+                    <div class="demo_ele">
+                        <div class="tab tab-navy active">active</div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs">
+                    <div class="tab">
+                        <span class="tab-text">tab</span>
+                    </div>
+                    <div class="tab active">
+                        <span class="tab-text">tab</span>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs fixed-width">
+                    <div class="tab">
+                        <p class="tab-text">equal</p>
+                    </div>
+                    <div class="tab active">
+                        <p class="tab-text">container</p>
+                    </div>
+                    <div class="tab">
+                        <p class="tab-text">width</p>
+                    </div>
+                    <div class="tab">
+                        <p class="tab-text">equal</p>
+                    </div>
+                    <div class="tab active">
+                        <p class="tab-text">container</p>
+                    </div>
+                    <div class="tab">
+                        <p class="tab-text">width</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs">
+                    <div class="tab">
+                        <span class="tab-text">tabs</span>
+                    </div>
+                    <div class="tab active">
+                        <span class="tab-text">longlong wrappedtext wrappedandhasdots</span>
+                    </div>
+                    <div class="tab">
+                        <span class="tab-text">no break</span>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="tabs fixed-width">
+                    <div class="tab">
+                        <span class="tab-text">tabs</span>
+                    </div>
+                    <div class="tab active">
+                        <span class="tab-text">longlong wrappedtext wrappedandhasdots</span>
+                    </div>
+                    <div class="tab">
+                        <span class="tab-text">no break</span>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Tabs</h3>
+                <p>Tabs organize content across different screens, data sets, and other interactions. Keep tab text
+                    short and simple, long text will be wrapped, then truncated. You can have as many tabs as needed,
+                    out of screen tabs will be scrollable.</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;div class="tabs"&gt;
+    &lt;div class="tab active"&gt;
+        &lt;span class="tab-text"&gt; tab text &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="tab"&gt;
+        &lt;span class="tab-text"&gt; tab text &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Form Control (text field) -->
+        <div class="demo_display">
+            <h3 class="headline" id="Form-Control">Form Control (text field)</h3>
+            <form action="demo">
+                <div class="demo_showcase flex flex-row flex-wrap">
+                    <div class="flex flex-col">
+                        <!-- resting -->
+                        <div class="textfield">
+                            <p class="field-label">Field label</p>
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="placeholder">
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- activated / focus -->
+                        <div class="textfield activated">
+                            <p class="field-label">Activated</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="placeholder" value="Activated">
+                            </div>
+                            <p class="helper-text">Consider change tick to pencile</p>
+                        </div>
+                        <!-- enabled -->
+                        <div class="textfield enabled">
+                            <p class="field-label">Enabled</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Resting + Value">
+                            </div>
+                            <p class="helper-text">Helper Text</p>
+                        </div>
+                        <!-- error -->
+                        <div class="textfield error">
+                            <p class="field-label">Error</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Error">
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- disabled -->
+                        <div class="textfield disabled">
+                            <p class="field-label">Field Label</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="disabled" disabled>
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <!-- resting -->
+                        <div class="textfield outlined">
+                            <p class="field-label">Field label</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="placeholder">
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- activated / focus -->
+                        <div class="textfield outlined activated">
+                            <p class="field-label">Activated</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="placeholder" value="Activated">
+                            </div>
+                            <p class="helper-text">What's with the tick?</p>
+                        </div>
+                        <!-- enabled -->
+                        <div class="textfield outlined enabled">
+                            <p class="field-label">Enabled</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="What's the difference from resting?">
+                            </div>
+                            <p class="helper-text">When is this used?</p>
+                        </div>
+                        <!-- error -->
+                        <div class="textfield outlined error">
+                            <p class="field-label">Error</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Error">
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                        <!-- disabled -->
+                        <div class="textfield outlined disabled">
+                            <p class="field-label">Field Label</p>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="disabled" disabled>
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <!-- resting -->
+                        <div class="textfield outlined">
+                            <div class="input-wrapper">
+                                <textarea placeholder="placeholder"></textarea>
+                            </div>
+                        </div>
+                        <div class="textfield outlined">
+                            <p class="field-label">Field label</p>
+                            <div class="input-wrapper">
+                                <textarea placeholder="placeholder"></textarea>
+                            </div>
+                            <p class="helper-text">Helper text</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="demo_description">
+                <h3>Form Control</h3>
+                <p>For now, form control consist of Text Fields, Checkbox, and Radio Button. For text field, 5 visual
+                    states are provided for different use-cases.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="form-group"&gt;
+    &lt;div class="textfield outlined error"&gt;
+        &lt;span class="field-label"&gt; label text &lt;/span&gt;
+        &lt;div class="input-wrapper"&gt;
+            &lt;input type="text" placeholder="placeholder"&gt;
+        &lt;/div&gt;
+        &lt;span class="helper-text"&gt; helper text &lt;/span&gt;
+    &lt;/div&gt;
+&lt;div&gt;</code></pre>
+                <h3>Remark</h3>
+                <h5>Change Log</h5>
+                <ul>
+                    <li>9 May, 2019</li>
+                    <li>To fix bug when <code>field-label</code> or <code>helper-text</code> is not present, an
+                        <code>input-wrapper</code> is added to keep icon in place.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Selection Control -->
+        <div class="demo_display">
+            <h3 class="headline" id="Selection-Control">Selection Control</h3>
+            <div class="demo_showcase flex flex-row">
+                <div class="demo_checkbox_wrapper">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_1">
+                        <label for="checkbox_1">
+                            <span class="label-mark"></span> not checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_2" checked="checked">
+                        <label for="checkbox_2">
+                            <span class="label-mark"></span> checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_3" disabled=true>
+                        <label for="checkbox_3">
+                            <span class="label-mark"></span> disabled </label>
+                    </div>
+                </div>
+                <div class="demo_checkbox_wrapper">
+                    <div class="form-group">
+                        <input type="radio" id="radio_1" name="only-one">
+                        <label for="radio_1" class="radio">
+                            <span class="label-mark"></span> not checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio_2" name="only-one" checked>
+                        <label for="radio_2" class="radio">
+                            <span class="label-mark"></span> checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio_3" name="only-one" disabled>
+                        <label for="radio_3" class="radio">
+                            <span class="label-mark"></span> disabled </label>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase flex flex-row">
+                <div class="demo_checkbox_wrapper">
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_4">
+                        <label for="checkbox_4" class="label-large">
+                            <span class="label-mark"></span> not checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_5" checked="checked">
+                        <label for="checkbox_5" class="label-large">
+                            <span class="label-mark"></span> checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox_6" disabled=true>
+                        <label for="checkbox_6" class="label-large">
+                            <span class="label-mark"></span> disabled </label>
+                    </div>
+                </div>
+                <div class="demo_checkbox_wrapper">
+                    <div class="form-group">
+                        <input type="radio" id="radio_4" name="radio-l">
+                        <label for="radio_4" class="label-large">
+                            <span class="label-mark"></span> not checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio_5" name="radio-l" checked>
+                        <label for="radio_5" class="label-large">
+                            <span class="label-mark"></span> checked </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio_6" name="radio-l" disabled>
+                        <label for="radio_6" class="label-large">
+                            <span class="label-mark"></span> disabled </label>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_no_bg bg-white flex flex-row">
+                <div class="demo_toggle_wrapper">
+                    <div class="form-group">
+                        <input type="checkbox" id="toggle_1" class="btn-toggle">
+                        <label for="toggle_1"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Selection Control</h3>
+                <p>Selection control consist of Checkbox, Radio Button, and Toggle Button.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="form-group"&gt;
+    &lt;input type="checkbox" id="checkbox_n"&gt;
+    &lt;label class="label" for="checkbox_n"&gt;
+        &lt;span class="label-mark"&gt;&lt;/span&gt; label text
+    &lt;/label&gt;
+&lt;div&gt;
+&lt;div class="form-group"&gt;
+    &lt;input type="radio" id="radio_n"&gt;
+    &lt;label class="label" for="radio_n"&gt;
+        &lt;span class="label-mark"&gt;&lt;/span&gt; label text
+    &lt;/label&gt;
+&lt;div&gt;
+&lt;div class="demo_toggle_wrapper"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;input type="checkbox" id="toggle_1" class="btn-toggle"&gt;
+        &lt;label for="toggle_1"&gt;&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- drop down button -->
+        <div class="demo_display">
+            <h3 class="headline" id="Dropdown">Dropdown</h3>
+            <div class="demo_showcase">
+                <a id="demo_dd"></a>
+            </div>
+            <div class="demo_description">
+                <h3>Drop Down Button</h3>
+                <p>Drop Down Button provides user with a list of options</p>
+                <h3>Usage</h3>
+                <h5>plain HTML</h5>
+                <pre><code class="html language-html">&lt;a id="dd_1"&gt;
+    &lt;span class="dd-default" data-value="default"&gt; default &lt;/span&gt;
+    &lt;div class="dd-list" id="demo_dd_list"&gt;
+        &lt;ul class="list"&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 1 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 2 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item 3 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+                <h5>generate with JS</h5>
+                <pre><code class="html language-html">&lt;a id="demo_dd"&gt;&lt;/a&gt;</code></pre>
+                <pre><code class="js language-js">
+// settings and inputs
+let dd = new dropdown({
+    id: "demo_dd",
+    allValues: ["a", "b", "c"],
+    defaultValue: "a"
+});
+// create button
+dd.init();
+// get current value
+dd.currentValue;</code></pre>
+            </div>
+        </div>
+        <!-- Search Box -->
+        <div class="demo_display">
+            <h3 class="headline" id="Search-Box">Search Box</h3>
+            <div class="demo_showcase demo_no_bg">
+                <div class="flex flex-row">
+                    <div>
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box plain">
+                            </div>
+                        </div>
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <p class="search-label">Label</p>
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box full">
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
+                        <!-- search bar -->
+                        <div class="searchbox disabled">
+                            <p class="search-label">Label</p>
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box disabled" disabled>
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <!-- search bar -->
+                        <div class="searchbox">
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="search box plain"
+                                       value="click to see history" id="demo-search-input-history">
+                                <!-- search history / suggestion / filtered result -->
+                            </div>
+                            <p class="search-helper">Hepler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Search Box</h3>
+                <p>Place to input search or filter keywords, can be used together with list</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;div class="searchbox"&gt;
+    &lt;div class="search-wrapper"&gt;
+        &lt;input class="search-input" type="text" placeholder="search box"&gt;
+        &lt;ul class="search-history list"&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;div class="list-text"&gt;
+                        &lt;span class="list-text-secondary"&gt; search history 1 &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;div class="list-text"&gt;
+                        &lt;span class="list-text-secondary"&gt; search history 2 &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;p class="search-helper"&gt; helper text &lt;/p&gt;
+&lt;div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="demo_display">
+            <h3 class="headline" id="Modal">Modal (Dialog Box)</h3>
+            <button class="btn open-modal" data-modalid="1">Style only</button>
+            <button class="btn create-modal" data-modalid="2">Build By Code</button>
+            <button class="btn create-modal" data-modalid="3">Build By Code 2</button>
+            <!-- style only, no function exposed -->
+            <div class="modal" id="modal1" style="display:none">
+                <div class="modal-wrapper">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Modal Title</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-contained" id="close-modal1">Close</button>
+                    </div>
+                </div>
+            </div>
+            <!-- modal.init will append modal to id="modalx" -->
+            <div id="modal2"></div>
+            <div id="modal3"></div>
+            <div class="demo_description">
+                <h3>Dialog / Modal</h3>
+                <p>Dialogs inform users about a task and can contain critical information, require decisions, or involve
+                    multiple tasks. Dialog can be created in 2 ways, either by plain HTLM, with custom JS. Or by builtin
+                    Modal Class functions.</p>
+                <h3>Usage</h3>
+                <p>Case 1: Using Class Function, in HTML file add a reference element with a modal ID:</p>
+                <pre><code class="html language-html">&lt;button class="btn" data-modalid="1"&gt;Build By Code&lt;/button&gt;
+&lt;div id="modal_1&gt;&lt;/div&gt;</code></pre>
+                <p>and in javascript:</p>
+                <pre><code class="js language-js">let modalSettings = {
+    // modal id : string
+    id: "modal_1",
+    // class names of modal icon : string array
+    iconClass: ["icon", "icon-device_access_alarm_24px"],
+    // modal title : string
+    title: "my modal",
+    // modal body text : string
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    // action buttons : string array, max length = 2
+    buttonText: ["very long button", "ok"],
+    // align button vertically instead, default false
+    stackButton: true,
+}
+let modal = new Modal(modalSettings);
+// create this modal
+modal.init();
+// destory this modal
+modal.destory();</code></pre>
+                <p>Case 2: Create a dailog with plain HTML:</p>
+                <pre><code class="html language-html">&lt;div class="modal" id="modal1"&gt;
+    &lt;div class="modal-wrapper"&gt;
+        &lt;div class="modal-header"&gt;
+            &lt;h3 class="modal-title"&gt;Modal Title&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+            &lt;p class="modal-content"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+            &lt;button class="btn btn-contained" id="close-modal1"&gt;Close&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Home Tool Bar -->
+        <div class="demo_display">
+            <h3 class="headline" id="Home-Tool-Bar">Home Tool Bar (Button)</h3>
+            <!-- Tool Bar Btn Gold -->
+            <div class="demo_showcase  demo_screen_mob">
+                <div class="toolbar">
+                    <div class="toolbar-btn">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_account_balance_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Text</p>
+                    </div>
+                    <div class="toolbar-btn">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_map_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Maps</p>
+                    </div>
+                    <div class="toolbar-btn">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-international_call"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Currency Converter</p>
+                    </div>
+                    <div class="toolbar-btn">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-notification_wifi_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Wi-Fi Hotspot</p>
+                    </div>
+                    <div class="toolbar-btn">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-vip_concierge"></i>
+                        </div>
+                        <p class="toolbar-btn-text">VIP Concierge</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tool Bar Btn Navy -->
+            <div class="demo_showcase  demo_screen_mob">
+                <div class="toolbar">
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_account_balance_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Text</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_map_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Maps</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-international_call"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Currency Converter</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-notification_wifi_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Wi-Fi Hotspot</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-vip_concierge"></i>
+                        </div>
+                        <p class="toolbar-btn-text">VIP Concierge</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_account_balance_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Text</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-general_map_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Maps</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-international_call"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Currency Converter</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-notification_wifi_24px"></i>
+                        </div>
+                        <p class="toolbar-btn-text">Wi-Fi Hotspot</p>
+                    </div>
+                    <div class="toolbar-btn toolbar-navy">
+                        <div class="toolbar-btn-icon-wrapper">
+                            <i class="toolbar-btn-icon icon icon-vip_concierge"></i>
+                        </div>
+                        <p class="toolbar-btn-text">VIP Concierge</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Home Tool Bar</h3>
+                <p>A Series of buttons to open most used apps on handy, located at the top of handy homepage.</p>
+                <h3>Scrolling JS not ready yet</h3>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="flex"&gt;
+    &lt;div class="toolbar-btn"&gt;
+        &lt;div class="toolbar-btn-icon-wrapper"&gt;
+            &lt;i class="toolbar-btn-icon icon icon-general_account_balance_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;p class="toolbar-btn-text"&gt;Text&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="toolbar-btn"&gt;
+        &lt;div class="toolbar-btn-icon-wrapper"&gt;
+            &lt;i class="toolbar-btn-icon icon icon-general_map_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;p class="toolbar-btn-text"&gt;Maps&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="toolbar-btn"&gt;
+        &lt;div class="toolbar-btn-icon-wrapper"&gt;
+            &lt;i class="toolbar-btn-icon icon icon-international_call"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;p class="toolbar-btn-text"&gt;Currency Converter&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="toolbar-btn"&gt;
+        &lt;div class="toolbar-btn-icon-wrapper"&gt;
+            &lt;i class="toolbar-btn-icon icon icon-notification_wifi_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;p class="toolbar-btn-text"&gt;Wi-Fi Hotspot&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="toolbar-btn"&gt;
+        &lt;div class="toolbar-btn-icon-wrapper"&gt;
+            &lt;i class="toolbar-btn-icon icon icon-vip_concierge"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;p class="toolbar-btn-text"&gt;VIP Concierge&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- top bar -->
+        <div class="demo_display">
+            <h3 class="headline" id="Top-Bar">Top Bar</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body">
+                        <h3 class="top-bar-title">Page Title</h3>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="top-bar-actions">
+                            <i class="icon icon-device_gps_fixed_24px"></i>
+                            <i class="icon icon-content_copy_24px"></i>
+                        </div>
+                        <div class="top-bar-menu">
+                            <i class="icon icon-navigation_more_horiz_24px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-dark">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body">
+                        <h3 class="top-bar-title">Page Title</h3>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="top-bar-actions">
+                            <i class="icon icon-device_gps_fixed_24px"></i>
+                        </div>
+                        <div class="top-bar-menu">
+                            <i class="icon icon-navigation_more_horiz_24px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-gold">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body">
+                        <h3 class="top-bar-title">Page Title</h3>
+                    </div>
+                    <div class="top-bar-right">
+                        <i class="top-bar-icon icon icon-navigation_more_horiz_24px"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-navy">
+                    <div class="top-bar-left">
+                        <div class="top-bar-icon">
+                            <i class="icon icon-hardware_keyboard_arrow_left_24px"></i>
+                        </div>
+                    </div>
+                    <div class="top-bar-body">
+                        <h3 class="top-bar-title">Page Title</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Top Bar</h3>
+                <p>A bar on top of the screen that provides user with controls and info of the page.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="top-bar"&gt;
+    &lt;div class="top-bar-left"&gt;
+        &lt;i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-body"&gt;
+        &lt;h3 class="top-bar-title"&gt;Page Title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-right"&gt;
+        &lt;div class="top-bar-actions"&gt;
+            &lt;i class="icon icon-device_gps_fixed_24px"&gt;&lt;/i&gt;
+            &lt;i class="icon icon-content_copy_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="top-bar-menu"&gt;
+            &lt;i class="icon icon-navigation_more_horiz_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- chat room top bar -->
+        <div class="demo_display">
+            <h3 class="headline" id="Top-Bar-Chat">Top Bar (Chat)</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-chat">
+                    <div class="top-bar-left">
+                        <div class="top-bar-icon">
+                            <i class="icon icon-hardware_keyboard_arrow_left_24px"></i>
+                        </div>
+                    </div>
+                    <div class="top-bar-body">
+                        <div class="chat-info-strip">
+                            <img class="avatar" src="./src/images/demo/checker_bg.png" alt="avatar">
+                            <div class="chat-info">
+                                <p class="chat-name">Name</p>
+                                <p class="chat-number">+123 123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="top-bar-actions">
+                            <span class="leave-chat">Leave Chat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-chat">
+                    <div class="top-bar-left">
+                        <div class="top-bar-icon">
+                            <i class="icon icon-hardware_keyboard_arrow_left_24px"></i>
+                        </div>
+                    </div>
+                    <div class="top-bar-body">
+                        <div class="chat-info-strip">
+                            <img class="avatar" src="./src/images/demo/checker_bg.png" alt="avatar">
+                            <div class="chat-info">
+                                <p class="chat-name">Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="top-bar-actions">
+                            <i class="icon icon-maps_local_phone_24px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar top-bar-chat">
+                    <div class="top-bar-left">
+                        <div class="top-bar-icon">
+                            <i class="icon icon-hardware_keyboard_arrow_left_24px"></i>
+                        </div>
+                    </div>
+                    <div class="top-bar-body">
+                        <div class="chat-info-strip">
+                            <div class="chat-info">
+                                <p class="chat-name">Name</p>
+                                <p class="chat-number">+123 123 456 789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-bar-right">
+                        <div class="top-bar-actions">
+                            <i class="icon icon-maps_local_phone_24px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Top Bar (Chat)</h3>
+                <p>Provides user with control and contact info of a chat</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="top-bar top-bar-chat"&gt;
+    &lt;div class="top-bar-left"&gt;
+        &lt;div class="top-bar-icon"&gt;
+            &lt;i class="icon icon-hardware_keyboard_arrow_left_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-body"&gt;
+        &lt;div class="chat-info-strip"&gt;
+            &lt;img class="avatar" src="./src/images/demo/checker_bg.png" alt="avatar"&gt;
+            &lt;div class="chat-info"&gt;
+                &lt;p class="chat-name"&gt;Name&lt;/p&gt;
+                &lt;p class="chat-number"&gt;+123 123 456 789&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-right"&gt;
+        &lt;div class="top-bar-actions"&gt;
+            &lt;i class="icon icon-maps_local_phone_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- ticketing top bar -->
+        <div class="demo_display">
+            <h3 class="headline" id="Top-Bar-Ticketing">Top Bar (Ticketing)</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body">
+                        <h3 class="top-bar-title">Page Title</h3>
+                        <i class="icon icon-navigation_expand_more_24px"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Top Bar (Ticketing)</h3>
+                <p>Provides user with control of a page</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="top-bar"&gt;
+    &lt;div class="top-bar-left"&gt;
+        &lt;i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-body"&gt;
+        &lt;h3 class="top-bar-title"&gt;Page Title&lt;/h3&gt;
+        &lt;i class="icon icon-navigation_expand_more_24px"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- bottom nav -->
+        <div class="demo_display">
+            <h3 class="headline" id="Bottom-Nav">Bottom Nav</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-dark">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-navy">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="bottom-nav bottom-nav-gold">
+                    <a class="bottom-nav-btn bottom-nav-btn-active">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">caption</p>
+                    </a>
+                    <a class="bottom-nav-btn">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">suuperlongvocab</p>
+                    </a>
+                    <a class="bottom-nav-btn bottom-nav-btn-disabled">
+                        <i class="bottom-nav-icon icon icon-general_home_24px"></i>
+                        <p class="bottom-nav-text">long long long</p>
+                    </a>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Bottom Nav</h3>
+                <p>Navigation bar at screen bottom that allows user to switch between pages and functions.</p>
+                <p>Max 5 buttons is allowed.</p>
+                <p>Make sure caption text is short and precise</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="bottom-nav bottom-nav-gold"&gt;
+    &lt;a class="bottom-nav-btn bottom-nav-btn-active"&gt;
+        &lt;i class="bottom-nav-icon icon icon-general_home_24px"&gt;&lt;/i&gt;
+        &lt;p class="bottom-nav-text"&gt;caption&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a class="bottom-nav-btn"&gt;
+        &lt;i class="bottom-nav-icon icon icon-general_home_24px"&gt;&lt;/i&gt;
+        &lt;p class="bottom-nav-text"&gt;caption&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a class="bottom-nav-btn"&gt;
+        &lt;i class="bottom-nav-icon icon icon-general_home_24px"&gt;&lt;/i&gt;
+        &lt;p class="bottom-nav-text"&gt;caption&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a class="bottom-nav-btn"&gt;
+        &lt;i class="bottom-nav-icon icon icon-general_home_24px"&gt;&lt;/i&gt;
+        &lt;p class="bottom-nav-text"&gt;caption&lt;/p&gt;
+    &lt;/a&gt;
+    &lt;a class="bottom-nav-btn bottom-nav-btn-disabled"&gt;
+        &lt;i class="bottom-nav-icon icon icon-general_home_24px"&gt;&lt;/i&gt;
+        &lt;p class="bottom-nav-text"&gt;long long caption&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- chips -->
+        <div class="demo_display">
+            <h3 class="headline" id="Chips">Chips</h3>
+            <div class="demo_showcase">
+                <span class="chip">Enabled</span>
+                <span class="chip chip-pressed">Pressed</span>
+                <span class="chip chip-focused">Focused</span>
+                <span class="chip chip-disabled">Disabled</span>
+            </div>
+            <div class="demo_showcase">
+                <div class="chip">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                    <span class="chip-text">Enabled</span>
+                </div>
+                <div class="chip chip-pressed">
+                    <i class="icon icon-general_bookmarks_24px"></i>
+                    <span class="chip-text">Pressed</span>
+                    <i class="icon icon-general_highlight_off_24px"></i>
+                </div>
+                <div class="chip chip-focused">
+                    <span class="chip-text">Focused</span>
+                    <i class="icon icon-general_highlight_off_24px"></i>
+                </div>
+                <div class="chip chip-disabled">Disabled</div>
+            </div>
+            <div class="demo_description">
+                <h3>Chip</h3>
+                <p>Chips are compact elements that represent an input, attribute, or action.</p>
+                <h3>Usage</h3>
+                <pre><code>&lt;p class="chip"&gt; chip text &lt;p&gt; </code></pre>
+                <h5>For a chip with icons, add:</h5>
+                <pre><code>&lt;i class="icon icon-content_add_24px icon-left" &gt; </code></pre>
+                <p>before or after chip text.</p>
+                <h5>Set a chip to be active</h5>
+                <pre><code>&lt;p class="chip chip-focused"&gt; chip text &lt;p&gt; </code></pre>
+            </div>
+        </div>
+        <!-- list -->
+        <div class="demo_display">
+            <h3 class="headline" id="List">List</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <ul class="list">
+                    <li class="list-row">
+                        <div class="list-content">
+                            <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                            </div>
+                            <i class="list-meta icon icon-general_favorite_24px"></i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content">
+                            <img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                            </div>
+                            <i class="list-meta icon icon-general_favorite_24px"></i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content">
+                            <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                            </div>
+                            <span class="list-meta">Caption</i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <ul class="list">
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                                <span class="list-text-secondary">Secondary Text</span>
+                            </div>
+                            <i class="list-meta icon icon-general_favorite_24px"></i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                                <span class="list-text-secondary">Secondary Text</span>
+                            </div>
+                            <span class="list-meta">Caption</i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"></i>
+                            <div class="list-text">
+                                <span class="list-text-overline">Overline</span>
+                                <span class="list-text-primary">Primary Text</span>
+                            </div>
+                            <div class="list-meta form-group">
+                                <input type="checkbox" id="checkbox_list_1">
+                                <label for="checkbox_list_1">
+                                    <span class="label-mark"></span></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <ul class="list">
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                            <div class="list-text">
+                                <span class="list-text-overline">Overline</span>
+                                <span class="list-text-primary">Primary Text</span>
+                                <span class="list-text-secondary">Secondary Text</span>
+                            </div>
+                            <i class="list-meta icon icon-general_favorite_24px"></i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"></i>
+                            <div class="list-text">
+                                <span class="list-text-overline">Overline</span>
+                                <span class="list-text-primary">Primary Text</span>
+                                <span class="list-text-secondary">Secondary Text</span>
+                            </div>
+                            <span class="list-meta">Caption</i>
+                        </div>
+                    </li>
+                    <li class="list-row">
+                        <div class="list-content multiline">
+                            <img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"></i>
+                            <div class="list-text">
+                                <span class="list-text-primary">Primary Text</span>
+                                <span class="list-text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Sed ultrices nisi aliquam imperdiet vehicula.</span>
+                            </div>
+                            <div class="list-meta form-group">
+                                <input type="checkbox" id="checkbox_list_2">
+                                <label for="checkbox_list_2">
+                                    <span class="label-mark"></span></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="demo_description">
+                <h3>List</h3>
+                <p>Lists are continuous, vertical indexes of text or images.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;ul class="list"&gt;
+    &lt;li class="list-row"&gt;
+        &lt;div class="list-content multiline"&gt;
+            &lt;i class="list-thumbnail icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+            &lt;div class="list-text"&gt;
+                &lt;span class="list-text-overline"&gt;Overline&lt;/span&gt;
+                &lt;span class="list-text-primary"&gt;Primary Text&lt;/span&gt;
+                &lt;span class="list-text-secondary"&gt;Secondary Text&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;i class="list-meta icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="list-row"&gt;
+        &lt;div class="list-content multiline"&gt;
+            &lt;img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"&gt;&lt;/i&gt;
+            &lt;div class="list-text"&gt;
+                &lt;span class="list-text-overline"&gt;Overline&lt;/span&gt;
+                &lt;span class="list-text-primary"&gt;Primary Text&lt;/span&gt;
+                &lt;span class="list-text-secondary"&gt;Secondary Text&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;span class="list-meta"&gt;Caption&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="list-row"&gt;
+        &lt;div class="list-content multiline"&gt;
+            &lt;img class="list-thumbnail avatar" alt="avatar" src="public/images/demo/checker_bg.png"&gt;&lt;/i&gt;
+            &lt;div class="list-text"&gt;
+                &lt;span class="list-text-primary"&gt;Primary Text&lt;/span&gt;
+                &lt;span class="list-text-secondary"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Sed ultrices nisi aliquam imperdiet vehicula.&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="list-meta form-group"&gt;
+                &lt;input type="checkbox" id="checkbox_list_2"&gt;
+                &lt;label for="checkbox_list_2"&gt;
+                    &lt;span class="label-mark"&gt;&lt;/span&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+        </div>
+        <!-- nav drawer -->
+        <div class="demo_display">
+            <h3 class="headline" id="Navigation-Drawer">Navigation Drawer</h3>
+            <span class="btn nav-drawer-toggle-btn" data-id="side-nav-drawer">Side Menu</span>
+            <span class="btn nav-drawer-toggle-btn" data-id="bottom-nav-drawer">Open Bottom</span>
+            <div class="nav-drawer" id="side-nav-drawer">
+                <div class="nav-drawer-left">
+                    <div class="nav-drawer-mainTitle"> Title <i
+                           class="nav-drawer-close icon icon-navigation_close_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row active">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <i class="nav-drawer-icon-left icon icon-toggle_star_24px"></i>
+                        <span class="nav-drawer-title">Item</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-drawer" id="bottom-nav-drawer">
+                <div class="nav-drawer-bottom">
+                    <div class="nav-drawer-mainTitle"> Title <i
+                           class="nav-drawer-close icon icon-navigation_close_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                    <div class="nav-drawer-row">
+                        <span class="nav-drawer-title">Item</span>
+                        <i class="nav-drawer-icon-right icon icon-general_favorite_24px"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Navigation Drawer</h3>
+                <p>Navigation drawers provide access to destinations in your app.</p>
+                <p>Currently it can slides out from left or from bottom, by toggling class name "nav-drawer-show".</p>
+                <p>To stop the content under the Navigation Drawer from scrolling, add class <code>no-scroll</code> to
+                    body when the drawer is open.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;div class="nav-drawer" id="bottom-nav-drawer"&gt;
+    &lt;div class="nav-drawer-bottom"&gt;
+        &lt;div class="nav-drawer-mainTitle"&gt; Title &lt;i
+                class="nav-drawer-close icon icon-navigation_close_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row active"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="nav-drawer-row"&gt;
+            &lt;span class="nav-drawer-title"&gt;Item&lt;/span&gt;
+            &lt;i class="nav-drawer-icon-right icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <pre><code class="js language-js">document.getElementById("bottom-nav-drawer").classList.add("nav-drawer-show");</code></pre>
+                <p>or</p>
+                <pre><code class="js language-js">document.getElementById("side-nav-drawer").classList.add("nav-drawer-show");</code></pre>
+            </div>
+        </div>
+        <!-- images -->
+        <div class="demo_display">
+            <h3 class="headline" id="Images">Images</h3>
+            <p class="subtitle2">16:9 POI screen , no padding</p>
+            <div class="subtitle2">image-fw</div>
+            <div class="demo_showcase demo_screen_mob">
+                <img src="public/images/demo/img_fw.png" alt="img" class="image-fw">
+            </div>
+            <p class="subtitle2">16:9 large image / large card</p>
+            <div class="subtitle2">image-l</div>
+            <div class="demo_showcase demo_screen_mob">
+                <img src="public/images/demo/img_l.png" alt="img" class="image-l">
+            </div>
+            <p class="subtitle2">16:9 medium-wide image / medium-wide card</p>
+            <div class="subtitle2">image-m-wide</div>
+            <div class="demo_showcase demo_screen_mob">
+                <img src="public/images/demo/img_m_wide.png" alt="img" class="image-m-wide">
+            </div>
+            <p class="subtitle2">4:3 medium image / medium card</p>
+            <div class="subtitle2">image-m</div>
+            <div class="demo_showcase demo_screen_mob">
+                <img src="public/images/demo/img_m.png" alt="img" class="image-m">
+            </div>
+            <p class="subtitle2">1:1 s image / list image</p>
+            <div class="subtitle2">image-s</div>
+            <div class="demo_showcase demo_screen_mob">
+                <img src="public/images/demo/img_s.png" alt="img" class="image-s">
+            </div>
+            <div class="demo_description">
+                <h3>Image Sizing</h3>
+                <p>Images stored in BE have been cropped into different size and aspect ratio, images shall be shown in
+                    specific dimension according to it position and function.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;img class="image-fw" src="./img.jpg" alt="img"&gt;</code></pre>
+            </div>
+        </div>
+        <!-- card -->
+        <div class="demo_display">
+            <h3 class="headline" id="Card-Large">Card (Large)</h3>
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
+                <div class="card card-fw">
+                    <div class="card-container">
+                        <div class="card-head">
+                            <img class="card-head-avatar avatar" alt="avatar" src="./src/images/demo/checker_bg.png">
+                            <div class="card-head-text">
+                                <span class="card-head-title"> Full Width Card </span>
+                                <span class="card-head-subtitle"> card-fw </span>
+                            </div>
+                            <i class="card-head-icon icon icon-general_favorite_24px"></i>
+                        </div>
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./src/images/demo/img_fw.png">
+                            <div class="card-media-overlay">
+                                <div class="card-media-overlay-top">
+                                    <span class="tag"> Bestseller </span>
+                                    <i class="card-media-overlay-videoBtn
+                                    icon icon-av_play_circle_outline_24px"></i>
+                                </div>
+                                <div class="card-media-overlay-bottom">
+                                    <span class="card-media-overlay-bottom-title"> Image Title </span>
+                                    <span class="card-media-overlay-bottom-subtitle">Image subtitle</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+                            </span>
+                            <span class="card-body-content"> Enter directly with QR code </span>
+                            <span class="tag"> Hong Kong </span>
+                            <div class="card-body-ticketing">
+                                <div class="card-body-ticketing-rating">
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_border_24px"></i>
+                                </div>
+                                <div class="card-body-ticketing-pricing">
+                                    <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                                    <span class="card-body-ticketing-price"> HK$ 558 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
+                <div class="card card-l">
+                    <div class="card-container">
+                        <div class="card-head">
+                            <img class="card-head-avatar avatar" alt="avatar" src="./src/images/demo/checker_bg.png">
+                            <div class="card-head-text">
+                                <span class="card-head-title"> Large Card </span>
+                                <span class="card-head-subtitle"> card-l </span>
+                            </div>
+                            <i class="card-head-icon icon icon-general_favorite_24px"></i>
+                        </div>
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./src/images/demo/img_l.png">
+                            <div class="card-media-overlay">
+                                <div class="card-media-overlay-top">
+                                    <span class="tag"> Bestseller </span>
+                                    <i class="card-media-overlay-videoBtn
+                                    icon icon-av_play_circle_outline_24px"></i>
+                                </div>
+                                <div class="card-media-overlay-bottom">
+                                    <span class="card-media-overlay-bottom-title"> Image Title </span>
+                                    <span class="card-media-overlay-bottom-subtitle">Image subtitle</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+                            </span>
+                            <span class="card-body-content"> Enter directly with QR code </span>
+                            <span class="tag"> Hong Kong </span>
+                            <div class="card-body-ticketing">
+                                <div class="card-body-ticketing-rating">
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_24px"></i>
+                                    <i class="icon icon-toggle_star_border_24px"></i>
+                                </div>
+                                <div class="card-body-ticketing-pricing">
+                                    <span class="card-body-ticketing-price-previous"> HK$ 888 </span>
+                                    <span class="card-body-ticketing-price"> HK$ 558 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Card</h3>
+                <p>Cards contain content and actions about a single subject.</p>
+                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+                <h3>Usage</h3>
+                <h5>Full Width Card, 16:9, no padding</h5>
+                <pre><code class="html language-html">&lt;div class="card card-fw"&gt;
+    &lt;div class="card-container"&gt;
+        /* Card Head */
+        &lt;div class="card-head"&gt;
+            &lt;img class="card-head-avatar avatar" alt="avatar" src="./src/images/demo/checker_bg.png"&gt;
+            &lt;div class="card-head-text"&gt;
+                &lt;span class="card-head-title"&gt; Full Width Card &lt;/span&gt;
+                &lt;span class="card-head-subtitle"&gt; card-fw &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;i class="card-head-icon icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        /* Card Media */
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./src/images/demo/img_fw.png"&gt;
+            &lt;div class="card-media-overlay"&gt;
+                &lt;div class="card-media-overlay-top"&gt;
+                    &lt;span class="tag"&gt; Bestseller &lt;/span&gt;
+                    &lt;i class="card-media-overlay-videoBtn
+                    icon icon-av_play_circle_outline_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-media-overlay-bottom"&gt;
+                    &lt;span class="card-media-overlay-bottom-title"&gt; Image Title &lt;/span&gt;
+                    &lt;span class="card-media-overlay-bottom-subtitle"&gt;Image subtitle&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        /* Card Body */
+        &lt;div class="card-body"&gt;
+            /* Body Title */
+            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+            &lt;/span&gt;
+            /* Body Content */
+            &lt;span class="card-body-content"&gt; Enter directly with QR code &lt;/span&gt;
+            /* Body Tags */
+            &lt;span class="tag"&gt; Hong Kong &lt;/span&gt;
+
+            /* Body Ticketing infos */
+            &lt;div class="card-body-ticketing"&gt;
+                &lt;div class="card-body-ticketing-rating"&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_border_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-body-ticketing-pricing"&gt;
+                    &lt;span class="card-body-ticketing-price-previous"&gt; HK$ 888 &lt;/span&gt;
+                    &lt;span class="card-body-ticketing-price"&gt; HK$ 558 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h5>Large Card 16:9</h5>
+                <pre><code class="html language-html">&lt;div class="card card-l"&gt;
+    &lt;div class="card-container"&gt;
+        &lt;div class="card-head"&gt;
+            &lt;img class="card-head-avatar avatar" alt="avatar" src="./src/images/demo/checker_bg.png"&gt;
+            &lt;div class="card-head-text"&gt;
+                &lt;span class="card-head-title"&gt; Large Card &lt;/span&gt;
+                &lt;span class="card-head-subtitle"&gt; card-l &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;i class="card-head-icon icon icon-general_favorite_24px"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./src/images/demo/img_l.png"&gt;
+            &lt;div class="card-media-overlay"&gt;
+                &lt;div class="card-media-overlay-top"&gt;
+                    &lt;span class="tag"&gt; Bestseller &lt;/span&gt;
+                    &lt;i class="card-media-overlay-videoBtn
+                    icon icon-av_play_circle_outline_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-media-overlay-bottom"&gt;
+                    &lt;span class="card-media-overlay-bottom-title"&gt; Image Title &lt;/span&gt;
+                    &lt;span class="card-media-overlay-bottom-subtitle"&gt;Image subtitle&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;span class="card-body-title"&gt; Hong Kong Disneyland Admisison Ticket (QR Code Direct)
+            &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; Enter directly with QR code &lt;/span&gt;
+            &lt;span class="tag"&gt; Hong Kong &lt;/span&gt;
+            &lt;div class="card-body-ticketing"&gt;
+                &lt;div class="card-body-ticketing-rating"&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;i class="icon icon-toggle_star_border_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="card-body-ticketing-pricing"&gt;
+                    &lt;span class="card-body-ticketing-price-previous"&gt; HK$ 888 &lt;/span&gt;
+                    &lt;span class="card-body-ticketing-price"&gt; HK$ 558 &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Card-Medium">Card (medium)</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="card card-m-wide">
+                    <div class="card-container">
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./src/images/demo/img_m_wide.png">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Medium Card 16:9 image </span>
+                            <span class="card-body-content"> card-m-wide </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="card card-m">
+                    <div class="card-container">
+                        <div class="card-media-container">
+                            <img class="card-media" alt="card-media" src="./src/images/demo/img_m.png">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-body-title"> Medium Card 4:3 image </span>
+                            <span class="card-body-content"> card-m </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Card</h3>
+                <p>Cards contain content and actions about a single subject.</p>
+                <p>Cards also come in various size and layout accoring to position on screen and functionality.</p>
+                <h3>Usage</h3>
+                <h5>Medium Size Card, 16:9</h5>
+                <pre><code class="html language-html">&lt;div class="card card-m-wide"&gt;
+    &lt;div class="card-container"&gt;
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./src/images/demo/img_m_wide.png"&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;span class="card-body-title"&gt; Medium Card 16:9 image &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; card-m-wide &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h5>Medium Size Card, 4:3</h5>
+                <pre><code class="html language-html">&lt;div class="card card-m"&gt;
+    &lt;div class="card-container"&gt;
+        &lt;div class="card-media-container"&gt;
+            &lt;img class="card-media" alt="card-media" src="./src/images/demo/img_m.png"&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;span class="card-body-title"&gt; Medium Card 4:3 image &lt;/span&gt;
+            &lt;span class="card-body-content"&gt; card-m &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- tag -->
+        <div class="demo_display">
+            <h3 class="headline" id="Tag">Tag</h3>
+            <div class="demo_showcase">
+                <span class="tag">Tag</span>
+                <span class="tag">
+                    <i class="icon icon-toggle_star_24px"></i> Tag </span>
+            </div>
+            <div class="demo_description">
+                <h3>Tag</h3>
+                <p>A tag provides a single piece of information of the relating object.</p>
+                <h3>Usage</h3>
+                <p>Plain text or icon to the left</p>
+                <pre><code class="html language-html">&lt;span class="tag"&gt; tag &lt;/span&gt;
+&lt;span class="tag"&gt; &lt;i class="icon icon-toggle_star_24px"&gt;&lt;/i&gt; tag &lt;/span&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Chat">Chat</h3>
+            <!-- input bar -->
+            <div class="demo_showcase demo_screen_mob">
+                <div class="chat-input">
+                    <i class="chat-voice icon icon-av_mic_24px"></i>
+                    <textarea class="chat-text" rows="1" placeholder="type something"
+                              onkeyup="textAreaResize(this)"></textarea>
+                    <i class="chat-send send-enabled icon icon-content_send_24px"></i>
+                </div>
+                <div class="chat-input">
+                    <i class="chat-voice talking icon icon-av_mic_24px"></i>
+                    <textarea class="chat-text" rows="1" placeholder="type something"
+                              onkeyup="textAreaResize(this)"></textarea>
+                    <i class="chat-send icon icon-content_send_24px"></i>
+                </div>
+                <div class="chat-input voice-input">
+                    <i class="chat-voice icon icon-hardware_keyboard_24px"></i>
+                    <span class="record-btn resting">Hold to Talk</span>
+                </div>
+            </div>
+            <!-- chat bubbles2 -->
+            <div class="demo_showcase demo_screen_mob demo_no_bg">
+                <div class="chat-bubble bubble-left">
+                    <img src="./src/images/demo/avatar.png" alt="avatar" class="avatar">
+                    <div class="msg-wrapper">
+                        <span class="chat-msg"> Chat Content </span>
+                    </div>
+                </div>
+                <div class="chat-bubble bubble-right">
+                    <div class="msg-wrapper">
+                        <span class="chat-msg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna
+                            malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. </span>
+                    </div>
+                </div>
+                <div class="chat-bubble bubble-left">
+                    <img src="./src/images/demo/avatar.png" alt="avatar" class="avatar">
+                    <div class="msg-wrapper">
+                        <div class="msg-typing"></div>
+                    </div>
+                </div>
+                <div class="chat-bubble bubble-right">
+                    <div class="msg-wrapper">
+                        <div class="msg-typing"></div>
+                    </div>
+                </div>
+                <div class="chat-bubble bubble-left">
+                    <img src="./src/images/demo/avatar.png" alt="avatar" class="avatar">
+                    <div class="msg-wrapper playing infinite-animation">
+                        <i class="audio-control icon icon-av_pause_circle_filled_24px"></i>
+                        <span class="audio-timer">0:01</span>
+                    </div>
+                </div>
+                <div class="chat-bubble bubble-right">
+                    <div class="msg-wrapper">
+                        <i class="audio-controlicon icon icon-av_play_circle_filled_24px"></i>
+                        <span class="audio-timer">0:01</span>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Chat</h3>
+                <p>The Chat style library provides chat bubbles for plain text, voice message, input component including
+                    text field, record audio button and send button.</p>
+                <p>Include the handy js library to get auto resizing for textfield.</p>
+                <h3>Usage</h3>
+                <p>Input text field Class name is for styling</p>
+                <pre><code class="html language-html">&lt;div class="chat-input"&gt;
+    &lt;i class="chat-voice icon icon-av_mic_24px"&gt;&lt;/i&gt;
+    &lt;textarea
+        class="chat-text" rows="1" 
+        placeholder="type something"
+        onkeyup="textAreaResize(this)"
+    &gt;&lt;/textarea&gt;
+    &lt;i class="chat-send send-enabled icon icon-content_send_24px"&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+                <p>Chat Bubbles</p>
+                <pre><code class="html language-html">&lt;div class="chat-bubble bubble-right"&gt; 
+    &lt;div class="msg-wrapper"&gt;
+        &lt;span class="chat-msg"&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel magna malesuada, eleifend elit luctus, aliquam elit. Nam at vulputate leo. &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <p>Audio Chat Bubble</p>
+                <pre><code class="html language-html">&lt;div class="chat-bubble bubble-left"&gt;
+    &lt;div class="msg-wrapper playing infinite-animation"&gt;
+        &lt;i class="audio-control icon icon-av_pause_circle_filled_24px"&gt;&lt;/i&gt;
+        &lt;span class="audio-timer"&gt;0:01&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- tool tip -->
+        <div class="demo_display">
+            <h3 class="headline" id="Tool-Tip"> Tool Tip </h3>
+            <div class="demo_showcase demo_screen_mob demo_tooltip_wrapper">
+                <span class="tooltip tp-left" data-tip="Tips" tabindex="1"> left </span>
+                <span class="tooltip tp-center" data-tip="Long Long Long Long Long Long Long Long Long tips"
+                      tabindex="2"> center </span>
+                <span class="tooltip tp-right" data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                      tabindex="3"> right </span>
+            </div>
+            <div class="demo_showcase demo_screen_mob demo_tooltip_wrapper">
+                <span class="tooltip tp-left tp-bottom" data-tip="Tips" tabindex="1"> left </span>
+                <span class="tooltip tp-center tp-bottom" data-tip="Long Long Long Long Long Long Long Long Long tips"
+                      tabindex="2"> center </span>
+                <span class="tooltip tp-right tp-bottom"
+                      data-tip="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tabindex="3"> right </span>
+            </div>
+            <div class="demo_description">
+                <h3>Tool Tip</h3>
+                <p>A tooltip provides quick explanation on an element or a function on screen.</p>
+                <h3>Usage</h3>
+                <p>Wrap up the element that requires a tooltip.</p>
+                <p>Use class name <code>tp-left</code>, <code>tp-center</code> and <code>tp-right</code> to define tool
+                    tip position.</p>
+                <p>Use class name <code>tp-bottom</code> to place tooltip at the bottom if necessary.</p>
+                <p>Put tool tip text in <code>data-tip</code> attribute.</p>
+                <pre><code class="html language-html">&lt;span class="tooltip tp-left" data-tip="Tips"&gt; content that needs tooltip &lt;/span&gt;</code></pre>
+            </div>
+        </div>
+        <!-- tool tip - center center -->
+        <div class="demo_display">
+            <h3 class="headline" id="Tool-Tip-Centered"> Tool Tip (Screen Centered) </h3>
+            <div class="demo_showcase">
+                <a class="btn btn-contained" id="show-tooltip">Hold to see tool tip</a>
+                <div class="tooltip tp-activity">
+                    <i class="icon icon-av_mic_24px"></i>
+                    <span class="tp-text"> This is the tooltip </span>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Tool Tip</h3>
+                <p>A screen centered tooltip provides instantaneous information of current activity.</p>
+                <h3>Usage</h3>
+                <p>Screen centered tooltip, default hidden, toggle class name <code>tp-show</code> to toggle appearence.
+                </p>
+                <pre><code class="html language-html">&lt;div class="tooltip tp-activity tp-show"&gt;
+    &lt;i class="icon icon-av_mic_24px"&gt;&lt;/i&gt;
+    &lt;span class="tp-text"&gt; This is the tooltip &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Dividers -->
+        <div class="demo_display">
+            <h3 class="headline" id="Dividers"> Dividers </h3>
+            <div class="demo_showcase">
+                <hr>
+            </div>
+            <div class="demo_description">
+                <h3>Divider</h3>
+                <p>A divider a used to visually separate two vertically neighbouring sections of content.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;hr&gt;</code></pre>
+                <p>Also add spacing as specified in design.</p>
+                <h3>Remark</h3>
+                <p>Do not use divider on components like list, menu, or accordion. They have their own "divider"
+                    integrated already.</p>
+            </div>
+        </div>
+        <!-- menu (small) -->
+        <div class="demo_display">
+            <h3 class="headline" id="Menu"> Menu </h3>
+            <div class="demo_showcase demo_screen_mob" style="padding-bottom: 160px">
+                <div class="menu-anchor">
+                    <div class="menu m-show" id="menu_1">
+                        <ul class="list">
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                    <i class="list-meta icon icon-navigation_chevron_right_24px"></i>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase  demo_screen_mob" style="padding-bottom: 160px">
+                <div class="menu-anchor">
+                    <div class="menu m-full m-show" id="menu_2">
+                        <ul class="list">
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                    <i class="list-meta icon icon-navigation_chevron_right_24px"></i>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h5 class="subtitle1"> Example with top bar</h5>
+            <div class="demo_showcase  demo_screen_mob demo_full_width">
+                <div class="top-bar menu-anchor">
+                    <div class="top-bar-left">
+                        <i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"></i>
+                    </div>
+                    <div class="top-bar-body" id="top-bar-dd-btn">
+                        <h3 class="top-bar-title">Page Title</h3>
+                        <i class="icon icon-navigation_expand_more_24px"></i>
+                    </div>
+                    <div class="menu m-full" id="menu_3">
+                        <ul class="list">
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <span class="list-text">item</span>
+                                    <i class="list-meta icon icon-navigation_chevron_right_24px"></i>
+                                </div>
+                            </li>
+                            <li class="list-row">
+                                <div class="list-content">
+                                    <i class="list-thumbnail icon icon-toggle_star_24px"></i>
+                                    <span class="list-text">item</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Menu</h3>
+                <p>"Menus display a list of choices on temporary surfaces."</p>
+                <h3>Usage</h3>
+                <p>Class <code>menu-anchor</code> sets reference element's position as <code>relative</code>. Class
+                    <code>m-full</code> sets menu to screen width. Class <code>m-show</code> is the class that can
+                    toggle menu visibility.</p> Content of a menu is structured by the <code>List</code> component</p>
+                <pre><code class="html language-html">&lt;div class="top-bar menu-anchor"&gt;
+    &lt;div class="top-bar-left"&gt;
+        &lt;i class="top-bar-icon icon icon-hardware_keyboard_arrow_left_24px"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="top-bar-body" id="top-bar-dd-btn"&gt;
+        &lt;h3 class="top-bar-title"&gt;Page Title&lt;/h3&gt;
+        &lt;i class="icon icon-navigation_expand_more_24px"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="menu m-full m-show" id="menu_3"&gt;
+        &lt;ul class="list"&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;span class="list-text"&gt;item&lt;/span&gt;
+                    &lt;i class="list-meta icon icon-navigation_chevron_right_24px"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li class="list-row"&gt;
+                &lt;div class="list-content"&gt;
+                    &lt;i class="list-thumbnail icon icon-toggle_star_24px"&gt;&lt;/i&gt;
+                    &lt;span class="list-text"&gt;item&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Breadcrumb">Breadcrumb</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <a href="#" class="breadcrumb active"> breadcrumb </a>
+                <a href="#" class="breadcrumb"> breadcrumb </a>
+                <a href="#" class="breadcrumb"> breadcrumb </a>
+            </div>
+            <div class="demo_description">
+                <h3>Breadcrumb</h3>
+                <p>Indicate the current page's location within a navigational hierarchy that automatically adds
+                    separators via CSS.</p>
+                <p>Use class name <code>active</code> to specify current page / step.</p>
+                <h3>Usage</h3>
+                <pre><code class="html language-html">&lt;a href="#" class="breadcrumb active"&gt; breadcrumb &lt;/a&gt;
+&lt;a href="#" class="breadcrumb"&gt; breadcrumb &lt;/a&gt;
+&lt;a href="#" class="breadcrumb"&gt; breadcrumb &lt;/a&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Pagination">Pagination</h3>
+            <div class="demo_showcase">
+                <div class="pagination">
+                    <a class="pg-back pg-disabled"></a>
+                    <div class="pg-btn-wrapper">
+                        <a class="pg-btn active"> 1 </a>
+                        <a class="pg-btn"> 2 </a>
+                        <a class="pg-btn"> 3 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 100 </a>
+                    </div>
+                    <a class="pg-forth"></a>
+                </div>
+            </div>
+            <div class="demo_showcase">
+                <div class="pagination">
+                    <a class="pg-back pg-disabled"></a>
+                    <div class="pg-btn-wrapper">
+                        <a class="pg-btn"> 1 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 101 </a>
+                        <a class="pg-btn active"> 102 </a>
+                        <a class="pg-btn"> 103 </a>
+                        <a class="pg-btn"> ... </a>
+                        <a class="pg-btn"> 200 </a>
+                    </div>
+                    <a class="pg-forth"></a>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Pagination</h3>
+                <p>Pagination component provides user a quick way to reach different page or section within the page
+                    content.</p>
+                <h3>Usage</h3>
+                <p>Use <code>pg-disabled</code> to disable back and forth button. Use <code>active</code> to highlight
+                    current page.</p>
+                <h5>Normal / Default Situation</h5>
+                <pre><code class="html language-html">&lt;div class="pagination"&gt;
+    &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
+    &lt;div class="pg-btn-wrapper"&gt;
+        &lt;a class="pg-btn active"&gt; 1 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 2 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 3 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 100 &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a class="pg-forth"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                <h5>In the Middle</h5>
+                <p>The maximun number of page button can be displayed is 7.</p>
+                <pre><code class="html language-html">&lt;div class="pagination"&gt;
+    &lt;a class="pg-back pg-disabled"&gt;&lt;/a&gt;
+    &lt;div class="pg-btn-wrapper"&gt;
+        &lt;a class="pg-btn"&gt; 1 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 101 &lt;/a&gt;
+        &lt;a class="pg-btn active"&gt; 102 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 103 &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; ... &lt;/a&gt;
+        &lt;a class="pg-btn"&gt; 200 &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;a class="pg-forth"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Progress-Bar">Progress Bar</h3>
+            <div class="demo_showcase">
+                <div class="progress-bar">
+                    <div class="pb-container">
+                        <div class="pb-bar pb-infinite"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="demo_showcase">
+                <div class="progress-bar">
+                    <div class="pb-container">
+                        <div id="demo-pb-bar-1" class="pb-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_progress_bar_control">
+                <p class="subtitle2">Click to see progress bar transition</p>
+                <button class="demo_pb_control" data-percent="25"> 25% </button>
+                <button class="demo_pb_control" data-percent="50"> 50% </button>
+                <button class="demo_pb_control" data-percent="75"> 75% </button>
+            </div>
+            <div class="demo_description">
+                <h3>Progress Bar Linear</h3>
+                <p>Progress bar shows user the progress of a loading process. Infinite rolling is used when progress
+                    percentage is not important to user.</p>
+                <h3>Usage</h3>
+                <h5>Infinite</h5>
+                <p>Use <code>pb-infinite</code> together with <code>pb-bar</code> to get infinite loading animation</p>
+                <pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+    &lt;div class="pb-container"&gt;
+        &lt;div class="pb-bar pb-infinite"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h5>Live Progress</h5>
+                <p>Alter inline CSS width to control length of progress bar by your JS.</p>
+                <pre><code class="html language-html">&lt;div class="progress-bar"&gt;
+    &lt;div class="pb-container"&gt;
+        &lt;div class="pb-bar" style="width: 75%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Circular Progress Bar -->
+        <div class="demo_display">
+            <h3 class="headline" id="Progress-Bar-Circular">Progress Bar (Circular)</h3>
+            <!-- require JS -->
+            <div class="demo_showcase">
+                <div id="circular-progress-1"></div>
+            </div>
+            <button id="set-progress-bar-1">0.3</button>
+            <button id="set-progress-bar-2">0.7</button>
+            <button id="set-progress-bar-infinite">loop</button>
+            <button id="set-progress-bar-toggle">toggle</button>
+            <button id="set-progress-bar-reset">reset</button>
+            <!-- fixed arc no JS needed -->
+            <div class="demo_showcase">
+                <div class="process-indicator">
+                    <div class="indicator fixed-arc"></div>
+                    <p class="label">Loading ...</p>
+                </div>
+                <div class="process-indicator navy">
+                    <div class="indicator fixed-arc"></div>
+                    <p class="label">Loading ...</p>
+                </div>
+            </div>
+            <div class="demo_description">
+<h3>Progress Bar Circular</h3>
+<p>Progress bar shows user the progress of a loading process.
+Javascript library is required if you want to have control on the component.
+Otherwise you can use <code>fixed-arc indicator</code> to place an infinite rotation indicator.</p>
+<h3>Usage (Controlable)</h3>
+<h5>Basic</h5>
+<p>Add the following element to your code.</p>
+<pre><code class="html language-html">&lt;div id="circular-progress-1"&gt;&lt;/div&gt;</code></pre>
+<p>Create a new progress bar, use the id of the element created above.</p>
+<pre><code class="js language-js">let cpb = new circularProgressBar({id: "circular-progress-1"});</code></pre>
+<h5>Update Progress</h5>
+<p>Use the <code>update(percent)</code> function to update progress, where <code>0 &lt;= percent &lt;= 1</code></p>
+<pre><code class="js language-js">cpb.update(0.2);</code></pre>
+<h5>Infinite Rotation</h5>
+<p>Use the <code>infinite()</code> function to start rotation animation.</p>
+<pre><code class="js language-js">cpb.infinite();</code></pre>
+<h5>Toggle Rotation</h5>
+<p>Use the <code>toggleInfinite()</code> function to toggle rotation animation, after using <code>infinite()</code> function.</p>
+<pre><code class="js language-js">cpb.toggleInfinite();</code></pre>
+<h5>Reset Rotation</h5>
+<p>Use the <code>reset()</code> function to reset bar position.</p>
+<pre><code class="js language-js">cpb.reset();</code></pre>
+<h3>Usage (No control)</h3>
+<h5>Basic</h5>
+<pre><code class="html language-html">&lt;div class="process-indicator navy"&gt;
+    &lt;div class="indicator fixed-arc"&gt;&lt;/div&gt;
+    &lt;p class="label"&gt;Loading ...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Accordion -->
+        <div class="demo_display">
+            <h3 class="headline" id="Accordion">Accordion</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="accordion">
+                    <input id="demo_accordion_1" type="checkbox" name="demo_accordion_1" />
+                    <label for="demo_accordion_1" class="ac-title">Label</label>
+                    <div class="ac-body">
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="accordion">
+                    <input id="demo_accordion_2" type="checkbox" name="demo_accordion_set_1" />
+                    <label for="demo_accordion_2" class="ac-title">default size</label>
+                    <div class="ac-body">
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
+                    </div>
+                </div>
+                <div class="accordion ac-m">
+                    <input id="demo_accordion_3" type="checkbox" name="demo_accordion_set_1" />
+                    <label for="demo_accordion_3" class="ac-title">meduim size</label>
+                    <div class="ac-body">
+                        <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                            architecto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <form>
+                    <div class="accordion">
+                        <input id="demo_accordion_5" type="radio" name="demo_accordion_set_2" />
+                        <label for="demo_accordion_5" class="ac-title">Label</label>
+                        <div class="ac-body">
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input id="demo_accordion_6" type="radio" name="demo_accordion_set_2" />
+                        <label for="demo_accordion_6" class="ac-title">Label</label>
+                        <div class="ac-body">
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <input id="demo_accordion_7" type="radio" name="demo_accordion_set_2" />
+                        <label for="demo_accordion_7" class="ac-title">Label</label>
+                        <div class="ac-body">
+                            <p class="ac-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur,
+                                architecto</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="demo_description">
+                <h3>Accordion</h3>
+                <p>An expandable list that shows user details about the list title.</p>
+                <h3>Usage</h3>
+                <p>There are two types of behavior on opening accordion. Use radio button if you want the accordion set
+                    to open one tab only. Use checkbox button if you want the accordion set to open multiple tabs. Use
+                    class name <code>ac-m</code> together with <code>accordion</code> if you want bigger font size.</p>
+                <h5>Opening Multiple Accordions</h5>
+                <pre><code class="html language-html">&lt;div class="accordion"&gt;
+    // hidden checkbox button that control accordion state
+    &lt;input id="demo_accordion_1" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_1" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="accordion"&gt;
+    &lt;input id="demo_accordion_2" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_2" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="accordion"&gt;
+    &lt;input id="demo_accordion_3" type="checkbox" name="demo_accordion_set_1" /&gt;
+    &lt;label for="demo_accordion_3" class="ac-title"&gt;Label&lt;/label&gt;
+    &lt;div class="ac-body"&gt;
+        &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <h5>Opening Single Accordion</h5>
+                <pre><code class="html language-html">&lt;form&gt;
+    // wrap the set of accordion in a form so that you can have multiple accordion sets that open single accordion
+    &lt;div class="accordion"&gt;
+        // hidden radio input that control accordion state
+        &lt;input id="demo_accordion_4" type="radio" name="demo_accordion_set_2" /&gt;
+        // label for button which serve as title of the accordion
+        &lt;label for="demo_accordion_4" class="ac-title"&gt;Label&lt;/label&gt;
+        // the actual body of the accordion, which is hidden by default
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion"&gt;
+        &lt;input id="demo_accordion_5" type="radio" name="demo_accordion_set_2" /&gt;
+        &lt;label for="demo_accordion_5" class="ac-title"&gt;Label&lt;/label&gt;
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion"&gt;
+        &lt;input id="demo_accordion_6" type="radio" name="demo_accordion_set_2" /&gt;
+        &lt;label for="demo_accordion_6" class="ac-title"&gt;Label&lt;/label&gt;
+        &lt;div class="ac-body"&gt;
+            &lt;p class="ac-content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+        <!-- carousel -->
+        <div class="demo_display">
+            <h3 class="headline" id="Carousel-Indicator"> Carousel Indicator </h3>
+            <div class="demo_showcase demo_no_bg">
+                <div class="carousel-indicator">
+                    <a class="indicator active"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                </div>
+            </div>
+            <div class="demo_showcase demo_no_bg bg-white">
+                <div class="carousel-indicator indicator-dark">
+                    <a class="indicator active"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                    <a class="indicator"></a>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Carousel Indicator</h3>
+                <p>Shows user current state of a carousel and provides control on carousel.</p>
+                <h3>Usage</h3>
+                <p>Use <code>indicator-dark</code> to change color to suit your slides if needed.</p>
+                <pre><code class="html language-html">&lt;div class="carousel-indicator indicator-dark"&gt;
+    &lt;a class="indicator active"&gt;&lt;/a&gt;
+    &lt;a class="indicator"&gt;&lt;/a&gt;
+    &lt;a class="indicator"&gt;&lt;/a&gt;
+    &lt;a class="indicator"&gt;&lt;/a&gt;
+    &lt;a class="indicator"&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Backdrop -->
+        <div class="demo_display">
+            <h3 class="headline" id="Backdrop"> Backdrop </h3>
+            <div class="demo_showcase demo_screen_mob demo_no_bg full-width">
+                <div class="backdrop">
+                    <div class="bd-back bg-white"> Back <button id="demo_toggle_backdrop_1"
+                                data-target="demo_backdrop_1"> Demo Toggle </button>
+                    </div>
+                    <div class="bd-front bg-navy-200" id="demo_backdrop_1"> Front </div>
+                </div>
+            </div>
+            <div class="demo_description">
+                <h3>Backdrop</h3>
+                <p>A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content.
+                </p>
+                <h3>Usage</h3>
+                <p>Style both layer so user can distinguish them. Use <code>collapse</code> on <code>bd-front</code> to
+                    toggle front layer position.</p>
+                <pre><code class="html language-html">&lt;div class="backdrop"&gt;
+    &lt;div class="bd-back bg-white"&gt;
+        Back
+    &lt;/div&gt;
+    &lt;div class="bd-front bg-navy-200"&gt;
+        Front
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+        <!-- Slider -->
+        <div class="demo_display">
+            <h3 class="headline" id="Slider"> Slider </h3>
+            <div class="demo_showcase">
+                <div id="demo_rangeSlider"></div>
+            </div>
+            <div class="demo_description">
+                <h3>Range Slider</h3>
+                <p>An input component that allows user set value within a preset range by draging the button on the
+                    track.</p>
+                <h3>Usage</h3>
+                <p>Since support on styling <code>input[type=range]</code> with pure CSS is low, an external library is
+                    induced to provides both styling and functional support.</p>
+                <p>See <a href="https://github.com/harrisonchan9/noUiSlider">noUiSlider</a> for full documentations.</p>
+                <pre><code class="html language-html">// label the slider with an id
+&lt;div id="demo_rangeSlider"&gt;&lt;/div&gt;
+
+// also include the js library
+&lt;script src="&lt;CDN domain&gt;/handyBaseline.min.js"&gt;&lt;/script&gt;</code></pre>
+                <pre><code class="js language-js">var slider = document.getElementById('demo_rangeSlider');
+
+noUiSlider.create(slider, {
+    // starting position of knob
+    start: [50],
+    // Display colored bars between handles
+    connect: [true, false],
+    // min max of value on the bar
+    range: {
+        'min': 0,
+        'max': 100
+    },
+});
+
+// When the slider value changes ...
+slider.noUiSlider.on('update', function (values, handle) {
+    // `values` is the value of current state, in case of multiple knobs, `values` is an array
+    // `handle` is the index of the knob that triggered the action
+    // your code here
+});</code></pre>
+                <p>There are some other options such as:</p>
+                <pre><code class="js language-js">// tooltip
+tooltip: true,
+// show scale
+pips: {
+    mode: 'steps',
+    stepped: true,
+    density: 10
+},
+// step difference
+step: 10,</code></pre>
+                <p>See library <a href="https://refreshless.com/nouislider/">documentation</a> for more information.</p>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="File-Upload">File Upload</h3>
+            <div class="demo_showcase">
+                <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
+                    <div class="up-control">
+                        <label for="file-uploader-1" class="up-label"> Drag and drop files here or <a class="btn">Browse
+                                files</a>
+                        </label>
+                        <input id="file-uploader-1" class="up-input" type="file" name="files[]"
+                               data-multiple-caption="{count} files selected" multiple />
+                        <button class="hide" type="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
+            <div class="demo_showcase">
+                <form class="file-uploader" method="post" action="" enctype="multipart/form-data">
+                    <div class="up-control">
+                        <label for="file-uploader-2" class="up-label"> N files have been selected </label>
+                        <input id="file-uploader-2" class="up-input" type="file" name="files[]"
+                               data-multiple-caption="{count} files selected" multiple />
+                        <button type="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
+            <div class="demo_description">
+                <h3>File Uploader</h3>
+                <p>This is a pure CSS component, JS / React component is not on schedule. Pull Request is very welcomed.
+                </p>
+                <h3>Usage</h3>
+                <h5>Default State</h5>
+                <pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+    &lt;div class="up-control"&gt;
+        &lt;label for="file-uploader-1" class="up-label"&gt;
+            Drag and drop files here or
+            &lt;a class="btn"&gt;Browse files&lt;/a&gt;
+        &lt;/label&gt;
+        &lt;input id="file-uploader-1" class="up-input"
+            type="file" name="files[]"
+            data-multiple-caption="{count} files selected" multiple /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <h5>File Chosen</h5>
+                <ol>
+                    <li>update the label text yourself</li>
+                    <li>toggle class <code>hide</code> on submit button</li>
+                </ol>
+                <pre><code class="html language-html">&lt;form class="file-uploader" method="post" action="" enctype="multipart/form-data"&gt;
+    &lt;div class="up-control"&gt;
+        &lt;label for="file-uploader-2" class="up-label"&gt;
+            N files have been selected
+        &lt;/label&gt;
+        &lt;input id="file-uploader-2" class="up-input"
+            type="file" name="files[]"
+            data-multiple-caption="{count} files selected" multiple /&gt;
+        &lt;button type="submit"&gt;Upload&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                <h3>Remark</h3>
+                <p>Chrome on T2 works fine, but Webview on T2 is not working. Consult android team.</p>
+            </div>
+        </div>
+        <div class="demo_display">
+            <h3 class="headline" id="Alert-Chip">Alert Chip</h3>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="alert-chip"> This is the Normal Alert </div>
+            </div>
+            <div class="demo_showcase demo_screen_mob">
+                <div class="alert-chip error"> This is the Error Alert </div>
+            </div>
+            <div class="demo_description">
+<h3>Alert</h3>
+<p>A simple pop up containing simple message.</p>
+<h3>Usage</h3>
+<p>There are normal and error versions avaliable. 
+Use class name <code>error</code> for error version.</p>
+<pre><code class="html language-html">&lt;div class="alert-chip error"&gt; Your Message &lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- staging -->
+<script
+        src="https://handy-staging-test.s3.amazonaws.com/design_baseline_demo/dist/javascripts/handyBaseline.min.js"></script>
+<!-- production -->
+<!-- <script src="http://cdn.handy.travel/baseline/dist/javascripts/handyBaseline.min.js"></script> -->
+<script src="./src/javascripts/demo/demo.js"></script>
+
+</html>
